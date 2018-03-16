@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css &amp; css3 | BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="css & css3" />
+  
+  
+  
+  
+  <meta name="description" content="##css &amp;amp; css3 css 选择器css选择器：（权重值）!important：（无穷大）行间样式：（1000）id：（100）class、属性、伪类：（10）标签、伪元素：（1）通配符：（0） display 属性display 属性：none：此元素不会被显示block：此元素将显示为块级元素，此元素前后会带有换行符inline：此元素会被显示为内联元素，元素前后没有换行符inl">
+<meta name="keywords" content="css &amp; css3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS &amp; CSS3">
+<meta property="og:url" content="http://yoursite.com/2018/03/15/CSS-CSS3/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="##css &amp;amp; css3 css 选择器css选择器：（权重值）!important：（无穷大）行间样式：（1000）id：（100）class、属性、伪类：（10）标签、伪元素：（1）通配符：（0） display 属性display 属性：none：此元素不会被显示block：此元素将显示为块级元素，此元素前后会带有换行符inline：此元素会被显示为内联元素，元素前后没有换行符inl">
+<meta property="og:updated_time" content="2018-03-16T02:24:12.331Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS &amp; CSS3">
+<meta name="twitter:description" content="##css &amp;amp; css3 css 选择器css选择器：（权重值）!important：（无穷大）行间样式：（1000）id：（100）class、属性、伪类：（10）标签、伪元素：（1）通配符：（0） display 属性display 属性：none：此元素不会被显示block：此元素将显示为块级元素，此元素前后会带有换行符inline：此元素会被显示为内联元素，元素前后没有换行符inl">
+  
+    <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Startseite</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archive</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Kategorien</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Schreib etwas..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Beiträge',
+            PAGES: 'Seiten',
+            CATEGORIES: 'Kategorien',
+            TAGS: 'Tags',
+            UNTITLED: '(Unbenannt)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-CSS-CSS3" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      CSS &amp; CSS3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/03/15/CSS-CSS3/" class="article-date">
+	  <time datetime="2018-03-15T15:10:17.000Z" itemprop="datePublished">2018-03-15</time>
+	</a>
+
+      
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		PV:<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##css &amp; css3</p>
+<h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><p>css选择器：（权重值）<br>!important：（无穷大）<br>行间样式：（1000）<br>id：（100）<br>class、属性、伪类：（10）<br>标签、伪元素：（1）<br>通配符：（0）</p>
+<h3 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h3><p>display 属性：<br>none：此元素不会被显示<br>block：此元素将显示为块级元素，此元素前后会带有换行符<br>inline：此元素会被显示为内联元素，元素前后没有换行符<br>inline-block：行内块元素<br>flex：css3的弹性盒子</p>
+<h3 id="position-属性-amp-z-index-属性-amp-三栏布局"><a href="#position-属性-amp-z-index-属性-amp-三栏布局" class="headerlink" title="position 属性 &amp; z-index 属性 &amp; 三栏布局"></a>position 属性 &amp; z-index 属性 &amp; 三栏布局</h3><p>postion 属性: absolute，relative，fixed（相对于视口定位），static，inherit</p>
+<p>position 与 z-index 的关系：同一级元素，若都有 position，谁在后谁在上面。若含有 z-index，谁 z-index 大，谁在上面。可以不用考虑 position，若 z-index 相同再考虑 position。</p>
+<p>问题：若同一级元素，都是绝对定位，其中一个 z-index 为 10，另一个 z-index 为 20，但是 z-index 为 10 的元素中含有一个 z-index 为 30 的 子元素，谁在最上面？<br>答案：z-index 为 20 的元素在最上面。其次是 z-index 为 30 元素。最后是 z-index 为 10 的元素。（先考虑 父级 z-index，再考虑 子级 z-index。）</p>
+<p>问题：如何三栏布局？<br>答案：<br>1.使用 position</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.使用 float</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    <span class="built_in">float</span>: right;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.使用 display: flex（调换了right 与 center 的位置）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.left&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    flex-grow: 1;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line">.right&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="float-属性-amp-清除浮动"><a href="#float-属性-amp-清除浮动" class="headerlink" title="float 属性 &amp; 清除浮动"></a>float 属性 &amp; 清除浮动</h3><p>float 属性：left，right，none，inherit</p>
+<p>问题：如何清楚浮动？<br>答案：<br>1.为带有浮动元素的父元素，添加伪元素（最佳推选）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:after &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">    content: <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.触发bfc，为带有浮动元素的父元素，添加 overflew：hidden<br>3.触发bfc，为带有浮动元素的父元素，添加 position：absolute<br>4.触发bfc，为带有浮动元素的父元素，添加 display：inline-block<br>5.触发bfc，为带有浮动元素的父元素，添加 zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</p>
+<h3 id="盒子模型-amp-margin-塌陷-amp-margin-合并"><a href="#盒子模型-amp-margin-塌陷-amp-margin-合并" class="headerlink" title="盒子模型 &amp; margin 塌陷 &amp; margin 合并"></a>盒子模型 &amp; margin 塌陷 &amp; margin 合并</h3><p>盒子模型含有：<br>width 属性<br>padiing 属性： 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）<br>border 属性<br>margin 属性 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）</p>
+<p>问题：如何解决 margin 塌陷 与 margin 合并？<br>答案：<br>1.触发bfc，为含有 margin 的元素的父级，添加 overflew：hidden<br>2.触发bfc，为含有 margin 的元素的父级，添加 border</p>
+<h3 id="css-溢出打点"><a href="#css-溢出打点" class="headerlink" title="css 溢出打点"></a>css 溢出打点</h3><p>问题：css 单行如何益处打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>问题：css 多行如何益出打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: 2; // 几行就写几，这里是 3 行</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css-伪元素-与-伪类"><a href="#css-伪元素-与-伪类" class="headerlink" title="css 伪元素 与 伪类"></a>css 伪元素 与 伪类</h3><p>css 伪元素: after，before，first-letter，first-line（使用时需要设置 content: ‘xxx’）<br>css 伪类: hover，active，focus，link，visit，lang</p>
+<h3 id="css3-兼容性"><a href="#css3-兼容性" class="headerlink" title="css3 兼容性"></a>css3 兼容性</h3><p>-moz- // firefox—-&gt;gecko<br>-ms- // ie—-&gt;trident<br>-webkit- // safari—-&gt;webkit<br>-o- // opera—-&gt;presto<br>无// chrome—-&gt;blink/webkit</p>
+<h3 id="css3-选择器"><a href="#css3-选择器" class="headerlink" title="css3 选择器"></a>css3 选择器</h3><p>css3选择器:</p>
+<p>1.css3属性选择器 ele[attr=”*(任意位置),^(开头),$(结尾)”]</p>
+<p>2.css3伪类选择器</p>
+<p>第一组：同一父级下的某个子元素<br>:first-child<br>:last-child<br>:nth-child(n) 同一父级下的第几个子元素 （正着来）<br>:nth-last-child(n) （倒着来）</p>
+<p>第二组：（常用）一类中的某个元素</p>
+<p>:first-of-type<br>:last-of-type<br>:nth-of-type(n) 一类中的第几个元素 （正着来）<br>:nth-last-of-type(n) （倒着来）</p>
+<p>3.css3条件选择器</p>
+<p>E&gt;F F是E的直接子元素<br>E+F F是E的兄弟节点，而且是E后面的第一个<br>E~F F是E后面的兄弟节点</p>
+<h3 id="css3-图像变换-transform"><a href="#css3-图像变换-transform" class="headerlink" title="css3 图像变换 transform"></a>css3 图像变换 transform</h3><p>1.旋转<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate(…deg) / rotateX / rotateY / rotateZ / rotate3d(0/1 , 0/1 , 0/1 , …deg) // 1 变换，0 不变换</span><br></pre></td></tr></table></figure></p>
+<p>2.位移<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: translate(…px , …px) / translateX / translateY / translateZ / translate3d(…px , …px , …px)</span><br></pre></td></tr></table></figure></p>
+<p>3.缩放<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: scale(数字) ／ scaleX / scaleY / scaleZ / scale3d(数字 , 数字 , 数字)</span><br></pre></td></tr></table></figure></p>
+<p>4.扭曲<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: skew(…deg) / skewX / skewY</span><br></pre></td></tr></table></figure></p>
+<p>5.设置变换的原点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">translate-origin: left top / 50% 50%</span><br><span class="line">//默认变换的原点为 50% 50%，为图形的中心</span><br></pre></td></tr></table></figure></p>
+<h3 id="css3-过度-transition"><a href="#css3-过度-transition" class="headerlink" title="css3 过度 transition"></a>css3 过度 transition</h3><p>transition 为一个复合属性，由下面几部分组成</p>
+<p>1.transition-property 指定过渡或者动态模拟的css属性。若全部则写 all。<br>2.transition-duration 指定过渡所需要的时间。<br>3.transition-timing-function 指定过渡函数。个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.transition-delay 指定延迟时间。</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px;</span><br><span class="line">    transition: all 5s linear 1s;</span><br><span class="line">    // 过渡全部属性，五秒完成，匀速运动，延时一秒</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    left: 100px;</span><br><span class="line">    // 若该元素 left 变成 100px，则会触发过渡</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-动画-animation"><a href="#css3-动画-animation" class="headerlink" title="css3 动画 animation"></a>css3 动画 animation</h3><p>css3 动画：animation + keyframes</p>
+<p>animation 为一个复合属性，由下面几部分组成：</p>
+<p>1.animation-name：执行动画的 keyframes 的名字。<br>2.animation-duration：执行动画的总时长。<br>3.animation-timing-function：指定过渡函数。这个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.animation-delay：执行延迟时间。<br>5.animation-direction：动画播放的方式。这个属性的值主要有：normal 正常播放模式、reverse 倒序播放、alternate 动画在奇数次正向播放偶数次倒序播放、alternate-reverse 动画在奇数次倒序播放偶数次正向播放。<br>6.animation-iteration-count：动画执行的次数。infinite 是无限次，写一个数字就是要执行几次。<br>7.animation-fill-mode：执行完动画后物体停止的位置。forwards 是停在结束的位置上、backwards 是快速执行初始帧（这个最好配合延迟来观察）、none 是回到初始帧的位置、both 是同时具有 forwards 和 backwards 的效果。<br>8.animation-play-state：控制动画的播放状态。running 是播放、paused 是暂停。</p>
+<p>keyframes 声明一个运动函数，函数为 百分比 + 样式状态 的 结合体</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px</span><br><span class="line">    animation: move 5s linear 1s forwards;</span><br><span class="line">    // 运动函数 move，五秒完成，匀速运动，延时一秒，停在结束的位置</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        left: 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        left: 2px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        left: 3px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-三维动画"><a href="#css3-三维动画" class="headerlink" title="css3 三维动画"></a>css3 三维动画</h3><p>使用三维动画：</p>
+<p>首先，给父级设置transform-style: preverse-3d<br>其次（可选/可不选），给父级设置景深: transform: prespective(…px) 或者 prespective: …px // 景深就是父级的深度<br>然后，给子级使用tranform: translateZ(…px)，形成三维效果<br>最后，调用 transform 上的各种 图形变换效果形成三维动画</p>
+<h3 id="css3-动画加速"><a href="#css3-动画加速" class="headerlink" title="css3 动画加速"></a>css3 动画加速</h3><p>动画加速:</p>
+<p>1.GPU硬件加速模式，让浏览器在渲染动画的时候从CPU转向GPU</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transform: transtion3d(0,0,0);</span><br><span class="line">transform: translateZ(0);</span><br></pre></td></tr></table></figure>
+<p>2.防止动画出现闪烁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">backface-visibilty: hidden;</span><br><span class="line">prespective: …px;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-多列布局-column"><a href="#css3-多列布局-column" class="headerlink" title="css3 多列布局 column"></a>css3 多列布局 column</h3><p>多列布局:</p>
+<p>父级属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.columns: xxx // 分成几分就写几。 复合属性，含有（column-width ／ column-count）</span><br><span class="line">2.column-gap: xxx // 布局两列中间宽度</span><br><span class="line">3.column-rule: 20px solid green // 布局两列中间加一横线</span><br></pre></td></tr></table></figure></p>
+<p>子级属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.column-span: all; // 此个子集元素独占完整一行</span><br></pre></td></tr></table></figure></p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    columns: 5;</span><br><span class="line">    column-gap: 0px;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-弹性盒子-flex"><a href="#css3-弹性盒子-flex" class="headerlink" title="css3 弹性盒子 flex"></a>css3 弹性盒子 flex</h3><p>父级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.display: flex</span><br><span class="line">2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素</span><br><span class="line">3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）</span><br><span class="line">4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</span><br></pre></td></tr></table></figure></p>
+<p>子级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.flex-grow // 按比例分配剩余空间</span><br><span class="line">2.flex-shrink // 按比例收缩超出空间</span><br><span class="line">3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</span><br></pre></td></tr></table></figure></p>
+<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：</p>
+<p>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    flex-basis: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: blue;           </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-盒子模型-box-sizing"><a href="#css3-盒子模型-box-sizing" class="headerlink" title="css3 盒子模型 box-sizing"></a>css3 盒子模型 box-sizing</h3><p>盒子模型:</p>
+<p>box-sizing: border-box // IE6混杂模式的盒模型 border + padding + content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 border-box 的总 宽／高 = content + margin</p>
+<p>box-sizing: content-box // 标准模式的盒模型 content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 content-box 的总 宽／高 = content + padding + border + margin</p>
+<h3 id="css3-背景图片-background-size"><a href="#css3-背景图片-background-size" class="headerlink" title="css3 背景图片 background-size"></a>css3 背景图片 background-size</h3><p>1.contain：同比例放大或缩小，尽量让一张图以最大限度沾满容器，多出的部分重复显示</p>
+<p>2.cover：同比例放大或缩小，一张图填满容器，多余的部分隐藏。</p>
+<p>移动端布局（media／rem／%）<br>移动端布局：</p>
+<p>1.使用 媒体查询 media，兼容不同尺寸的设备<br>@media (填写媒体查询属性) {}</p>
+<p>2.使用 rem，相对于 html 跟元素大小<br>html {font-size: 62.5% ／ …;}<br>然后在在设置 宽／高／字体大小 等属性的时候 使用 rem</p>
+<p>3.宽高使用 百分比（%）布局，还原设计图尺寸<br>高无法设置百分比，可以选用 padding-top<br>padding-top 相对于宽设置百分比</p>
+<p>4.使用 iconfont 等矢量图片，代替 png 等静态图片</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-css3/">css & css3</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/07/HTML-HTML5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">HTML &amp; HTML5</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Inhalt</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-选择器"><span class="nav-number">1.</span> <span class="nav-text">css 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-属性"><span class="nav-number">2.</span> <span class="nav-text">display 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-属性-amp-z-index-属性-amp-三栏布局"><span class="nav-number">3.</span> <span class="nav-text">position 属性 &amp; z-index 属性 &amp; 三栏布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float-属性-amp-清除浮动"><span class="nav-number">4.</span> <span class="nav-text">float 属性 &amp; 清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型-amp-margin-塌陷-amp-margin-合并"><span class="nav-number">5.</span> <span class="nav-text">盒子模型 &amp; margin 塌陷 &amp; margin 合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-溢出打点"><span class="nav-number">6.</span> <span class="nav-text">css 溢出打点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-伪元素-与-伪类"><span class="nav-number">7.</span> <span class="nav-text">css 伪元素 与 伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-兼容性"><span class="nav-number">8.</span> <span class="nav-text">css3 兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-选择器"><span class="nav-number">9.</span> <span class="nav-text">css3 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-图像变换-transform"><span class="nav-number">10.</span> <span class="nav-text">css3 图像变换 transform</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-过度-transition"><span class="nav-number">11.</span> <span class="nav-text">css3 过度 transition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-动画-animation"><span class="nav-number">12.</span> <span class="nav-text">css3 动画 animation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-三维动画"><span class="nav-number">13.</span> <span class="nav-text">css3 三维动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-动画加速"><span class="nav-number">14.</span> <span class="nav-text">css3 动画加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-多列布局-column"><span class="nav-number">15.</span> <span class="nav-text">css3 多列布局 column</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-弹性盒子-flex"><span class="nav-number">16.</span> <span class="nav-text">css3 弹性盒子 flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-盒子模型-box-sizing"><span class="nav-number">17.</span> <span class="nav-text">css3 盒子模型 box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-背景图片-background-size"><span class="nav-number">18.</span> <span class="nav-text">css3 背景图片 background-size</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 BLOG All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				UV : <span id="busuanzi_value_site_uv"></span> |  
+				PV : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            BLOG
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 林凯锋 All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>
