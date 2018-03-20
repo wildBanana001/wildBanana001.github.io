@@ -264,7 +264,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/20/postCSS垂直居中/">postCSS垂直居中</a>
+      <a class="article-title" href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a>
     </h1>
   
 
@@ -281,13 +281,20 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>##CSS垂直居中</p>
+<p>###position:absolute<br>设置position:absolute属性。</p>
+<p>####方法1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.cssCenter &#123;</span><br><span class="line">	position:absolute;</span><br><span class="line">	width:100px;</span><br><span class="line">	height:100px;</span><br><span class="line">	padding:10px;</span><br><span class="line">	top:50%;	</span><br><span class="line">	left:50%;	</span><br><span class="line">	margin-left: -60px;	/*(width+padding)/2*/</span><br><span class="line">	margin-top: -60px;	/*(height+padding)/2*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>####方法2<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.cssCenter &#123;</span><br><span class="line">	position:absolute;</span><br><span class="line">	margin:auto;</span><br><span class="line">	top:0;</span><br><span class="line">	left:0;</span><br><span class="line">	bottom:0;</span><br><span class="line">	right:0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###Transforms<br>内容块定义transform: translate(-50%,-50%)必须带上浏览器厂商的前缀，还要加上top: 50%; left: 50%;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">width: 50%;  </span><br><span class="line">margin: auto;  </span><br><span class="line">position: absolute;  </span><br><span class="line">top: 50%; left: 50%;  </span><br><span class="line">-webkit-transform: translate(-50%,-50%);  </span><br><span class="line">-ms-transform: translate(-50%,-50%);  </span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
     </footer>
   </div>
   
