@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>postjavascript的prototype及继承 | BLOG</title>
+  <title>javascript的prototype及继承 | BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="__proto__  prototype extend" />
   
   
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="postjavascript的prototype及继承">
+  
+  <meta name="description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
+<meta name="keywords" content="__proto__  prototype extend">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript的prototype及继承">
 <meta property="og:url" content="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:updated_time" content="2018-03-23T12:20:22.709Z">
+<meta property="og:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
+<meta property="og:updated_time" content="2018-03-25T14:41:01.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="postjavascript的prototype及继承">
+<meta name="twitter:title" content="javascript的prototype及继承">
+<meta name="twitter:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
   
     <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
   
@@ -163,7 +169,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      postjavascript的prototype及继承
+      javascript的prototype及继承
     </h1>
   
 
@@ -186,7 +192,13 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="javascript的prototype及继承"><a href="#javascript的prototype及继承" class="headerlink" title="javascript的prototype及继承"></a>javascript的prototype及继承</h1><p>原型（prototype） &amp; 原型链<br>原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。</p>
+<p>构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性<br>对象可以通过 object.proto = {}; 来 添加 / 修改 原型上的属性</p>
+<p>注意：undefined，null 没有原型</p>
+<p>原型链定义: 原型的对象还有自己的原型，这样原型上还有原型的结构就构成了原型链。</p>
+<p>例子：</p>
+<p>Father.prototype = {<br>    like: “you”<br>}<br>function Father () {<br>    this.name = “duanran”;<br>    this.age = 18;<br>}<br>Son.prototype = new Father();<br>function Son () {<br>    this.height = ‘180’;<br>}<br>var son = new Son();<br>son.<strong>proto</strong> = {<br>    name: “DuanRan” // 修改原型的 name 属性<br>}<br>console.log(son);</p>
+
       
     </div>
     <footer class="article-footer">
@@ -231,6 +243,8 @@ var a = new Donate({
 
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proto-prototype-extend/">__proto__  prototype extend</a></li></ul>
+
     </footer>
   </div>
   
@@ -254,7 +268,7 @@ var a = new Donate({
     <div id="toc" class="toc-article">
     <strong class="toc-title">Inhalt</strong>
     
-        <ol class="nav">Nichts</ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript的prototype及继承"><span class="nav-number">1.</span> <span class="nav-text">javascript的prototype及继承</span></a></li></ol>
     
     </div>
   </aside>
