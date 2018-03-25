@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/index.html">
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
-<meta property="og:updated_time" content="2018-03-25T14:41:01.731Z">
+<meta property="og:updated_time" content="2018-03-25T14:42:09.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript的prototype及继承">
 <meta name="twitter:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
@@ -198,6 +198,16 @@
 <p>原型链定义: 原型的对象还有自己的原型，这样原型上还有原型的结构就构成了原型链。</p>
 <p>例子：</p>
 <p>Father.prototype = {<br>    like: “you”<br>}<br>function Father () {<br>    this.name = “duanran”;<br>    this.age = 18;<br>}<br>Son.prototype = new Father();<br>function Son () {<br>    this.height = ‘180’;<br>}<br>var son = new Son();<br>son.<strong>proto</strong> = {<br>    name: “DuanRan” // 修改原型的 name 属性<br>}<br>console.log(son);</p>
+<p>继承<br>继承（6种方法）：<br>1.原型链继承<br>function Father () {}<br>function Son () {}<br>Son.prototype = new Father()</p>
+<p>缺点：会继承过多没有用的属性，造成大量的浪费。</p>
+<p>2.构造函数继承 call / apply<br>function Father () {}<br>function Son () {Father.call(this)}</p>
+<p>缺点：种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走两个构造函数，效率很低。</p>
+<p>3.共享原型<br>function Father () {}<br>function Son () {}<br>Son.prototype = Father.prototype;</p>
+<p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
+<p>4.object.create()<br>function Father () {}<br>var son = Object.create(new Father);</p>
+<p>5.圣杯模式</p>
+<p>var inherit = (function (){<br>    var F = function(){};<br>    return function (C,P){<br>        F.prototype = P.prototype;<br>        C.prototype = new F();<br>        C.prototype.constructor = C;<br>        C.prototype.uber = P;<br>    }<br>}());<br>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
+<p>6.extands（es6 方法）<br>class Father {}<br>class Son extands Father {}</p>
 
       
     </div>
