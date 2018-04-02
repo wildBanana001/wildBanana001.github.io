@@ -301,21 +301,32 @@
 </li>
 <li>300 Multiple Choices：请求的资源指向多个资源的URL</li>
 <li>301 Moved Permanently：永久性重定向 (在请求的URL已被移除时使用)</li>
-<li>302 Found：临时性重定向 （客户端使用location首部给出的URL来临时定位定位资源</li>
-<li>303 See Other：请求的对应资源存在着另一个URI</li>
-<li>304 Not Modified：资源已找到，但是未符合要求</li>
-<li>305 Use Proxy：使用代理</li>
+<li>302 Found：临时性重定向 （客户端使用location首部给出的URL来临时定位定位资源，将来请求仍然使用老的URL)</li>
+<li>303 See Other：告知客户端应该使用另一个URL来获取资源</li>
+<li>304 Not Modified：资源已找到，但不符合要求</li>
+<li>305 Use Proxy：说明必须通过一个代理来访问资源，代理的位置由location首部给出</li>
 <li><p>307 Temporary Redirect：临时重定向</p>
 </li>
 <li><p>4xx：客户端错误状态码</p>
 </li>
-<li>400 Bad Request：请求报文中存在语法错误</li>
+<li>400 Bad Request：客户端发送了一个错误的请求(一般为语法错误)</li>
 <li>401 Unauthorized：发送的请求需要有通过HTTP认证的认证信息</li>
 <li>402 Payment Required：这个状体码未使用，但已经被保留，以用作未来只用。</li>
 <li>403 Forbidden：不允许访问该资源</li>
-<li>404 Not Found：服务器上没有该资源</li>
+<li>404 Not Found：服务器上找不到该资源</li>
 <li>405 Method Not Allowed：请求方法对某些特定的资源不允许使用</li>
-<li><p>406 Not Acceptable：无法访问</p>
+<li>406 Not Acceptable：无法访问</li>
+<li>407 Proxy Authentication：要求对资源进行认证的代理服务器</li>
+<li>408 Request Timeout：客户端完成请求所花时间过长，服务器返回这个状态码，并关闭连接</li>
+<li>409 Conflict：说明请求可能在资源上引发一些冲突</li>
+<li>410 Gone：服务器曾经拥有过次资源</li>
+<li>411 Length Required：服务器要求在请求报文中包含Content-Length首部</li>
+<li>412 Precondition Failed：客户端发起条件请求，其中一个条件失败</li>
+<li>413 Request Entity Too Large：客户端发送的实体主体部分比服务器能够活着希望处理的要长</li>
+<li>414 Request URL Too Long：客户端所发送请求中的请求URL比服务器能够或希望处理的要长</li>
+<li>415 Unsupported Media Type：服务器无法理解客户端发送内容类型</li>
+<li>416 Request Range Not Satisfiable：请求指定资源范围无效或无法满足</li>
+<li><p>417 Expectation Failed：服务器无法满足请求期望</p>
 </li>
 <li><p>5xx：服务器错误状态码</p>
 </li>
