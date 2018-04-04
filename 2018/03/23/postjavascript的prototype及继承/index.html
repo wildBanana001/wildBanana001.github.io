@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/index.html">
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
-<meta property="og:updated_time" content="2018-04-04T05:13:39.997Z">
+<meta property="og:updated_time" content="2018-04-04T07:21:36.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript的prototype及继承">
 <meta name="twitter:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
@@ -207,18 +207,19 @@
 <li>构造函数继承 call / apply<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;Father.call(this)&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>缺点：种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走两个构造函数，效率很低。</p>
+<p>缺点：这种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走一个构造函数，效率很低。</p>
 <ol>
 <li>共享原型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = Father.prototype;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
 <ol>
-<li><p>object.create()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">var son = Object.create(new Father);</span><br></pre></td></tr></table></figure>
+<li>object.create() <strong>在原型上生成新的对象的实例</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">var son = Object.create(new Father);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>圣杯模式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var inherit = (function ()&#123;</span><br><span class="line">    var F = function()&#123;&#125;;</span><br><span class="line">    return function (C,P)&#123;</span><br><span class="line">        F.prototype = P.prototype;</span><br><span class="line">        C.prototype = new F();</span><br><span class="line">        C.prototype.constructor = C;</span><br><span class="line">        C.prototype.uber = P;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</ol>
+<p>缺点：object.creat方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象上。</p>
+<ol>
+<li>圣杯模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var inherit = (function ()&#123;</span><br><span class="line">    var F = function()&#123;&#125;;</span><br><span class="line">    return function (C,P)&#123;</span><br><span class="line">        F.prototype = P.prototype;</span><br><span class="line">        C.prototype = new F();</span><br><span class="line">        C.prototype.constructor = C;</span><br><span class="line">        C.prototype.uber = P;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
