@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript的prototype及继承 | BLOG</title>
+  <title>prototype及继承 | BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="__proto__  prototype extend" />
+  <meta name="keywords" content="__proto__  prototype extend class new this" />
   
   
   
   
-  <meta name="description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
-<meta name="keywords" content="__proto__  prototype extend">
+  <meta name="description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 JS中的 proto 总是指向prototype。 proto 并不是JS语言本身的特性，而是各大厂商具体实现时添加的私有属性，但不推荐使用，避">
+<meta name="keywords" content="__proto__  prototype extend class new this">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript的prototype及继承">
+<meta property="og:title" content="prototype及继承">
 <meta property="og:url" content="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
-<meta property="og:updated_time" content="2018-04-04T07:38:15.540Z">
+<meta property="og:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 JS中的 proto 总是指向prototype。 proto 并不是JS语言本身的特性，而是各大厂商具体实现时添加的私有属性，但不推荐使用，避">
+<meta property="og:updated_time" content="2018-04-04T09:29:14.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript的prototype及继承">
-<meta name="twitter:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性对象可以通过 object.proto =">
+<meta name="twitter:title" content="prototype及继承">
+<meta name="twitter:description" content="javascript的prototype及继承原型（prototype） &amp;amp; 原型链原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。 JS中的 proto 总是指向prototype。 proto 并不是JS语言本身的特性，而是各大厂商具体实现时添加的私有属性，但不推荐使用，避">
   
     <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
   
@@ -169,7 +169,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      javascript的prototype及继承
+      prototype及继承
     </h1>
   
 
@@ -193,7 +193,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="javascript的prototype及继承"><a href="#javascript的prototype及继承" class="headerlink" title="javascript的prototype及继承"></a>javascript的prototype及继承</h1><h3 id="原型（prototype）-amp-原型链"><a href="#原型（prototype）-amp-原型链" class="headerlink" title="原型（prototype） &amp; 原型链"></a>原型（prototype） &amp; 原型链</h3><p>原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。</p>
-<p>构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性<br>对象可以通过 object.proto = {}; 来 添加 / 修改 原型上的属性</p>
+<p>JS中的 <strong>proto</strong> 总是指向prototype。 <strong>proto</strong> 并不是JS语言本身的特性，而是各大厂商具体实现时添加的私有属性，但不推荐使用，避免对环境产生依赖。</p>
 <p>注意：undefined，null 没有原型</p>
 <p>原型链定义: 原型的对象还有自己的原型，这样原型上还有原型的结构就构成了原型链。</p>
 <p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Father.prototype = &#123;</span><br><span class="line">    like: &quot;you&quot;</span><br><span class="line">&#125;</span><br><span class="line">function Father () &#123;</span><br><span class="line">    this.name = &quot;duanran&quot;;</span><br><span class="line">    this.age = 18;</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = new Father();</span><br><span class="line">function Son () &#123;</span><br><span class="line">    this.height = &apos;180&apos;;</span><br><span class="line">&#125;</span><br><span class="line">var son = new Son();</span><br><span class="line">son.__proto__ = &#123;</span><br><span class="line">    name: &quot;DuanRan&quot; // 修改原型的 name 属性</span><br><span class="line">&#125;</span><br><span class="line">console.log(son);</span><br></pre></td></tr></table></figure></p>
@@ -224,8 +224,14 @@
 </ol>
 <p>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
 <ol>
-<li>extands（es6 方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;&#125;</span><br><span class="line">class Son extands Father &#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>extands（es6 方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;&#125;</span><br><span class="line">class Son extands Father &#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h4 id="js中的prototype-与-class"><a href="#js中的prototype-与-class" class="headerlink" title="js中的prototype 与 class"></a>js中的prototype 与 class</h4><p>class是js的es6中的语法糖<br>JavaScript是一门<strong>没有编译阶段</strong>的<strong>动态弱类型</strong>语言。<br>JS中的class由于没有编译阶段，所有js中的class和java中的class拥有着质的区别。<br>所以推荐优先使用prototype，使用prototype可以理解js语言的核心，而class只是一个工具方法。</p>
+<p>在es6之前，我们要改变一个原型，要这样写：<br>var F = fucntion(){};<br>F.prototype = Father.prototype;<br>var son = new F();<br>这样我们就可以实现将son.<strong>proto</strong> = Father.prototype。<br>而在es6中，我们就可以很方便了。因为使用object.creat()方法：可以在原型上生成新的对象的实例。只需要这样写：<br>function Father(){};<br>var son = Object.creat(new Father);</p>
+<p>顺便我们在说说我们在改变原型时使用了new这个关键字。<br>问：new是什么？<br>答：new其实是JS语法中的一个语法糖。当我们要创建一个对象的实例时。我们要去继承这个对象的原型。那么new的作用就是帮你自动完成4个步骤。<br>①帮你创建一个新对象。 var obj = new Object();<br>②帮你绑定原型。obj.<strong>proto</strong> = Object.prototype 将新对象的<strong>prototype</strong>属性指向构造函数的prototype<br>③帮你将this指向新对象。<br>④帮你return新对象。但在这里注意构造函数是否有返回值。如果构造函数的返回值为基本数据类型（number，string，boolean，undefined，null）则返回临新对象。如果构造函数的返回值为对象类型，则返回这个对象类型。</p>
+<p>那么我们在说说this是什么？<br>this是一个指向。在函数预编译过程中this指向window对象。在全局作用域里this也指向window对象。<br>最后<strong>this永远指向最后调用它的那个对象</strong>。<br>那么我们如何改变this指向？<br>①在函数内部使用 var that = this<br>②使用apply、call、bind函数改变this指向<br>③用new实例化一个对象<br>④使用es6的箭头函数</p>
+<p>其中call/apply作用都是改变this指向，区别只是后面传的参数形式不同。call(thisArg,[arg1,[arg2,[…]]])，apply(thisArg,[arrs])<br>bind也能改变this指向。但是bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入bind()方法的第一个参数作为this，传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</p>
 
       
     </div>
@@ -271,7 +277,7 @@ var a = new Donate({
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proto-prototype-extend/">__proto__  prototype extend</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proto-prototype-extend-class-new-this/">__proto__  prototype extend class new this</a></li></ul>
 
     </footer>
   </div>
@@ -305,7 +311,7 @@ var a = new Donate({
     <div id="toc" class="toc-article">
     <strong class="toc-title">Inhalt</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript的prototype及继承"><span class="nav-number">1.</span> <span class="nav-text">javascript的prototype及继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型（prototype）-amp-原型链"><span class="nav-number">1.0.1.</span> <span class="nav-text">原型（prototype） &amp; 原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">1.0.2.</span> <span class="nav-text">继承</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript的prototype及继承"><span class="nav-number">1.</span> <span class="nav-text">javascript的prototype及继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型（prototype）-amp-原型链"><span class="nav-number">1.0.1.</span> <span class="nav-text">原型（prototype） &amp; 原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">1.0.2.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#js中的prototype-与-class"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">js中的prototype 与 class</span></a></li></ol></li></ol></li></ol></li></ol>
     
     </div>
   </aside>
