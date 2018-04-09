@@ -233,11 +233,11 @@
   <div class="intro-navigate">
       <p class="navigater-list">
         
-          <a id="beautifont" class="main-nav-link" href="/">Startseite</a>
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
         
-          <a id="beautifont" class="main-nav-link" href="/archives">Archive</a>
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
         
-          <a id="beautifont" class="main-nav-link" href="/categories">Kategorien</a>
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
         
           <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
         
@@ -910,9 +910,9 @@
 <p>绘制线段：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(x1,y1) + ctx.lineTo(x2,y2) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
 <p>绘制矩形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.rect(x,y,dx,dy) + ctx.fill() / ctx.stroke() 或 ctx.fillRect(x,y,dx,dy) 或 ctx.strokRect(x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
 <p>绘制圆形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.arc(x,y,r,起始弧度,结束弧度,弧度方向(0或1)) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
-<p>绘制文本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillText(‘xxx’) 或 ctx.strokeText(‘xxx’)</span><br></pre></td></tr></table></figure></p>
+<p>绘制文本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillText(<span class="string">'xxx'</span>,x,y) 或 ctx.strokeText(<span class="string">'xxx'</span>,x,y)</span><br></pre></td></tr></table></figure></p>
 <p>嵌入图片：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.drawImage(img,x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
-<p>设置 canvas 填充 &amp; 描边 样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle = ‘xxx’ ～ ctx.strokeStyle = ‘xxx’</span><br></pre></td></tr></table></figure></p>
+<p>设置 canvas 填充 &amp; 描边 样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle = <span class="string">'xxx'</span> ～ ctx.strokeStyle = <span class="string">'xxx'</span></span><br></pre></td></tr></table></figure></p>
 <p>开始绘制 &amp; 结束绘制：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.beginPath() ～ ctx.closePath()</span><br></pre></td></tr></table></figure></p>
 <p>问题：canvas高斯模糊怎么做？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var canvas =document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">var ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">// w：图片的宽，h：图片的高，canvasW：画布的宽，canvasH：画布的高，gaussBluer：高斯模糊封装函数</span><br><span class="line">ctx.drawImage(img, 0, 0, w, h, 0, 0, canvasW, canvasH) // 将图片放到canvas</span><br><span class="line">var pixel = ctx.getImageData(0, 0, canvasH, canvasH) // 获取图片像素信息，受到同源策略的限制</span><br><span class="line">gaussBlur(pixel); // 高斯模糊</span><br><span class="line">ctx.putImageData(pixel, 0, 0); // 将像素信息放回canvas</span><br><span class="line">var imageData = canvas.toDataURL(); // 将canvas的内容抽取成一张图片，受到同源策略的限制</span><br><span class="line">dom.css(<span class="string">'background-image'</span>, <span class="string">'url('</span> + imageData + <span class="string">')'</span>); // 变成图片的src</span><br></pre></td></tr></table></figure></p>
 <h3 id="svg-基本操作（svg-矢量图-缩放不失真）"><a href="#svg-基本操作（svg-矢量图-缩放不失真）" class="headerlink" title="svg 基本操作（svg 矢量图 缩放不失真）"></a>svg 基本操作（svg 矢量图 缩放不失真）</h3><p>使用svg：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=“500px” height=“500px”&gt;&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
