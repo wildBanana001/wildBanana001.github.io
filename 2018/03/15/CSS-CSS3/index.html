@@ -1,48 +1,973 @@
-extends base
+<!DOCTYPE html>
+<html style="display: none;" >
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
 
-block title
-  title= page.title + ' | ' + config.title
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format('ll')
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable
-      a.disqus-comment-count( href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true
-      iframe(src='/donate/?AliPayQR=' + theme.donate.alipay_qr + '&WeChatQR=' + theme.donate.wechat_qr + '&GitHub=' + theme.donate.github + '&BTCQR=' + theme.donate.btc_qr + '&BTCKEY='+ theme.donate.btc_key + '&PayPal=' + theme.donate.paypal_url, style='overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;', frameborder='0', scrolling='no')
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
 
-    if page.comments
-      include _partial/comments.pug
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            CSS &amp; CSS3 | 
+        
+        BLOG
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",css & css3">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BLOG">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/15/CSS-CSS3/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="BLOG">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2018/03/15/CSS-CSS3/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="CSS &amp; CSS3 | BLOG">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="css &amp; css3"> 
+
+    
+        <meta property="article:published_time" content="Thu Mar 15 2018 23:10:17 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 16 2018 10:24:12 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2018/03/15/CSS-CSS3/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/15/CSS-CSS3/index.html",
+    "headline": "CSS & CSS3",
+    "datePublished": "Thu Mar 15 2018 23:10:17 GMT+0800",
+    "dateModified": "Fri Mar 16 2018 10:24:12 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "林凯锋",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "BLOG",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",css & css3",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css-选择器"><span class="post-toc-number">1.</span> <span class="post-toc-text">css 选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#display-属性"><span class="post-toc-number">2.</span> <span class="post-toc-text">display 属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#position-属性-amp-z-index-属性-amp-三栏布局"><span class="post-toc-number">3.</span> <span class="post-toc-text">position 属性 &amp; z-index 属性 &amp; 三栏布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#float-属性-amp-清除浮动"><span class="post-toc-number">4.</span> <span class="post-toc-text">float 属性 &amp; 清除浮动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#盒子模型-amp-margin-塌陷-amp-margin-合并"><span class="post-toc-number">5.</span> <span class="post-toc-text">盒子模型 &amp; margin 塌陷 &amp; margin 合并</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css-溢出打点"><span class="post-toc-number">6.</span> <span class="post-toc-text">css 溢出打点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css-伪元素-与-伪类"><span class="post-toc-number">7.</span> <span class="post-toc-text">css 伪元素 与 伪类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-兼容性"><span class="post-toc-number">8.</span> <span class="post-toc-text">css3 兼容性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-选择器"><span class="post-toc-number">9.</span> <span class="post-toc-text">css3 选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-图像变换-transform"><span class="post-toc-number">10.</span> <span class="post-toc-text">css3 图像变换 transform</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-过度-transition"><span class="post-toc-number">11.</span> <span class="post-toc-text">css3 过度 transition</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-动画-animation"><span class="post-toc-number">12.</span> <span class="post-toc-text">css3 动画 animation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-三维动画"><span class="post-toc-number">13.</span> <span class="post-toc-text">css3 三维动画</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-动画加速"><span class="post-toc-number">14.</span> <span class="post-toc-text">css3 动画加速</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-多列布局-column"><span class="post-toc-number">15.</span> <span class="post-toc-text">css3 多列布局 column</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-弹性盒子-flex"><span class="post-toc-number">16.</span> <span class="post-toc-text">css3 弹性盒子 flex</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-盒子模型-box-sizing"><span class="post-toc-number">17.</span> <span class="post-toc-text">css3 盒子模型 box-sizing</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css3-背景图片-background-size"><span class="post-toc-number">18.</span> <span class="post-toc-text">css3 背景图片 background-size</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                CSS & CSS3
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>林凯锋</strong>
+        <span>Mar 15, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/css-css3/">css & css3</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS &amp; CSS3&url=http://yoursite.com/2018/03/15/CSS-CSS3/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CSS &amp; CSS3&url=http://yoursite.com/2018/03/15/CSS-CSS3/index.html&via=林凯锋" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/15/CSS-CSS3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/15/CSS-CSS3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>##css &amp; css3</p>
+<h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><p>css选择器：（权重值）<br>!important：（无穷大）<br>行间样式：（1000）<br>id：（100）<br>class、属性、伪类：（10）<br>标签、伪元素：（1）<br>通配符：（0）</p>
+<h3 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h3><p>display 属性：<br>none：此元素不会被显示<br>block：此元素将显示为块级元素，此元素前后会带有换行符<br>inline：此元素会被显示为内联元素，元素前后没有换行符<br>inline-block：行内块元素<br>flex：css3的弹性盒子</p>
+<h3 id="position-属性-amp-z-index-属性-amp-三栏布局"><a href="#position-属性-amp-z-index-属性-amp-三栏布局" class="headerlink" title="position 属性 &amp; z-index 属性 &amp; 三栏布局"></a>position 属性 &amp; z-index 属性 &amp; 三栏布局</h3><p>postion 属性: absolute，relative，fixed（相对于视口定位），static，inherit</p>
+<p>position 与 z-index 的关系：同一级元素，若都有 position，谁在后谁在上面。若含有 z-index，谁 z-index 大，谁在上面。可以不用考虑 position，若 z-index 相同再考虑 position。</p>
+<p>问题：若同一级元素，都是绝对定位，其中一个 z-index 为 10，另一个 z-index 为 20，但是 z-index 为 10 的元素中含有一个 z-index 为 30 的 子元素，谁在最上面？<br>答案：z-index 为 20 的元素在最上面。其次是 z-index 为 30 元素。最后是 z-index 为 10 的元素。（先考虑 父级 z-index，再考虑 子级 z-index。）</p>
+<p>问题：如何三栏布局？<br>答案：<br>1.使用 position</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.使用 float</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    <span class="built_in">float</span>: right;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.使用 display: flex（调换了right 与 center 的位置）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.left&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    flex-grow: 1;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line">.right&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="float-属性-amp-清除浮动"><a href="#float-属性-amp-清除浮动" class="headerlink" title="float 属性 &amp; 清除浮动"></a>float 属性 &amp; 清除浮动</h3><p>float 属性：left，right，none，inherit</p>
+<p>问题：如何清楚浮动？<br>答案：<br>1.为带有浮动元素的父元素，添加伪元素（最佳推选）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:after &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">    content: <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.触发bfc，为带有浮动元素的父元素，添加 overflew：hidden<br>3.触发bfc，为带有浮动元素的父元素，添加 position：absolute<br>4.触发bfc，为带有浮动元素的父元素，添加 display：inline-block<br>5.触发bfc，为带有浮动元素的父元素，添加 zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</p>
+<h3 id="盒子模型-amp-margin-塌陷-amp-margin-合并"><a href="#盒子模型-amp-margin-塌陷-amp-margin-合并" class="headerlink" title="盒子模型 &amp; margin 塌陷 &amp; margin 合并"></a>盒子模型 &amp; margin 塌陷 &amp; margin 合并</h3><p>盒子模型含有：<br>width 属性<br>padiing 属性： 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）<br>border 属性<br>margin 属性 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）</p>
+<p>问题：如何解决 margin 塌陷 与 margin 合并？<br>答案：<br>1.触发bfc，为含有 margin 的元素的父级，添加 overflew：hidden<br>2.触发bfc，为含有 margin 的元素的父级，添加 border</p>
+<h3 id="css-溢出打点"><a href="#css-溢出打点" class="headerlink" title="css 溢出打点"></a>css 溢出打点</h3><p>问题：css 单行如何益处打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>问题：css 多行如何益出打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: 2; // 几行就写几，这里是 3 行</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css-伪元素-与-伪类"><a href="#css-伪元素-与-伪类" class="headerlink" title="css 伪元素 与 伪类"></a>css 伪元素 与 伪类</h3><p>css 伪元素: after，before，first-letter，first-line（使用时需要设置 content: ‘xxx’）<br>css 伪类: hover，active，focus，link，visit，lang</p>
+<h3 id="css3-兼容性"><a href="#css3-兼容性" class="headerlink" title="css3 兼容性"></a>css3 兼容性</h3><p>-moz- // firefox—-&gt;gecko<br>-ms- // ie—-&gt;trident<br>-webkit- // safari—-&gt;webkit<br>-o- // opera—-&gt;presto<br>无// chrome—-&gt;blink/webkit</p>
+<h3 id="css3-选择器"><a href="#css3-选择器" class="headerlink" title="css3 选择器"></a>css3 选择器</h3><p>css3选择器:</p>
+<p>1.css3属性选择器 ele[attr=”*(任意位置),^(开头),$(结尾)”]</p>
+<p>2.css3伪类选择器</p>
+<p>第一组：同一父级下的某个子元素<br>:first-child<br>:last-child<br>:nth-child(n) 同一父级下的第几个子元素 （正着来）<br>:nth-last-child(n) （倒着来）</p>
+<p>第二组：（常用）一类中的某个元素</p>
+<p>:first-of-type<br>:last-of-type<br>:nth-of-type(n) 一类中的第几个元素 （正着来）<br>:nth-last-of-type(n) （倒着来）</p>
+<p>3.css3条件选择器</p>
+<p>E&gt;F F是E的直接子元素<br>E+F F是E的兄弟节点，而且是E后面的第一个<br>E~F F是E后面的兄弟节点</p>
+<h3 id="css3-图像变换-transform"><a href="#css3-图像变换-transform" class="headerlink" title="css3 图像变换 transform"></a>css3 图像变换 transform</h3><p>1.旋转<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate(…deg) / rotateX / rotateY / rotateZ / rotate3d(0/1 , 0/1 , 0/1 , …deg) // 1 变换，0 不变换</span><br></pre></td></tr></table></figure></p>
+<p>2.位移<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: translate(…px , …px) / translateX / translateY / translateZ / translate3d(…px , …px , …px)</span><br></pre></td></tr></table></figure></p>
+<p>3.缩放<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: scale(数字) ／ scaleX / scaleY / scaleZ / scale3d(数字 , 数字 , 数字)</span><br></pre></td></tr></table></figure></p>
+<p>4.扭曲<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: skew(…deg) / skewX / skewY</span><br></pre></td></tr></table></figure></p>
+<p>5.设置变换的原点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">translate-origin: left top / 50% 50%</span><br><span class="line">//默认变换的原点为 50% 50%，为图形的中心</span><br></pre></td></tr></table></figure></p>
+<h3 id="css3-过度-transition"><a href="#css3-过度-transition" class="headerlink" title="css3 过度 transition"></a>css3 过度 transition</h3><p>transition 为一个复合属性，由下面几部分组成</p>
+<p>1.transition-property 指定过渡或者动态模拟的css属性。若全部则写 all。<br>2.transition-duration 指定过渡所需要的时间。<br>3.transition-timing-function 指定过渡函数。个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.transition-delay 指定延迟时间。</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px;</span><br><span class="line">    transition: all 5s linear 1s;</span><br><span class="line">    // 过渡全部属性，五秒完成，匀速运动，延时一秒</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    left: 100px;</span><br><span class="line">    // 若该元素 left 变成 100px，则会触发过渡</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-动画-animation"><a href="#css3-动画-animation" class="headerlink" title="css3 动画 animation"></a>css3 动画 animation</h3><p>css3 动画：animation + keyframes</p>
+<p>animation 为一个复合属性，由下面几部分组成：</p>
+<p>1.animation-name：执行动画的 keyframes 的名字。<br>2.animation-duration：执行动画的总时长。<br>3.animation-timing-function：指定过渡函数。这个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.animation-delay：执行延迟时间。<br>5.animation-direction：动画播放的方式。这个属性的值主要有：normal 正常播放模式、reverse 倒序播放、alternate 动画在奇数次正向播放偶数次倒序播放、alternate-reverse 动画在奇数次倒序播放偶数次正向播放。<br>6.animation-iteration-count：动画执行的次数。infinite 是无限次，写一个数字就是要执行几次。<br>7.animation-fill-mode：执行完动画后物体停止的位置。forwards 是停在结束的位置上、backwards 是快速执行初始帧（这个最好配合延迟来观察）、none 是回到初始帧的位置、both 是同时具有 forwards 和 backwards 的效果。<br>8.animation-play-state：控制动画的播放状态。running 是播放、paused 是暂停。</p>
+<p>keyframes 声明一个运动函数，函数为 百分比 + 样式状态 的 结合体</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px</span><br><span class="line">    animation: move 5s linear 1s forwards;</span><br><span class="line">    // 运动函数 move，五秒完成，匀速运动，延时一秒，停在结束的位置</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        left: 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        left: 2px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        left: 3px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-三维动画"><a href="#css3-三维动画" class="headerlink" title="css3 三维动画"></a>css3 三维动画</h3><p>使用三维动画：</p>
+<p>首先，给父级设置transform-style: preverse-3d<br>其次（可选/可不选），给父级设置景深: transform: prespective(…px) 或者 prespective: …px // 景深就是父级的深度<br>然后，给子级使用tranform: translateZ(…px)，形成三维效果<br>最后，调用 transform 上的各种 图形变换效果形成三维动画</p>
+<h3 id="css3-动画加速"><a href="#css3-动画加速" class="headerlink" title="css3 动画加速"></a>css3 动画加速</h3><p>动画加速:</p>
+<p>1.GPU硬件加速模式，让浏览器在渲染动画的时候从CPU转向GPU</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transform: transtion3d(0,0,0);</span><br><span class="line">transform: translateZ(0);</span><br></pre></td></tr></table></figure>
+<p>2.防止动画出现闪烁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">backface-visibilty: hidden;</span><br><span class="line">prespective: …px;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-多列布局-column"><a href="#css3-多列布局-column" class="headerlink" title="css3 多列布局 column"></a>css3 多列布局 column</h3><p>多列布局:</p>
+<p>父级属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.columns: xxx // 分成几分就写几。 复合属性，含有（column-width ／ column-count）</span><br><span class="line">2.column-gap: xxx // 布局两列中间宽度</span><br><span class="line">3.column-rule: 20px solid green // 布局两列中间加一横线</span><br></pre></td></tr></table></figure></p>
+<p>子级属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.column-span: all; // 此个子集元素独占完整一行</span><br></pre></td></tr></table></figure></p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    columns: 5;</span><br><span class="line">    column-gap: 0px;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-弹性盒子-flex"><a href="#css3-弹性盒子-flex" class="headerlink" title="css3 弹性盒子 flex"></a>css3 弹性盒子 flex</h3><p>父级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.display: flex</span><br><span class="line">2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素</span><br><span class="line">3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）</span><br><span class="line">4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</span><br></pre></td></tr></table></figure></p>
+<p>子级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.flex-grow // 按比例分配剩余空间</span><br><span class="line">2.flex-shrink // 按比例收缩超出空间</span><br><span class="line">3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</span><br></pre></td></tr></table></figure></p>
+<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：</p>
+<p>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    flex-basis: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: blue;           </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-盒子模型-box-sizing"><a href="#css3-盒子模型-box-sizing" class="headerlink" title="css3 盒子模型 box-sizing"></a>css3 盒子模型 box-sizing</h3><p>盒子模型:</p>
+<p>box-sizing: border-box // IE6混杂模式的盒模型 border + padding + content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 border-box 的总 宽／高 = content + margin</p>
+<p>box-sizing: content-box // 标准模式的盒模型 content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 content-box 的总 宽／高 = content + padding + border + margin</p>
+<h3 id="css3-背景图片-background-size"><a href="#css3-背景图片-background-size" class="headerlink" title="css3 背景图片 background-size"></a>css3 背景图片 background-size</h3><p>1.contain：同比例放大或缩小，尽量让一张图以最大限度沾满容器，多出的部分重复显示</p>
+<p>2.cover：同比例放大或缩小，一张图填满容器，多余的部分隐藏。</p>
+<p>移动端布局（media／rem／%）<br>移动端布局：</p>
+<p>1.使用 媒体查询 media，兼容不同尺寸的设备<br>@media (填写媒体查询属性) {}</p>
+<p>2.使用 rem，相对于 html 跟元素大小<br>html {font-size: 62.5% ／ …;}<br>然后在在设置 宽／高／字体大小 等属性的时候 使用 rem</p>
+<p>3.宽高使用 百分比（%）布局，还原设计图尺寸<br>高无法设置百分比，可以选用 padding-top<br>padding-top 相对于宽设置百分比</p>
+<p>4.使用 iconfont 等矢量图片，代替 png 等静态图片</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/03/17/Markdown语法/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/07/HTML-HTML5/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="林凯锋's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            Theme - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>BLOG
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
