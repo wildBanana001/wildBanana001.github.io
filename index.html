@@ -256,6 +256,54 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-Promise"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/04/11/Promise/">Promise</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/04/11/Promise/" class="article-date">
+	  <time datetime="2018-04-11T15:41:20.000Z" itemprop="datePublished">2018-04-11</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ES6-Promise"><a href="#ES6-Promise" class="headerlink" title="ES6 Promise"></a>ES6 Promise</h2><h4 id="es6新增属性"><a href="#es6新增属性" class="headerlink" title="es6新增属性"></a>es6新增属性</h4><p>let const 变量的解构赋值<br>Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()<br>Set和Map数据结构<br>Proxy 代理  Reflect Iterator和for…of循环  Generator函数 *  async异步函数<br>class基本语法和继承 Promise  module模块化<br>字符串，正则，数值，函数，数组，对象的扩展</p>
+<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱，ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）</p>
+<p>Promise对象有三个状体：Pending（起始状体，进行中），Resolved（成功），Rejected（失败）<br>Pending –&gt; Resolved 或 Pending –&gt; Rejected ，状体改变后不会在变</p>
+<p>Promise 对象<br>var promise = new Promise(function(resolved,rejected){</p>
+<p>});</p>
+<p>Promise.catch<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，是rejected的语法糖</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/promise-catch-es6/">promise catch es6</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-网络"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
