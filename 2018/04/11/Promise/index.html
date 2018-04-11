@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/11/Promise/index.html">
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="ES6 Promisees6新增属性let const 变量的解构赋值Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()Set和Map数据结构Proxy 代理  Reflect Iterator和for…o">
-<meta property="og:updated_time" content="2018-04-11T15:50:24.147Z">
+<meta property="og:updated_time" content="2018-04-11T15:54:45.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Promise">
 <meta name="twitter:description" content="ES6 Promisees6新增属性let const 变量的解构赋值Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()Set和Map数据结构Proxy 代理  Reflect Iterator和for…o">
@@ -100,11 +100,11 @@
             <div class="navbar-collapse collapse">
               <ul class="hnav navbar-nav">
                 
-                  <li> <a class="main-nav-link" href="/">Startseite</a> </li>
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/archives">Archive</a> </li>
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/categories">Kategorien</a> </li>
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
                 
                   <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
                 
@@ -120,7 +120,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Schreib etwas..." />
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -132,11 +132,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Beiträge',
-            PAGES: 'Seiten',
-            CATEGORIES: 'Kategorien',
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
             TAGS: 'Tags',
-            UNTITLED: '(Unbenannt)',
+            UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -195,10 +195,7 @@
         <h2 id="ES6-Promise"><a href="#ES6-Promise" class="headerlink" title="ES6 Promise"></a>ES6 Promise</h2><h4 id="es6新增属性"><a href="#es6新增属性" class="headerlink" title="es6新增属性"></a>es6新增属性</h4><p>let const 变量的解构赋值<br>Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()<br>Set和Map数据结构<br>Proxy 代理  Reflect Iterator和for…of循环  Generator函数 *  async异步函数<br>class基本语法和继承 Promise  module模块化<br>字符串，正则，数值，函数，数组，对象的扩展</p>
 <h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱，ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）</p>
 <p>Promise对象有三个状体：Pending（起始状体，进行中），Resolved（成功），Rejected（失败）<br>Pending –&gt; Resolved 或 Pending –&gt; Rejected ，状体改变后不会在变</p>
-<p>Promise 对象<br>var promise = new Promise(function(resolved,rejected){</p>
-<p>});</p>
-<p>Promise.catch<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，是rejected的语法糖</p>
-<p>概念<br>ES6 原生提供了 Promise 对象</p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>ES6 原生提供了 Promise 对象</p>
 <p>所谓 Promise，就是一个对象，用来传递异步操作的消息。</p>
 <p>Promise 对象有三个状态：Pending，Resolved，Rejected</p>
 <p>Pending（Promise 对象的起始状态，进行中）<br>Resolved（Promise 对象的成功状态）<br>Rejected（Promise 对象的失败状态）</p>
@@ -214,11 +211,7 @@
 <p>第一个函数为 promise 对象成功时的回调函数<br>第二个函数为 promise 对象失败时的回调函数</p>
 <p>两个函数均有一个形参<br>第一个函数形参为，promise 对象成功时传递来的数据<br>第二个函数形参为，promise 对象失败时传递来的数据</p>
 <p>我们看一下下面这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 首先创建 Promise 对象</span><br><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    if(成功) &#123;</span><br><span class="line">        resolve(&apos;success&apos;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        reject(&apos;fail&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">//利用实例化对象调用 promise.then 方法</span><br><span class="line">promise.then(function (data) &#123;</span><br><span class="line">    // data 就是我们 resolve 发送的数据</span><br><span class="line">    console.log(data)</span><br><span class="line">    // 如果成功的话 控制台会打印 success</span><br><span class="line">&#125;,function (error) &#123;</span><br><span class="line">    // error 就是我们 reject 发送的数据</span><br><span class="line">    console.log(error)</span><br><span class="line">    // 如果失败的话 控制台会打印 fail</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h4 id="promise-catch"><a href="#promise-catch" class="headerlink" title="promise.catch"></a>promise.catch</h4><p>Promise 对象上还有一个 promise.catch 方法</p>
-<p>如果 promise.then 不传第二个参数的话，我们还可以用 promise.catch 方法来获取 promise 对象失败时传递来的数据</p>
-<p>promise.catch 接受 一个函数 作为参数</p>
-<p>函数为 promise 对象失败时的回调函数</p>
-<p>函数形参为，promise 对象失败时传递来的数据</p>
+<h4 id="promise-catch"><a href="#promise-catch" class="headerlink" title="promise.catch"></a>promise.catch</h4><p>Promise 对象上还有一个 promise.catch 方法<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，所有catch本质是rejected的语法糖<br>promise.catch 接受 一个函数 作为参数<br>函数为 promise 对象失败时的回调函数<br>函数形参为，promise 对象失败时传递来的数据</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 首先创建 Promise 对象</span><br><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    if(成功) &#123;</span><br><span class="line">        resolve(&apos;success&apos;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        reject(&apos;fail&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">promise.then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;).catch(function (error) &#123; </span><br><span class="line">    //利用实例化对象 链式 调用 promise.catch 方法</span><br><span class="line">    // error 就是我们 reject 发送的数据</span><br><span class="line">    console.log(error);</span><br><span class="line">    // 如果失败的话 控制台会打印 fail</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <h4 id="Promise-实现-图片预加载"><a href="#Promise-实现-图片预加载" class="headerlink" title="Promise 实现 图片预加载"></a>Promise 实现 图片预加载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function loadImage (url) &#123;</span><br><span class="line">    var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">        var img = new Image();</span><br><span class="line">        img.onload = function () &#123;</span><br><span class="line">            resolve(img);</span><br><span class="line">        &#125;</span><br><span class="line">        img.onerror = function () &#123;</span><br><span class="line">            reject(&apos;error&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">        img.src = url</span><br><span class="line">    &#125;)</span><br><span class="line">    return promise;</span><br><span class="line">&#125;</span><br><span class="line">var myImg = loadImage(&apos;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1495438302464&amp;di=8e9f1d9c871d8d5c1f653c06e2889448&amp;imgtype=0&amp;src=http%3A%2F%2Fv1.qzone.cc%2Favatar%2F201303%2F18%2F17%2F14%2F5146daf314dfa660.jpg%2521180x180.jpg&apos;);</span><br><span class="line">myImg.then(function (img) &#123;</span><br><span class="line">    document.body.appendChild(img)</span><br><span class="line">&#125;,function (error) &#123;</span><br><span class="line">    console.log(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h4 id="Promise-实现-Ajax-获取数据"><a href="#Promise-实现-Ajax-获取数据" class="headerlink" title="Promise 实现 Ajax 获取数据"></a>Promise 实现 Ajax 获取数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">function ajax (url,method,type,data) &#123;</span><br><span class="line">    var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">        var xml = null;</span><br><span class="line">        if(window.XMLHttpRequest) &#123;</span><br><span class="line">            xml = new window.XMLHttpRequest();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml = new ActiveXObject(&apos;Mircosoft.XMLHTTP&apos;);</span><br><span class="line">        &#125;</span><br><span class="line">        if(method == &quot;GET&quot;) &#123;</span><br><span class="line">            url += &apos;?&apos; + data + new Date().getTime();</span><br><span class="line">            xml.open(method,url,type);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml.open(method,url,type);</span><br><span class="line">        &#125;</span><br><span class="line">        xml.onreadystatechange = function () &#123;</span><br><span class="line">            if(xml.readyState == 4 &amp;&amp; xml.status == 200) &#123;</span><br><span class="line">                resolve(xml.responseText);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                reject(&apos;error&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(method == &quot;GET&quot;) &#123;</span><br><span class="line">            xml.send();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urle&apos;);</span><br><span class="line">            xml.send(data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;) </span><br><span class="line">    return promise;    </span><br><span class="line">&#125;</span><br><span class="line">var myAjax = ajax(&apos;http://www.baidu.com&apos;,&apos;GET&apos;,false);</span><br><span class="line">myAjax.then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;,function (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -276,7 +269,7 @@ var a = new Donate({
   
   
     <a href="/2018/03/29/网络/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">网络</div>
     </a>
   
@@ -289,9 +282,9 @@ var a = new Donate({
 
   <aside id="toc-sidebar">
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Inhalt</strong>
+    <strong class="toc-title">Contents</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-Promise"><span class="nav-number">1.</span> <span class="nav-text">ES6 Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#es6新增属性"><span class="nav-number">1.0.1.</span> <span class="nav-text">es6新增属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">1.0.2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-对象"><span class="nav-number">1.0.3.</span> <span class="nav-text">Promise 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-对象的-成功-与-失败"><span class="nav-number">1.0.4.</span> <span class="nav-text">Promise 对象的 成功 与 失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#promise-then"><span class="nav-number">1.0.5.</span> <span class="nav-text">promise.then</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#promise-catch"><span class="nav-number">1.0.6.</span> <span class="nav-text">promise.catch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-实现-图片预加载"><span class="nav-number">1.0.7.</span> <span class="nav-text">Promise 实现 图片预加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-实现-Ajax-获取数据"><span class="nav-number">1.0.8.</span> <span class="nav-text">Promise 实现 Ajax 获取数据</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-Promise"><span class="nav-number">1.</span> <span class="nav-text">ES6 Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#es6新增属性"><span class="nav-number">1.0.1.</span> <span class="nav-text">es6新增属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">1.0.2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">1.0.3.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-对象"><span class="nav-number">1.0.4.</span> <span class="nav-text">Promise 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-对象的-成功-与-失败"><span class="nav-number">1.0.5.</span> <span class="nav-text">Promise 对象的 成功 与 失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#promise-then"><span class="nav-number">1.0.6.</span> <span class="nav-text">promise.then</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#promise-catch"><span class="nav-number">1.0.7.</span> <span class="nav-text">promise.catch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-实现-图片预加载"><span class="nav-number">1.0.8.</span> <span class="nav-text">Promise 实现 图片预加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-实现-Ajax-获取数据"><span class="nav-number">1.0.9.</span> <span class="nav-text">Promise 实现 Ajax 获取数据</span></a></li></ol></li></ol></li></ol>
     
     </div>
   </aside>
