@@ -1,955 +1,1278 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<html style="display: none;" >
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
 
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+        BLOG
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
   
-  <title>BLOG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BLOG">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="BLOG">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BLOG">
-  
-    <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BLOG">
+    <meta name="msapplication-starturl" content="http://yoursite.com/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="BLOG">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="BLOG">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    
+
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "BLOG",
+        "logo": "/img/favicon.png"
+    },
+    "url": "http://yoursite.com",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/img/favicon.png"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    },
+    "description": ""
+}
+</script>
+
+
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">BLOG</a>
-      </h1>
-      
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
+    
+        <!-- Paradox Header -->
+        <!-- Daily pic -->
+<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
+
+    <!-- Pic & Slogan -->
+    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
+        <p class="index-top-block-slogan"><a href="#">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </a></p>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+
+    <!-- Avatar & Name -->
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <!-- Author Avatar -->
+        <div id="author-avatar">
+            <img src="/img/avatar.png" width="32px" height="32px" alt="avatar">
+        </div>
+        <div>
+            <strong>林凯锋</strong>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Promise" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/11/Promise/" class="article-date">
-  <time datetime="2018-04-11T15:41:20.000Z" itemprop="datePublished">2018-04-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/11/Promise/">Promise</a>
-    </h1>
-  
+</div>
 
-      </header>
+        <!-- Blog info -->
+<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
+
+    <!-- Search -->
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ES6-Promise"><a href="#ES6-Promise" class="headerlink" title="ES6 Promise"></a>ES6 Promise</h2><h4 id="es6新增属性"><a href="#es6新增属性" class="headerlink" title="es6新增属性"></a>es6新增属性</h4><p>let const 变量的解构赋值<br>Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()<br>Set和Map数据结构<br>Proxy 代理  Reflect Iterator和for…of循环  Generator函数 *  async异步函数<br>class基本语法和继承 Promise  module模块化<br>字符串，正则，数值，函数，数组，对象的扩展</p>
-<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱，ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）</p>
-<p>Promise对象有三个状体：Pending（起始状体，进行中），Resolved（成功），Rejected（失败）<br>Pending –&gt; Resolved 或 Pending –&gt; Rejected ，状体改变后不会在变</p>
-<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>ES6 原生提供了 Promise 对象</p>
-<p>所谓 Promise，就是一个对象，用来传递异步操作的消息。</p>
-<p>Promise 对象有三个状态：Pending，Resolved，Rejected</p>
-<p>Pending（Promise 对象的起始状态，进行中）<br>Resolved（Promise 对象的成功状态）<br>Rejected（Promise 对象的失败状态）</p>
-<p>Promise 对象的状态只可能从 Pending -&gt; Resolved 或者 Pending -&gt; Rejected，而且状态只要改变后不会再变</p>
-<h4 id="Promise-对象"><a href="#Promise-对象" class="headerlink" title="Promise 对象"></a>Promise 对象</h4><p>创建一个 Promise 对象<br>var promise = new Promise(function(resolve,reject){ … });<br>Promise 对象接受一个函数作为参数，函数的形参有两个参数，resolve，reject，是原生 Js 中自带的方法</p>
-<p>resolve：改变 Promise 的状态，变成成功状态，由（Pending -&gt; Resolved），并且可以发送成功状态时的数据<br>reject：改变 Promise 的状态，变成失败状态，由（Pending -&gt; Rejected），并且可以发送失败状态时的数据</p>
-<p>例如：我们想在 成功 时将 Promise 的状态变为成功，并且发送 success，失败时将 Promise 的状态变为失败，并且发送 fail<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    if(成功) &#123;</span><br><span class="line">        resolve(&apos;success&apos;); </span><br><span class="line">        // 我们调用 resolve 这个方法，改变了 Promise 的状态</span><br><span class="line">        // Promise 的状态由 Pending 变为 Resolved，并且发送 success</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        reject(&apos;fail&apos;); </span><br><span class="line">        // 我们调用 reject 这个方法，改变了 Promise 的状态</span><br><span class="line">        // Promise 的状态由 Pending 变为 Rejected，并且发送 fail</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h4 id="Promise-对象的-成功-与-失败"><a href="#Promise-对象的-成功-与-失败" class="headerlink" title="Promise 对象的 成功 与 失败"></a>Promise 对象的 成功 与 失败</h4><p>在 Promise 对象的方法中<br>我们调用 resolve 这个函数，就可以将 Promise 的状态变为成功<br>我们调用 resject 这个函数，就可以将 Promise 的状态变为失败</p>
-<p>例如：以 图片预加预加载 举例：当图片加载成功时我们把这个 img 标签发送，失败时我们发送 error 字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    var img = new Image();</span><br><span class="line">    img.onload = function () &#123; </span><br><span class="line">        // 图片预加载成功</span><br><span class="line">        resolve(img);</span><br><span class="line">        // 我们调用 resolve 这个方法，将 Promise 状态改变为成功，并发送 img 这个标签</span><br><span class="line">    &#125;</span><br><span class="line">    img.onerror = function () &#123; </span><br><span class="line">        // 图片预加载失败</span><br><span class="line">        reject(&apos;error&apos;);</span><br><span class="line">        // 我们调用 reject 这个方法，将 Promise 状态改变为失败，并发送 error 这个字符串</span><br><span class="line">    &#125;</span><br><span class="line">    img.src = url</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h4 id="promise-then"><a href="#promise-then" class="headerlink" title="promise.then"></a>promise.then</h4><p>在上面的例子中，我们都发送了数据，那我们发送的 数据 我们又如何获取到呢？</p>
-<p>通过 promise.then 这方法来获取到，我们发送的数据</p>
-<p>promise.then 接受 两个函数 作为参数（第二个参数可以不传）</p>
-<p>第一个函数为 promise 对象成功时的回调函数<br>第二个函数为 promise 对象失败时的回调函数</p>
-<p>两个函数均有一个形参<br>第一个函数形参为，promise 对象成功时传递来的数据<br>第二个函数形参为，promise 对象失败时传递来的数据</p>
-<p>我们看一下下面这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 首先创建 Promise 对象</span><br><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    if(成功) &#123;</span><br><span class="line">        resolve(&apos;success&apos;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        reject(&apos;fail&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">//利用实例化对象调用 promise.then 方法</span><br><span class="line">promise.then(function (data) &#123;</span><br><span class="line">    // data 就是我们 resolve 发送的数据</span><br><span class="line">    console.log(data)</span><br><span class="line">    // 如果成功的话 控制台会打印 success</span><br><span class="line">&#125;,function (error) &#123;</span><br><span class="line">    // error 就是我们 reject 发送的数据</span><br><span class="line">    console.log(error)</span><br><span class="line">    // 如果失败的话 控制台会打印 fail</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h4 id="promise-catch"><a href="#promise-catch" class="headerlink" title="promise.catch"></a>promise.catch</h4><p>Promise 对象上还有一个 promise.catch 方法<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，所有catch本质是rejected的语法糖<br>promise.catch 接受 一个函数 作为参数<br>函数为 promise 对象失败时的回调函数<br>函数形参为，promise 对象失败时传递来的数据</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 首先创建Promise对象</span><br><span class="line">var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">    if(成功) &#123;</span><br><span class="line">        resolve(&apos;success&apos;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        reject(&apos;fail&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">promise.then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;).catch(function (error) &#123; </span><br><span class="line">    //利用实例化对象 链式 调用 promise.catch 方法</span><br><span class="line">    // error 就是我们 reject 发送的数据</span><br><span class="line">    console.log(error);</span><br><span class="line">    // 如果失败的话 控制台会打印 fail</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h4 id="Promise-实现图片预加载"><a href="#Promise-实现图片预加载" class="headerlink" title="Promise 实现图片预加载"></a>Promise 实现图片预加载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function loadImage (url) &#123;</span><br><span class="line">    var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">        var img = new Image();</span><br><span class="line">        img.onload = function () &#123;</span><br><span class="line">            resolve(img);</span><br><span class="line">        &#125;</span><br><span class="line">        img.onerror = function () &#123;</span><br><span class="line">            reject(&apos;error&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">        img.src = url</span><br><span class="line">    &#125;)</span><br><span class="line">    return promise;</span><br><span class="line">&#125;</span><br><span class="line">var myImg = loadImage(&apos;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1495438302464&amp;di=8e9f1d9c871d8d5c1f653c06e2889448&amp;imgtype=0&amp;src=http%3A%2F%2Fv1.qzone.cc%2Favatar%2F201303%2F18%2F17%2F14%2F5146daf314dfa660.jpg%2521180x180.jpg&apos;);</span><br><span class="line">myImg.then(function (img) &#123;</span><br><span class="line">    document.body.appendChild(img)</span><br><span class="line">&#125;,function (error) &#123;</span><br><span class="line">    console.log(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="Promise-实现Ajax获取数据"><a href="#Promise-实现Ajax获取数据" class="headerlink" title="Promise 实现Ajax获取数据"></a>Promise 实现Ajax获取数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">function ajax (url,method,type,data) &#123;</span><br><span class="line">    var promise = new Promise(function (resolve,reject) &#123;</span><br><span class="line">        var xml = null;</span><br><span class="line">        if(window.XMLHttpRequest) &#123;</span><br><span class="line">            xml = new window.XMLHttpRequest();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml = new ActiveXObject(&apos;Mircosoft.XMLHTTP&apos;);</span><br><span class="line">        &#125;</span><br><span class="line">        if(method == &quot;GET&quot;) &#123;</span><br><span class="line">            url += &apos;?&apos; + data + new Date().getTime();</span><br><span class="line">            xml.open(method,url,type);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml.open(method,url,type);</span><br><span class="line">        &#125;</span><br><span class="line">        xml.onreadystatechange = function () &#123;</span><br><span class="line">            if(xml.readyState == 4 &amp;&amp; xml.status == 200) &#123;</span><br><span class="line">                resolve(xml.responseText);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                reject(&apos;error&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(method == &quot;GET&quot;) &#123;</span><br><span class="line">            xml.send();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            xml.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urle&apos;);</span><br><span class="line">            xml.send(data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;) </span><br><span class="line">    return promise;    </span><br><span class="line">&#125;</span><br><span class="line">var myAjax = ajax(&apos;http://www.baidu.com&apos;,&apos;GET&apos;,false);</span><br><span class="line">myAjax.then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;,function (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="Promise-源码"><a href="#Promise-源码" class="headerlink" title="Promise 源码"></a>Promise 源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">       我们要满足状态只能三种状态：PENDING,FULFILLED,REJECTED三种状态，且状态只能由PENDING=&gt;FULFILLED,或者PENDING=&gt;REJECTED</span><br><span class="line">       */</span><br><span class="line">       var PENDING = 0;</span><br><span class="line">       var FULFILLED = 1;</span><br><span class="line">       </span><br><span class="line">       var REJECTED = 2;</span><br><span class="line">       /*</span><br><span class="line">       value状态为执行成功事件的入参，deferreds保存着状态改变之后的需要处理的函数以及promise子节点，构造函数里面应该包含这三个属性的初始化</span><br><span class="line">        */</span><br><span class="line">       function Promise(callback) &#123;</span><br><span class="line">           this.status = PENDING;</span><br><span class="line">           this.value = null;</span><br><span class="line">           this.defferd = [];</span><br><span class="line">           setTimeout(callback.bind(this, this.resolve.bind(this), this.reject.bind(this)), 0);</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       Promise.prototype = &#123;</span><br><span class="line">           constructor: Promise,</span><br><span class="line">           //触发改变promise状态到FULFILLED</span><br><span class="line">           resolve: function (result) &#123;</span><br><span class="line">               this.status = FULFILLED;</span><br><span class="line">               this.value = result;</span><br><span class="line">               this.done();</span><br><span class="line">           &#125;,</span><br><span class="line">           //触发改变promise状态到REJECTED</span><br><span class="line">           reject: function (error) &#123;</span><br><span class="line">               this.status = REJECTED;</span><br><span class="line">               this.value = error;</span><br><span class="line">           &#125;,</span><br><span class="line">           //处理defferd</span><br><span class="line">           handle: function (fn) &#123;</span><br><span class="line">               if (!fn) &#123;</span><br><span class="line">                   return;</span><br><span class="line">               &#125;</span><br><span class="line">               var value = this.value;</span><br><span class="line">               var t = this.status;</span><br><span class="line">               var p;</span><br><span class="line">               if (t == PENDING) &#123;</span><br><span class="line">                    this.defferd.push(fn);</span><br><span class="line">               &#125; else &#123;</span><br><span class="line">                   if (t == FULFILLED &amp;&amp; typeof fn.onfulfiled == &apos;function&apos;) &#123;</span><br><span class="line">                       p = fn.onfulfiled(value);</span><br><span class="line">                   &#125;</span><br><span class="line">                   if (t == REJECTED &amp;&amp; typeof fn.onrejected == &apos;function&apos;) &#123;</span><br><span class="line">                       p = fn.onrejected(value);</span><br><span class="line">                   &#125;</span><br><span class="line">               var promise = fn.promise;</span><br><span class="line">               if (promise) &#123;</span><br><span class="line">                   if (p &amp;&amp; p.constructor == Promise) &#123;</span><br><span class="line">                       p.defferd = promise.defferd;</span><br><span class="line">                   &#125; else &#123;</span><br><span class="line">                       p = this;</span><br><span class="line">                       p.defferd = promise.defferd;</span><br><span class="line">                       this.done();</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;,</span><br><span class="line">           //触发promise defferd里面需要执行的函数</span><br><span class="line">           done: function () &#123;</span><br><span class="line">               var status = this.status;</span><br><span class="line">               if (status == PENDING) &#123;</span><br><span class="line">                   return;</span><br><span class="line">               &#125;</span><br><span class="line">               var defferd = this.defferd;</span><br><span class="line">               for (var i = 0; i &lt; defferd.length; i++) &#123;</span><br><span class="line">                   this.handle(defferd[i]);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;,</span><br><span class="line">           /*储存then函数里面的事件</span><br><span class="line">           返回promise对象</span><br><span class="line">           defferd函数当前promise对象里面</span><br><span class="line">           */</span><br><span class="line">           then: function (success, fail) &#123;</span><br><span class="line">              var o = &#123;</span><br><span class="line">                   onfulfiled: success,</span><br><span class="line">                   onrejected: fail</span><br><span class="line">               &#125;;</span><br><span class="line">               var status = this.status;</span><br><span class="line">               o.promise = new this.constructor(function () &#123;</span><br><span class="line">           </span><br><span class="line">               &#125;);</span><br><span class="line">               if (status == PENDING) &#123;</span><br><span class="line">                   this.defferd.push(o);</span><br><span class="line">               &#125; else if (status == FULFILLED || status == REJECTED) &#123;</span><br><span class="line">                   this.handle(o);</span><br><span class="line">               &#125;</span><br><span class="line">               return o.promise;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br></pre></td></tr></table></figure>
-      
+    <!-- Google -->
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
+        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+        </label>
+
+        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
+            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
+            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+
+            <input type="hidden" name="sitesearch" value="http://yoursite.com">
+        </form>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/11/Promise/" data-id="cjfzhuhqx00065cnwncevm6g6" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/promise-catch-es6/">promise catch es6</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-网络" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/29/网络/" class="article-date">
-  <time datetime="2018-03-29T14:59:01.000Z" itemprop="datePublished">2018-03-29</time>
-</a>
+
+
+
+
+
+    <!-- LOGO -->
+    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
+        <a href="#" target="_blank">
+            <img src="/img/logo.png" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Infomation -->
+    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+        <!-- Blog Title -->
+        <div>
+            <strong>BLOG</strong>
+        </div>
+        <div class="section-spacer"></div>
+
+        <!-- Pages -->
+        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">view_carousel</i>
+            <span class="visuallyhidden">Pages</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            
+        </ul>
+
+        <!-- Menu -->
+        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">more_vert</i>
+            <span class="visuallyhidden">show menu</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            
+
+            
+
+            
+                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=BLOG&url=http://yoursite.com&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Weibo
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=BLOG&url=http://yoursite.com&via=林凯锋" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Twitter
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Facebook
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://plus.google.com/share?url=http://yoursite.com" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Google+
+                    </li>
+                </a>
+            
+
+            
+
+            
+
+            
+        </ul>
+    </div>
+</div>
+
     
-  </div>
-  <div class="article-inner">
+    <div class="locate-thumbnail-symbol"></div>
+
+    <!-- Pin on top -->
     
+
+    <!-- Normal Post -->
     
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/29/网络/">网络</a>
-    </h1>
-  
-
-      </header>
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h3><h4 id="网络状态码"><a href="#网络状态码" class="headerlink" title="网络状态码"></a>网络状态码</h4><ul>
-<li>1xx：信息性状态码</li>
-<li>100 Continue: 客户端应用程序向服务器发送一个服务器无法处理或使用的大实体</li>
-<li><p>101 Switching Protocols : 服务器正在根据客户端的指定，将协议切换成Update首部所列的协议</p>
-</li>
-<li><p>2xx：成功状态码</p>
-</li>
-<li><strong>200 OK：请求已经被服务器正常处理</strong></li>
-<li>201 Created：服务器在请求的响应中创建服务器对象</li>
-<li>202 Accepted：请求已接受，但服务器还未对其执行任何动作</li>
-<li>203 Not-Authoritative：实体首部包含的信息不是来自于源端服务器，而是来自资源的一份副本</li>
-<li><strong>204 Not Content：响应报文中包含若干首部和一个状态行，但没有实体的主体部分</strong></li>
-<li>205 Reset Content：重置内容</li>
-<li><p><strong>206 Partial Content：表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求</strong></p>
-</li>
-<li><p>3xx：重定向状态码</p>
-</li>
-<li>300 Multiple Choices：请求的资源指向多个资源的URL</li>
-<li><strong>301 Moved Permanently：永久性重定向 (在请求的URL已被移除时使用)</strong></li>
-<li><strong>302 Found：临时性重定向 （客户端使用location首部给出的URL来临时定位定位资源，将来请求仍然使用老的URL)</strong></li>
-<li><strong>303 See Other：告知客户端应该使用另一个URL来获取资源</strong></li>
-<li><strong>304 Not Modified：资源已找到，但不符合要求</strong></li>
-<li>305 Use Proxy：说明必须通过一个代理来访问资源，代理的位置由location首部给出</li>
-<li><p><strong>307 Temporary Redirect：临时重定向</strong></p>
-</li>
-<li><p>4xx：客户端错误状态码</p>
-</li>
-<li><strong>400 Bad Request：客户端发送了一个错误的请求(一般为语法错误)</strong></li>
-<li><strong>401 Unauthorized：发送的请求需要有通过HTTP认证的认证信息</strong></li>
-<li>402 Payment Required：这个状体码未使用，但已经被保留，以用作未来只用。</li>
-<li><strong>403 Forbidden：不允许访问该资源</strong></li>
-<li><strong>404 Not Found：服务器上找不到该资源</strong></li>
-<li>405 Method Not Allowed：请求方法对某些特定的资源不允许使用</li>
-<li>406 Not Acceptable：无法访问</li>
-<li>407 Proxy Authentication：要求对资源进行认证的代理服务器</li>
-<li>408 Request Timeout：客户端完成请求所花时间过长，服务器返回这个状态码，并关闭连接</li>
-<li>409 Conflict：说明请求可能在资源上引发一些冲突</li>
-<li>410 Gone：服务器曾经拥有过次资源</li>
-<li>411 Length Required：服务器要求在请求报文中包含Content-Length首部</li>
-<li>412 Precondition Failed：客户端发起条件请求，其中一个条件失败</li>
-<li>413 Request Entity Too Large：客户端发送的实体主体部分比服务器能够活着希望处理的要长</li>
-<li>414 Request URL Too Long：客户端所发送请求中的请求URL比服务器能够或希望处理的要长</li>
-<li>415 Unsupported Media Type：服务器无法理解客户端发送内容类型</li>
-<li>416 Request Range Not Satisfiable：请求指定资源范围无效或无法满足</li>
-<li><p>417 Expectation Failed：服务器无法满足请求期望</p>
-</li>
-<li><p>5xx：服务器错误状态码</p>
-</li>
-<li><strong>500 Internal Server Error：服务器端在执行请求时发生错误</strong></li>
-<li>501 Not Implemented：服务器不具备完成请求的功能</li>
-<li>502 Bad Gateway：服务器作为网关或代理，从上游服务器收到无效响应</li>
-<li><strong>503 Service Unavailable：服务器暂时处于超负载或正在停机维护，无法处理请求</strong></li>
-<li>504 Gateway Timeout：服务器作为网关或代理，但是没有及时从上游服务器收到请求</li>
-<li>505 Http Version Not Supported：服务器不支持请求中所用的 HTTP 协议版本</li>
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/04/11/Promise/">Promise</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/04/11/Promise/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Apr 11, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/29/网络/">网络</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            网络
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/29/网络/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 29, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/23/postjavascript的prototype及继承/">prototype及继承</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/23/postjavascript的prototype及继承/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 23, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            CS...
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/20/postCSS垂直居中/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 20, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/17/Markdown语法/">Markdown语法</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/17/Markdown语法/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 17, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/15/CSS-CSS3/">CSS &amp; CSS3</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            ##css &amp; css3
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/15/CSS-CSS3/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 15, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/03/07/HTML-HTML5/">HTML &amp; HTML5</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/03/07/HTML-HTML5/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Mar 07, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/01/26/hello/">hello</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            hello world!
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/01/26/hello/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="林凯锋's avatar">
+            </div>
+            <div>
+                <strong>林凯锋</strong>
+                <span>Jan 26, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
+</script>
+
+    
+</div>
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="林凯锋's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                الرئيسية
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    أرشيف
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
 </ul>
-<h3 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h3><p>同源策略: 协议名、域名、端口号 都相同。<br>不同源 的 客户端 脚本 在没有明确授权的情况下，是不能够读写对方的资源的。</p>
-<p>协议名：http / https　协议，https 协议 比 http 协议 多了一层 ssl 安全协议层</p>
-<p>域名：主域名 / 子域名 –&gt; <code>www.baidu.com</code> / <code>zhidao.baidu.com</code><br>主域名 和 子域名 分为： 一级域名/二级域名/三级域名/ …<br>一级域名 com<br>二级域名 baidu.com</p>
-<p>端口号：80 / 8080（一般网页的默认端口号），当网页的端口号是默认端口号的时候，端口号会隐藏</p>
-<h3 id="三次握手-amp-四次挥手"><a href="#三次握手-amp-四次挥手" class="headerlink" title="三次握手 &amp; 四次挥手"></a>三次握手 &amp; 四次挥手</h3><p>三次握手：客户端与服务器建立连接</p>
-<ol>
-<li>客户端发送 SYN 数据包给服务器</li>
-<li>服务器回传一个 SYN / ACK 数据包</li>
-<li>客户端回传一个 ACK 数据包</li>
-</ol>
-<p>四次挥手：客户端与服务器断开连接</p>
-<ol>
-<li>客户端发送 FIN / ACK 数据包给服务器</li>
-<li>服务器返回 ACK 报文</li>
-<li>服务器与客户端断开连接, 发送 FIN / ACK 报文</li>
-<li>客户端返回一个 ACK 报文, 挥手结束</li>
-</ol>
-<p><strong>ACK : 确认序号有效<br>SYN : 发起一个新连接<br>FIN ： 释放一个新连接</strong><br>URG ： 紧急指针有效<br>PSH ： 接收方应该尽快将这个报文交给应用层<br>RST ： 重置连接 </p>
-<h3 id="URI-amp-URL"><a href="#URI-amp-URL" class="headerlink" title="URI &amp; URL"></a>URI &amp; URL</h3><p>URI：统一资源标识符<br>URL：统一资源定位符，URL 为 URI 的子集</p>
-<p>在浏览器输入一个 url 都经历了什么？</p>
-<ol>
-<li>浏览器通过 DNS 把域名解析成 ip 地址</li>
-<li>客户端通过 TCP 协议建立到服务器的 TCP 连接（三次握手）</li>
-<li>客户端向服务端发送 HTTP 协议包，请求服务器里面的资源文档</li>
-<li>服务器向客户端发送 HTTP 协议应答包</li>
-<li>客户端和服务器断开，客户端开始解释处理 HTML 文档</li>
-</ol>
-<h3 id="HTTP-协议-amp-TCP-IP-协议"><a href="#HTTP-协议-amp-TCP-IP-协议" class="headerlink" title="HTTP 协议 &amp; TCP / IP 协议"></a>HTTP 协议 &amp; TCP / IP 协议</h3><p>HTTP 协议 是 TCP / IP 协议 的子集。</p>
-<p>TCP / IP 分层管理的结构是: 应用层、传输层、网络层、数据链路层。</p>
-<p>应用层是 HTTP 协议<br>传输层是 TCP 协议<br>网络层是 IP 协议<br>链路层是 网络</p>
-<h3 id="请求-amp-响应"><a href="#请求-amp-响应" class="headerlink" title="请求 &amp; 响应"></a>请求 &amp; 响应</h3><p>HTTP 通过 报文 进行通信，报文 分为 请求报文 和 响应报文。</p>
-<p>请求报文：</p>
-<ol>
-<li>请求头：请求方法，请求URL，HTTP协议，版本 （GET/img/logo.gif HTTP/1.1）</li>
-<li>请求行：(Accept-Language:en)</li>
-<li>空行</li>
-<li>请求主体：请求中的内容</li>
-</ol>
-<p>响应报文：</p>
-<ol>
-<li>响应头：报文协议，报文版本，状态码，状态描述 (HTTP/1.1 200 OK)</li>
-<li>响应行：(content-length:16)</li>
-<li>空行</li>
-<li>响应主体</li>
-</ol>
-<p>get 与 post 的区别？<br>get：<br>资源类型：主动的 或 被动的<br>数据类型：文本<br>数据量：小于255个字符<br>可见性：url 的一部分，在浏览器地址中可见<br>数据缓存：数据在 url 历史缓存中</p>
-<p>post：<br>资源类型：主动的<br>数据类型：文本 或 二进制<br>数据量：没有限制<br>可见性：作为 请求主体 发送，用户不可见<br>数据缓存：数据不在 url 历史缓存中</p>
-<h3 id="ajax-amp-fetch"><a href="#ajax-amp-fetch" class="headerlink" title="ajax &amp; fetch"></a>ajax &amp; fetch</h3><h4 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h4><p>  ajax不是一种单一的技术，而是有机利用一系列交互式网页应用相关的技术所形成的结合体。<br>  ajax是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，ajax可以使网页实现异步更新。意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
-<h4 id="ajax-优缺点"><a href="#ajax-优缺点" class="headerlink" title="ajax 优缺点"></a>ajax 优缺点</h4><p>ajax 优点:</p>
-<ol>
-<li>页面无刷新，用户体验好</li>
-<li>使用异步的形式与服务器进行通信，响应更快</li>
-<li>减少冗余请求，减轻服务器的负担</li>
-<li>基于标准化的并被广泛支持的技术，不需要插件或者小程序</li>
-</ol>
-<p>AJAX缺点:</p>
-<ol>
-<li>不支持浏览器的后退机制</li>
-<li>对搜索引擎支持较弱</li>
-<li>无法使用URL直接访问</li>
-<li>破坏了程序异常机制</li>
-<li>存在一定安全问题</li>
-</ol>
-<h4 id="ajax包含技术"><a href="#ajax包含技术" class="headerlink" title="ajax包含技术"></a>ajax包含技术</h4><ol>
-<li>使用CSS和XHTML表示</li>
-<li>使用javascript来绑定和调用</li>
-<li>使用DOM模型来交互和动态显示</li>
-<li>使用XMLHttpRequest来和服务器进行异步通信</li>
-</ol>
-<p>XMLHttpRequest目前虽然还没有被W3C所采纳，但它已经是一个事实的标准，因为目前几乎所有的主流浏览器都支持它</p>
-<h4 id="ajax-步骤"><a href="#ajax-步骤" class="headerlink" title="ajax 步骤"></a>ajax 步骤</h4><p>通过XMLHttpRequest对象来向服务器发起异步请求，从服务器获取数据，用JavaScript来操作DOM更新页面</p>
-<ol>
-<li><p>创建 ajax 对象<br>var xml = XMLHttpRequest()  //主流浏览器<br>var xml = ActiveXObject(‘Mircosoft.XMLHTTP’)  //IE5、IE6</p>
-</li>
-<li><p>创建与服务器的连接和调用<br>xml.open(get/post, url, anync) // 第三个参数是boolean值，默认为true，异步模式</p>
-</li>
-<li><p>监听对象状态改变<br>xml.onReadyStateChange  //监听对象状态改变<br>xml.readyState == 4     //响应已完成 返回0：请求未初始化; 返回1：请求已建立，但还没发送(send还没调用); 返回2：请求已发送，正在处理(通常现在可以获取到响应头); 返回3.请求正在处理中(通常现在可以获取到响应的部分数据，但服务器还没有完成响应的生成);<br>xml.status == 200       //“OK：请求已经被服务器正常处理”<br>callBack(responseText)  // 若成功，通过回调函数接收 ajax 返回的数据</p>
-</li>
-<li><p>向服务器发送数据<br>xml.send()</p>
-</li>
-</ol>
-<ul>
-<li><p>使用GET请求：将要提交的参数写到open方法里的url里，send传参为null或空。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xml.open(&quot;GET&quot;, url + &apos;?&apos; + data, flag);</span><br><span class="line">xml.send(null) 或 xml.send()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用POST请求：若要像HTML表单那样POST数据，使用setRequestHeader()来添加HTTP头，然后在send()方法里规定希望发送的数据格式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xml.open(&quot;POST&quot;, url, flag);</span><br><span class="line">xml.setRequestHeader(&apos;Content-type&apos;, &apos;application/x-www-form-urlencoded&apos;);</span><br><span class="line">xml.send(data);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>为什么监听要放到发送数据前边？<br>因为因为现在网速是越来越快了，若网速非常快，刚刚请求数据，数据就已经返回回来了，但是代码还没有走到监听部分，这就导致了监听部分的失效。</p>
-<h4 id="封装-ajax"><a href="#封装-ajax" class="headerlink" title="封装 ajax"></a>封装 ajax</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">function Ajax(method, url, flag, data, callback)&#123;</span><br><span class="line">    var xml = null;</span><br><span class="line">    //兼容性</span><br><span class="line">    if(window.XMLHttpRequest) &#123;</span><br><span class="line">        xml = new XMLHttpRequest();</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        xml = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    //将method值变为大写</span><br><span class="line">    method = method.toUpperCase();</span><br><span class="line">    //判断请求方式</span><br><span class="line">    if(method === &apos;GET&apos;)&#123;</span><br><span class="line">        xml.open(method, url + &apos;?&apos; + data, flag);</span><br><span class="line">        xml.send();</span><br><span class="line">    &#125;else if(method === &apos;POST&apos;)&#123;</span><br><span class="line">        xml.open(method, url, flag);</span><br><span class="line">        xml.setRequestHeader(&apos;Content-type&apos;, &apos;application/x-www-form-urlencoded&apos;);</span><br><span class="line">        xml.send(data);</span><br><span class="line">    &#125;</span><br><span class="line">    //监听</span><br><span class="line">    xml.onreadystatechange = function () &#123;</span><br><span class="line">        if(xml.readyState === 4) &#123;</span><br><span class="line">            if(xml.status === 200) &#123;</span><br><span class="line">                callback(xml.responseText);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                alert(&apos;error&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="jQuery中的ajax"><a href="#jQuery中的ajax" class="headerlink" title="jQuery中的ajax"></a>jQuery中的ajax</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//ajax请求后台数据 </span><br><span class="line">var btn = document.getElementsByTagName(&quot;input&quot;)[0]; </span><br><span class="line">btn.onclick = function()&#123; </span><br><span class="line">    //json格式 </span><br><span class="line">    ajax(&#123;</span><br><span class="line">        type:&quot;post&quot;, </span><br><span class="line">        url:&quot;post.php&quot;, </span><br><span class="line">        data:&quot;username=poetries&amp;pwd=123456&quot;, </span><br><span class="line">        asyn:true, </span><br><span class="line">        success:function(data)&#123; </span><br><span class="line">            document.write(data); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125;); </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">//封装ajax </span><br><span class="line">function ajax(aJson)&#123; </span><br><span class="line">    var ajx = null; </span><br><span class="line">    var type = aJson.type || &quot;get&quot;; </span><br><span class="line">    var asyn = aJson.asyn || true; </span><br><span class="line">    // url 接收 传输位置 </span><br><span class="line">    var url = aJson.url; </span><br><span class="line">    // success 接收 传输完成后的回调函数 </span><br><span class="line">    var success = aJson.success;</span><br><span class="line">    // data 接收需要附带传输的数据 </span><br><span class="line">    var data = aJson.data || &apos;&apos;;</span><br><span class="line">    //兼容处理 </span><br><span class="line">    if(window.XMLHttpRequest)&#123;</span><br><span class="line">        ajx = new XMLHttpRequest();  //主流浏览器 </span><br><span class="line">    &#125;else &#123; </span><br><span class="line">        ajx = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);  //IE5、IE6 </span><br><span class="line">    &#125; </span><br><span class="line">    if (type == &quot;get&quot; &amp;&amp; data) &#123; </span><br><span class="line">        url +=&quot;/?&quot;+data+&quot;&amp;&quot;+Math.random(); </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    //初始化ajax请求 </span><br><span class="line">    ajx.open( type , url , asyn ); </span><br><span class="line">    //规定传输数据的格式 </span><br><span class="line">    ajx.setRequestHeader(&apos;content-type&apos;,&apos;application/x-www-form-urlencoded&apos;); </span><br><span class="line">    //发送ajax请求（包括post数据的传输） </span><br><span class="line">    type == &quot;get&quot; ?ajx.send():ajx.send(aJson.data); </span><br><span class="line">    //处理请求 </span><br><span class="line">    ajx.onreadystatechange = function(aJson)&#123; </span><br><span class="line">        if(ajx.readState == 4)&#123; </span><br><span class="line">            //200是HTTP 请求成功的状态码</span><br><span class="line">            if (ajx.status == 200 &amp;&amp; ajx.status&lt;300) &#123; </span><br><span class="line">            //请求成功处理数据 </span><br><span class="line">            success &amp;&amp; success(ajx.responseText); </span><br><span class="line">            &#125;else&#123; </span><br><span class="line">                alert(&quot;请求出错&quot;+ajx.status); </span><br><span class="line">            &#125; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a>Fetch</h3><p>Fetch API：Fetch 是 XMLHttpRequest 的最新替代技术。<br>Fetch API 提供了一个 fetch() 方法，被定义在 BOM 的 window 对象中。<br>Fetch 方法返回的是一个 Promise 对象，让你能够对 请求 的 返回结果 进行检索。</p>
-<h4 id="Fetch-的优点："><a href="#Fetch-的优点：" class="headerlink" title="Fetch 的优点："></a>Fetch 的优点：</h4><ol>
-<li>语法简洁，更加语义化</li>
-<li>基于标准 Promise 实现，可以链式调用，支持 async/await</li>
-</ol>
-<h4 id="Fetch返回的response"><a href="#Fetch返回的response" class="headerlink" title="Fetch返回的response"></a>Fetch返回的response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  body: ReadableStream</span><br><span class="line">  bodyUsed: false</span><br><span class="line">  headers: Headers</span><br><span class="line">  ok : true</span><br><span class="line">  redirected : false</span><br><span class="line">  status : 200</span><br><span class="line">  statusText : &quot;OK&quot;</span><br><span class="line">  type : &quot;cors&quot;</span><br><span class="line">  url : &quot;http://some-website.com/some-url&quot;</span><br><span class="line">  __proto__ : Response</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Fetch-的使用："><a href="#Fetch-的使用：" class="headerlink" title="Fetch 的使用："></a>Fetch 的使用：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//fetch获取数据</span><br><span class="line">fetch(url).then(function (res) &#123; // 需要同源策略</span><br><span class="line">    return res.json();</span><br><span class="line">&#125;).then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;).catch(function (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//fetch发送数据</span><br><span class="line">const data = &#123;data:&apos;content&apos;&#125;;</span><br><span class="line">fetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    body:JSON.stringify(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="Fetch处理异常-zlFetch"><a href="#Fetch处理异常-zlFetch" class="headerlink" title="Fetch处理异常 zlFetch"></a>Fetch处理异常 zlFetch</h4><p>Fetch不会关心ajax是否成功，它只关心从服务器发送请求和接收响应。所以我们应该在响应失败时去抛出异常。<br>那么我们可以使用zlFetch库，它会来帮我们进行异常处理。<br>只需要安装一下zlFetch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install zl-fetch --save</span><br></pre></td></tr></table></figure></p>
-<p>引入zlFetch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//正常JS引入</span><br><span class="line">const zlFetch = require(&apos;zl-fetch&apos;)</span><br><span class="line">//ES6引入</span><br><span class="line">import zlFetch from &apos;zl-fetch&apos;</span><br></pre></td></tr></table></figure></p>
-<h4 id="Fetch和zlFetch使用区别"><a href="#Fetch和zlFetch使用区别" class="headerlink" title="Fetch和zlFetch使用区别"></a>Fetch和zlFetch使用区别</h4><p>zlFetch还能无须转换成JSON格式就能发送JSON数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const data = &#123;data:&apos;content&apos;&#125;;</span><br><span class="line"></span><br><span class="line">//Fetch</span><br><span class="line">fetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    body:JSON.stringify(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//zlFetch</span><br><span class="line">zlFetch(url, &#123;</span><br><span class="line">  method: &apos;post&apos;,</span><br><span class="line">  body: data</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>Fetch是很好的方法，能发送和接收数据。不需要在编写XHR请求或依赖于jQuery。<br>尽管Fetch很好，但是其错误处理不是很直接。在处理之前，需要让错误信息进入到catch方法中。<br>使用zlFetch库，就不需要担心错误处理了。</p>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>跨域的方法</p>
-<ol>
-<li>flash</li>
-<li>服务器代理中转 // 将资源放在服务器上</li>
-<li>iframe + document.domain // 主域名相同，子域名不同，在子页面 与 主页面 分别加上 document.domain</li>
-<li>iframe + location.hash // 用 location.hash 值传递数据，将数据放到 url 里</li>
-<li>iframe + window.name // 修改子页面的 window.name 让主页面获取到这个值</li>
-<li>postMessage // 使用 iframe.contentWindow.postMessage 发送数据，在子页面绑定 message 事件接收数据</li>
-<li>jsonp // script 标签 src 属性 不受同源策略限制</li>
-<li>cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持</li>
-</ol>
-<p>后面两种现在比较常用！</p>
-<h3 id="jsonp-amp-jsonp-原理"><a href="#jsonp-amp-jsonp-原理" class="headerlink" title="jsonp &amp; jsonp 原理"></a>jsonp &amp; jsonp 原理</h3><p>什么是 jsonp：web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。</p>
-<p>jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。</p>
-<h4 id="jsonp-优缺点"><a href="#jsonp-优缺点" class="headerlink" title="jsonp 优缺点"></a>jsonp 优缺点</h4><p>jsonp 优点：</p>
-<ol>
-<li>JSONP 可以跨越同源策略</li>
-<li>兼容性好</li>
-<li>可以定义 callback 处理函数，处理函数交给了调用方</li>
-</ol>
-<p>jsonp 缺点：</p>
-<ol>
-<li>只支持 GET 请求而不支持 POST 请求</li>
-<li>调用失败的时候不会返回各种 HTTP 状态码</li>
-<li>安全性不高</li>
-</ol>
-<h4 id="封装-jsonp"><a href="#封装-jsonp" class="headerlink" title="封装 jsonp"></a>封装 jsonp</h4><p>我们自己封装的简单 jsonp：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">function jsonp (url,symbol,callback,jsonpCallBack) &#123; // symbol 一般为 &amp; 或者 ？</span><br><span class="line">    // 最后面的两个参数一般是和后台人员协商好的，回掉函数名称（一般为 cb 或 callback） 与 定义的回掉函数名字（我们定义的处理函数）</span><br><span class="line">    var script = document.createElement(&apos;script&apos;);</span><br><span class="line">    script.src = url + symbol + callback + &apos;=&apos; + jsonpCallBack;</span><br><span class="line">    document.body.appendChild(script);</span><br><span class="line">    document.body.removeChild(script);</span><br><span class="line">&#125;</span><br><span class="line">function doJsonp (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;</span><br><span class="line">jsonp(&apos;http://suggestion.baidu.com/su?wd=jsonp&apos;,&apos;&amp;&apos;,&apos;cb&apos;,&apos;doJsonp&apos;);</span><br><span class="line">jsonp 百度搜索框</span><br><span class="line">百度搜索框：</span><br><span class="line"></span><br><span class="line">// html</span><br><span class="line">&lt;input type=&quot;text&quot; id=&quot;input&quot; placeholder=&quot;请输入内容&quot;&gt;</span><br><span class="line">&lt;ul id=&quot;ul&quot;&gt;&lt;/ul&gt;</span><br><span class="line">// js</span><br><span class="line">var input = document.getElementById(&apos;input&apos;);</span><br><span class="line">var ul = document.getElementById(&apos;ul&apos;);</span><br><span class="line">input.onkeyup = function (e) &#123;</span><br><span class="line">    jsonp(&apos;http://suggestion.baidu.com/su?wd=&apos;,this.value,&apos;&amp;&apos;,&apos;cb&apos;,&apos;doJsonp&apos;);</span><br><span class="line">&#125;</span><br><span class="line">function jsonp (url,value,symbol,callback,jsonpCallBack) &#123; </span><br><span class="line">    var script = document.createElement(&apos;script&apos;);</span><br><span class="line">    script.src = url + value + symbol + callback + &apos;=&apos; + jsonpCallBack;</span><br><span class="line">    document.body.appendChild(script);</span><br><span class="line">    document.body.removeChild(script);</span><br><span class="line">&#125;</span><br><span class="line">function doJsonp (data) &#123;</span><br><span class="line">    var data = data.s;</span><br><span class="line">    var html = &apos;&apos;;</span><br><span class="line">    for(var i = 0 ; i &lt; data.length ; i++) &#123;</span><br><span class="line">        html += &apos;&lt;li&gt;&apos;;</span><br><span class="line">        html += &apos;&lt;a href=&quot;https://www.baidu.com/s?wd=&apos; + data[i] + &apos;&quot; target=&quot;_blank&quot;&gt;&apos;;</span><br><span class="line">        html += data[i];</span><br><span class="line">        html += &apos;&lt;/a&gt;&apos;;</span><br><span class="line">        html += &apos;&lt;/li&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    ul.innerHTML = html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="cors-跨域资源共享"><a href="#cors-跨域资源共享" class="headerlink" title="cors 跨域资源共享"></a>cors 跨域资源共享</h3><p>cors 与 jsonp 相比的优点：<br>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求（get／post／put／delete）</p>
-<p><strong>get ／ post ／ put ／ delete</strong><br>get，post，put，delete：对应这个资源的 查，改，增，删 4 个操作。</p>
-<h4 id="使用-cors："><a href="#使用-cors：" class="headerlink" title="使用 cors："></a>使用 cors：</h4><ol>
-<li>在请求头中，添加 Origin 字段。<br>Origin 字段用来说明，请求来自哪个源（协议 + 域名 + 端口）。<br>服务器根据这个值，决定是否同意这次请求。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Origin: https://wildbanana001.github.io/</span><br></pre></td></tr></table></figure>
-<ol>
-<li>在响应头中，服务器会返回 Access-Control-Allow-Origin 字段。<br>Access-Control-Allow-Origin 字段的值,要么是 Origin 的值，要么是 *（接受 任意 域名 的请求），表示接受这个域名的请求。<br>要是没有返回 Access-Control-Allow-Origin 字段，则代表出错了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. Access-Control-Allow-Origin: https://wildbanana001.github.io/</span><br><span class="line">2. Access-Control-Allow-Origin: *</span><br></pre></td></tr></table></figure></li>
-</ol>
 
-      
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            سمة - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/29/网络/" data-id="cjfzhuhrd000a5cnwerhzjg85" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络-ajax-fetch-jsonp/">网络 ajax fetch jsonp</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-postjavascript的prototype及继承" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/23/postjavascript的prototype及继承/" class="article-date">
-  <time datetime="2018-03-23T12:20:22.000Z" itemprop="datePublished">2018-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/23/postjavascript的prototype及继承/">prototype及继承</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="javascript的prototype及继承"><a href="#javascript的prototype及继承" class="headerlink" title="javascript的prototype及继承"></a>javascript的prototype及继承</h1><h3 id="原型（prototype）-amp-原型链"><a href="#原型（prototype）-amp-原型链" class="headerlink" title="原型（prototype） &amp; 原型链"></a>原型（prototype） &amp; 原型链</h3><p>原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。</p>
-<p>JS中的<code>__proto__</code>总是指向prototype。<code>__proto__</code>并不是JS语言本身的特性，而是各大厂商具体实现时添加的私有属性，但不推荐使用，避免对环境产生依赖。</p>
-<p>构造函数可以通过<code>function.prototype = {};</code>来 添加 / 修改 原型上的属性<br>对象可以通过<code>object.__proto__ = {};</code>来 添加 / 修改 原型上的属性</p>
-<p>注意：undefined，null 没有原型</p>
-<p>原型链定义: 原型的对象还有自己的原型，这样原型上还有原型的结构就构成了原型链。</p>
-<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Father.prototype = &#123;</span><br><span class="line">    like: &quot;you&quot;</span><br><span class="line">&#125;</span><br><span class="line">function Father () &#123;</span><br><span class="line">    this.name = &quot;duanran&quot;;</span><br><span class="line">    this.age = 18;</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = new Father();</span><br><span class="line">function Son () &#123;</span><br><span class="line">    this.height = &apos;180&apos;;</span><br><span class="line">&#125;</span><br><span class="line">var son = new Son();</span><br><span class="line">son.__proto__ = &#123;</span><br><span class="line">    name: &quot;DuanRan&quot; // 修改原型的 name 属性</span><br><span class="line">&#125;</span><br><span class="line">console.log(son);</span><br></pre></td></tr></table></figure></p>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承（6种方法）：</p>
-<ol>
-<li>原型链继承<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = new Father()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>缺点：会继承过多没有用的属性，造成大量的浪费。</p>
-<ol>
-<li>构造函数继承 call / apply<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;Father.call(this)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>缺点：这种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走一个构造函数，效率很低。</p>
-<ol>
-<li>共享原型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = Father.prototype;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
-<ol>
-<li>object.create() <strong>在原型上生成新的对象的实例</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">var son = Object.create(new Father);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>缺点：object.creat方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象上。所以这个继承得到的不是类，只是得到对象。<br>好处：这个方法在你想要改变一个的原型来创建实例而言会特别好用。</p>
-<ol>
-<li>圣杯模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var inherit = (function ()&#123;</span><br><span class="line">    var F = function()&#123;&#125;;</span><br><span class="line">    return function (C,P)&#123;</span><br><span class="line">        F.prototype = P.prototype;</span><br><span class="line">        C.prototype = new F();</span><br><span class="line">        C.prototype.constructor = C;</span><br><span class="line">        C.prototype.uber = P;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
-<ol>
-<li>extands（es6 方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;&#125;</span><br><span class="line">class Son extands Father &#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="js中的prototype-与-class"><a href="#js中的prototype-与-class" class="headerlink" title="js中的prototype 与 class"></a>js中的prototype 与 class</h4><p>class是js的es6中的语法糖<br>JavaScript是一门<strong>没有编译阶段</strong>的<strong>动态弱类型</strong>语言。<br>JS中的class由于没有编译阶段，所有js中的class和java中的class拥有着质的区别。<br>所以推荐优先使用prototype，使用prototype可以理解js语言的核心，而class只是一个工具方法。</p>
-<p>在es6之前，我们要改变一个原型，要这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var F = fucntion()&#123;&#125;;</span><br><span class="line">F.prototype = Father.prototype;</span><br><span class="line">var son = new F();</span><br></pre></td></tr></table></figure></p>
-<p>这样我们就可以实现将<code>son.__proto__ = Father.prototype</code>。<br>而在es6中，我们就可以很方便了。因为使用object.creat()方法：可以在原型上生成新的对象的实例。只需要这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father()&#123;&#125;;</span><br><span class="line">var son = Object.creat(new Father);</span><br></pre></td></tr></table></figure></p>
-<h4 id="顺便我们在说说我们在改变原型时使用了new这个关键字。"><a href="#顺便我们在说说我们在改变原型时使用了new这个关键字。" class="headerlink" title="顺便我们在说说我们在改变原型时使用了new这个关键字。"></a>顺便我们在说说我们在改变原型时使用了new这个关键字。</h4><p>问：new是什么？<br>答：new其实是JS语法中的一个语法糖。当我们要创建一个对象的实例时。我们要去继承这个对象的原型。那么new的作用就是帮你自动完成4个步骤。<br>①帮你创建一个新对象。<code>var obj = new Object()</code>;<br>②帮你绑定原型。<code>obj.__proto__ = Object.prototype</code> 将新对象的<code>__proto__</code>属性指向构造函数的prototype<br>③帮你将this指向新对象。<br>④帮你return新对象。但在这里注意构造函数是否有返回值。如果构造函数的返回值为基本数据类型（number，string，boolean，undefined，null）则返回临新对象。如果构造函数的返回值为对象类型，则返回这个对象类型。</p>
-<h4 id="那么我们在说说this是什么？"><a href="#那么我们在说说this是什么？" class="headerlink" title="那么我们在说说this是什么？"></a>那么我们在说说this是什么？</h4><p>this是一个指向。在函数预编译过程中this指向window对象。在全局作用域里this也指向window对象。<br>最后<strong>this永远指向最后调用它的那个对象</strong>。<br>那么我们如何改变this指向？<br>①在函数内部使用 var that = this<br>②使用apply、call、bind函数改变this指向<br>③用new实例化一个对象<br>④使用es6的箭头函数</p>
-<p>其中call/apply作用都是改变this指向，区别只是后面传的参数形式不同。<code>call(thisArg,[arg1,[arg2,[...]]])，apply(thisArg,[arrs])</code><br>bind也能改变this指向。但是bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入bind()方法的第一个参数作为this，传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/" data-id="cjfzhuhri000e5cnwxym1fd4m" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proto-prototype-extend-class-new-this/">__proto__  prototype extend class new this</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-postCSS垂直居中" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/20/postCSS垂直居中/" class="article-date">
-  <time datetime="2018-03-20T13:14:47.000Z" itemprop="datePublished">2018-03-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="CSS垂直居中"><a href="#CSS垂直居中" class="headerlink" title="CSS垂直居中"></a>CSS垂直居中</h2><h3 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h3><p>设置position:absolute属性。</p>
-<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">padding:10px;</span><br><span class="line">top:50%;	</span><br><span class="line">left:50%;	</span><br><span class="line">margin-left: -60px;	/*(width+padding)/2*/</span><br><span class="line">margin-top: -60px;	/*(height+padding)/2*/</span><br></pre></td></tr></table></figure>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">margin:auto;</span><br><span class="line">top:0;</span><br><span class="line">left:0;</span><br><span class="line">bottom:0;</span><br><span class="line">right:0;</span><br></pre></td></tr></table></figure>
-<h3 id="Transforms"><a href="#Transforms" class="headerlink" title="Transforms"></a>Transforms</h3><p>内容块定义transform:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;  </span><br><span class="line">top: 50%; left: 50%;  </span><br><span class="line">//兼容</span><br><span class="line">-webkit-transform: translate(-50%,-50%);  </span><br><span class="line">-ms-transform: translate(-50%,-50%);  </span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></p>
-<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">align-items: center;</span><br><span class="line">justify-content: center;</span><br></pre></td></tr></table></figure>
-<h3 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//父级</span><br><span class="line">display: table; </span><br><span class="line"></span><br><span class="line">//子级</span><br><span class="line">display: table-cell;</span><br><span class="line">text-align: center;</span><br><span class="line">vertical-align: middle; //设置元素的垂直对齐方式 middle: 把此元素放置在父元素的中部。</span><br></pre></td></tr></table></figure>
-<h3 id="顺便说说四大主流浏览器内核"><a href="#顺便说说四大主流浏览器内核" class="headerlink" title="顺便说说四大主流浏览器内核"></a>顺便说说四大主流浏览器内核</h3><p>浏览器内核：负责对网页语法的解释（如HTML,JAVASCRIPT)并渲染网页。</p>
-<ol>
-<li>Trident: IE (微软开发，开放内核)</li>
-<li>Gecko: FireFox （完全开源）</li>
-<li>Presto: Opera（前内核，现已废弃）</li>
-<li>Webkit: chrome Safari 傲游3 猎豹浏览器 百度浏览器 opear浏览器(Safari内核,Chrome内核原型,开源)</li>
-</ol>
-<ul>
-<li>Trident内核速度是四大主流浏览器内核中最慢的。所以曾经国内厂商开发了部分浏览器有”双核”或”多核”版本，就是将Trident内核称为”兼容模式”，其他内核称为”高速模式”。</li>
-<li>Presto内核在2003年的Opera7中首次被使用，该款引擎的特点就是渲染速度的优化达到了极致，然而代价是牺牲了网页的兼容性。</li>
-<li>Webkit是苹果公司自己的内核，google的chrome也使用webkit作为内核。 是一个开源的浏览器引擎，同时WebKit 也是苹果Mac OS X 系统引擎框架版本的名称，它拥有清晰的源码结构、极快的渲染速度，包含的 WebCore 排版引擎和JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来。 </li>
-<li>chromium是 Google 的chrome浏览器背后的引擎，Chromium是一个由Google主导开发的网页浏览器，其目的是为了创建一个安全、稳定和快速的通用浏览器。Chromium相当于Chrome的工程版或称实验版</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/20/postCSS垂直居中/" data-id="cjfzhuhrf000b5cnw9dzyhaf6" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Markdown语法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/17/Markdown语法/" class="article-date">
-  <time datetime="2018-03-17T13:42:39.000Z" itemprop="datePublished">2018-03-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/Markdown语法/">Markdown语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><p>初次接触markdown是写文章时所需。这是一种轻量级标记语言，创始人为John Gruber(约翰·格鲁伯)。这是一种比HTML还简单容易学习的语言！简单来说就是一种排版语法。</p>
-<h3 id="Markdown特性"><a href="#Markdown特性" class="headerlink" title="Markdown特性"></a>Markdown特性</h3><p>markdown允许人们使用易读易写的纯文本格式编写文档，然后转化为有效的HTML文档。它吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
-<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><pre><code>1. # 一级标题
-2. ## 二级标题
-3. ### 三级标题
-4. #### 四级标题
-5. ##### 五级标题
-6. ###### 六级标题
-7. 一级标题
-==================
-8. 二级标题
--------------------
-</code></pre><h3 id="斜体和斜体及删除线"><a href="#斜体和斜体及删除线" class="headerlink" title="斜体和斜体及删除线"></a>斜体和斜体及删除线</h3><pre><code>1. *斜体*
-2. _斜体_
-3. **粗体**
-4. ***加粗斜体***
-5. ~~删除线~~
-</code></pre><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><pre><code>1. 链接
-[链接标题](链接地址) | [title](url)
-例 ： [blog](wildBanana001.github.io)
-
-2. 引用链接
-[链接文字][链接标记] | [链接文字][]
-例 ： 今天我去了[GitHub][1]社区，创建了一个[账号][2]。这真的是个有趣的[博客][]呢！
-
-[1]:https://www.github.com &quot;GitHub&quot;
-[2]:https://www.github.com/wildBanana001 &quot;账号&quot;
-[博客]:wildBanana001.github.io
-
-3. 自动链接
-&lt;wildBanana001.github.io&gt;
-
-4. 页内超链接
-用于跳转到指定标题。
-### 超链接{#jump}
-
-我想回到[超链接](#jump)
-</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>1. - 无序列表
-2. 1. 有序列表
-</code></pre><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code>1. &gt; 一级
-2. &gt;&gt; 二级
-3. &gt;&gt; 三级
-</code></pre><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><pre><code>1. ![图片Alt](图片地址 &quot;图片Title&quot;)
-例 ： ![我的图片](img.jpg &quot;我的图片&quot;)
-2. 1[](图片地址)
-例 ： ![](img.jpg)
-</code></pre><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>1.  学号|姓名|分数
-    -|-|-
-    小明|男|75
-    小红|女|79
-    小陆|男|92
-2.  |学号|姓名|分数|
-    |-|-|-|
-    |小明|男|75|
-    |小红|女|79|
-    |小陆|男|92|
-</code></pre><h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><pre><code>1. * * *
-2. ***
-3. *****
-4. - - -
-5. ---------------------------------------
-</code></pre><h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><pre><code>单行在代码前后加入&quot; ` &quot;
-例 ： ` markdown `
-多行则在代码前后加入&quot; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例 ：</span><br></pre></td></tr></table></figure>
-
-       markdown
-       markdown
-       markdown
-       ```
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/17/Markdown语法/" data-id="cjfzhuhq400015cnw1kergggc" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS-CSS3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/15/CSS-CSS3/" class="article-date">
-  <time datetime="2018-03-15T15:10:17.000Z" itemprop="datePublished">2018-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/15/CSS-CSS3/">CSS &amp; CSS3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##css &amp; css3</p>
-<h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><p>css选择器：（权重值）<br>!important：（无穷大）<br>行间样式：（1000）<br>id：（100）<br>class、属性、伪类：（10）<br>标签、伪元素：（1）<br>通配符：（0）</p>
-<h3 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h3><p>display 属性：<br>none：此元素不会被显示<br>block：此元素将显示为块级元素，此元素前后会带有换行符<br>inline：此元素会被显示为内联元素，元素前后没有换行符<br>inline-block：行内块元素<br>flex：css3的弹性盒子</p>
-<h3 id="position-属性-amp-z-index-属性-amp-三栏布局"><a href="#position-属性-amp-z-index-属性-amp-三栏布局" class="headerlink" title="position 属性 &amp; z-index 属性 &amp; 三栏布局"></a>position 属性 &amp; z-index 属性 &amp; 三栏布局</h3><p>postion 属性: absolute，relative，fixed（相对于视口定位），static，inherit</p>
-<p>position 与 z-index 的关系：同一级元素，若都有 position，谁在后谁在上面。若含有 z-index，谁 z-index 大，谁在上面。可以不用考虑 position，若 z-index 相同再考虑 position。</p>
-<p>问题：若同一级元素，都是绝对定位，其中一个 z-index 为 10，另一个 z-index 为 20，但是 z-index 为 10 的元素中含有一个 z-index 为 30 的 子元素，谁在最上面？<br>答案：z-index 为 20 的元素在最上面。其次是 z-index 为 30 元素。最后是 z-index 为 10 的元素。（先考虑 父级 z-index，再考虑 子级 z-index。）</p>
-<p>问题：如何三栏布局？<br>答案：<br>1.使用 position</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.使用 float</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.left &#123;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    <span class="built_in">float</span>: right;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3.使用 display: flex（调换了right 与 center 的位置）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.left&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.center &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    flex-grow: 1;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line">.right&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 1000px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="float-属性-amp-清除浮动"><a href="#float-属性-amp-清除浮动" class="headerlink" title="float 属性 &amp; 清除浮动"></a>float 属性 &amp; 清除浮动</h3><p>float 属性：left，right，none，inherit</p>
-<p>问题：如何清楚浮动？<br>答案：<br>1.为带有浮动元素的父元素，添加伪元素（最佳推选）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:after &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">    content: <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.触发bfc，为带有浮动元素的父元素，添加 overflew：hidden<br>3.触发bfc，为带有浮动元素的父元素，添加 position：absolute<br>4.触发bfc，为带有浮动元素的父元素，添加 display：inline-block<br>5.触发bfc，为带有浮动元素的父元素，添加 zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</p>
-<h3 id="盒子模型-amp-margin-塌陷-amp-margin-合并"><a href="#盒子模型-amp-margin-塌陷-amp-margin-合并" class="headerlink" title="盒子模型 &amp; margin 塌陷 &amp; margin 合并"></a>盒子模型 &amp; margin 塌陷 &amp; margin 合并</h3><p>盒子模型含有：<br>width 属性<br>padiing 属性： 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）<br>border 属性<br>margin 属性 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）</p>
-<p>问题：如何解决 margin 塌陷 与 margin 合并？<br>答案：<br>1.触发bfc，为含有 margin 的元素的父级，添加 overflew：hidden<br>2.触发bfc，为含有 margin 的元素的父级，添加 border</p>
-<h3 id="css-溢出打点"><a href="#css-溢出打点" class="headerlink" title="css 溢出打点"></a>css 溢出打点</h3><p>问题：css 单行如何益处打点？<br>答案：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>问题：css 多行如何益出打点？<br>答案：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: 2; // 几行就写几，这里是 3 行</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="css-伪元素-与-伪类"><a href="#css-伪元素-与-伪类" class="headerlink" title="css 伪元素 与 伪类"></a>css 伪元素 与 伪类</h3><p>css 伪元素: after，before，first-letter，first-line（使用时需要设置 content: ‘xxx’）<br>css 伪类: hover，active，focus，link，visit，lang</p>
-<h3 id="css3-兼容性"><a href="#css3-兼容性" class="headerlink" title="css3 兼容性"></a>css3 兼容性</h3><p>-moz- // firefox—-&gt;gecko<br>-ms- // ie—-&gt;trident<br>-webkit- // safari—-&gt;webkit<br>-o- // opera—-&gt;presto<br>无// chrome—-&gt;blink/webkit</p>
-<h3 id="css3-选择器"><a href="#css3-选择器" class="headerlink" title="css3 选择器"></a>css3 选择器</h3><p>css3选择器:</p>
-<p>1.css3属性选择器 ele[attr=”*(任意位置),^(开头),$(结尾)”]</p>
-<p>2.css3伪类选择器</p>
-<p>第一组：同一父级下的某个子元素<br>:first-child<br>:last-child<br>:nth-child(n) 同一父级下的第几个子元素 （正着来）<br>:nth-last-child(n) （倒着来）</p>
-<p>第二组：（常用）一类中的某个元素</p>
-<p>:first-of-type<br>:last-of-type<br>:nth-of-type(n) 一类中的第几个元素 （正着来）<br>:nth-last-of-type(n) （倒着来）</p>
-<p>3.css3条件选择器</p>
-<p>E&gt;F F是E的直接子元素<br>E+F F是E的兄弟节点，而且是E后面的第一个<br>E~F F是E后面的兄弟节点</p>
-<h3 id="css3-图像变换-transform"><a href="#css3-图像变换-transform" class="headerlink" title="css3 图像变换 transform"></a>css3 图像变换 transform</h3><p>1.旋转<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate(…deg) / rotateX / rotateY / rotateZ / rotate3d(0/1 , 0/1 , 0/1 , …deg) // 1 变换，0 不变换</span><br></pre></td></tr></table></figure></p>
-<p>2.位移<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: translate(…px , …px) / translateX / translateY / translateZ / translate3d(…px , …px , …px)</span><br></pre></td></tr></table></figure></p>
-<p>3.缩放<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: scale(数字) ／ scaleX / scaleY / scaleZ / scale3d(数字 , 数字 , 数字)</span><br></pre></td></tr></table></figure></p>
-<p>4.扭曲<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: skew(…deg) / skewX / skewY</span><br></pre></td></tr></table></figure></p>
-<p>5.设置变换的原点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">translate-origin: left top / 50% 50%</span><br><span class="line">//默认变换的原点为 50% 50%，为图形的中心</span><br></pre></td></tr></table></figure></p>
-<h3 id="css3-过度-transition"><a href="#css3-过度-transition" class="headerlink" title="css3 过度 transition"></a>css3 过度 transition</h3><p>transition 为一个复合属性，由下面几部分组成</p>
-<p>1.transition-property 指定过渡或者动态模拟的css属性。若全部则写 all。<br>2.transition-duration 指定过渡所需要的时间。<br>3.transition-timing-function 指定过渡函数。个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.transition-delay 指定延迟时间。</p>
-<p>例子：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px;</span><br><span class="line">    transition: all 5s linear 1s;</span><br><span class="line">    // 过渡全部属性，五秒完成，匀速运动，延时一秒</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    left: 100px;</span><br><span class="line">    // 若该元素 left 变成 100px，则会触发过渡</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="css3-动画-animation"><a href="#css3-动画-animation" class="headerlink" title="css3 动画 animation"></a>css3 动画 animation</h3><p>css3 动画：animation + keyframes</p>
-<p>animation 为一个复合属性，由下面几部分组成：</p>
-<p>1.animation-name：执行动画的 keyframes 的名字。<br>2.animation-duration：执行动画的总时长。<br>3.animation-timing-function：指定过渡函数。这个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.animation-delay：执行延迟时间。<br>5.animation-direction：动画播放的方式。这个属性的值主要有：normal 正常播放模式、reverse 倒序播放、alternate 动画在奇数次正向播放偶数次倒序播放、alternate-reverse 动画在奇数次倒序播放偶数次正向播放。<br>6.animation-iteration-count：动画执行的次数。infinite 是无限次，写一个数字就是要执行几次。<br>7.animation-fill-mode：执行完动画后物体停止的位置。forwards 是停在结束的位置上、backwards 是快速执行初始帧（这个最好配合延迟来观察）、none 是回到初始帧的位置、both 是同时具有 forwards 和 backwards 的效果。<br>8.animation-play-state：控制动画的播放状态。running 是播放、paused 是暂停。</p>
-<p>keyframes 声明一个运动函数，函数为 百分比 + 样式状态 的 结合体</p>
-<p>例子：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px</span><br><span class="line">    animation: move 5s linear 1s forwards;</span><br><span class="line">    // 运动函数 move，五秒完成，匀速运动，延时一秒，停在结束的位置</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        left: 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        left: 2px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        left: 3px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="css3-三维动画"><a href="#css3-三维动画" class="headerlink" title="css3 三维动画"></a>css3 三维动画</h3><p>使用三维动画：</p>
-<p>首先，给父级设置transform-style: preverse-3d<br>其次（可选/可不选），给父级设置景深: transform: prespective(…px) 或者 prespective: …px // 景深就是父级的深度<br>然后，给子级使用tranform: translateZ(…px)，形成三维效果<br>最后，调用 transform 上的各种 图形变换效果形成三维动画</p>
-<h3 id="css3-动画加速"><a href="#css3-动画加速" class="headerlink" title="css3 动画加速"></a>css3 动画加速</h3><p>动画加速:</p>
-<p>1.GPU硬件加速模式，让浏览器在渲染动画的时候从CPU转向GPU</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transform: transtion3d(0,0,0);</span><br><span class="line">transform: translateZ(0);</span><br></pre></td></tr></table></figure>
-<p>2.防止动画出现闪烁</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">backface-visibilty: hidden;</span><br><span class="line">prespective: …px;</span><br></pre></td></tr></table></figure>
-<h3 id="css3-多列布局-column"><a href="#css3-多列布局-column" class="headerlink" title="css3 多列布局 column"></a>css3 多列布局 column</h3><p>多列布局:</p>
-<p>父级属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.columns: xxx // 分成几分就写几。 复合属性，含有（column-width ／ column-count）</span><br><span class="line">2.column-gap: xxx // 布局两列中间宽度</span><br><span class="line">3.column-rule: 20px solid green // 布局两列中间加一横线</span><br></pre></td></tr></table></figure></p>
-<p>子级属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.column-span: all; // 此个子集元素独占完整一行</span><br></pre></td></tr></table></figure></p>
-<p>例子：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    columns: 5;</span><br><span class="line">    column-gap: 0px;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="css3-弹性盒子-flex"><a href="#css3-弹性盒子-flex" class="headerlink" title="css3 弹性盒子 flex"></a>css3 弹性盒子 flex</h3><p>父级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.display: flex</span><br><span class="line">2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素</span><br><span class="line">3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）</span><br><span class="line">4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</span><br></pre></td></tr></table></figure></p>
-<p>子级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.flex-grow // 按比例分配剩余空间</span><br><span class="line">2.flex-shrink // 按比例收缩超出空间</span><br><span class="line">3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</span><br></pre></td></tr></table></figure></p>
-<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：</p>
-<p>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
-<p>例子：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    flex-basis: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: blue;           </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="css3-盒子模型-box-sizing"><a href="#css3-盒子模型-box-sizing" class="headerlink" title="css3 盒子模型 box-sizing"></a>css3 盒子模型 box-sizing</h3><p>盒子模型:</p>
-<p>box-sizing: border-box // IE6混杂模式的盒模型 border + padding + content = 设置的宽／高（width: …px / height: …px）</p>
-<p>所以 border-box 的总 宽／高 = content + margin</p>
-<p>box-sizing: content-box // 标准模式的盒模型 content = 设置的宽／高（width: …px / height: …px）</p>
-<p>所以 content-box 的总 宽／高 = content + padding + border + margin</p>
-<h3 id="css3-背景图片-background-size"><a href="#css3-背景图片-background-size" class="headerlink" title="css3 背景图片 background-size"></a>css3 背景图片 background-size</h3><p>1.contain：同比例放大或缩小，尽量让一张图以最大限度沾满容器，多出的部分重复显示</p>
-<p>2.cover：同比例放大或缩小，一张图填满容器，多余的部分隐藏。</p>
-<p>移动端布局（media／rem／%）<br>移动端布局：</p>
-<p>1.使用 媒体查询 media，兼容不同尺寸的设备<br>@media (填写媒体查询属性) {}</p>
-<p>2.使用 rem，相对于 html 跟元素大小<br>html {font-size: 62.5% ／ …;}<br>然后在在设置 宽／高／字体大小 等属性的时候 使用 rem</p>
-<p>3.宽高使用 百分比（%）布局，还原设计图尺寸<br>高无法设置百分比，可以选用 padding-top<br>padding-top 相对于宽设置百分比</p>
-<p>4.使用 iconfont 等矢量图片，代替 png 等静态图片</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/15/CSS-CSS3/" data-id="cjfzhuhpz00005cnwnjr2jn2n" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-css3/">css & css3</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML-HTML5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/07/HTML-HTML5/" class="article-date">
-  <time datetime="2018-03-07T14:39:23.000Z" itemprop="datePublished">2018-03-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/07/HTML-HTML5/">HTML &amp; HTML5</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="html-amp-html5"><a href="#html-amp-html5" class="headerlink" title="html &amp; html5"></a>html &amp; html5</h2><h3 id="行级元素-amp-块级元素"><a href="#行级元素-amp-块级元素" class="headerlink" title="行级元素 &amp; 块级元素"></a>行级元素 &amp; 块级元素</h3><p>行级元素（inline）：span，a，em，strong，br<br>块级元素（block）：div，h1~h6，p，ul，li，ol<br>行级块元素（inline-block）：img，input，textarea，select，button</p>
-<h3 id="单标签-amp-双标签"><a href="#单标签-amp-双标签" class="headerlink" title="单标签 &amp; 双标签"></a>单标签 &amp; 双标签</h3><p>单标签：img，input，meta，link，br，hr<br>双标签：div，span，h1~h6，p，script，style</p>
-<h3 id="meta-标签"><a href="#meta-标签" class="headerlink" title="meta 标签"></a>meta 标签</h3><p>用于设置字符集<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=”utf-8/gbk/…”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>用于告诉搜索引擎，你网页的关键字<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=”keywords” content=”xxx”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>用于告诉搜索引擎，你网站的主要内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=”description” content=”xxx”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>用于设计移动端网页（页面可视区大小 等于 手机尺寸）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>用于搜索引擎爬虫的索引方式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=”robots” content=”none”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>用于标注网页的作者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=”author” content=”xxx”/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>　</p>
-<h3 id="input-标签"><a href="#input-标签" class="headerlink" title="input 标签"></a>input 标签</h3><p>input 标签传统 type 属性：text／password／image／radio／checkbox／button／submit／reset／file<br>input 标签 h5 type 属性：email／url／number／range／date／…</p>
-<p>问题：input 默认显示 你好，若输入内容则消失？<br>答案：</p>
-<p>方法一：onfocus，onblur</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> </span><br><span class="line">       onfocus=<span class="string">"if(this.value=='你好')&#123;this.value=''&#125;"</span> </span><br><span class="line">       onblur=<span class="string">"if(!this.value)&#123;this.value='你好'&#125;"</span> </span><br><span class="line">       value=<span class="string">"你好"</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>方法二：h5 placeholder</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> placeholder=<span class="string">"你好"</span>&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="h5-新增标签"><a href="#h5-新增标签" class="headerlink" title="h5 新增标签"></a>h5 新增标签</h2><h3 id="结构性标签：主体标签，非主体标签"><a href="#结构性标签：主体标签，非主体标签" class="headerlink" title="结构性标签：主体标签，非主体标签"></a>结构性标签：主体标签，非主体标签</h3><p>主体标签：header（页眉），footer（页脚），hgroup（标题组），address（地址栏）<br>非主体标签：article（一个模块），section（一个区块），nav（导航），aside（侧边栏）</p>
-<p>非结构性标签：audio，video，canvas</p>
-<p>问题：若 ie 不兼容 h5 新标签怎么办？<br>答案：使用 js 的 createElement 方法，在 js 代码生成标签插入到页面里。</p>
-<h3 id="Audio-amp-Video-标签"><a href="#Audio-amp-Video-标签" class="headerlink" title="Audio &amp; Video 标签"></a>Audio &amp; Video 标签</h3><p>audio 和 video 标签上的一些 属性 与 方法:</p>
-<p>自动播放: autoplay（行间属性）<br>进度条: controls（行间属性）<br>播放: play（js 方法）<br>暂停: pause（js 方法）<br>已经播放时间: currentTime（js 方法）<br>视频的总时长: duration（js 方法）<br>音量: volume（js 方法）（0～1）<br>播放速度: playbackRate（js 方法）（默认1）</p>
-<h3 id="canvas-基本操作（canvas-位图-缩放失真）"><a href="#canvas-基本操作（canvas-位图-缩放失真）" class="headerlink" title="canvas 基本操作（canvas 位图 缩放失真）"></a>canvas 基本操作（canvas 位图 缩放失真）</h3><p>使用canvas：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas =document.getElementById(‘myCanvas’);</span><br><span class="line">var ctx = canvas.getContext(‘2d’);</span><br></pre></td></tr></table></figure></p>
-<p>绘制线段：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(x1,y1) + ctx.lineTo(x2,y2) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
-<p>绘制矩形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.rect(x,y,dx,dy) + ctx.fill() / ctx.stroke() 或 ctx.fillRect(x,y,dx,dy) 或 ctx.strokRect(x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
-<p>绘制圆形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.arc(x,y,r,起始弧度,结束弧度,弧度方向(0或1)) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
-<p>绘制文本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillText(<span class="string">'xxx'</span>,x,y) 或 ctx.strokeText(<span class="string">'xxx'</span>,x,y) 使用ctx.font =<span class="string">"50px Verdana"</span>来设置大小和字体</span><br></pre></td></tr></table></figure></p>
-<p>嵌入图片：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.drawImage(img,x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
-<p>设置 canvas 填充 &amp; 描边 样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle = <span class="string">'xxx'</span> ～ ctx.strokeStyle = <span class="string">'xxx'</span></span><br></pre></td></tr></table></figure></p>
-<p>开始绘制 &amp; 结束绘制：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.beginPath() ～ ctx.closePath()</span><br></pre></td></tr></table></figure></p>
-<p>问题：canvas高斯模糊怎么做？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var canvas =document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">var ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">// w：图片的宽，h：图片的高，canvasW：画布的宽，canvasH：画布的高，gaussBluer：高斯模糊封装函数</span><br><span class="line">ctx.drawImage(img, 0, 0, w, h, 0, 0, canvasW, canvasH) // 将图片放到canvas</span><br><span class="line">var pixel = ctx.getImageData(0, 0, canvasH, canvasH) // 获取图片像素信息，受到同源策略的限制</span><br><span class="line">gaussBlur(pixel); // 高斯模糊</span><br><span class="line">ctx.putImageData(pixel, 0, 0); // 将像素信息放回canvas</span><br><span class="line">var imageData = canvas.toDataURL(); // 将canvas的内容抽取成一张图片，受到同源策略的限制</span><br><span class="line">dom.css(<span class="string">'background-image'</span>, <span class="string">'url('</span> + imageData + <span class="string">')'</span>); // 变成图片的src</span><br></pre></td></tr></table></figure></p>
-<h3 id="svg-基本操作（svg-矢量图-缩放不失真）"><a href="#svg-基本操作（svg-矢量图-缩放不失真）" class="headerlink" title="svg 基本操作（svg 矢量图 缩放不失真）"></a>svg 基本操作（svg 矢量图 缩放不失真）</h3><p>使用svg：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=“500px” height=“500px”&gt;&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
-<p>绘制直线:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;line x1=”xxx” y1=”xxx” x2=”xxx” y2=”xxx”&gt;&lt;/line&gt;</span><br></pre></td></tr></table></figure></p>
-<p>绘制矩形:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;rect x=”xxx” y=”xxx” width=”xxx” height=”xxx” rx=”xxx” ry=”xxx”″&gt;&lt;/rect&gt;</span><br></pre></td></tr></table></figure></p>
-<p>绘制圆形:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;circle r=”xxx” cx=”xxx” cy=”xxx”&gt;&lt;/circle&gt;</span><br></pre></td></tr></table></figure></p>
-<p>绘制椭圆:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;ellipse rx=”xxx” ry=”xxx” cx=”xxx” cy=”xxx”&gt;&lt;/ellipse&gt;</span><br></pre></td></tr></table></figure></p>
-<p>路径:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;path d = “M xxx xxx L xxx xxx” /&gt; // 从(xxx,xxx)到(xxx,xxx)</span><br><span class="line">&lt;path d=”M xxx xxx H xxx V xxx”/&gt; // H横向移动 V纵向移动</span><br><span class="line">A 命令绘制圆弧</span><br><span class="line">Z 命令回到起点</span><br></pre></td></tr></table></figure></p>
-<h3 id="html5-地理位置"><a href="#html5-地理位置" class="headerlink" title="html5 地理位置"></a>html5 地理位置</h3><p>html5获取当前地理位置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.navigator.geolocation</span><br></pre></td></tr></table></figure></p>
-<p>为设备绑定运动状态的事件：devicemotion // 可实现摇一摇等功能</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(<span class="string">'devicemotion'</span>,<span class="function"><span class="title">function</span></span> () &#123;&#125;,<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="html5-拖拽"><a href="#html5-拖拽" class="headerlink" title="html5 拖拽"></a>html5 拖拽</h3><p>html5拖拽:</p>
-<p><div draggable="”true”"></div> 元素可以拖拽</p>
-<p>dragstart 被拖拽元素 开始时触发<br>dragend 被拖拽元素 结束时触发<br>dragenter 目标元素 拖拽元素进入目标元素<br>dragover 目标元素 拖拽元素在目标元素上移动<br>drop 目标元素 被拖拽的元素在目标元素上同时鼠标放开触发的事件</p>
-<p>h5 中小方块拖拽：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div draggable=<span class="string">"true"</span> id=<span class="string">"dragDiv"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line"><span class="comment">#dragDiv &#123;</span></span><br><span class="line">    position: absolute;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line">// js</span><br><span class="line">var div = document.getElementById(<span class="string">'dragDiv'</span>);</span><br><span class="line">var touchX,touchY;</span><br><span class="line">div.addEventListener(<span class="string">'dragstart'</span>,<span class="keyword">function</span> (e) &#123;</span><br><span class="line">    var x = e.clientX;</span><br><span class="line">    var y = e.clientY;</span><br><span class="line">    var left = this.offsetLeft;</span><br><span class="line">    var top = this.offsetTop;</span><br><span class="line">    touchX = x - left;</span><br><span class="line">    touchY = y - top;</span><br><span class="line">    document.addEventListener(<span class="string">'dragover'</span>,move,<span class="literal">false</span>);</span><br><span class="line">    div.addEventListener(<span class="string">'dragend'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        document.removeEventListener(<span class="string">'dragover'</span>,move,<span class="literal">false</span>);</span><br><span class="line">    &#125;,<span class="literal">false</span>)</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br><span class="line"><span class="keyword">function</span> move (e) &#123;</span><br><span class="line">    div.style.left = e.clientX - touchX + <span class="string">'px'</span>;</span><br><span class="line">    div.style.top = e.clientY - touchY + <span class="string">'px'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="html5-运动"><a href="#html5-运动" class="headerlink" title="html5 运动"></a>html5 运动</h3><p>html运动：requestAnimationFrame() // 每秒 60 贞，进行运动</p>
-<p>使用方法：递归调用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</span><br><span class="line">    requestAnimationFrame(move);</span><br><span class="line">    // ... 运动代码</span><br><span class="line">&#125;;</span><br><span class="line">var animationFrame = requestAnimationFrame(move);</span><br></pre></td></tr></table></figure>
-<p>解除 requestAnimationFrame 的运动:cancelAnimationFrame()</p>
-<p>解除方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</span><br><span class="line">    requestAnimationFrame(move);</span><br><span class="line">    // ... 运动代码</span><br><span class="line">&#125;;</span><br><span class="line">var animationFrame = requestAnimationFrame(move);</span><br><span class="line">setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    cancelAnimationFrame(animationFrame)</span><br><span class="line">&#125;,10000)</span><br></pre></td></tr></table></figure>
-<p>问题：兼容各个浏览器的 requestAnimFrame<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.requestAnimFrame = (<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> window.requestAnimationFrame ||</span><br><span class="line">        window.webkitRequestAnimationFrame ||</span><br><span class="line">        window.mozRequestAnimationFrame ||</span><br><span class="line">        <span class="keyword">function</span>( callback )&#123;</span><br><span class="line">            window.setTimeout(callback, 1000 / 60);</span><br><span class="line">        &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
-<h3 id="html5-客户端存储-amp-storage-amp-cookie"><a href="#html5-客户端存储-amp-storage-amp-cookie" class="headerlink" title="html5 客户端存储 &amp; storage &amp; cookie"></a>html5 客户端存储 &amp; storage &amp; cookie</h3><p>客户端存储:<br>localStorage: 存储量在5M以上，浏览器关闭不会失效<br>sessionStorage: 存储量在5M以上，浏览器关闭失效<br>cookie: 存储量不大于4k，过期失效</p>
-<p>localStorage/sessionStorage 操作方法:<br>1.setItem(name,val) 设置属性值<br>2.getItem(name) 获得属性值<br>3.removeItem(name) 移出属性值<br>4.clear() 清除所有属性</p>
-<p>localstorage 的 查看 与 存储：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse(window.localStorage.getItem(<span class="string">'xxx'</span>))</span><br><span class="line">window.localStorage.setItem(<span class="string">'xxx'</span>,JSON.stringify(&#123;...&#125;))</span><br></pre></td></tr></table></figure></p>
-<p>cookie 操作方法:</p>
-<p>1.存储 cookie：document.cookie = “name=duanran;expires=10000;” // 时间为10000毫秒<br>2.查看 cookie：document.cookie<br>3.删除 cookie：document.cookie = “name=;expires=-1;” // 时间设置为-1</p>
-<p>cookie 的封装函数：<br>1.存储 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> setCookie(name, value, time) &#123;</span><br><span class="line">    var oDate = new Date();</span><br><span class="line">    oDate.setDate(oDate.getDate() + time);</span><br><span class="line">    document.cookie = name + <span class="string">'='</span> + value + <span class="string">';expires='</span> + oDate + <span class="string">';'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2.查看 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getCookie(key) &#123;</span><br><span class="line">    var arr = document.cookie.split(<span class="string">';'</span>);</span><br><span class="line">    <span class="keyword">for</span>(var i = 0, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">        var temp = arr[i].split(<span class="string">'='</span>);</span><br><span class="line">        <span class="keyword">if</span>(temp[0] == key) &#123;</span><br><span class="line">            <span class="built_in">return</span> temp[1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3.删除 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> removeCookie (key) &#123;</span><br><span class="line">    setCookie(key, <span class="string">''</span>, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/07/HTML-HTML5/" data-id="cjfzhuhr300075cnwltdr63or" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-html5/">html & html5</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/26/hello/" class="article-date">
-  <time datetime="2018-01-26T04:54:12.000Z" itemprop="datePublished">2018-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/hello/">hello</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hello world!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/26/hello/" data-id="cjfzhuhra00095cnw65dia2tf" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-world/">hello world</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
+    <!-- Sidebar Image -->
     
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proto-prototype-extend-class-new-this/">__proto__  prototype extend class new this</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-css3/">css & css3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/">hello world</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-html5/">html & html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise-catch-es6/">promise catch es6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络-ajax-fetch-jsonp/">网络 ajax fetch jsonp</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/proto-prototype-extend-class-new-this/" style="font-size: 10px;">__proto__  prototype extend class new this</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-css3/" style="font-size: 10px;">css & css3</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/html-html5/" style="font-size: 10px;">html & html5</a> <a href="/tags/promise-catch-es6/" style="font-size: 10px;">promise catch es6</a> <a href="/tags/网络-ajax-fetch-jsonp/" style="font-size: 10px;">网络 ajax fetch jsonp</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/04/11/Promise/">Promise</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/29/网络/">网络</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/23/postjavascript的prototype及继承/">prototype及继承</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/17/Markdown语法/">Markdown语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 林凯锋<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>BLOG
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
 
 
-<script src="/js/script.js"></script>
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 
 
 
-  </div>
-</body>
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiftye -->
+    
+
+    <!-- Local Search-->
+    
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
 </html>
