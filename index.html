@@ -3,12 +3,10 @@
 <head>
   <meta charset="utf-8">
   
+
+  
   <title>BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  
   <meta property="og:type" content="website">
 <meta property="og:title" content="BLOG">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -18,267 +16,71 @@
   
     <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
   
-
   
-
-  <link rel="icon" href="/css/images/mylogo.jpg">
-  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+    <link rel="icon" href="/favicon.png">
+  
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
   <link rel="stylesheet" href="/css/style.css">
-
-  <script src="/js/jquery-3.1.1.min.js"></script>
-  <script src="/js/bootstrap.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-
-  
-    <link rel="stylesheet" href="/css/home.css" >
-  
-
-  
-
-  
-
-  
-  
-  
-    <link rel="stylesheet" href="/css/vdonate.css" >
-  
-
 </head>
 
-
-
-  <body>
-
-
-  
-    <header id="header">
-
-	<!-- 背景图模式 -->
-	
-
-    
-      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
-
-      <!-- Support rolling -->  
-        
-        <section class="awSlider">
-          <div class="carousel slide carousel-fade " data-ride="carousel">
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-               
-                  
-                    <div class="item active">
-                  
-                    <img id="carousel-img0" src="/css/images/home-bg.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img0 = new Image();
-                      var imageTag0 = document.getElementById("carousel-img0");
-                      img0.src = imageTag0.src;
-                      img0.onload=function(){
-                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag0.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag0.style.height = document.body.clientHeight + "px";
-                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img1" src="/css/images/sample.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img1 = new Image();
-                      var imageTag1 = document.getElementById("carousel-img1");
-                      img1.src = imageTag1.src;
-                      img1.onload=function(){
-                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag1.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag1.style.height = document.body.clientHeight + "px";
-                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img2" src="https://source.unsplash.com/collection/954550/1920x1080">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img2 = new Image();
-                      var imageTag2 = document.getElementById("carousel-img2");
-                      img2.src = imageTag2.src;
-                      img2.onload=function(){
-                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag2.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag2.style.height = document.body.clientHeight + "px";
-                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Geri</span>
-            </a>
-            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">İleri</span>
-            </a>
-          </div>
-        </section>
-        <script>
-          $('section.awSlider .carousel').carousel({
-              pause: '',
-              interval: 5000
-          });
-          var startImage = $('section.awSlider .item.active > img').attr('src');
-          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
-              var bscn = $(this).find('.item.active > img').attr('src');
-              $('section.awSlider > img').attr('src', bscn);
-          });
-        </script>
-      
-
-    
- 
-
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      <!-- 折线Polyline背景 -->
-      
-    </script>
-    
-
-    
-      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
-    
-
-        
-          <div class="homelogoback"  style="border: 1px solid #404040;" >
-            <h1><a href="#content" id="logo">BLOG</a></h1>
-            <h3></h3>
-            <h5>林凯锋</h5>
-            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
-          </div>
-        
-    
-    </div>
-  </div>
-
-  <!-- 自适应主页背景大图 -->
-  
-
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var homelogodiv = document.getElementById("homelogo");
-        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
-          homelogodiv.style.width = document.body.clientWidth + "px";
-          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-        } else {
-          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
-          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
-        }
-    </script>
-  
-
-  <div class="intro-navigate">
-      <p class="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">Home</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">About</a>
-        
-      </p>
-  </div>
-
-</header>
-  
+<body>
   <div id="container">
     <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">BLOG</a>
+      </h1>
       
-            
-      <div id="content" class="outer">
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <section id="main" style="float:none;">
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
   
-    <article id="post-Promise"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-Promise" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/11/Promise/" class="article-date">
+  <time datetime="2018-04-11T15:41:20.000Z" itemprop="datePublished">2018-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/04/11/Promise/">Promise</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/04/11/Promise/" class="article-date">
-	  <time datetime="2018-04-11T15:41:20.000Z" itemprop="datePublished">2018-04-11</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="ES6-Promise"><a href="#ES6-Promise" class="headerlink" title="ES6 Promise"></a>ES6 Promise</h2><h4 id="es6新增属性"><a href="#es6新增属性" class="headerlink" title="es6新增属性"></a>es6新增属性</h4><p>let const 变量的解构赋值<br>Symbol 避免属性名冲突 保证该变量独一无二。是新的原始数据类型（undefined、null、Boolean、String、number、object）它前面不能使用new命名，会报错，因为它是原始类型。 let s = Symbol()<br>Set和Map数据结构<br>Proxy 代理  Reflect Iterator和for…of循环  Generator函数 *  async异步函数<br>class基本语法和继承 Promise  module模块化<br>字符串，正则，数值，函数，数组，对象的扩展</p>
@@ -308,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/04/11/Promise/" data-id="cjfzhuhqx00065cnwncevm6g6" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/promise-catch-es6/">promise catch es6</a></li></ul>
@@ -318,32 +120,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-网络"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-网络" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/网络/" class="article-date">
+  <time datetime="2018-03-29T14:59:01.000Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/29/网络/">网络</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/29/网络/" class="article-date">
-	  <time datetime="2018-03-29T14:59:01.000Z" itemprop="datePublished">2018-03-29</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h3><h4 id="网络状态码"><a href="#网络状态码" class="headerlink" title="网络状态码"></a>网络状态码</h4><ul>
@@ -544,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/29/网络/" data-id="cjfzhuhrd000a5cnwerhzjg85" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络-ajax-fetch-jsonp/">网络 ajax fetch jsonp</a></li></ul>
@@ -554,32 +352,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-postjavascript的prototype及继承"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-postjavascript的prototype及继承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/23/postjavascript的prototype及继承/" class="article-date">
+  <time datetime="2018-03-23T12:20:22.000Z" itemprop="datePublished">2018-03-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/23/postjavascript的prototype及继承/">prototype及继承</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/23/postjavascript的prototype及继承/" class="article-date">
-	  <time datetime="2018-03-23T12:20:22.000Z" itemprop="datePublished">2018-03-23</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="javascript的prototype及继承"><a href="#javascript的prototype及继承" class="headerlink" title="javascript的prototype及继承"></a>javascript的prototype及继承</h1><h3 id="原型（prototype）-amp-原型链"><a href="#原型（prototype）-amp-原型链" class="headerlink" title="原型（prototype） &amp; 原型链"></a>原型（prototype） &amp; 原型链</h3><p>原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。</p>
@@ -628,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/23/postjavascript的prototype及继承/" data-id="cjfzhuhri000e5cnwxym1fd4m" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proto-prototype-extend-class-new-this/">__proto__  prototype extend class new this</a></li></ul>
@@ -638,32 +432,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-postCSS垂直居中"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-postCSS垂直居中" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/20/postCSS垂直居中/" class="article-date">
+  <time datetime="2018-03-20T13:14:47.000Z" itemprop="datePublished">2018-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/20/postCSS垂直居中/" class="article-date">
-	  <time datetime="2018-03-20T13:14:47.000Z" itemprop="datePublished">2018-03-20</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="CSS垂直居中"><a href="#CSS垂直居中" class="headerlink" title="CSS垂直居中"></a>CSS垂直居中</h2><h3 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h3><p>设置position:absolute属性。</p>
@@ -689,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/20/postCSS垂直居中/" data-id="cjfzhuhrf000b5cnw9dzyhaf6" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -699,32 +489,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-Markdown语法"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-Markdown语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/17/Markdown语法/" class="article-date">
+  <time datetime="2018-03-17T13:42:39.000Z" itemprop="datePublished">2018-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/17/Markdown语法/">Markdown语法</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/17/Markdown语法/" class="article-date">
-	  <time datetime="2018-03-17T13:42:39.000Z" itemprop="datePublished">2018-03-17</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><p>初次接触markdown是写文章时所需。这是一种轻量级标记语言，创始人为John Gruber(约翰·格鲁伯)。这是一种比HTML还简单容易学习的语言！简单来说就是一种排版语法。</p>
@@ -800,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/17/Markdown语法/" data-id="cjfzhuhq400015cnw1kergggc" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
@@ -810,32 +596,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-CSS-CSS3"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-CSS-CSS3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/15/CSS-CSS3/" class="article-date">
+  <time datetime="2018-03-15T15:10:17.000Z" itemprop="datePublished">2018-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/15/CSS-CSS3/">CSS &amp; CSS3</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/15/CSS-CSS3/" class="article-date">
-	  <time datetime="2018-03-15T15:10:17.000Z" itemprop="datePublished">2018-03-15</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p>##css &amp; css3</p>
@@ -919,7 +701,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/15/CSS-CSS3/" data-id="cjfzhuhpz00005cnwnjr2jn2n" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-css3/">css & css3</a></li></ul>
@@ -929,32 +711,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-HTML-HTML5"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-HTML-HTML5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/07/HTML-HTML5/" class="article-date">
+  <time datetime="2018-03-07T14:39:23.000Z" itemprop="datePublished">2018-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/03/07/HTML-HTML5/">HTML &amp; HTML5</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/03/07/HTML-HTML5/" class="article-date">
-	  <time datetime="2018-03-07T14:39:23.000Z" itemprop="datePublished">2018-03-07</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="html-amp-html5"><a href="#html-amp-html5" class="headerlink" title="html &amp; html5"></a>html &amp; html5</h2><h3 id="行级元素-amp-块级元素"><a href="#行级元素-amp-块级元素" class="headerlink" title="行级元素 &amp; 块级元素"></a>行级元素 &amp; 块级元素</h3><p>行级元素（inline）：span，a，em，strong，br<br>块级元素（block）：div，h1~h6，p，ul，li，ol<br>行级块元素（inline-block）：img，input，textarea，select，button</p>
@@ -1019,7 +797,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/03/07/HTML-HTML5/" data-id="cjfzhuhr300075cnwltdr63or" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-html5/">html & html5</a></li></ul>
@@ -1029,32 +807,28 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
-    <article id="post-hello"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/26/hello/" class="article-date">
+  <time datetime="2018-01-26T04:54:12.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
+    <h1 itemprop="name">
       <a class="article-title" href="/2018/01/26/hello/">hello</a>
     </h1>
   
 
       </header>
     
-    <div class="article-meta">
-      
-	<a href="/2018/01/26/hello/" class="article-date">
-	  <time datetime="2018-01-26T04:54:12.000Z" itemprop="datePublished">2018-01-26</time>
-	</a>
-
-      
-      
-    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p>hello world!</p>
@@ -1062,7 +836,7 @@
       
     </div>
     <footer class="article-footer">
-      
+      <a data-url="http://yoursite.com/2018/01/26/hello/" data-id="cjfzhuhra00095cnw65dia2tf" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-world/">hello world</a></li></ul>
@@ -1072,194 +846,110 @@
   
 </article>
 
-<!-- Table of Contents -->
 
   
 
 
 </section>
         
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proto-prototype-extend-class-new-this/">__proto__  prototype extend class new this</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-css3/">css & css3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/">hello world</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-html5/">html & html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise-catch-es6/">promise catch es6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络-ajax-fetch-jsonp/">网络 ajax fetch jsonp</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/proto-prototype-extend-class-new-this/" style="font-size: 10px;">__proto__  prototype extend class new this</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-css3/" style="font-size: 10px;">css & css3</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/html-html5/" style="font-size: 10px;">html & html5</a> <a href="/tags/promise-catch-es6/" style="font-size: 10px;">promise catch es6</a> <a href="/tags/网络-ajax-fetch-jsonp/" style="font-size: 10px;">网络 ajax fetch jsonp</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Promise/">Promise</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/网络/">网络</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/23/postjavascript的prototype及继承/">prototype及继承</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/postCSS垂直居中/">CSS垂直居中</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/17/Markdown语法/">Markdown语法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
-      
       <footer id="footer">
   
-
-  <div class="container">
-      	<div class="row">
-	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
-	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 BLOG All Rights Reserved.</p>
-	      
-	      
-    		<p class="busuanzi_uv">
-				UV : <span id="busuanzi_value_site_uv"></span> |  
-				PV : <span id="busuanzi_value_site_pv"></span>
-		    </p>
-  		   
-		</div>
-
-		
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 林凯锋<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
   </div>
 </footer>
-
-
-<!-- min height -->
-
-<script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-    var allheader = document.getElementById("allheader");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
-    if (allheader != null) {
-      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    } else {
-      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    }
-</script>
     </div>
-    <!-- <nav id="mobile-nav">
+    <nav id="mobile-nav">
   
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
   
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
+</nav>
     
 
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/scripts.js"></script>
-
-
-  <script src="/js/home.js"></script>
-
-
-
-
-
-
-
-
-
-
-	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
-
-
-
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
-
-
-
+<script src="/js/script.js"></script>
 
 
 
   </div>
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="myModalLabel">设置</h2>
-      </div>
-      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
-      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
-
-
-      <div class="modal-body">
-          <div style="margin:6px;">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
-              正文字号大小
-            </a>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            您已调整页面字体大小
-          </div>
-        </div>
-      
-
-
-          <div style="margin:6px;">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
-              夜间护眼模式
-            </a>
-        </div>
-          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="panel-body">
-            夜间模式已经开启，再次单击按钮即可关闭 
-          </div>
-        </div>
-
-        <div>
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        </div>
-         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="panel-body">
-            BLOG
-          </div>
-          <div class="panel-body">
-            Copyright © 2018 林凯锋 All Rights Reserved.
-          </div>
-        </div>
-      </div>
-
-
-      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
-      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
-      <div class="modal-footer">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-  
 </body>
 </html>
