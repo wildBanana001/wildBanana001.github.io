@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 22 2018 17:37:48 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 22 2018 17:40:00 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun Apr 22 2018 17:37:48 GMT+0800",
+    "dateModified": "Sun Apr 22 2018 17:40:00 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -484,7 +484,7 @@
 <p>图片对其方式：<br>标准盒模型：verticle-align: baseline; (inline, tablecell)怪异盒模型：verticle-align: bottom; </p>
 <h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><p>flex: 弹性容器(父元素) 、 弹性项目(子元素)<br>实则flex布局后，子元素的float、clear和vertical-align属性会失效。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">弹性容器：</span><br><span class="line"></span><br><span class="line">flex-direction 定义排列的方向</span><br><span class="line">row 默认值，主轴为水平，从左向右排列</span><br><span class="line">row-reverse 主轴为水平，从右向左排列</span><br><span class="line">column 主轴为垂直方向，从上向下排列</span><br><span class="line">column-reverse 主轴为垂直方向，从下向上排列</span><br><span class="line"></span><br><span class="line">flex-wrap 定义是否新行显示，以及新行的排列方向</span><br><span class="line">nowrap 默认值，显示在同一行，不换行</span><br><span class="line">wrap 一行显示不了时使用新行显示</span><br><span class="line">wrap-reverse 同 wrap，但是从下向上显示</span><br><span class="line"></span><br><span class="line">flex-flow 是 flex-direction 和 flex-wrap 的简写方式使用方法 </span><br><span class="line">flex-flow: &lt;‘flex-direction’&gt; || &lt;‘flex-wrap’&gt;</span><br><span class="line">默认值为： row nowrap</span><br><span class="line"></span><br><span class="line">justify-content 定义弹性项目在主轴上的对齐方式</span><br><span class="line">flex-start 默认值，从起始位置对齐，通常为左对齐</span><br><span class="line">flex-end 从结束位置对齐，通常为右对齐</span><br><span class="line">center 居中对齐</span><br><span class="line">space-between 两端对齐，平均间隔</span><br><span class="line">space-around 每个子元素都有相等的外边距，相邻元素外边距不会叠加</span><br><span class="line"></span><br><span class="line">align-items 定义弹性项目在侧轴上的对齐方式</span><br><span class="line">stretch 默认值，弹性项目在没指定高度或者高度为 auto 的情况下，则高度会占满空间</span><br><span class="line">flex-start 侧轴起点开始对齐</span><br><span class="line">flex-end 从侧轴结束位置对齐</span><br><span class="line">center 相对侧轴居中对齐</span><br><span class="line">baseline 与基线对齐</span><br><span class="line"></span><br><span class="line">align-content 定义多行在侧轴的对齐方式，当只有一行时，不起作用</span><br><span class="line">stretch 默认值，各行会伸展以占满整个纵轴空间</span><br><span class="line">flex-start 对齐到纵轴起点</span><br><span class="line">flex-end 对齐到纵轴终点</span><br><span class="line">center 相对纵轴中间对齐</span><br><span class="line">space-between 各行相对纵轴两端对齐，各行间隔相等</span><br><span class="line">space-around 各行都有相等的外边距，各行的外边距不会叠加</span><br><span class="line"></span><br><span class="line">弹性项目：</span><br><span class="line"></span><br><span class="line">flex-grow 数字，定义弹性项目的放大比例，默认 0</span><br><span class="line">flex-shrink 数字，定义弹性项目的缩小比例，默认 1，值 0 表示不缩小</span><br><span class="line">flex-basis 数字，定义弹性项目的默认尺寸，</span><br><span class="line">flex 是 flex-grow flex-shrink flex-basis 的缩写，默认值为 0 1 auto</span><br><span class="line">align-self 定义此弹性项目本身的对齐方式，会覆盖弹性容器 </span><br><span class="line">align-items 定义的对齐方式auto 从弹性容器继承</span><br><span class="line">stretch 弹性项目在没指定高度或者高度为 auto 的情况下，则高度会占满空间</span><br><span class="line">flex-start 侧轴起点开始对齐</span><br><span class="line">flex-end 从侧轴结束位置对齐</span><br><span class="line">center 相对侧轴居中对齐</span><br><span class="line">baseline 与基线对齐</span><br><span class="line">order 数字，定义弹性项目的显示顺序，数字越小越靠前</span><br></pre></td></tr></table></figure>
-<h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3><p>####事件冒泡/捕获/委托<br>事件流：事件捕获阶段（从上到下） -&gt; 处于目标阶段 -&gt; 事件冒泡阶段（从下到上）</p>
+<h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3><h4 id="事件冒泡-捕获-委托"><a href="#事件冒泡-捕获-委托" class="headerlink" title="事件冒泡/捕获/委托"></a>事件冒泡/捕获/委托</h4><p>事件流：事件捕获阶段（从上到下） -&gt; 处于目标阶段 -&gt; 事件冒泡阶段（从下到上）</p>
 <p>监听方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">addEventListener(event, function, useCapture)</span><br><span class="line">event：事件名，支持所有DOM事件</span><br><span class="line">function：指定事件触发时执行的函数</span><br><span class="line">useCapture（可选）：指定事件是否在捕获或冒泡阶段执行。</span><br><span class="line">true：捕获, false：冒泡。 默认false</span><br></pre></td></tr></table></figure></p>
 <p>处于目标阶段时，没有捕获与冒泡之分，执行顺序按照addEventListener的添加顺序决定。<br>使用stopPropagation()取消事件传播时，事件不会被传播给下一个节点，但同一节点的其他listener还是会执行。</p>
 <p>事件委托：利用事件冒泡，在所需DOM树最高层上添加一个事件处理程序。<br>适合事件委托事件： <code>click、mousedown、mouseup、keydown、keyup、keypress</code></p>
@@ -546,9 +546,8 @@
 <li>从此，以异步响应方式处理用户输入、网络事件等。</li>
 </ol>
 <h4 id="深拷贝、浅拷贝"><a href="#深拷贝、浅拷贝" class="headerlink" title="深拷贝、浅拷贝"></a>深拷贝、浅拷贝</h4><p>浅拷贝：原始类型为值传递，对象类型仍为引用传递。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function clone(src, tar) &#123; // src 源对象，tar 目标对象    </span><br><span class="line">    var tar = tar || &#123;&#125;;    </span><br><span class="line">    for(var prop in src) &#123;        </span><br><span class="line">        tar[prop] = src[prop];    </span><br><span class="line">    &#125;    </span><br><span class="line">    return tar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>ES6中，Object.assign可以实现对象的浅拷贝</p>
 <p>深拷贝：复制下所有属性，与原对象不在有联系。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function deepCopy(src,tar)&#123;    </span><br><span class="line">    var tar= tar|| &#123;&#125;;    </span><br><span class="line">    for (var prop in src)&#123;        </span><br><span class="line">        if (typeof(src[prop]) == &apos;object&apos;)&#123; </span><br><span class="line">            tar[prop] = (src[prop].constructor === Array ) ? [] : &#123;&#125;;            </span><br><span class="line">            deepCopy(src[prop],tar[prop]); </span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            tar[prop] = src[prop];        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;    </span><br><span class="line">    return tar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>数组方法slice(0)可以实现对数组的浅拷贝<br>数组方法concat([])可以实现对数组的深拷贝</p>
+<p>ES6中，Object.assign可以实现 <strong>对象</strong> 的浅拷贝<br>数组方法slice(0)可以实现对 <strong>数组</strong> 的浅拷贝<br>数组方法concat([])可以实现对 <strong>数组</strong> 的深拷贝</p>
 <h4 id="显隐身类型转化"><a href="#显隐身类型转化" class="headerlink" title="显隐身类型转化"></a>显隐身类型转化</h4><h4 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h4><p>节点的类型<br>节点的类型 与 对应的 nodeType（可用 nodeType 查看节点的 类型）<br>元素节点————&gt;1 // 例：<div><br>属性节点————&gt;2 // 例：id,class<br>文本节点————&gt;3 // 例：123<br>注释节点————&gt;8 // 例：&lt;!—— ——&gt;<br>document————&gt;9 // 例：#doucment<br>DocumentFragment————&gt;11</div></p>
 <p>选择元素节点选择元素节点的方法（6种）：</p>
 <ol>
@@ -818,7 +817,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/11/Promise/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
