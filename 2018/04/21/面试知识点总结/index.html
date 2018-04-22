@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 22 2018 17:44:13 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 22 2018 17:46:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun Apr 22 2018 17:44:13 GMT+0800",
+    "dateModified": "Sun Apr 22 2018 17:46:15 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>رئيسية</span>
+                    <span>Home</span>
                 </a>
             </span>
 
@@ -749,13 +749,9 @@
 3. 错误通知的管理，在HTTP1.1中新增了24个错误状态响应码，如409（Conflict）表示请求的资源与资源的当前状态发生冲突；410（Gone）表示服务器上的某个资源被永久性的删除。
 4. Host头处理，在HTTP1.0中认为每台服务器都绑定一个唯一的IP地址，因此，请求消息中的URL并没有传递主机名（hostname）。但随着虚拟主机技术的发展，在一台物理服务器上可以存在多个虚拟主机（Multi-homed Web Servers），并且它们共享一个IP地址。HTTP1.1的请求消息和响应消息都应支持Host头域，且请求消息中如果没有Host头域会报告一个错误（400 Bad Request）。
 5. 长连接，HTTP 1.1支持长连接（PersistentConnection）和请求的流水线（Pipelining）处理，在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection： keep-alive，一定程度上弥补了HTTP1.0每次请求都要创建连接的缺点。
-</code></pre><h4 id="HTTPS与HTTP的一些区别"><a href="#HTTPS与HTTP的一些区别" class="headerlink" title="HTTPS与HTTP的一些区别"></a>HTTPS与HTTP的一些区别</h4><pre><code>* HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。
-* HTTP协议运行在TCP之上，所有传输的内容都是明文，HTTPS运行在SSL/TLS之上，SSL/TLS运行在TCP之上，所有传输的内容都经过加密的。
-* HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
-* HTTPS可以有效的防止运营商劫持，解决了防劫持的一个大问题。
-</code></pre><h4 id="TCP和UDP的区别通用的-TCP-和-UDP-协议"><a href="#TCP和UDP的区别通用的-TCP-和-UDP-协议" class="headerlink" title="TCP和UDP的区别通用的 TCP 和 UDP 协议"></a>TCP和UDP的区别通用的 TCP 和 UDP 协议</h4><pre><code>* TCP 协议面向有连接，能正确处理丢包，传输顺序错乱的问题，但是为了建立与断开连接，需要至少7次的发包收包，资源浪费
-* UDP 面向无连接，不管对方有没有收到，如果要得到通知，需要通过应用层
-</code></pre><h4 id="HTTP常见状体码"><a href="#HTTP常见状体码" class="headerlink" title="HTTP常见状体码"></a>HTTP常见状体码</h4><p>2XX 成功</p>
+</code></pre><h4 id="HTTPS与HTTP的一些区别"><a href="#HTTPS与HTTP的一些区别" class="headerlink" title="HTTPS与HTTP的一些区别"></a>HTTPS与HTTP的一些区别</h4><p>HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。<br>HTTP协议运行在TCP之上，所有传输的内容都是明文，HTTPS运行在SSL/TLS之上，SSL/TLS运行在TCP之上，所有传输的内容都经过加密的。<br>HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。<br>HTTPS可以有效的防止运营商劫持，解决了防劫持的一个大问题。</p>
+<h4 id="TCP和UDP的区别通用的-TCP-和-UDP-协议"><a href="#TCP和UDP的区别通用的-TCP-和-UDP-协议" class="headerlink" title="TCP和UDP的区别通用的 TCP 和 UDP 协议"></a>TCP和UDP的区别通用的 TCP 和 UDP 协议</h4><p>TCP 协议面向有连接，能正确处理丢包，传输顺序错乱的问题，但是为了建立与断开连接，需要至少7次的发包收包，资源浪费<br>UDP 面向无连接，不管对方有没有收到，如果要得到通知，需要通过应用层</p>
+<h4 id="HTTP常见状体码"><a href="#HTTP常见状体码" class="headerlink" title="HTTP常见状体码"></a>HTTP常见状体码</h4><p>2XX 成功</p>
 <pre><code>* 200 OK，表示从客户端发来的请求在服务器端被正确处理
 * 204 No content，表示请求成功，但响应报文不含实体的主体部分
 * 206 Partial Content，进行范围请求
@@ -815,7 +811,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/11/Promise/" id="post_nav-older" class="next-content">
-            أقدم
+            Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
