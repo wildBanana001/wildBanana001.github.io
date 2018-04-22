@@ -43,7 +43,7 @@
     
     <title>
         
-            面试知识点总结 | 
+            web前端面试知识点总结 | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",html css js jQuery 网络 性能优化 webpack vue">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -231,14 +231,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/2018/04/21/面试知识点总结/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="面试知识点总结 | BLOG">
+    <meta property="og:title" content="web前端面试知识点总结 | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="html css js jQuery 网络 性能优化 webpack vue"> 
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 22 2018 16:43:38 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 22 2018 17:30:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,9 +259,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
-    "headline": "面试知识点总结",
+    "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun Apr 22 2018 16:43:38 GMT+0800",
+    "dateModified": "Sun Apr 22 2018 17:30:42 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -279,7 +279,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",html css js jQuery 网络 性能优化 webpack vue",
     "description": "",
 }
 </script>
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -456,7 +456,7 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                面试知识点总结
+                web前端面试知识点总结
             </p>
             <h2 id="面试常见知识点总结"><a href="#面试常见知识点总结" class="headerlink" title="面试常见知识点总结"></a>面试常见知识点总结</h2><h3 id="HTML与CSS部分"><a href="#HTML与CSS部分" class="headerlink" title="HTML与CSS部分"></a>HTML与CSS部分</h3><h4 id="BFC（Block-Formatting-Context）"><a href="#BFC（Block-Formatting-Context）" class="headerlink" title="BFC（Block Formatting Context）"></a>BFC（Block Formatting Context）</h4><pre><code>块级格式化上下文。
 overflow : hidden
@@ -597,10 +597,71 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 <li>dom1.appendChild(dom2); // 在dom1中最后的位置插入dom2</li>
 <li>dom1.insertBefore(dom2, dom3); // 在dom1下，把dom2插入到dom3前</li>
 </ol>
-<h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><p>window<br>window 对象表示浏览器中打开的窗口。<br>window 对象上有特别多的方法，一般来讲，能全局使用的都是 window 对象上的方法，例如我们常用的一些：<br>console，setInterval，setTimeout，navigator，screen，history，location</p>
-<p>navigator<br>navigator对象：<br>navigator.userAgent 目前用户使用的是 pc端 还是 移动端，是什么 浏览器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">问题：若是 移动端 跳转 移动端 url，若是 pc端 跳转 pc端 url？</span><br><span class="line">答案：</span><br><span class="line">if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase()))&#123;</span><br><span class="line">    window.location.href=&quot;移动端url&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    window.location.href=&quot;pc端url&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>screen<br>screen对象：1.screen.availHeight/screen.availWidth 可以查看除了 window 任务栏之外的 屏幕 的 高度 和 宽度。2.screen.height/screen.width 返回 显示器 的 屏幕 的 高度 和 宽度,兼容的较少。3.screen.deviceXDPI/screen.deviceYDPI 返回显示屏幕的分辨率。historyhistory对象：1.history.length 浏览历史的长度。2.history.back() 进入到下一个历史页面。3.history.forward() 返回到上一个历史页面。4.history.go() 当参数是 正数 的时候，前进到 下一个 历史页面，当是 负数 的时候，回退到 上一个 历史页面。locationlocation对象：1.location.href 设置或返回当前的 url2.location.host 返回当前的主机名 和 当前的 URL 端口号3.location.search 设置或返回从 问号 开始的 URL（查询部分）4.location.hash 跳转到 相应的 id 的 元素 的 位置5.location.reload 重新加载 当前 页面class特性与继承继承（6种方法）：1. 原型链继承<code>function Father () {}function Son () {}Son.prototype = new Father()</code>缺点：会继承过多没有用的属性，造成大量的浪费。2. 构造函数继承 call / apply<code>function Father () {}function Son () {Father.call(this)}</code>缺点：这种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走一个构造函数，效率很低。3. 共享原型<code>function Father () {}function Son () {}Son.prototype = Father.prototype;</code>缺点：没办法改变子类的原型，一改就两个一起改了。4. object.create() <strong>在原型上生成新的对象的实例</strong><code>function Father () {}var son = Object.create(new Father);</code>缺点：object.creat方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象上。所以这个继承得到的不是类，只是得到对象。好处：这个方法在你想要改变一个的原型来创建实例而言会特别好用。5. 圣杯模式<code>var inherit = (function (){    var F = function(){};    return function (C,P){        F.prototype = P.prototype;        C.prototype = new F();        C.prototype.constructor = C;        C.prototype.uber = P;    }}());</code>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。6. extands（es6 方法）<code>`</code>class Father {}class Son extands Father {}promise在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱，ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）Promise对象有三个状体：Pending（起始状体，进行中），Resolved（成功），Rejected（失败）Pending –&gt; Resolved 或 Pending –&gt; Rejected ，状体改变后不会在变Promise 对象var promise = new Promise(function(resolved,rejected){});Promise.catch如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，是rejected的语法糖jQuery的链式调用大部分人初看 jQuery.fn.init.prototype = jQuery.fn 这一句都会被卡主，很是不解。但是这句真的算是 jQuery 的绝妙之处。理解这几句很重要，分点解析一下：1）首先要明确，使用 $(‘xxx’) 这种实例化方式，其内部调用的是 return new jQuery.fn.init(selector, context, rootjQuery) 这一句话，也就是构造实例是交给了 jQuery.fn.init() 方法去完成。2）将 jQuery.fn.init 的 prototype 属性设置为 jQuery.fn，那么使用 new jQuery.fn.init() 生成的对象的原型对象就是 jQuery.fn ，所以挂载到 jQuery.fn 上面的函数就相当于挂载到 jQuery.fn.init() 生成的 jQuery 对象上，所有使用 new jQuery.fn.init() 生成的对象也能够访问到 jQuery.fn 上的所有原型方法。3）也就是实例化方法存在这么一个关系链  jQuery.fn.init.prototype = jQuery.fn = jQuery.prototype ;new jQuery.fn.init() 相当于 new jQuery() ;jQuery() 返回的是 new jQuery.fn.init()，而 var obj = new jQuery()，所以这 2 者是相当的，所以我们可以无 new 实例化 jQuery 对象。网络get/post</p>
-<pre><code>* GET在浏览器回退时是无害的，而POST会再次提交请求。
+<h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><p>定义：Browser Object Model，定义了操作浏览器的接口<br>BOM对象: Window, History,Navigator,Screen, Location等</p>
+<p>window 对象:表示浏览器中打开的窗口。<br>window 对象上有特别多的方法，一般来讲，能全局使用的都是 window 对象上的方法，例如我们常用的一些：<br>console，setInterval，setTimeout，navigator，screen，history，location</p>
+<p>navigator对象：<br>navigator.userAgent 目前用户使用的是 pc端 还是 移动端，是什么 浏览器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">问题：若是 移动端 跳转 移动端 url，若是 pc端 跳转 pc端 url？</span><br><span class="line">答案：</span><br><span class="line">if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase()))&#123;</span><br><span class="line">    window.location.href=&quot;移动端url&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    window.location.href=&quot;pc端url&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>screen对象：</p>
+<ol>
+<li>screen.availHeight/screen.availWidth 可以查看除了window任务栏之外的屏幕的高度和宽度。</li>
+<li>screen.height/screen.width 返回显示器的屏幕的高度和宽度,兼容的较少。</li>
+<li>screen.deviceXDPI/screen.deviceYDPI 返回显示屏幕的分辨率。</li>
+</ol>
+<p>history对象：</p>
+<ol>
+<li>history.length 浏览历史的长度。</li>
+<li>history.back() 进入到下一个历史页面。</li>
+<li>history.forward() 返回到上一个历史页面。</li>
+<li>history.go() 当参数是正数的时候，前进到下一个历史页面，当是负数的时候，回退到上一个历史页面。</li>
+</ol>
+<p>location对象：</p>
+<ol>
+<li>location.href 设置或返回当前的url</li>
+<li>location.host 返回当前的主机名和当前的URL端口号</li>
+<li>location.search 设置或返回从问号开始的URL(查询部分)</li>
+<li>location.hash 跳转到相应的id的元素的位置(“#”后是对浏览器操作的,对服务器无效,实际发出的请求也不包含”#”后面的部分。 “#”被算作历史记录)</li>
+<li>location.reload 重新加载当前页面</li>
+</ol>
+<h4 id="class特性与继承"><a href="#class特性与继承" class="headerlink" title="class特性与继承"></a>class特性与继承</h4><p>继承（6种方法）：</p>
+<ol>
+<li>原型链继承<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = new Father()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>缺点：会继承过多没有用的属性，造成大量的浪费。</p>
+<ol>
+<li>构造函数继承 call / apply<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;Father.call(this)&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>缺点：这种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走一个构造函数，效率很低。</p>
+<ol>
+<li>共享原型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = Father.prototype;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
+<ol>
+<li>object.create() <strong>在原型上生成新的对象的实例</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;var son = Object.create(new Father);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>缺点：object.creat方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象上。所以这个继承得到的不是类，只是得到对象。好处：这个方法在你想要改变一个的原型来创建实例而言会特别好用。</p>
+<ol>
+<li>圣杯模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var inherit = (function ()&#123;</span><br><span class="line">    var F = function()&#123;&#125;; </span><br><span class="line">    return function (C,P)&#123;</span><br><span class="line">        F.prototype = P.prototype;        </span><br><span class="line">        C.prototype = new F();        </span><br><span class="line">        C.prototype.constructor = C;        </span><br><span class="line">        C.prototype.uber = P;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
+<ol>
+<li>extands（es6 方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;&#125;</span><br><span class="line">class Son extands Father &#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱。<br>而ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）<br>Promise对象有三个状体：<br>Pending（起始状体，进行中）<br>Resolved（成功）<br>Rejected（失败）<br>Pending –&gt; Resolved 或 Pending –&gt; Rejected<br>状体改变后不会在变</p>
+<p>Promise 对象<br>var promise = new Promise(function(resolved,rejected){});</p>
+<p>Promise.catch<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，是rejected的语法糖</p>
+<h4 id="jQuery的链式调用-无new构造"><a href="#jQuery的链式调用-无new构造" class="headerlink" title="jQuery的链式调用/无new构造"></a>jQuery的链式调用/无new构造</h4><p>jQuery.fn.init.prototype = jQuery.fn </p>
+<ol>
+<li>首先要明确，使用 $(‘xxx’) 这种实例化方式，其内部调用的是 return new jQuery.fn.init(selector, context, rootjQuery) 这一句话，也就是构造实例是交给了 jQuery.fn.init() 方法去完成。</li>
+<li>将 jQuery.fn.init 的 prototype 属性设置为 jQuery.fn，那么使用 new jQuery.fn.init() 生成的对象的原型对象就是 jQuery.fn ，所以挂载到 jQuery.fn 上面的函数就相当于挂载到 jQuery.fn.init() 生成的 jQuery 对象上，所有使用 new jQuery.fn.init() 生成的对象也能够访问到 jQuery.fn 上的所有原型方法。</li>
+<li>也就是实例化方法存在这么一个关系链  </li>
+</ol>
+<p>jQuery.fn.init.prototype = jQuery.fn = jQuery.prototype ;<br>new jQuery.fn.init() 相当于 new jQuery() ;<br>jQuery() 返回的是 new jQuery.fn.init()，而 var obj = new jQuery()，所以这 2 者是相当的，所以我们可以无 new 实例化 jQuery 对象。</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="get-post"><a href="#get-post" class="headerlink" title="get/post"></a>get/post</h4><pre><code>* GET在浏览器回退时是无害的，而POST会再次提交请求。
 * GET产生的URL地址可以被Bookmark，而POST不可以。
 * GET请求会被浏览器主动cache，而POST不会，除非手动设置。
 * GET请求只能进行url编码，而POST支持多种编码方式。
@@ -609,7 +670,7 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 * 对参数的数据类型，GET只接受ASCII字符，而POST没有限制。
 * GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。
 * GET参数通过URL传递，POST放在Request body中。
-</code></pre><p>StrongeTCP/IP 三次握手，四次挥手三次握手：</p>
+</code></pre><h4 id="cookie-localstorage-Session"><a href="#cookie-localstorage-Session" class="headerlink" title="cookie localstorage Session"></a>cookie localstorage Session</h4><h4 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h4><p>三次握手，四次挥手三次握手：</p>
 <pre><code>* 客户端–发送带有SYN标志的数据包–一次握手–服务端
 * 服务端–发送带有SYN/ACK标志的数据包–二次握手–客户端
 * 客户端–发送带有带有ACK标志的数据包–三次握手–服务端
@@ -618,7 +679,8 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 * 服务器-收到这个FIN，它发回一个ACK，确认序号为收到的序号加1 。和SYN一样，一个FIN将占用一个序号
 * 服务器-关闭与客户端的连接，发送一个FIN给客户端
 * 客户端-发回ACK报文确认，并将确认序号设置为收到序号加1
-</code></pre><p>ajax/fetchajaxajax不是一种单一的技术，而是有机利用一系列交互式网页应用相关的技术所形成的结合体。ajax是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，ajax可以使网页实现异步更新。意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。ajax 优缺点ajax 优点:</p>
+</code></pre><h4 id="AJAX-Fetch"><a href="#AJAX-Fetch" class="headerlink" title="AJAX/Fetch"></a>AJAX/Fetch</h4><p>AJAX<br>AJAX是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，AJAX可以使网页实现异步更新。意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>AJAX 优缺点<br>AJAX 优点:</p>
 <pre><code>1. 页面无刷新，用户体验好
 2. 使用异步的形式与服务器进行通信，响应更快
 3. 减少冗余请求，减轻服务器的负担
@@ -629,32 +691,43 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 3. 无法使用URL直接访问
 4. 破坏了程序异常机制
 5. 存在一定安全问题
-</code></pre><p>ajax包含技术</p>
+</code></pre><p>AJAX包含技术</p>
 <pre><code>1. 使用CSS和XHTML表示
 2. 使用javascript来绑定和调用
 3. 使用DOM模型来交互和动态显示
 4. 使用XMLHttpRequest来和服务器进行异步通信
-</code></pre><p>XMLHttpRequest目前虽然还没有被W3C所采纳，但它已经是一个事实的标准，因为目前几乎所有的主流浏览器都支持它ajax 步骤通过XMLHttpRequest对象来向服务器发起异步请求，从服务器获取数据，用JavaScript来操作DOM更新页面</p>
-<pre><code>1. 创建 ajax 对象var xml = XMLHttpRequest() //主流浏览器var xml = ActiveXObject(‘Mircosoft.XMLHTTP’) //IE5、IE6
-2. 创建与服务器的连接和调用xml.open(get/post, url, anync) // 第三个参数是boolean值，默认为true，异步模式
-3. 监听对象状态改变xml.onReadyStateChange //监听对象状态改变xml.readyState == 4 //响应已完成 返回0：请求未初始化; 返回1：请求已建立，但还没发送(send还没调用); 返回2：请求已发送，正在处理(通常现在可以获取到响应头); 返回3.请求正在处理中(通常现在可以获取到响应的部分数据，但服务器还没有完成响应的生成);xml.status == 200 //“OK：请求已经被服务器正常处理”callBack(responseText) // 若成功，通过回调函数接收 ajax 返回的数据
-4. 向服务器发送数据xml.send()
-
-
-* 使用GET请求：将要提交的参数写到open方法里的url里，send传参为null或空。
-</code></pre><p>xml.open(“GET”, url + ‘?’ + data, flag);xml.send(null) 或 xml.send() * 使用POST请求：若要像HTML表单那样POST数据，使用setRequestHeader()来添加HTTP头，然后在send()方法里规定希望发送的数据格式<br>xml.open(“POST”, url, flag);xml.setRequestHeader(‘Content-type’, ‘application/x-www-form-urlencoded’);xml.send(data);<br>为什么监听要放到发送数据前边？因为因为现在网速是越来越快了，若网速非常快，刚刚请求数据，数据就已经返回回来了，但是代码还没有走到监听部分，这就导致了监听部分的失效。封装 ajaxfunction Ajax(method, url, flag, data, callback){var xml = null;//兼容性if(window.XMLHttpRequest) {xml = new XMLHttpRequest();}else {xml = new ActiveXObject(‘Microsoft.XMLHTTP’);}//将method值变为大写method = method.toUpperCase();//判断请求方式if(method === ‘GET’){xml.open(method, url + ‘?’ + data, flag);xml.send();}else if(method === ‘POST’){xml.open(method, url, flag);xml.setRequestHeader(‘Content-type’, ‘application/x-www-form-urlencoded’);xml.send(data);}//监听xml.onreadystatechange = function () {if(xml.readyState === 4) {if(xml.status === 200) {callback(xml.responseText);}else{alert(‘error’);}}}}FetchFetch API：Fetch 是 XMLHttpRequest 的最新替代技术。Fetch API 提供了一个 fetch() 方法，被定义在 BOM 的 window 对象中。Fetch 方法返回的是一个 Promise 对象，让你能够对 请求 的 返回结果 进行检索。Fetch 的优点：</p>
+</code></pre><p>XMLHttpRequest目前虽然还没有被W3C所采纳，但它已经是一个事实的标准，因为目前几乎所有的主流浏览器都支持它。</p>
+<p>AJAX 步骤<br>通过XMLHttpRequest对象来向服务器发起异步请求，从服务器获取数据，用JavaScript来操作DOM更新页面。</p>
+<ol>
+<li>创建 ajax 对象<br>var xml = XMLHttpRequest() //主流浏览器<br>var xml = ActiveXObject(‘Mircosoft.XMLHTTP’) //IE5、IE6</li>
+<li>创建与服务器的连接和调用<br>xml.open(get/post, url, anync) // 第三个参数是boolean值，默认为true，异步模式</li>
+<li>监听对象状态改变<br>xml.onReadyStateChange //监听对象状态改变<br>xml.readyState == 4 //响应已完成 返回0：请求未初始化; 返回1：请求已建立，但还没发送(send还没调用); 返回2：请求已发送，正在处理(通常现在可以获取到响应头); 返回3.请求正在处理中(通常现在可以获取到响应的部分数据，但服务器还没有完成响应的生成)<br>xml.status == 200 //“OK：请求已经被服务器正常处理”<br>callBack(responseText) // 若成功，通过回调函数接收 AJAX 返回的数据</li>
+<li>向服务器发送数据xml.send()</li>
+</ol>
+<p>为什么监听要放到发送数据前边？因为因为现在网速是越来越快了，若网速非常快，刚刚请求数据，数据就已经返回回来了，但是代码还没有走到监听部分，这就导致了监听部分的失效。</p>
+<p>使用GET请求：<br>将要提交的参数写到open方法里的url里，send传参为null或空。<br>xml.open(“GET”, url + ‘?’ + data, flag);<br>xml.send(null) 或 xml.send()<br>使用POST请求：<br>若要像HTML表单那样POST数据，使用setRequestHeader()来添加HTTP头，然后在send()方法里规定希望发送的数据格式<br>xml.open(“POST”, url, flag);<br>xml.setRequestHeader(‘Content-type’, ‘application/x-www-form-urlencoded’);<br>xml.send(data);</p>
+<p>封装 AJAX<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">function Ajax(method, url, flag, data, callback)&#123;</span><br><span class="line">    var xml = null;</span><br><span class="line">    //兼容性</span><br><span class="line">    if(window.XMLHttpRequest) &#123;</span><br><span class="line">        xml = new XMLHttpRequest();</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        xml = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    //将method值变为大写</span><br><span class="line">    method = method.toUpperCase();</span><br><span class="line">    //判断请求方式</span><br><span class="line">    if(method === &apos;GET&apos;)&#123;</span><br><span class="line">        xml.open(method, url + &apos;?&apos; + data, flag);</span><br><span class="line">        xml.send();</span><br><span class="line">    &#125;else if(method === &apos;POST&apos;)&#123;</span><br><span class="line">        xml.open(method, url, flag);</span><br><span class="line">        xml.setRequestHeader(&apos;Content-type&apos;, &apos;application/x-www-form-urlencoded&apos;);</span><br><span class="line">        xml.send(data);</span><br><span class="line">    &#125;</span><br><span class="line">    //监听</span><br><span class="line">    xml.onreadystatechange = function () &#123;</span><br><span class="line">        if(xml.readyState === 4) &#123;</span><br><span class="line">            if(xml.status === 200) &#123;</span><br><span class="line">                callback(xml.responseText);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                alert(&apos;error&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Fetch<br>Fetch API：Fetch 是 XMLHttpRequest 的最新替代技术。Fetch API 提供了一个 fetch() 方法，被定义在 BOM 的 window 对象中。Fetch 方法返回的是一个 Promise 对象，让你能够对 请求 的 返回结果 进行检索。</p>
+<p>Fetch 的优点：</p>
 <pre><code>1. 语法简洁，更加语义化
 2. 基于标准 Promise 实现，可以链式调用，支持 async/await
-</code></pre><p>Fetch返回的response{body: ReadableStreambodyUsed: falseheaders: Headersok : trueredirected : falsestatus : 200statusText : “OK”type : “cors”url : “<a href="http://some-website.com/some-url&quot;__proto_" target="_blank" rel="noopener">http://some-website.com/some-url&quot;__proto_</a>_ : Response}Fetch 的使用：//fetch获取数据fetch(url).then(function (res) { // 需要同源策略return res.json();}).then(function (data) {console.log(data);}).catch(function (err) {console.log(err);})//fetch发送数据const data = {data:’content’};fetch(url, {method: ‘post’,headers: {‘Content-Type’:’application/json’},body:JSON.stringify(data)})Fetch处理异常 zlFetchFetch不会关心ajax是否成功，它只关心从服务器发送请求和接收响应。所以我们应该在响应失败时去抛出异常。那么我们可以使用zlFetch库，它会来帮我们进行异常处理。只需要安装一下zlFetchnpm install zl-fetch –save引入zlFetch//正常JS引入const zlFetch = require(‘zl-fetch’)//ES6引入import zlFetch from ‘zl-fetch’Fetch和zlFetch使用区别zlFetch还能无须转换成JSON格式就能发送JSON数据const data = {data:’content’};//Fetchfetch(url, {method: ‘post’,headers: {‘Content-Type’:’application/json’},body:JSON.stringify(data)})//zlFetchzlFetch(url, {method: ‘post’,body: data});Fetch是很好的方法，能发送和接收数据。不需要在编写XHR请求或依赖于jQuery。尽管Fetch很好，但是其错误处理不是很直接。在处理之前，需要让错误信息进入到catch方法中。使用zlFetch库，就不需要担心错误处理了。跨域跨域的方法</p>
-<pre><code>1. flash
+</code></pre><p>Fetch返回的response<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    body: ReadableStream</span><br><span class="line">    bodyUsed: false</span><br><span class="line">    headers: Headers</span><br><span class="line">    ok : true</span><br><span class="line">    redirected : false</span><br><span class="line">    status : 200</span><br><span class="line">    statusText : &quot;OK&quot;</span><br><span class="line">    type : &quot;cors&quot;</span><br><span class="line">    url : &quot;http://some-website.com/some-url&quot;</span><br><span class="line">    __proto__ : Response</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Fetch 的使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//fetch获取数据</span><br><span class="line">fetch(url).then(function (res) &#123; // 需要同源策略</span><br><span class="line">    return res.json();</span><br><span class="line">&#125;).then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;).catch(function (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">&#125;)</span><br><span class="line">//fetch发送数据</span><br><span class="line">const data = &#123;data:&apos;content&apos;&#125;;</span><br><span class="line">fetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    body:JSON.stringify(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>Fetch处理异常<br>zlFetchFetch不会关心ajax是否成功，它只关心从服务器发送请求和接收响应。所以我们应该在响应失败时去抛出异常。那么我们可以使用zlFetch库，它会来帮我们进行异常处理。</p>
+<p>安装一下zlFetch<br><code>npm install zl-fetch --save</code></p>
+<p>引入zlFetch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//正常JS引入</span><br><span class="line">const zlFetch = require(&apos;zl-fetch&apos;)</span><br><span class="line">//ES6引入</span><br><span class="line">import zlFetch from &apos;zl-fetch&apos;</span><br></pre></td></tr></table></figure></p>
+<p>Fetch和zlFetch使用区别<br>zlFetch还能无须转换成JSON格式就能发送JSON数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const data = &#123;data:&apos;content&apos;&#125;;</span><br><span class="line"></span><br><span class="line">//Fetch</span><br><span class="line">fetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    body:JSON.stringify(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//zlFetch</span><br><span class="line">zlFetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    body: data</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Fetch是很好的方法，能发送和接收数据。不需要在编写XHR请求或依赖于jQuery。尽管Fetch很好，但是其错误处理不是很直接。在处理之前，需要让错误信息进入到catch方法中。使用zlFetch库，就不需要担心错误处理了。</p>
+<h4 id="跨域跨域的方法"><a href="#跨域跨域的方法" class="headerlink" title="跨域跨域的方法"></a>跨域跨域的方法</h4><pre><code>1. flash
 2. 服务器代理中转 // 将资源放在服务器上
 3. iframe + document.domain // 主域名相同，子域名不同，在子页面 与 主页面 分别加上 document.domain
 4. iframe + location.hash // 用 location.hash 值传递数据，将数据放到 url 里
 5. iframe + window.name // 修改子页面的 window.name 让主页面获取到这个值
 6. postMessage // 使用 iframe.contentWindow.postMessage 发送数据，在子页面绑定 message 事件接收数据
-7. jsonp // script 标签 src 属性 不受同源策略限制
-8. cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持
-</code></pre><p>后面两种现在比较常用！jsonp原理 jsonp：web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。jsonp 优点：</p>
+7. jsonp // script 标签 src 属性 不受同源策略限制(常用)
+8. cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持(常用)
+</code></pre><h4 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h4><p>jsonp：<br>web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。<br>jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。</p>
+<p>jsonp 优点：</p>
 <pre><code>1. JSONP 可以跨越同源策略
 2. 兼容性好
 3. 可以定义 callback 处理函数，处理函数交给了调用方
@@ -662,8 +735,7 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 <pre><code>1. 只支持 GET 请求而不支持 POST 请求
 2. 调用失败的时候不会返回各种 HTTP 状态码
 3. 安全性不高
-</code></pre><p>CORS网络请求过程（在浏览器输入url）</p>
-<pre><code>* 输入地址
+</code></pre><h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><h4 id="网络请求过程（在浏览器输入url）"><a href="#网络请求过程（在浏览器输入url）" class="headerlink" title="网络请求过程（在浏览器输入url）"></a>网络请求过程（在浏览器输入url）</h4><pre><code>* 输入地址
 * 浏览器查找域名的 IP 地址 这一步包括 DNS 具体的查找过程，包括：浏览器缓存-&gt;系统缓存-&gt;路由器缓存...
 * 浏览器向 web 服务器发送一个 HTTP 请求  
 * 服务器的永久重定向响应（从http://www.example.com到http://www.example）
@@ -673,28 +745,27 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 * 浏览器显示 HTML    (以下部分具体可看JS时间线)
 * 浏览器发送请求获取嵌入在 HTML 中的资源（如图片、音频、视频、CSS、JS等等）
 * . 浏览器发送异步请求
-</code></pre><p>HTTPHttp协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。HTTP1.1 与 HTTP2.0区别HTTP的基本优化影响一个 HTTP 网络请求的因素主要有两个：带宽和延迟。</p>
+</code></pre><h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。<br>所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。</p>
+<h4 id="HTTP1-1-与-HTTP2-0区别"><a href="#HTTP1-1-与-HTTP2-0区别" class="headerlink" title="HTTP1.1 与 HTTP2.0区别"></a>HTTP1.1 与 HTTP2.0区别</h4><h4 id="HTTP的基本优化"><a href="#HTTP的基本优化" class="headerlink" title="HTTP的基本优化"></a>HTTP的基本优化</h4><p>影响一个 HTTP 网络请求的因素主要有两个：带宽和延迟。</p>
 <pre><code>* 带宽：如果说我们还停留在拨号上网的阶段，带宽可能会成为一个比较严重影响请求的问题，但是现在网络基础建设已经使得带宽得到极大的提升，我们不再会担心由带宽而影响网速，那么就只剩下延迟了。
 * 延迟：
 
     * 浏览器阻塞（HOL blocking）：浏览器会因为一些原因阻塞请求。浏览器对于同一个域名，同时只能有 4 个连接（这个根据浏览器内核不同可能会有所差异），超过浏览器最大连接数限制，后续请求就会被阻塞。
     * DNS 查询（DNS Lookup）：浏览器需要知道目标服务器的 IP 才能建立连接。将域名解析为 IP 的这个系统就是 DNS。这个通常可以利用DNS缓存结果来达到减少这个时间的目的。
     * 建立连接（Initial connection）：HTTP 是基于 TCP 协议的，浏览器最快也要在第三次握手时才能捎带 HTTP 请求报文，达到真正的建立连接，但是这些连接无法复用会导致每次请求都经历三次握手和慢启动。三次握手在高延迟的场景下影响较明显，慢启动则对文件类大请求影响较大。
-</code></pre><p>HTTP1.0和HTTP1.1的一些区别HTTP1.0最早在网页中使用是在1996年，那个时候只是使用一些较为简单的网页上和网络请求上，而HTTP1.1则在1999年才开始广泛应用于现在的各大浏览器网络请求中，同时HTTP1.1也是当前使用最为广泛的HTTP协议。 主要区别主要体现在：</p>
+</code></pre><h4 id="HTTP1-0和HTTP1-1的一些区别"><a href="#HTTP1-0和HTTP1-1的一些区别" class="headerlink" title="HTTP1.0和HTTP1.1的一些区别"></a>HTTP1.0和HTTP1.1的一些区别</h4><p>HTTP1.0最早在网页中使用是在1996年，那个时候只是使用一些较为简单的网页上和网络请求上，而HTTP1.1则在1999年才开始广泛应用于现在的各大浏览器网络请求中，同时HTTP1.1也是当前使用最为广泛的HTTP协议。 主要区别主要体现在：</p>
 <pre><code>1. 缓存处理，在HTTP1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略。
 2. 带宽优化及网络连接的使用，HTTP1.0中，存在一些浪费带宽的现象，例如客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能，HTTP1.1则在请求头引入了range头域，它允许只请求资源的某个部分，即返回码是206（Partial Content），这样就方便了开发者自由的选择以便于充分利用带宽和连接。
 3. 错误通知的管理，在HTTP1.1中新增了24个错误状态响应码，如409（Conflict）表示请求的资源与资源的当前状态发生冲突；410（Gone）表示服务器上的某个资源被永久性的删除。
 4. Host头处理，在HTTP1.0中认为每台服务器都绑定一个唯一的IP地址，因此，请求消息中的URL并没有传递主机名（hostname）。但随着虚拟主机技术的发展，在一台物理服务器上可以存在多个虚拟主机（Multi-homed Web Servers），并且它们共享一个IP地址。HTTP1.1的请求消息和响应消息都应支持Host头域，且请求消息中如果没有Host头域会报告一个错误（400 Bad Request）。
 5. 长连接，HTTP 1.1支持长连接（PersistentConnection）和请求的流水线（Pipelining）处理，在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection： keep-alive，一定程度上弥补了HTTP1.0每次请求都要创建连接的缺点。
-</code></pre><p>HTTPS与HTTP的一些区别</p>
-<pre><code>* HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。
+</code></pre><h4 id="HTTPS与HTTP的一些区别"><a href="#HTTPS与HTTP的一些区别" class="headerlink" title="HTTPS与HTTP的一些区别"></a>HTTPS与HTTP的一些区别</h4><pre><code>* HTTPS协议需要到CA申请证书，一般免费证书很少，需要交费。
 * HTTP协议运行在TCP之上，所有传输的内容都是明文，HTTPS运行在SSL/TLS之上，SSL/TLS运行在TCP之上，所有传输的内容都经过加密的。
 * HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
 * HTTPS可以有效的防止运营商劫持，解决了防劫持的一个大问题。
-</code></pre><p>TCP和UDP的区别通用的 TCP 和 UDP 协议</p>
-<pre><code>* TCP 协议面向有连接，能正确处理丢包，传输顺序错乱的问题，但是为了建立与断开连接，需要至少7次的发包收包，资源浪费
+</code></pre><h4 id="TCP和UDP的区别通用的-TCP-和-UDP-协议"><a href="#TCP和UDP的区别通用的-TCP-和-UDP-协议" class="headerlink" title="TCP和UDP的区别通用的 TCP 和 UDP 协议"></a>TCP和UDP的区别通用的 TCP 和 UDP 协议</h4><pre><code>* TCP 协议面向有连接，能正确处理丢包，传输顺序错乱的问题，但是为了建立与断开连接，需要至少7次的发包收包，资源浪费
 * UDP 面向无连接，不管对方有没有收到，如果要得到通知，需要通过应用层
-</code></pre><p>HTTP常见状体码2XX 成功</p>
+</code></pre><h4 id="HTTP常见状体码"><a href="#HTTP常见状体码" class="headerlink" title="HTTP常见状体码"></a>HTTP常见状体码</h4><p>2XX 成功</p>
 <pre><code>* 200 OK，表示从客户端发来的请求在服务器端被正确处理
 * 204 No content，表示请求成功，但响应报文不含实体的主体部分
 * 206 Partial Content，进行范围请求
@@ -712,8 +783,20 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
 </code></pre><p>5XX 服务器错误</p>
 <pre><code>* 500 internal sever error，表示服务器端在执行请求时发生了错误
 * 503 service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求
-</code></pre><p>HTTP缓存HTTP缓存头部简述http的(nginx)服务器可以直接升级到https吗？http1.0短连接可以实现长连接吗？网络安全XSS链接型反射型存储型防御：过滤非法字符（利用正则匹配），限制长度（截断）设计模式观察者模式MVC模式 、 MVVM模式工厂模式单例模式中介者模式 装饰者模式前端工程化前端性能优化VUEVue生命周期new Vue() -&gt; Init(Event &amp; Lifecycle) -&gt; beforeCreate -&gt; init(injections &amp; reactivity) -&gt; created -&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; ) -Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> ) -&gt; beforeMount -&gt; Create vm.$el and replace ‘el’ with it -&gt; mounted -&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch) -&gt; when vm.$destroy() is called -&gt; beforeDestroy -&gt; Teardown watchers, child components and event listeners -&gt; Destroyed -&gt; destroyed方法生命周期beforeCreate -&gt; created -&gt; beforeMount -&gt; mounted -&gt; ( beforeUpdate -OR&gt; updated) -&gt; beforeDestroy -&gt; destroyed 创建Vue实例 -&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。-&gt;初始化注入和反应-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期-&gt; 是否有template模板属性-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数-&gt; 创建虚拟el替代Vue实例里的el-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)-&gt; 开始销毁虚拟Vue-&gt; 卸载watchers, child, components 和 eventlisteners-&gt; 销毁，结束Vue双向数据绑定       每当 new 一个 Vue，主要做了两件事：第一个是监听数据：observe(data)，第二个是编译 HTML：nodeToFragement(id)。       在监听数据的过程中，会为 data 中的每一个属性生成一个主题对象 dep。       在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。       修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。       发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。vuex Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。vueRoute的实现方式，若前端hash值改变，如何通知数据层</p>
-
+</code></pre><h4 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h4><h4 id="HTTP缓存头部简述"><a href="#HTTP缓存头部简述" class="headerlink" title="HTTP缓存头部简述"></a>HTTP缓存头部简述</h4><h4 id="http的-nginx-服务器可以直接升级到https吗？"><a href="#http的-nginx-服务器可以直接升级到https吗？" class="headerlink" title="http的(nginx)服务器可以直接升级到https吗？"></a>http的(nginx)服务器可以直接升级到https吗？</h4><h4 id="http1-0短连接可以实现长连接吗？"><a href="#http1-0短连接可以实现长连接吗？" class="headerlink" title="http1.0短连接可以实现长连接吗？"></a>http1.0短连接可以实现长连接吗？</h4><h4 id="网络安全XSS"><a href="#网络安全XSS" class="headerlink" title="网络安全XSS"></a>网络安全XSS</h4><p>链接型<br>反射型<br>存储型<br>防御：过滤非法字符（利用正则匹配），限制长度（截断）</p>
+<h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4><p>观察者模式</p>
+<p>MVC模式</p>
+<p>MVVM模式</p>
+<p>工厂模式</p>
+<p>单例模式</p>
+<p>中介者模式</p>
+<p>装饰者模式</p>
+<h3 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h3><h3 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h3><h3 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
+<p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
+<p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
+<h4 id="Vue双向数据绑定"><a href="#Vue双向数据绑定" class="headerlink" title="Vue双向数据绑定"></a>Vue双向数据绑定</h4><p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observe(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，会为 data 中的每一个属性生成一个主题对象 dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
+<h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+<h4 id="vueRoute的实现方式，若前端hash值改变，如何通知数据层"><a href="#vueRoute的实现方式，若前端hash值改变，如何通知数据层" class="headerlink" title="vueRoute的实现方式，若前端hash值改变，如何通知数据层"></a>vueRoute的实现方式，若前端hash值改变，如何通知数据层</h4>
             
         </div>
     
@@ -742,7 +825,7 @@ Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机�
     <!-- Next Nav -->
     
         <a href="/2018/04/11/Promise/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
