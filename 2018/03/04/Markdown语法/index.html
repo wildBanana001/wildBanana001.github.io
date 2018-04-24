@@ -43,7 +43,7 @@
     
     <title>
         
-            CSS垂直居中 | 
+            Markdown语法 | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",css 浏览器内核">
+    <meta name="keywords" content=",Markdown">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -214,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BLOG">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/20/postCSS垂直居中/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/04/Markdown语法/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BLOG">
@@ -229,16 +229,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/03/20/postCSS垂直居中/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/04/Markdown语法/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="CSS垂直居中 | BLOG">
+    <meta property="og:title" content="Markdown语法 | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="css 浏览器内核"> 
+    <meta property="og:article:tag" content="Markdown"> 
 
     
-        <meta property="article:published_time" content="Tue Mar 20 2018 21:14:47 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 19 2018 02:24:08 GMT+0800">
+        <meta property="article:published_time" content="Sun Mar 04 2018 21:42:39 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 25 2018 00:51:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,7 +246,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/03/20/postCSS垂直居中/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/04/Markdown语法/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -258,10 +258,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/03/20/postCSS垂直居中/index.html",
-    "headline": "CSS垂直居中",
-    "datePublished": "Tue Mar 20 2018 21:14:47 GMT+0800",
-    "dateModified": "Thu Apr 19 2018 02:24:08 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/04/Markdown语法/index.html",
+    "headline": "Markdown语法",
+    "datePublished": "Sun Mar 04 2018 21:42:39 GMT+0800",
+    "dateModified": "Wed Apr 25 2018 00:51:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -279,7 +279,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",css 浏览器内核",
+    "keywords": ",Markdown",
     "description": "",
 }
 </script>
@@ -456,28 +456,78 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                CSS垂直居中
+                Markdown语法
             </p>
-            <h2 id="CSS垂直居中"><a href="#CSS垂直居中" class="headerlink" title="CSS垂直居中"></a>CSS垂直居中</h2><h3 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h3><p>设置position:absolute属性。</p>
-<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">padding:10px;</span><br><span class="line">top:50%;	</span><br><span class="line">left:50%;	</span><br><span class="line">margin-left: -60px;	/*(width+padding)/2*/</span><br><span class="line">margin-top: -60px;	/*(height+padding)/2*/</span><br></pre></td></tr></table></figure>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">margin:auto;</span><br><span class="line">top:0;</span><br><span class="line">left:0;</span><br><span class="line">bottom:0;</span><br><span class="line">right:0;</span><br></pre></td></tr></table></figure>
-<h3 id="Transforms"><a href="#Transforms" class="headerlink" title="Transforms"></a>Transforms</h3><p>内容块定义transform:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;  </span><br><span class="line">top: 50%; left: 50%;  </span><br><span class="line">//兼容</span><br><span class="line">-webkit-transform: translate(-50%,-50%);  </span><br><span class="line">-ms-transform: translate(-50%,-50%);  </span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></p>
-<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">align-items: center;</span><br><span class="line">justify-content: center;</span><br></pre></td></tr></table></figure>
-<h3 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//父级</span><br><span class="line">display: table; </span><br><span class="line"></span><br><span class="line">//子级</span><br><span class="line">display: table-cell;</span><br><span class="line">text-align: center;</span><br><span class="line">vertical-align: middle; //设置元素的垂直对齐方式 middle: 把此元素放置在父元素的中部。</span><br></pre></td></tr></table></figure>
-<h3 id="顺便说说四大主流浏览器内核"><a href="#顺便说说四大主流浏览器内核" class="headerlink" title="顺便说说四大主流浏览器内核"></a>顺便说说四大主流浏览器内核</h3><p>浏览器内核：负责对网页语法的解释（如HTML,JAVASCRIPT)并渲染网页。</p>
-<ol>
-<li>Trident: IE (微软开发，开放内核)</li>
-<li>Gecko: FireFox （完全开源）</li>
-<li>Presto: Opera（前内核，现已废弃）</li>
-<li>Webkit: chrome Safari 傲游3 猎豹浏览器 百度浏览器 opear浏览器(Safari内核,Chrome内核原型,开源)</li>
-</ol>
-<ul>
-<li>Trident内核速度是四大主流浏览器内核中最慢的。所以曾经国内厂商开发了部分浏览器有”双核”或”多核”版本，就是将Trident内核称为”兼容模式”，其他内核称为”高速模式”。</li>
-<li>Presto内核在2003年的Opera7中首次被使用，该款引擎的特点就是渲染速度的优化达到了极致，然而代价是牺牲了网页的兼容性。</li>
-<li>Webkit是苹果公司自己的内核，google的chrome也使用webkit作为内核。 是一个开源的浏览器引擎，同时WebKit 也是苹果Mac OS X 系统引擎框架版本的名称，它拥有清晰的源码结构、极快的渲染速度，包含的 WebCore 排版引擎和JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来。 </li>
-<li>chromium是 Google 的chrome浏览器背后的引擎，Chromium是一个由Google主导开发的网页浏览器，其目的是为了创建一个安全、稳定和快速的通用浏览器。Chromium相当于Chrome的工程版或称实验版</li>
-</ul>
+            <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><p>初次接触markdown是写文章时所需。这是一种轻量级标记语言，创始人为John Gruber(约翰·格鲁伯)。这是一种比HTML还简单容易学习的语言！简单来说就是一种排版语法。</p>
+<h3 id="Markdown特性"><a href="#Markdown特性" class="headerlink" title="Markdown特性"></a>Markdown特性</h3><p>markdown允许人们使用易读易写的纯文本格式编写文档，然后转化为有效的HTML文档。它吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
+<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><pre><code>1. # 一级标题
+2. ## 二级标题
+3. ### 三级标题
+4. #### 四级标题
+5. ##### 五级标题
+6. ###### 六级标题
+7. 一级标题
+==================
+8. 二级标题
+-------------------
+</code></pre><h3 id="斜体和斜体及删除线"><a href="#斜体和斜体及删除线" class="headerlink" title="斜体和斜体及删除线"></a>斜体和斜体及删除线</h3><pre><code>1. *斜体*
+2. _斜体_
+3. **粗体**
+4. ***加粗斜体***
+5. ~~删除线~~
+</code></pre><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><pre><code>1. 链接
+[链接标题](链接地址) | [title](url)
+例 ： [blog](wildBanana001.github.io)
 
+2. 引用链接
+[链接文字][链接标记] | [链接文字][]
+例 ： 今天我去了[GitHub][1]社区，创建了一个[账号][2]。这真的是个有趣的[博客][]呢！
+
+[1]:https://www.github.com &quot;GitHub&quot;
+[2]:https://www.github.com/wildBanana001 &quot;账号&quot;
+[博客]:wildBanana001.github.io
+
+3. 自动链接
+&lt;wildBanana001.github.io&gt;
+
+4. 页内超链接
+用于跳转到指定标题。
+### 超链接{#jump}
+
+我想回到[超链接](#jump)
+</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>1. - 无序列表
+2. 1. 有序列表
+</code></pre><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code>1. &gt; 一级
+2. &gt;&gt; 二级
+3. &gt;&gt; 三级
+</code></pre><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><pre><code>1. ![图片Alt](图片地址 &quot;图片Title&quot;)
+例 ： ![我的图片](img.jpg &quot;我的图片&quot;)
+2. 1[](图片地址)
+例 ： ![](img.jpg)
+</code></pre><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>1.  学号|姓名|分数
+    -|-|-
+    小明|男|75
+    小红|女|79
+    小陆|男|92
+2.  |学号|姓名|分数|
+    |-|-|-|
+    |小明|男|75|
+    |小红|女|79|
+    |小陆|男|92|
+</code></pre><h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><pre><code>1. * * *
+2. ***
+3. *****
+4. - - -
+5. ---------------------------------------
+</code></pre><h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><pre><code>单行在代码前后加入&quot; ` &quot;
+例 ： ` markdown `
+多行则在代码前后加入&quot; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例 ：</span><br></pre></td></tr></table></figure>
+
+       markdown
+       markdown
+       markdown
+       ```
+</code></pre>
             
         </div>
     
@@ -499,7 +549,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/23/postjavascript的prototype及继承/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/03/06/HTML/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -513,7 +563,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/03/15/CSS-CSS3/" id="post_nav-older" class="next-content">
+        <a href="/2018/01/26/hello/" id="post_nav-older" class="next-content">
             أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
