@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html style="display: none;" >
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            HTML5 | 
+        
+        BLOG
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",html5 canvas/svg cookie/storage">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BLOG">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/27/HTML5/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="BLOG">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2018/03/27/HTML5/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="HTML5 | BLOG">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="html5 canvas/svg cookie/storage"> 
+
+    
+        <meta property="article:published_time" content="Tue Mar 27 2018 22:39:23 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 25 2018 01:03:04 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2018/03/27/HTML5/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/27/HTML5/index.html",
+    "headline": "HTML5",
+    "datePublished": "Tue Mar 27 2018 22:39:23 GMT+0800",
+    "dateModified": "Wed Apr 25 2018 01:03:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "林凯锋",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/myavatar.png"
+        },
+        "description": "github.com/wildBanana001"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "BLOG",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",html5 canvas/svg cookie/storage",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Isolation" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;BLOG
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="BLOG">
+                BLOG
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                github.com/wildBanana001
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+
+                    <!-- Post TOC -->
+
+    
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+
+
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
+            <span class="name-span">林凯锋</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+
+    
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                HTML5
+            </p>
+            <h2 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h2><h3 id="结构性标签：主体标签，非主体标签"><a href="#结构性标签：主体标签，非主体标签" class="headerlink" title="结构性标签：主体标签，非主体标签"></a>结构性标签：主体标签，非主体标签</h3><p>主体标签：header（页眉），footer（页脚），hgroup（标题组），address（地址栏）<br>非主体标签：article（一个模块），section（一个区块），nav（导航），aside（侧边栏）</p>
+<p>非结构性标签：audio，video，canvas</p>
+<p>问题：若 ie 不兼容 h5 新标签怎么办？<br>答案：使用 js 的 createElement 方法，在 js 代码生成标签插入到页面里。</p>
+<h3 id="Audio-amp-Video-标签"><a href="#Audio-amp-Video-标签" class="headerlink" title="Audio &amp; Video 标签"></a>Audio &amp; Video 标签</h3><p>audio 和 video 标签上的一些 属性 与 方法:</p>
+<p>自动播放: autoplay（行间属性）<br>进度条: controls（行间属性）<br>播放: play（js 方法）<br>暂停: pause（js 方法）<br>已经播放时间: currentTime（js 方法）<br>视频的总时长: duration（js 方法）<br>音量: volume（js 方法）（0～1）<br>播放速度: playbackRate（js 方法）（默认1）</p>
+<h3 id="canvas-基本操作（canvas-位图-缩放失真）"><a href="#canvas-基本操作（canvas-位图-缩放失真）" class="headerlink" title="canvas 基本操作（canvas 位图 缩放失真）"></a>canvas 基本操作（canvas 位图 缩放失真）</h3><p>使用canvas：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas =document.getElementById(‘myCanvas’);</span><br><span class="line">var ctx = canvas.getContext(‘2d’);</span><br></pre></td></tr></table></figure></p>
+<p>绘制线段：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(x1,y1) + ctx.lineTo(x2,y2) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
+<p>绘制矩形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.rect(x,y,dx,dy) + ctx.fill() / ctx.stroke() 或 ctx.fillRect(x,y,dx,dy) 或 ctx.strokRect(x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
+<p>绘制圆形：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.arc(x,y,r,起始弧度,结束弧度,弧度方向(0或1)) + ctx.fill() / ctx.stroke()</span><br></pre></td></tr></table></figure></p>
+<p>绘制文本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillText(<span class="string">'xxx'</span>,x,y) 或 ctx.strokeText(<span class="string">'xxx'</span>,x,y) 使用ctx.font =<span class="string">"50px Verdana"</span>来设置大小和字体</span><br></pre></td></tr></table></figure></p>
+<p>嵌入图片：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.drawImage(img,x,y,dx,dy)</span><br></pre></td></tr></table></figure></p>
+<p>设置 canvas 填充 &amp; 描边 样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillStyle = <span class="string">'xxx'</span> ～ ctx.strokeStyle = <span class="string">'xxx'</span></span><br></pre></td></tr></table></figure></p>
+<p>开始绘制 &amp; 结束绘制：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.beginPath() ～ ctx.closePath()</span><br></pre></td></tr></table></figure></p>
+<p>问题：canvas高斯模糊怎么做？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var canvas =document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">var ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">// w：图片的宽，h：图片的高，canvasW：画布的宽，canvasH：画布的高，gaussBluer：高斯模糊封装函数</span><br><span class="line">ctx.drawImage(img, 0, 0, w, h, 0, 0, canvasW, canvasH) // 将图片放到canvas</span><br><span class="line">var pixel = ctx.getImageData(0, 0, canvasH, canvasH) // 获取图片像素信息，受到同源策略的限制</span><br><span class="line">gaussBlur(pixel); // 高斯模糊</span><br><span class="line">ctx.putImageData(pixel, 0, 0); // 将像素信息放回canvas</span><br><span class="line">var imageData = canvas.toDataURL(); // 将canvas的内容抽取成一张图片，受到同源策略的限制</span><br><span class="line">dom.css(<span class="string">'background-image'</span>, <span class="string">'url('</span> + imageData + <span class="string">')'</span>); // 变成图片的src</span><br></pre></td></tr></table></figure></p>
+<h3 id="svg-基本操作（svg-矢量图-缩放不失真）"><a href="#svg-基本操作（svg-矢量图-缩放不失真）" class="headerlink" title="svg 基本操作（svg 矢量图 缩放不失真）"></a>svg 基本操作（svg 矢量图 缩放不失真）</h3><p>使用svg：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=“500px” height=“500px”&gt;&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
+<p>绘制直线:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;line x1=”xxx” y1=”xxx” x2=”xxx” y2=”xxx”&gt;&lt;/line&gt;</span><br></pre></td></tr></table></figure></p>
+<p>绘制矩形:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;rect x=”xxx” y=”xxx” width=”xxx” height=”xxx” rx=”xxx” ry=”xxx”″&gt;&lt;/rect&gt;</span><br></pre></td></tr></table></figure></p>
+<p>绘制圆形:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;circle r=”xxx” cx=”xxx” cy=”xxx”&gt;&lt;/circle&gt;</span><br></pre></td></tr></table></figure></p>
+<p>绘制椭圆:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;ellipse rx=”xxx” ry=”xxx” cx=”xxx” cy=”xxx”&gt;&lt;/ellipse&gt;</span><br></pre></td></tr></table></figure></p>
+<p>路径:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;path d = “M xxx xxx L xxx xxx” /&gt; // 从(xxx,xxx)到(xxx,xxx)</span><br><span class="line">&lt;path d=”M xxx xxx H xxx V xxx”/&gt; // H横向移动 V纵向移动</span><br><span class="line">A 命令绘制圆弧</span><br><span class="line">Z 命令回到起点</span><br></pre></td></tr></table></figure></p>
+<h3 id="html5-地理位置"><a href="#html5-地理位置" class="headerlink" title="html5 地理位置"></a>html5 地理位置</h3><p>html5获取当前地理位置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.navigator.geolocation</span><br></pre></td></tr></table></figure></p>
+<p>为设备绑定运动状态的事件：devicemotion // 可实现摇一摇等功能</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(<span class="string">'devicemotion'</span>,<span class="function"><span class="title">function</span></span> () &#123;&#125;,<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="html5-拖拽"><a href="#html5-拖拽" class="headerlink" title="html5 拖拽"></a>html5 拖拽</h3><p>html5拖拽:</p>
+<p><div draggable="”true”"></div> 元素可以拖拽</p>
+<p>dragstart 被拖拽元素 开始时触发<br>dragend 被拖拽元素 结束时触发<br>dragenter 目标元素 拖拽元素进入目标元素<br>dragover 目标元素 拖拽元素在目标元素上移动<br>drop 目标元素 被拖拽的元素在目标元素上同时鼠标放开触发的事件</p>
+<p>h5 中小方块拖拽：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;div draggable=<span class="string">"true"</span> id=<span class="string">"dragDiv"</span>&gt;&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line"><span class="comment">#dragDiv &#123;</span></span><br><span class="line">    position: absolute;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line">// js</span><br><span class="line">var div = document.getElementById(<span class="string">'dragDiv'</span>);</span><br><span class="line">var touchX,touchY;</span><br><span class="line">div.addEventListener(<span class="string">'dragstart'</span>,<span class="keyword">function</span> (e) &#123;</span><br><span class="line">    var x = e.clientX;</span><br><span class="line">    var y = e.clientY;</span><br><span class="line">    var left = this.offsetLeft;</span><br><span class="line">    var top = this.offsetTop;</span><br><span class="line">    touchX = x - left;</span><br><span class="line">    touchY = y - top;</span><br><span class="line">    document.addEventListener(<span class="string">'dragover'</span>,move,<span class="literal">false</span>);</span><br><span class="line">    div.addEventListener(<span class="string">'dragend'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        document.removeEventListener(<span class="string">'dragover'</span>,move,<span class="literal">false</span>);</span><br><span class="line">    &#125;,<span class="literal">false</span>)</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br><span class="line"><span class="keyword">function</span> move (e) &#123;</span><br><span class="line">    div.style.left = e.clientX - touchX + <span class="string">'px'</span>;</span><br><span class="line">    div.style.top = e.clientY - touchY + <span class="string">'px'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="html5-运动"><a href="#html5-运动" class="headerlink" title="html5 运动"></a>html5 运动</h3><p>html运动：requestAnimationFrame() // 每秒 60 贞，进行运动</p>
+<p>使用方法：递归调用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</span><br><span class="line">    requestAnimationFrame(move);</span><br><span class="line">    // ... 运动代码</span><br><span class="line">&#125;;</span><br><span class="line">var animationFrame = requestAnimationFrame(move);</span><br></pre></td></tr></table></figure>
+<p>解除 requestAnimationFrame 的运动:cancelAnimationFrame()</p>
+<p>解除方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</span><br><span class="line">    requestAnimationFrame(move);</span><br><span class="line">    // ... 运动代码</span><br><span class="line">&#125;;</span><br><span class="line">var animationFrame = requestAnimationFrame(move);</span><br><span class="line">setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    cancelAnimationFrame(animationFrame)</span><br><span class="line">&#125;,10000)</span><br></pre></td></tr></table></figure>
+<p>问题：兼容各个浏览器的 requestAnimFrame<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.requestAnimFrame = (<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> window.requestAnimationFrame ||</span><br><span class="line">        window.webkitRequestAnimationFrame ||</span><br><span class="line">        window.mozRequestAnimationFrame ||</span><br><span class="line">        <span class="keyword">function</span>( callback )&#123;</span><br><span class="line">            window.setTimeout(callback, 1000 / 60);</span><br><span class="line">        &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<h3 id="html5-客户端存储-amp-storage-amp-cookie"><a href="#html5-客户端存储-amp-storage-amp-cookie" class="headerlink" title="html5 客户端存储 &amp; storage &amp; cookie"></a>html5 客户端存储 &amp; storage &amp; cookie</h3><p>客户端存储:<br>localStorage: 存储量在5M以上，浏览器关闭不会失效<br>sessionStorage: 存储量在5M以上，浏览器关闭失效<br>cookie: 存储量不大于4k，过期失效</p>
+<p>localStorage/sessionStorage 操作方法:<br>1.setItem(name,val) 设置属性值<br>2.getItem(name) 获得属性值<br>3.removeItem(name) 移出属性值<br>4.clear() 清除所有属性</p>
+<p>localstorage 的 查看 与 存储：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse(window.localStorage.getItem(<span class="string">'xxx'</span>))</span><br><span class="line">window.localStorage.setItem(<span class="string">'xxx'</span>,JSON.stringify(&#123;...&#125;))</span><br></pre></td></tr></table></figure></p>
+<p>cookie 操作方法:</p>
+<p>1.存储 cookie：document.cookie = “name=duanran;expires=10000;” // 时间为10000毫秒<br>2.查看 cookie：document.cookie<br>3.删除 cookie：document.cookie = “name=;expires=-1;” // 时间设置为-1</p>
+<p>cookie 的封装函数：<br>1.存储 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> setCookie(name, value, time) &#123;</span><br><span class="line">    var oDate = new Date();</span><br><span class="line">    oDate.setDate(oDate.getDate() + time);</span><br><span class="line">    document.cookie = name + <span class="string">'='</span> + value + <span class="string">';expires='</span> + oDate + <span class="string">';'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.查看 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getCookie(key) &#123;</span><br><span class="line">    var arr = document.cookie.split(<span class="string">';'</span>);</span><br><span class="line">    <span class="keyword">for</span>(var i = 0, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">        var temp = arr[i].split(<span class="string">'='</span>);</span><br><span class="line">        <span class="keyword">if</span>(temp[0] == key) &#123;</span><br><span class="line">            <span class="built_in">return</span> temp[1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.删除 cookie<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> removeCookie (key) &#123;</span><br><span class="line">    setCookie(key, <span class="string">''</span>, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            
+        </div>
+    
+</div>
+
+
+                
+                    <!-- Paradox Post Info -->
+                    
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/03/29/prototype及继承/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            أحدث
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/22/CSS3/" id="post_nav-older" class="next-content">
+            أقدم
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
