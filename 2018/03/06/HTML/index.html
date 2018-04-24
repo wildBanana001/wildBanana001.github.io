@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Tue Mar 06 2018 23:22:55 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 24 2018 23:54:53 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 25 2018 00:47:08 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/03/06/HTML/index.html",
     "headline": "HTML",
     "datePublished": "Tue Mar 06 2018 23:22:55 GMT+0800",
-    "dateModified": "Tue Apr 24 2018 23:54:53 GMT+0800",
+    "dateModified": "Wed Apr 25 2018 00:47:08 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -458,8 +458,23 @@
             <p class="post-title">
                 HTML
             </p>
-            <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h3><p>h标签：标题标签，显示为黑体加粗。共六种：h1-h6。其中h1最大，h6最小。<br><code>例： &lt;h1&gt;标签&lt;/h1&gt;</code></p>
-<p>hr标签：表示一条水平线。 <code>例：&lt;hr /&gt;水平线</code> </p>
+            <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h3><ol>
+<li>h标签：标题标签，显示为黑体加粗。共六种：h1-h6。其中h1最大，h6最小。<br><code>例： &lt;h1&gt;标签&lt;/h1&gt;</code></li>
+<li>hr标签：表示一条水平线。 <code>例：&lt;hr /&gt;水平线</code> </li>
+<li>p标签：段落标签，相当于我们文章中的一段文字。<code>例： &lt;p&gt;段落&lt;/p&gt;</code></li>
+<li>br标签：换行符。在代码中直接换行，浏览器不认识，所有需要使用它告诉浏览器。<br><code>例： &lt;br /&gt;换行</code></li>
+<li><p>无序列表：有多个列表项组成，每个列表前面带小黑点，称为无序列表。用<ui>表示。列表中的每一个小项用<li>表示。</li></ui></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;这是无序列表第一项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是无序列表第二项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是无序列表第三项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是无序列表第四项&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有序列表：有序列表用<ol>标签，列表中的每一个小项用<li>表示。</li></ol></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;这是有序列表第一项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是有序列表第二项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是有序列表第三项&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;这是有序列表第四项&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>div、span标签：div、span标签只是包裹作用，没有任何其他含义。需配合CSS使用。只不过div是块级标签、span是行级标签。</p>
+</li>
+<li>em、strong、i、b标签：em和i都能倾斜。strong和b都能加粗！但是，i和b仅仅是单纯的倾斜加粗，而em和Strong多了强调的语义。 em和strong都表示强调，但是strong强调的级别更高！其中Strong和em都可以多层嵌套，表示强调程度的递增！</li>
+<li>img标签：图片标签，src属性：图片的路径。<code>例： &lt;image src=&#39;img.jpg&#39; /&gt;</code></li>
+<li>a标签：超链接，href属性：表示超链接需要跳转的页面，可以跳转到网络地址或者本地html文件 。<code>例：&lt;a href=&quot;https://www.baidu.com</code></li>
+</ol>
 <h3 id="行级元素-amp-块级元素"><a href="#行级元素-amp-块级元素" class="headerlink" title="行级元素 &amp; 块级元素"></a>行级元素 &amp; 块级元素</h3><p>行级元素（inline）：span，a，em，strong，br<br>块级元素（block）：div，h1~h6，p，ul，li，ol<br>行级块元素（inline-block）：img，input，textarea，select，button</p>
 <p>行级标签：默认宽度由内容撑开,不会自动换行，不能设置宽高。<br>块级标签：默认宽度100%，占满整行。会自动换行，可以设置宽高。<br>行级块元素：默认宽度由内容撑开，不会自动换行，可以设置宽高。</p>
 <h3 id="单标签-amp-双标签"><a href="#单标签-amp-双标签" class="headerlink" title="单标签 &amp; 双标签"></a>单标签 &amp; 双标签</h3><p>单标签：img，input，meta，link，br，hr<br>双标签：div，span，h1~h6，p，script，style</p>
@@ -476,6 +491,16 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> </span><br><span class="line">       onfocus=<span class="string">"if(this.value=='你好')&#123;this.value=''&#125;"</span> </span><br><span class="line">       onblur=<span class="string">"if(!this.value)&#123;this.value='你好'&#125;"</span> </span><br><span class="line">       value=<span class="string">"你好"</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>方法二：h5 placeholder</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> placeholder=<span class="string">"你好"</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="W3C规范"><a href="#W3C规范" class="headerlink" title="W3C规范"></a>W3C规范</h3><ol>
+<li>W3c:万维网联盟，负责制定和维护Web行业开发标准；</li>
+<li>W3c要求的规范：<ul>
+<li>规范中倡导两个分离：<br> 内容与表现分离；（HTML与CSS分离开）<br> 内容与行为分离：（HTML与JavaScript分离开）</li>
+<li>HTML语言要遵循语义化！！</li>
+<li>关于代码书写的规范：<br> 标签与属性必须要小写<br> 标签必须要闭合<br> 属性值必须用引号引起来（img src=”属性值”）<br> 标签必须正确嵌套（不能交叉，块级标签可以包裹行级标签，行级标签不能包裹块级标签）</li>
+</ul>
+</li>
+</ol>
+
             
         </div>
     
