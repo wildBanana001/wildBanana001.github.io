@@ -43,7 +43,7 @@
     
     <title>
         
-            CSS垂直居中 | 
+            CSS3 | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",css 浏览器内核">
+    <meta name="keywords" content=",css3 选择器 transform transition animation 怪异盒模型">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -214,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BLOG">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/20/postCSS垂直居中/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/22/CSS-CSS3/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BLOG">
@@ -229,16 +229,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/03/20/postCSS垂直居中/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/22/CSS-CSS3/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="CSS垂直居中 | BLOG">
+    <meta property="og:title" content="CSS3 | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="css 浏览器内核"> 
+    <meta property="og:article:tag" content="css3 选择器 transform transition animation 怪异盒模型"> 
 
     
-        <meta property="article:published_time" content="Tue Mar 20 2018 21:14:47 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 19 2018 02:24:08 GMT+0800">
+        <meta property="article:published_time" content="Thu Mar 22 2018 23:10:17 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 25 2018 01:00:50 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,7 +246,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/03/20/postCSS垂直居中/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/22/CSS-CSS3/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -258,10 +258,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/03/20/postCSS垂直居中/index.html",
-    "headline": "CSS垂直居中",
-    "datePublished": "Tue Mar 20 2018 21:14:47 GMT+0800",
-    "dateModified": "Thu Apr 19 2018 02:24:08 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/22/CSS-CSS3/index.html",
+    "headline": "CSS3",
+    "datePublished": "Thu Mar 22 2018 23:10:17 GMT+0800",
+    "dateModified": "Wed Apr 25 2018 01:00:50 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -279,7 +279,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",css 浏览器内核",
+    "keywords": ",css3 选择器 transform transition animation 怪异盒模型",
     "description": "",
 }
 </script>
@@ -456,27 +456,62 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                CSS垂直居中
+                CSS3
             </p>
-            <h2 id="CSS垂直居中"><a href="#CSS垂直居中" class="headerlink" title="CSS垂直居中"></a>CSS垂直居中</h2><h3 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h3><p>设置position:absolute属性。</p>
-<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">padding:10px;</span><br><span class="line">top:50%;	</span><br><span class="line">left:50%;	</span><br><span class="line">margin-left: -60px;	/*(width+padding)/2*/</span><br><span class="line">margin-top: -60px;	/*(height+padding)/2*/</span><br></pre></td></tr></table></figure>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">margin:auto;</span><br><span class="line">top:0;</span><br><span class="line">left:0;</span><br><span class="line">bottom:0;</span><br><span class="line">right:0;</span><br></pre></td></tr></table></figure>
-<h3 id="Transforms"><a href="#Transforms" class="headerlink" title="Transforms"></a>Transforms</h3><p>内容块定义transform:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;  </span><br><span class="line">top: 50%; left: 50%;  </span><br><span class="line">//兼容</span><br><span class="line">-webkit-transform: translate(-50%,-50%);  </span><br><span class="line">-ms-transform: translate(-50%,-50%);  </span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></p>
-<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">align-items: center;</span><br><span class="line">justify-content: center;</span><br></pre></td></tr></table></figure>
-<h3 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//父级</span><br><span class="line">display: table; </span><br><span class="line"></span><br><span class="line">//子级</span><br><span class="line">display: table-cell;</span><br><span class="line">text-align: center;</span><br><span class="line">vertical-align: middle; //设置元素的垂直对齐方式 middle: 把此元素放置在父元素的中部。</span><br></pre></td></tr></table></figure>
-<h3 id="顺便说说四大主流浏览器内核"><a href="#顺便说说四大主流浏览器内核" class="headerlink" title="顺便说说四大主流浏览器内核"></a>顺便说说四大主流浏览器内核</h3><p>浏览器内核：负责对网页语法的解释（如HTML,JAVASCRIPT)并渲染网页。</p>
-<ol>
-<li>Trident: IE (微软开发，开放内核)</li>
-<li>Gecko: FireFox （完全开源）</li>
-<li>Presto: Opera（前内核，现已废弃）</li>
-<li>Webkit: chrome Safari 傲游3 猎豹浏览器 百度浏览器 opear浏览器(Safari内核,Chrome内核原型,开源)</li>
-</ol>
-<ul>
-<li>Trident内核速度是四大主流浏览器内核中最慢的。所以曾经国内厂商开发了部分浏览器有”双核”或”多核”版本，就是将Trident内核称为”兼容模式”，其他内核称为”高速模式”。</li>
-<li>Presto内核在2003年的Opera7中首次被使用，该款引擎的特点就是渲染速度的优化达到了极致，然而代价是牺牲了网页的兼容性。</li>
-<li>Webkit是苹果公司自己的内核，google的chrome也使用webkit作为内核。 是一个开源的浏览器引擎，同时WebKit 也是苹果Mac OS X 系统引擎框架版本的名称，它拥有清晰的源码结构、极快的渲染速度，包含的 WebCore 排版引擎和JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来。 </li>
-<li>chromium是 Google 的chrome浏览器背后的引擎，Chromium是一个由Google主导开发的网页浏览器，其目的是为了创建一个安全、稳定和快速的通用浏览器。Chromium相当于Chrome的工程版或称实验版</li>
-</ul>
+            <h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="css3-兼容性"><a href="#css3-兼容性" class="headerlink" title="css3 兼容性"></a>css3 兼容性</h3><p>-moz- // firefox—-&gt;gecko<br>-ms- // ie—-&gt;trident<br>-webkit- // safari—-&gt;webkit<br>-o- // opera—-&gt;presto<br>无// chrome—-&gt;blink/webkit</p>
+<h3 id="css3-选择器"><a href="#css3-选择器" class="headerlink" title="css3 选择器"></a>css3 选择器</h3><p>css3选择器:</p>
+<p>1.css3属性选择器 ele[attr=”*(任意位置),^(开头),$(结尾)”]</p>
+<p>2.css3伪类选择器</p>
+<p>第一组：同一父级下的某个子元素<br>:first-child<br>:last-child<br>:nth-child(n) 同一父级下的第几个子元素 （正着来）<br>:nth-last-child(n) （倒着来）</p>
+<p>第二组：（常用）一类中的某个元素</p>
+<p>:first-of-type<br>:last-of-type<br>:nth-of-type(n) 一类中的第几个元素 （正着来）<br>:nth-last-of-type(n) （倒着来）</p>
+<p>3.css3条件选择器</p>
+<p>E&gt;F F是E的直接子元素<br>E+F F是E的兄弟节点，而且是E后面的第一个<br>E~F F是E后面的兄弟节点</p>
+<h3 id="css3-图像变换-transform"><a href="#css3-图像变换-transform" class="headerlink" title="css3 图像变换 transform"></a>css3 图像变换 transform</h3><p>1.旋转<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate(…deg) / rotateX / rotateY / rotateZ / rotate3d(0/1 , 0/1 , 0/1 , …deg) // 1 变换，0 不变换</span><br></pre></td></tr></table></figure></p>
+<p>2.位移<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: translate(…px , …px) / translateX / translateY / translateZ / translate3d(…px , …px , …px)</span><br></pre></td></tr></table></figure></p>
+<p>3.缩放<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: scale(数字) ／ scaleX / scaleY / scaleZ / scale3d(数字 , 数字 , 数字)</span><br></pre></td></tr></table></figure></p>
+<p>4.扭曲<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: skew(…deg) / skewX / skewY</span><br></pre></td></tr></table></figure></p>
+<p>5.设置变换的原点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">translate-origin: left top / 50% 50%</span><br><span class="line">//默认变换的原点为 50% 50%，为图形的中心</span><br></pre></td></tr></table></figure></p>
+<h3 id="css3-过度-transition"><a href="#css3-过度-transition" class="headerlink" title="css3 过度 transition"></a>css3 过度 transition</h3><p>transition 为一个复合属性，由下面几部分组成</p>
+<p>1.transition-property 指定过渡或者动态模拟的css属性。若全部则写 all。<br>2.transition-duration 指定过渡所需要的时间。<br>3.transition-timing-function 指定过渡函数。个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.transition-delay 指定延迟时间。</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px;</span><br><span class="line">    transition: all 5s linear 1s;</span><br><span class="line">    // 过渡全部属性，五秒完成，匀速运动，延时一秒</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    left: 100px;</span><br><span class="line">    // 若该元素 left 变成 100px，则会触发过渡</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-动画-animation"><a href="#css3-动画-animation" class="headerlink" title="css3 动画 animation"></a>css3 动画 animation</h3><p>css3 动画：animation + keyframes</p>
+<p>animation 为一个复合属性，由下面几部分组成：</p>
+<p>1.animation-name：执行动画的 keyframes 的名字。<br>2.animation-duration：执行动画的总时长。<br>3.animation-timing-function：指定过渡函数。这个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out 动画以低速开始和结束。<br>4.animation-delay：执行延迟时间。<br>5.animation-direction：动画播放的方式。这个属性的值主要有：normal 正常播放模式、reverse 倒序播放、alternate 动画在奇数次正向播放偶数次倒序播放、alternate-reverse 动画在奇数次倒序播放偶数次正向播放。<br>6.animation-iteration-count：动画执行的次数。infinite 是无限次，写一个数字就是要执行几次。<br>7.animation-fill-mode：执行完动画后物体停止的位置。forwards 是停在结束的位置上、backwards 是快速执行初始帧（这个最好配合延迟来观察）、none 是回到初始帧的位置、both 是同时具有 forwards 和 backwards 的效果。<br>8.animation-play-state：控制动画的播放状态。running 是播放、paused 是暂停。</p>
+<p>keyframes 声明一个运动函数，函数为 百分比 + 样式状态 的 结合体</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    left: 1px</span><br><span class="line">    animation: move 5s linear 1s forwards;</span><br><span class="line">    // 运动函数 move，五秒完成，匀速运动，延时一秒，停在结束的位置</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        left: 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        left: 2px;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        left: 3px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-三维动画"><a href="#css3-三维动画" class="headerlink" title="css3 三维动画"></a>css3 三维动画</h3><p>使用三维动画：</p>
+<p>首先，给父级设置transform-style: preverse-3d<br>其次（可选/可不选），给父级设置景深: transform: prespective(…px) 或者 prespective: …px // 景深就是父级的深度<br>然后，给子级使用tranform: translateZ(…px)，形成三维效果<br>最后，调用 transform 上的各种 图形变换效果形成三维动画</p>
+<h3 id="css3-动画加速"><a href="#css3-动画加速" class="headerlink" title="css3 动画加速"></a>css3 动画加速</h3><p>动画加速:</p>
+<p>1.GPU硬件加速模式，让浏览器在渲染动画的时候从CPU转向GPU</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transform: transtion3d(0,0,0);</span><br><span class="line">transform: translateZ(0);</span><br></pre></td></tr></table></figure>
+<p>2.防止动画出现闪烁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">backface-visibilty: hidden;</span><br><span class="line">prespective: …px;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-多列布局-column"><a href="#css3-多列布局-column" class="headerlink" title="css3 多列布局 column"></a>css3 多列布局 column</h3><p>多列布局:</p>
+<p>父级属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.columns: xxx // 分成几分就写几。 复合属性，含有（column-width ／ column-count）</span><br><span class="line">2.column-gap: xxx // 布局两列中间宽度</span><br><span class="line">3.column-rule: 20px solid green // 布局两列中间加一横线</span><br></pre></td></tr></table></figure></p>
+<p>子级属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.column-span: all; // 此个子集元素独占完整一行</span><br></pre></td></tr></table></figure></p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    columns: 5;</span><br><span class="line">    column-gap: 0px;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-弹性盒子-flex"><a href="#css3-弹性盒子-flex" class="headerlink" title="css3 弹性盒子 flex"></a>css3 弹性盒子 flex</h3><p>父级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.display: flex</span><br><span class="line">2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素</span><br><span class="line">3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）</span><br><span class="line">4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</span><br></pre></td></tr></table></figure></p>
+<p>子级元素属性:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.flex-grow // 按比例分配剩余空间</span><br><span class="line">2.flex-shrink // 按比例收缩超出空间</span><br><span class="line">3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</span><br></pre></td></tr></table></figure></p>
+<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：</p>
+<p>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=<span class="string">"father"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">// css</span><br><span class="line">.father &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">    flex-basis: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background-color: blue;           </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css3-盒子模型-box-sizing"><a href="#css3-盒子模型-box-sizing" class="headerlink" title="css3 盒子模型 box-sizing"></a>css3 盒子模型 box-sizing</h3><p>盒子模型:</p>
+<p>box-sizing: border-box // IE6混杂模式的盒模型 border + padding + content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 border-box 的总 宽／高 = content + margin</p>
+<p>box-sizing: content-box // 标准模式的盒模型 content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 content-box 的总 宽／高 = content + padding + border + margin</p>
+<h3 id="css3-背景图片-background-size"><a href="#css3-背景图片-background-size" class="headerlink" title="css3 背景图片 background-size"></a>css3 背景图片 background-size</h3><p>1.contain：同比例放大或缩小，尽量让一张图以最大限度沾满容器，多出的部分重复显示</p>
+<p>2.cover：同比例放大或缩小，一张图填满容器，多余的部分隐藏。</p>
+<p>移动端布局（media／rem／%）<br>移动端布局：</p>
+<p>1.使用 媒体查询 media，兼容不同尺寸的设备<br>@media (填写媒体查询属性) {}</p>
+<p>2.使用 rem，相对于 html 跟元素大小<br>html {font-size: 62.5% ／ …;}<br>然后在在设置 宽／高／字体大小 等属性的时候 使用 rem</p>
+<p>3.宽高使用 百分比（%）布局，还原设计图尺寸<br>高无法设置百分比，可以选用 padding-top<br>padding-top 相对于宽设置百分比</p>
+<p>4.使用 iconfont 等矢量图片，代替 png 等静态图片</p>
 
             
         </div>
@@ -499,7 +534,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/22/CSS-CSS3/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/03/23/postjavascript的prototype及继承/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -513,7 +548,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/03/15/CSS/" id="post_nav-older" class="next-content">
+        <a href="/2018/03/20/postCSS垂直居中/" id="post_nav-older" class="next-content">
             أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
