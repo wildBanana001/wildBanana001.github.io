@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 26 2018 12:21:39 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 26 2018 12:41:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Thu Apr 26 2018 12:21:39 GMT+0800",
+    "dateModified": "Thu Apr 26 2018 12:41:15 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -458,7 +458,8 @@
             <p class="post-title">
                 web前端面试知识点总结
             </p>
-            <h2 id="面试常见知识点总结"><a href="#面试常见知识点总结" class="headerlink" title="面试常见知识点总结"></a>面试常见知识点总结</h2><h3 id="HTML与CSS部分"><a href="#HTML与CSS部分" class="headerlink" title="HTML与CSS部分"></a>HTML与CSS部分</h3><h4 id="BFC（Block-Formatting-Context）"><a href="#BFC（Block-Formatting-Context）" class="headerlink" title="BFC（Block Formatting Context）"></a>BFC（Block Formatting Context）</h4><p>块级格式化上下文。<br>overflow : hidden<br>position: absolute 、fixed<br>display: inline-block 、table-cell 、table-caption<br>这些属性创建时会自动创建BFC。<br>新方式：只为创建BFC无任何副作用。 display: flow-root<br>BFC适用： 解决浮动问题、两栏布局、margin塌陷/合并</p>
+            <h2 id="面试常见知识点总结"><a href="#面试常见知识点总结" class="headerlink" title="面试常见知识点总结"></a>面试常见知识点总结</h2><h3 id="HTML与CSS部分"><a href="#HTML与CSS部分" class="headerlink" title="HTML与CSS部分"></a>HTML与CSS部分</h3><h4 id="如何去浮动"><a href="#如何去浮动" class="headerlink" title="如何去浮动"></a>如何去浮动</h4><h4 id="清浮动的原理方法"><a href="#清浮动的原理方法" class="headerlink" title="清浮动的原理方法"></a>清浮动的原理方法</h4><h4 id="跨浏览器的事件模型"><a href="#跨浏览器的事件模型" class="headerlink" title="跨浏览器的事件模型"></a>跨浏览器的事件模型</h4><h4 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h4><h4 id="CSS内核"><a href="#CSS内核" class="headerlink" title="CSS内核"></a>CSS内核</h4><h4 id="图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？"><a href="#图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？" class="headerlink" title="图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？"></a>图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？</h4><p>PNG8: 8位的png最多支持256(2^8)种颜色，8位的png其实支持不透明、索引透明、alpha透明。</p>
+<h4 id="BFC（Block-Formatting-Context）"><a href="#BFC（Block-Formatting-Context）" class="headerlink" title="BFC（Block Formatting Context）"></a>BFC（Block Formatting Context）</h4><p>块级格式化上下文。<br>overflow : hidden<br>position: absolute 、fixed<br>display: inline-block 、table-cell 、table-caption<br>这些属性创建时会自动创建BFC。<br>新方式：只为创建BFC无任何副作用。 display: flow-root<br>BFC适用： 解决浮动问题、两栏布局、margin塌陷/合并</p>
 <p>Flex(弹性)和 Grid(网格)布局中的元素也会自动创建类似BFC的机制，只是它们被称为 Flex Formatting Context(FFC,弹性格式上下文) 和 Grid Formatting Context(GFC,网格格式上下文)。</p>
 <h4 id="css两栏布局实现方法"><a href="#css两栏布局实现方法" class="headerlink" title="css两栏布局实现方法"></a>css两栏布局实现方法</h4><ol>
 <li>float + margin<br> 给左边的元素一个固定宽度，向左浮动，给右边一个向右浮动，宽度为100%，设置margin-left为120px（避免重合，且间距为20px）</li>
@@ -758,7 +759,7 @@
 * 浏览器显示 HTML    (以下部分具体可看JS时间线)
 * 浏览器发送请求获取嵌入在 HTML 中的资源（如图片、音频、视频、CSS、JS等等）
 * . 浏览器发送异步请求
-</code></pre><h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。<br>所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。</p>
+</code></pre><h4 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h4><h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。<br>所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。</p>
 <h4 id="HTTP1-1-与-HTTP2-0区别"><a href="#HTTP1-1-与-HTTP2-0区别" class="headerlink" title="HTTP1.1 与 HTTP2.0区别"></a>HTTP1.1 与 HTTP2.0区别</h4><h4 id="HTTP的基本优化"><a href="#HTTP的基本优化" class="headerlink" title="HTTP的基本优化"></a>HTTP的基本优化</h4><p>影响一个 HTTP 网络请求的因素主要有两个：带宽和延迟。</p>
 <pre><code>* 带宽：如果说我们还停留在拨号上网的阶段，带宽可能会成为一个比较严重影响请求的问题，但是现在网络基础建设已经使得带宽得到极大的提升，我们不再会担心由带宽而影响网速，那么就只剩下延迟了。
 * 延迟：
@@ -805,7 +806,7 @@
 <p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
 <h4 id="Vue双向数据绑定"><a href="#Vue双向数据绑定" class="headerlink" title="Vue双向数据绑定"></a>Vue双向数据绑定</h4><p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observe(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，会为 data 中的每一个属性生成一个主题对象 dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
 <h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-<h4 id="vueRoute的实现方式，若前端hash值改变，如何通知数据层"><a href="#vueRoute的实现方式，若前端hash值改变，如何通知数据层" class="headerlink" title="vueRoute的实现方式，若前端hash值改变，如何通知数据层"></a>vueRoute的实现方式，若前端hash值改变，如何通知数据层</h4>
+<h4 id="vueRoute的实现方式，若前端hash值改变，如何通知数据层"><a href="#vueRoute的实现方式，若前端hash值改变，如何通知数据层" class="headerlink" title="vueRoute的实现方式，若前端hash值改变，如何通知数据层"></a>vueRoute的实现方式，若前端hash值改变，如何通知数据层</h4><h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><h4 id="二叉树遍历思路"><a href="#二叉树遍历思路" class="headerlink" title="二叉树遍历思路"></a>二叉树遍历思路</h4><h4 id="树的广度和深度的优先遍历"><a href="#树的广度和深度的优先遍历" class="headerlink" title="树的广度和深度的优先遍历"></a>树的广度和深度的优先遍历</h4><h4 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h4><h4 id="创建线程的步骤"><a href="#创建线程的步骤" class="headerlink" title="创建线程的步骤"></a>创建线程的步骤</h4><h4 id="实现栈"><a href="#实现栈" class="headerlink" title="实现栈"></a>实现栈</h4><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><h4 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h4><h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><h4 id="平时怎么学习的"><a href="#平时怎么学习的" class="headerlink" title="平时怎么学习的"></a>平时怎么学习的</h4><h4 id="你觉得最有成就感的事情是什么"><a href="#你觉得最有成就感的事情是什么" class="headerlink" title="你觉得最有成就感的事情是什么"></a>你觉得最有成就感的事情是什么</h4><h4 id="有过团队经历么"><a href="#有过团队经历么" class="headerlink" title="有过团队经历么"></a>有过团队经历么</h4><h4 id="了解前端技术前沿团队么"><a href="#了解前端技术前沿团队么" class="headerlink" title="了解前端技术前沿团队么"></a>了解前端技术前沿团队么</h4><h4 id="5年后想成为什么样的人"><a href="#5年后想成为什么样的人" class="headerlink" title="5年后想成为什么样的人"></a>5年后想成为什么样的人</h4><h4 id="为什么学前端"><a href="#为什么学前端" class="headerlink" title="为什么学前端"></a>为什么学前端</h4>
             
         </div>
     
@@ -834,7 +835,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
