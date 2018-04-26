@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 26 2018 15:56:55 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 26 2018 15:59:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Thu Apr 26 2018 15:56:55 GMT+0800",
+    "dateModified": "Thu Apr 26 2018 15:59:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -462,11 +462,11 @@
 <li><p>为带有浮动元素的父元素，添加伪元素（最佳推选）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:after &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>触发bfc，为带有浮动元素的父元素，添加 overflew：hidden</p>
+<li><p>触发bfc，为带有浮动元素的父元素，添加 <code>overflew：hidden</code></p>
 </li>
-<li>触发bfc，为带有浮动元素的父元素，添加 position：absolute</li>
-<li>触发bfc，为带有浮动元素的父元素，添加 display：inline-block</li>
-<li>触发bfc，为带有浮动元素的父元素，添加 zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</li>
+<li>触发bfc，为带有浮动元素的父元素，添加 <code>position：absolute</code></li>
+<li>触发bfc，为带有浮动元素的父元素，添加 <code>display：inline-block</code></li>
+<li>触发bfc，为带有浮动元素的父元素，添加 <code>zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</code></li>
 </ol>
 <h4 id="跨浏览器的事件模型"><a href="#跨浏览器的事件模型" class="headerlink" title="跨浏览器的事件模型"></a>跨浏览器的事件模型</h4><h4 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h4><h4 id="CSS内核"><a href="#CSS内核" class="headerlink" title="CSS内核"></a>CSS内核</h4><h4 id="图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？"><a href="#图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？" class="headerlink" title="图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？"></a>图片有哪几种格式？各自的优缺点是什么？png有哪些格式？各自的特点是什么？</h4><p>PNG8: 8位的png最多支持256(2^8)种颜色，8位的png其实支持不透明、索引透明、alpha透明。</p>
 <h4 id="BFC（Block-Formatting-Context）"><a href="#BFC（Block-Formatting-Context）" class="headerlink" title="BFC（Block Formatting Context）"></a>BFC（Block Formatting Context）</h4><p>块级格式化上下文。<br>overflow : hidden<br>position: absolute 、fixed<br>display: inline-block 、table-cell 、table-caption<br>这些属性创建时会自动创建BFC。<br>新方式：只为创建BFC无任何副作用。 display: flow-root<br>BFC适用： 解决浮动问题、两栏布局、margin塌陷/合并</p>
