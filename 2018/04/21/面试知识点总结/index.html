@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Wed May 02 2018 11:35:44 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 02 2018 11:37:37 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Wed May 02 2018 11:35:44 GMT+0800",
+    "dateModified": "Wed May 02 2018 11:37:37 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -783,7 +783,9 @@
 <pre><code>1. 只支持 GET 请求而不支持 POST 请求
 2. 调用失败的时候不会返回各种 HTTP 状态码
 3. 安全性不高
-</code></pre><h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><h4 id="网络请求过程（在浏览器输入url）"><a href="#网络请求过程（在浏览器输入url）" class="headerlink" title="网络请求过程（在浏览器输入url）"></a>网络请求过程（在浏览器输入url）</h4><pre><code>* 输入地址
+</code></pre><h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><p>cors 与 jsonp 相比的优点：<br>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求（get／post／put／delete）</p>
+<p>使用 cors：<br>在请求头中，添加 Origin 字段。<br>Origin 字段用来说明，请求来自哪个源（协议 + 域名 + 端口）。<br>服务器根据这个值，决定是否同意这次请求。<br><code>Origin: https://wildbanana001.github.io/</code><br>在响应头中，服务器会返回 Access-Control-Allow-Origin 字段。<br>Access-Control-Allow-Origin 字段的值,要么是 Origin 的值，要么是 <em>（接受 任意 域名 的请求），表示接受这个域名的请求。<br>要是没有返回 Access-Control-Allow-Origin 字段，则代表出错了。<br><code>Access-Control-Allow-Origin: https://wildbanana001.github.io/</code><br>`Access-Control-Allow-Origin: </em>`</p>
+<h4 id="网络请求过程（在浏览器输入url）"><a href="#网络请求过程（在浏览器输入url）" class="headerlink" title="网络请求过程（在浏览器输入url）"></a>网络请求过程（在浏览器输入url）</h4><pre><code>* 输入地址
 * 浏览器查找域名的 IP 地址 这一步包括 DNS 具体的查找过程，包括：浏览器缓存-&gt;系统缓存-&gt;路由器缓存...
 * 浏览器向 web 服务器发送一个 HTTP 请求  
 * 服务器的永久重定向响应（从http://www.example.com到http://www.example）
@@ -869,7 +871,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            Older
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
