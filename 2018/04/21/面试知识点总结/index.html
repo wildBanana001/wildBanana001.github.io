@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Thu May 03 2018 17:06:23 GMT+0800">
+        <meta property="article:modified_time" content="Thu May 03 2018 17:41:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Thu May 03 2018 17:06:23 GMT+0800",
+    "dateModified": "Thu May 03 2018 17:41:34 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -829,14 +829,17 @@
 <pre><code>* 500 internal sever error，表示服务器端在执行请求时发生了错误
 * 503 service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求
 </code></pre><h4 id="HTTP缓存-待补充"><a href="#HTTP缓存-待补充" class="headerlink" title="HTTP缓存(待补充)"></a>HTTP缓存(待补充)</h4><h4 id="HTTP缓存头部简述-待补充"><a href="#HTTP缓存头部简述-待补充" class="headerlink" title="HTTP缓存头部简述(待补充)"></a>HTTP缓存头部简述(待补充)</h4><h4 id="http的-nginx-服务器可以直接升级到https吗？-待补充"><a href="#http的-nginx-服务器可以直接升级到https吗？-待补充" class="headerlink" title="http的(nginx)服务器可以直接升级到https吗？(待补充)"></a>http的(nginx)服务器可以直接升级到https吗？(待补充)</h4><h4 id="http1-0短连接可以实现长连接吗？-待补充"><a href="#http1-0短连接可以实现长连接吗？-待补充" class="headerlink" title="http1.0短连接可以实现长连接吗？(待补充)"></a>http1.0短连接可以实现长连接吗？(待补充)</h4><h4 id="网络安全XSS-待补充"><a href="#网络安全XSS-待补充" class="headerlink" title="网络安全XSS(待补充)"></a>网络安全XSS(待补充)</h4><p>链接型<br>反射型<br>存储型<br>防御：过滤非法字符（利用正则匹配），限制长度（截断）</p>
-<h4 id="设计模式-待补充"><a href="#设计模式-待补充" class="headerlink" title="设计模式(待补充)"></a>设计模式(待补充)</h4><p>观察者模式</p>
-<p>MVC模式</p>
-<p>MVVM模式</p>
-<p>工厂模式</p>
-<p>单例模式</p>
-<p>中介者模式</p>
-<p>装饰者模式</p>
-<h3 id="前端工程化-待补充"><a href="#前端工程化-待补充" class="headerlink" title="前端工程化(待补充)"></a>前端工程化(待补充)</h3><h3 id="前端性能优化-待补充"><a href="#前端性能优化-待补充" class="headerlink" title="前端性能优化(待补充)"></a>前端性能优化(待补充)</h3><h3 id="VUE-待补充"><a href="#VUE-待补充" class="headerlink" title="VUE(待补充)"></a>VUE(待补充)</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
+<h4 id="设计模式-待补充"><a href="#设计模式-待补充" class="headerlink" title="设计模式(待补充)"></a>设计模式(待补充)</h4><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5><h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><h5 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h5><h5 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h5><p>目的： 当创建相似对象时执行重复操作。 在编译时不知道具体类型(类)的情况下，为工厂客户提供一种创建对象的接口。</p>
+<p>使用工厂模式不用new或对象字面量的构造函数，依据创建时传参来指定类型创建对象的接口。<br>例：<code>var corolla = CarMaker.factory(&#39;Compact&#39;);</code></p>
+<h5 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h5><p>思想：保证一个特定类仅有一个实例。<br>实质：保证每次创建的实例对象this指向原来的实例。<br>使用JavaScript中的对象创建对象字面量时，它就是一个单例。因为每一个对象的空间地址不同，所以两个对象的空间地址不同，故两个对象不会相等。</p>
+<p>JavaScript实现单例：</p>
+<ol>
+<li>使用new操作符实例构造函数。(new会得this指向该对象实例this)</li>
+<li>在构造函数的静态属性中缓存该实例。(在实例中定义一个变量接收this)</li>
+<li>将该实例包装在闭包中</li>
+</ol>
+<h5 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h5><h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><h3 id="前端工程化-待补充"><a href="#前端工程化-待补充" class="headerlink" title="前端工程化(待补充)"></a>前端工程化(待补充)</h3><h3 id="前端性能优化-待补充"><a href="#前端性能优化-待补充" class="headerlink" title="前端性能优化(待补充)"></a>前端性能优化(待补充)</h3><p>可跳转☞：<br><a href="https://wildbanana001.github.io/2018/05/03/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">https://wildbanana001.github.io/2018/05/03/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</a></p>
+<h3 id="VUE-待补充"><a href="#VUE-待补充" class="headerlink" title="VUE(待补充)"></a>VUE(待补充)</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
 <p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
 <p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
 <h4 id="Vue双向数据绑定"><a href="#Vue双向数据绑定" class="headerlink" title="Vue双向数据绑定"></a>Vue双向数据绑定</h4><p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observe(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，会为 data 中的每一个属性生成一个主题对象 dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
