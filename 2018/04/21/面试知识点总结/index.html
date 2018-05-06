@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun May 06 2018 17:07:31 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 06 2018 17:17:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun May 06 2018 17:07:31 GMT+0800",
+    "dateModified": "Sun May 06 2018 17:17:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -793,7 +793,16 @@
 * 浏览器发送请求获取嵌入在 HTML 中的资源（如图片、音频、视频、CSS、JS等等）
 * . 浏览器发送异步请求
 </code></pre><h4 id="应用层协议-待补充"><a href="#应用层协议-待补充" class="headerlink" title="应用层协议(待补充)"></a>应用层协议(待补充)</h4><h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>Http协议是建立在TCP协议基础之上的，当浏览器需要从服务器获取网页数据的时候，会发出一次Http请求。Http会通过TCP建立起一个到服务器的连接通道，当本次请求需要的数据完毕后，Http会立即将TCP连接断开，这个过程是很短的。所以Http连接是一种短连接，是一种无状态的连接。<br>所谓的无状态，是指浏览器每次向服务器发起请求的时候，不是通过一个连接，而是每次都建立一个新的连接。如果是一个连接的话，服务器进程中就能保持住这个连接并且在内存中记住一些信息状态。而每次请求结束后，连接就关闭，相关的内容就释放了，所以记不住任何状态，成为无状态连接。</p>
-<h4 id="HTTP1-1-与-HTTP2-0区别-待补充"><a href="#HTTP1-1-与-HTTP2-0区别-待补充" class="headerlink" title="HTTP1.1 与 HTTP2.0区别(待补充)"></a>HTTP1.1 与 HTTP2.0区别(待补充)</h4><h4 id="HTTP的基本优化"><a href="#HTTP的基本优化" class="headerlink" title="HTTP的基本优化"></a>HTTP的基本优化</h4><p>影响一个 HTTP 网络请求的因素主要有两个：带宽和延迟。</p>
+<h4 id="HTTP1-1-与-HTTP2-0区别"><a href="#HTTP1-1-与-HTTP2-0区别" class="headerlink" title="HTTP1.1 与 HTTP2.0区别"></a>HTTP1.1 与 HTTP2.0区别</h4><ol>
+<li>在浏览器端，HTTP/2仅能在TLS下运行，也就是HTTPS。这不是因为HTTP/2标准强制要求，而是全球两大浏览器领导者 —— Firefox和Chrome都明确地表示，他们只会实现基于TLS的HTTP/2。</li>
+<li>HTTP/2取消了大量头字段，并且取消了小版本号。也就是说服务器和客户端都必须确定自己是否完整兼容http2或者彻底不兼容。</li>
+<li>HTTP/2不再是一个基于文本的协议，通过新增的二进制分帧层变成了一个二进制协议，这意味着：<br>HTTP/2使用二进制帧进行数据交换。HTTP/2规范中一共定义了10种帧，其中最基础的两种分别对应于HTTP/1.1的DATA和HEADERS帧HTTP/2可以对压缩头信息进行压缩了。反正是二进制帧。</li>
+<li>利用帧，HTTP/2可以在单个TCP连接上高效传输所有资源：通过在单个连接上建立多个流，实现流的多路复用。流可以指派一个优先级，也可以为流建立依赖关系。这样可以避免“浏览器明明在等关键的CSS和JS，服务器却还在发图片”。完全避免线头阻塞。</li>
+<li>服务器可以利用RST_STREAM帧随时中断某个chunk的发送。</li>
+<li>服务器可以主动向客户端推送资源让客户端缓存。当然，客户端可以使用RST_STREAM帧拒绝掉服务器的“好意”。</li>
+<li>HTTP/2的流可以进行流量控制，通过公示流量窗口来限制另一端发送数据。</li>
+</ol>
+<h4 id="HTTP的基本优化"><a href="#HTTP的基本优化" class="headerlink" title="HTTP的基本优化"></a>HTTP的基本优化</h4><p>影响一个 HTTP 网络请求的因素主要有两个：带宽和延迟。</p>
 <pre><code>* 带宽：如果说我们还停留在拨号上网的阶段，带宽可能会成为一个比较严重影响请求的问题，但是现在网络基础建设已经使得带宽得到极大的提升，我们不再会担心由带宽而影响网速，那么就只剩下延迟了。
 * 延迟：
 
