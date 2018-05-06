@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Thu May 03 2018 17:41:34 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 06 2018 17:07:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Thu May 03 2018 17:41:34 GMT+0800",
+    "dateModified": "Sun May 06 2018 17:07:31 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -781,7 +781,7 @@
 2. 调用失败的时候不会返回各种 HTTP 状态码
 3. 安全性不高
 </code></pre><h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><p>cors 与 jsonp 相比的优点：<br>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求（get／post／put／delete）</p>
-<p>使用 cors：<br>在请求头中，添加 Origin 字段。<br>Origin 字段用来说明，请求来自哪个源（协议 + 域名 + 端口）。<br>服务器根据这个值，决定是否同意这次请求。<br><code>Origin: https://wildbanana001.github.io/</code><br>在响应头中，服务器会返回 Access-Control-Allow-Origin 字段。<br>Access-Control-Allow-Origin 字段的值,要么是 Origin 的值，要么是 <em>（接受 任意 域名 的请求），表示接受这个域名的请求。<br>要是没有返回 Access-Control-Allow-Origin 字段，则代表出错了。<br><code>Access-Control-Allow-Origin: https://wildbanana001.github.io/</code><br>`Access-Control-Allow-Origin: </em> `</p>
+<p>使用 cors：<br>在请求头中，添加 Origin 字段。<br>Origin 字段用来说明，请求来自哪个源（协议 + 域名 + 端口）。<br>服务器根据这个值，决定是否同意这次请求。<br><code>Origin: https://wildbanana001.github.io/</code><br>在响应头中，服务器会返回 Access-Control-Allow-Origin 字段。<br>Access-Control-Allow-Origin 字段的值,要么是 Origin 的值，要么是 *（接受 任意 域名 的请求），表示接受这个域名的请求。<br>要是没有返回 Access-Control-Allow-Origin 字段，则代表出错了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://wildbanana001.github.io/</span><br><span class="line">Access-Control-Allow-Origin: *</span><br></pre></td></tr></table></figure></p>
 <h4 id="网络请求过程（在浏览器输入url）"><a href="#网络请求过程（在浏览器输入url）" class="headerlink" title="网络请求过程（在浏览器输入url）"></a>网络请求过程（在浏览器输入url）</h4><pre><code>* 输入地址
 * 浏览器查找域名的 IP 地址 这一步包括 DNS 具体的查找过程，包括：浏览器缓存-&gt;系统缓存-&gt;路由器缓存...
 * 浏览器向 web 服务器发送一个 HTTP 请求  
@@ -828,7 +828,14 @@
 </code></pre><p>5XX 服务器错误</p>
 <pre><code>* 500 internal sever error，表示服务器端在执行请求时发生了错误
 * 503 service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求
-</code></pre><h4 id="HTTP缓存-待补充"><a href="#HTTP缓存-待补充" class="headerlink" title="HTTP缓存(待补充)"></a>HTTP缓存(待补充)</h4><h4 id="HTTP缓存头部简述-待补充"><a href="#HTTP缓存头部简述-待补充" class="headerlink" title="HTTP缓存头部简述(待补充)"></a>HTTP缓存头部简述(待补充)</h4><h4 id="http的-nginx-服务器可以直接升级到https吗？-待补充"><a href="#http的-nginx-服务器可以直接升级到https吗？-待补充" class="headerlink" title="http的(nginx)服务器可以直接升级到https吗？(待补充)"></a>http的(nginx)服务器可以直接升级到https吗？(待补充)</h4><h4 id="http1-0短连接可以实现长连接吗？-待补充"><a href="#http1-0短连接可以实现长连接吗？-待补充" class="headerlink" title="http1.0短连接可以实现长连接吗？(待补充)"></a>http1.0短连接可以实现长连接吗？(待补充)</h4><h4 id="网络安全XSS-待补充"><a href="#网络安全XSS-待补充" class="headerlink" title="网络安全XSS(待补充)"></a>网络安全XSS(待补充)</h4><p>链接型<br>反射型<br>存储型<br>防御：过滤非法字符（利用正则匹配），限制长度（截断）</p>
+</code></pre><h4 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h4><ol>
+<li>当浏览器第一次向服务器请求资源时会去询问服务器这个资源该不该缓存，用什么方法缓存。假设服务器同意浏览器缓存，并告诉浏览器一个资源失效时间，这个时间存放在Expires中如：Mon,10 Dec 1990 02:25:22GMT。那么这个资源在这个时间之前都能使用。那么有一个问题是：客户端的时间是可以被修改的，而且客户端和服务器时间未必一致。</li>
+<li>既然返回一个绝对时间不好用，那么服务器就返回一个相对时间好了，这个时间在Cache-Control:max-age=300单位是秒（s）。现在好了300秒内这个资源就不会过期。那么有一种可能是300秒后我再次去服务器拿这个资源发现资源并没有被改变过，服务器又再次返回了同样的资源给我，这样的话就浪费了一次带宽。其实可以返回一条信息给浏览器表明缓存资源可以继续使用。</li>
+<li>现在回到浏览器第一次请求的时候，服务器响应头中多了一个ETag:W/“e-cbxLFQW5zapn79tQwb/g6Q”。这个ETag是服务器根据资源计算出的唯一标识，通常配合max-age使用。当时间过期以后浏览器会将标识放在请求头中的If-None-Match，服务器收到请求以后会拿请求中的标识与服务器根据资源计算的Etag进行比较，若一致则返回响应头其中包含状态码304。不一致就返回新的资源。但是在分布式系统中每个机器生成的ETag不一样。</li>
+<li>既然ETag也不是那么的靠谱，那么服务器第一次返回时在响应头中又加了一个字段Last-Modified。当资源过期时浏览器发现资源有Last-Modified，然后发请求时便在请求头增加了一个字段If-Modified-Since表示发送的请求时间，服务器拿到这个时间与资源的最后修改时间比较，如果修改时间比较新那么返回新的资源，否则返回Http 304。</li>
+</ol>
+<p>当Expires与Cache-Control:max-age同时存在时max-age的优先级高。<br>[Last-Modified，If-Modified-Since]和[ETag、If-None-Match]经常会放在一起使用。</p>
+<h4 id="HTTP缓存头部简述-待补充"><a href="#HTTP缓存头部简述-待补充" class="headerlink" title="HTTP缓存头部简述(待补充)"></a>HTTP缓存头部简述(待补充)</h4><h4 id="http的-nginx-服务器可以直接升级到https吗？-待补充"><a href="#http的-nginx-服务器可以直接升级到https吗？-待补充" class="headerlink" title="http的(nginx)服务器可以直接升级到https吗？(待补充)"></a>http的(nginx)服务器可以直接升级到https吗？(待补充)</h4><h4 id="http1-0短连接可以实现长连接吗？-待补充"><a href="#http1-0短连接可以实现长连接吗？-待补充" class="headerlink" title="http1.0短连接可以实现长连接吗？(待补充)"></a>http1.0短连接可以实现长连接吗？(待补充)</h4><h4 id="网络安全XSS-待补充"><a href="#网络安全XSS-待补充" class="headerlink" title="网络安全XSS(待补充)"></a>网络安全XSS(待补充)</h4><p>链接型<br>反射型<br>存储型<br>防御：过滤非法字符（利用正则匹配），限制长度（截断）</p>
 <h4 id="设计模式-待补充"><a href="#设计模式-待补充" class="headerlink" title="设计模式(待补充)"></a>设计模式(待补充)</h4><h5 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h5><h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><h5 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h5><h5 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h5><p>目的： 当创建相似对象时执行重复操作。 在编译时不知道具体类型(类)的情况下，为工厂客户提供一种创建对象的接口。</p>
 <p>使用工厂模式不用new或对象字面量的构造函数，依据创建时传参来指定类型创建对象的接口。<br>例：<code>var corolla = CarMaker.factory(&#39;Compact&#39;);</code></p>
 <h5 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h5><p>思想：保证一个特定类仅有一个实例。<br>实质：保证每次创建的实例对象this指向原来的实例。<br>使用JavaScript中的对象创建对象字面量时，它就是一个单例。因为每一个对象的空间地址不同，所以两个对象的空间地址不同，故两个对象不会相等。</p>
