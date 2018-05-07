@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 07 2018 20:14:47 GMT+0800">
+        <meta property="article:modified_time" content="Mon May 07 2018 20:24:52 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Mon May 07 2018 20:14:47 GMT+0800",
+    "dateModified": "Mon May 07 2018 20:24:52 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -867,7 +867,7 @@
 <li>将该实例包装在闭包中</li>
 </ol>
 <h5 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h5><p>目的：对对象实现互相通信，形成松耦合，提高可维护性。<br>实质：使用一个中介者(mediator)对象来保存其他对象的信息，通过它去通知其他对象状态改变。<br>在mediator对象中定义用户信息，状态，交互方法。当要改变数据都要经过调用mediator上的属性或方法。通过使对象之间并不直接”通话”，而是仅通过一个中介者对象进行通信，从而促进形成松散耦合。</p>
-<h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><p>目的：可在运动时动态添加附加功能到对象中。<br>实质：通过从预定于装饰者对象中添加功能，从而在运行时调整对象。</p>
+<h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><p>目的：可在运动时动态添加附加功能到对象中。<br>实质：通过从预定于装饰者对象中添加功能，从而在运行时调整对象。<br>实现装饰者模式的其中一个方法是使得每个装饰者成为一个对象，并且该对象包含了应该被重载的方法。每个装饰者实际上继承了目前已经被前一个装饰者进行增强后的对象。每个装饰方法在“继承的对象”上调用了同样的方法并获取其值，此外它还继续执行了一些操作。</p>
 <h3 id="前端工程化-待补充"><a href="#前端工程化-待补充" class="headerlink" title="前端工程化(待补充)"></a>前端工程化(待补充)</h3><h3 id="前端性能优化-待补充"><a href="#前端性能优化-待补充" class="headerlink" title="前端性能优化(待补充)"></a>前端性能优化(待补充)</h3><p>可跳转☞：<br><a href="https://wildbanana001.github.io/2018/05/03/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">https://wildbanana001.github.io/2018/05/03/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</a></p>
 <h3 id="VUE-待补充"><a href="#VUE-待补充" class="headerlink" title="VUE(待补充)"></a>VUE(待补充)</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
 <p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
@@ -902,7 +902,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
+            أحدث
         </a>
     
 
@@ -912,7 +912,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            Older
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
