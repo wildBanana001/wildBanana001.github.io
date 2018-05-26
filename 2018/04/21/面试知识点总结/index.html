@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sat May 26 2018 23:48:07 GMT+0800">
+        <meta property="article:modified_time" content="Sat May 26 2018 23:49:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sat May 26 2018 23:48:07 GMT+0800",
+    "dateModified": "Sat May 26 2018 23:49:16 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -499,7 +499,7 @@
 <li>table表格布局优点兼容性好，缺点操作繁琐，当其中某个单元格高度超出时，两侧单元格同时自动增高。</li>
 <li>grid网格布局比较前沿。可以用css做到很多事情。</li>
 </ol>
-<p>问题：当高度不定时，以上那种方法比较好？<br>    flex和table比较好。float布局的中间会往左右没有flex的元素扩展，但是我们可以创建BFC来解决。postion布局中间会扩展。grid布局中间也会扩展。        </p>
+<p>问题：当高度不定时，以上那种方法比较好？<br>    flex和table比较好。float布局的中间会往左右没有flex的元素扩展，但是我们可以创建BFC使其不向左右扩展。postion布局中间会扩展。grid布局中间也会扩展。        </p>
 <h4 id="css垂直居中"><a href="#css垂直居中" class="headerlink" title="css垂直居中"></a>css垂直居中</h4><ol>
 <li><p>absolute + margin</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">position:absolute;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">padding:10px;</span><br><span class="line">top:50%;</span><br><span class="line">left:50%;</span><br><span class="line">margin-left: -60px; /*(width+padding)/2*/</span><br><span class="line">margin-top: -60px; /*(height+padding)/2*/</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">方法二：(适用于绝大数情况)</span><br><span class="line">position:absolute;</span><br><span class="line">margin:auto;</span><br><span class="line">top:0;</span><br><span class="line">left:0;</span><br><span class="line">bottom:0;</span><br><span class="line">right:0;</span><br></pre></td></tr></table></figure>
