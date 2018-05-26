@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Thu May 17 2018 23:55:44 GMT+0800">
+        <meta property="article:modified_time" content="Sat May 26 2018 23:29:26 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Thu May 17 2018 23:55:44 GMT+0800",
+    "dateModified": "Sat May 26 2018 23:29:26 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>رئيسية</span>
+                    <span>Home</span>
                 </a>
             </span>
 
@@ -481,6 +481,15 @@
 <li>float + BFC<br> 给左边的元素一个固定宽度，向左浮动，给右边一个overflow:hidden触发BFC特性。</li>
 <li>absolute<br> 给父级一个position：relative。给左边position：absolute；left：0；及一个宽度。给右边position：absolute；right：0；left：120px;则可以实现自适应。</li>
 <li>flex<br> 给父级设置display：flex。给自适应子级一个flex：1即可。</li>
+</ol>
+<h4 id="css三栏布局"><a href="#css三栏布局" class="headerlink" title="css三栏布局"></a>css三栏布局</h4><p>问题： 高度已定，左右定宽，中间自适应。</p>
+<ol>
+<li>float<br> 给左边和右边一个固定宽度和左浮动右浮动。中间不写宽度。</li>
+<li>postion：absolute<br> 给父级一个absolute，左边固定宽度，left：0，中间left和right大于左右的宽度，右边固定宽度和right：0。</li>
+<li>flex 弹性布局<br> 给父级一个display：flex。左右固定宽度，中间flex：1。</li>
+<li>table 表格布局<br> 给父级一个display：table，width：100%。给所有子级display：table-cell。给左右固定宽度。</li>
+<li>grid 网格布局<br> 在父级上写：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">display: grid;</span><br><span class="line">width:100%;</span><br><span class="line">grid-template-rows: 100px; //高度</span><br><span class="line">grid-template-columns： 300px auto 300px; //左右固定宽度，中间自适应</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h4 id="css垂直居中"><a href="#css垂直居中" class="headerlink" title="css垂直居中"></a>css垂直居中</h4><ol>
 <li><p>absolute + margin</p>
@@ -925,7 +934,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            أحدث
+            Neuren
         </a>
     
 
@@ -935,7 +944,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            أقدم
+            Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
