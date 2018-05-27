@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun May 27 2018 09:13:25 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 27 2018 19:07:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun May 27 2018 09:13:25 GMT+0800",
+    "dateModified": "Sun May 27 2018 19:07:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -697,12 +697,12 @@
 </ol>
 <p>缺点：这种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走一个构造函数，效率很低。</p>
 <ol>
-<li>共享原型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = Father.prototype;</span><br></pre></td></tr></table></figure>
+<li>共享原型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;</span><br><span class="line">    Father.call(this)</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = Father.prototype;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
+<p>缺点：由于共用原型对象，没办法改变子类的原型，一改就两个一起改了。</p>
 <ol>
-<li>object.create() <strong>在原型上生成新的对象的实例</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;var son = Object.create(new Father);</span><br></pre></td></tr></table></figure>
+<li>object.create() <strong>在原型上生成新的对象的</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;</span><br><span class="line">    Father.call(this)</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = Object.create(Father.prototype)</span><br><span class="line">Son.prototype.constructor = Son</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>缺点：object.creat方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象上。所以这个继承得到的不是类，只是得到对象。好处：这个方法在你想要改变一个的原型来创建实例而言会特别好用。</p>
@@ -978,7 +978,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -988,7 +988,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
