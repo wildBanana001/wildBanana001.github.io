@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 28 2018 11:18:52 GMT+0800">
+        <meta property="article:modified_time" content="Mon May 28 2018 22:28:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Mon May 28 2018 11:18:52 GMT+0800",
+    "dateModified": "Mon May 28 2018 22:28:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -458,7 +458,8 @@
             <p class="post-title">
                 web前端面试知识点总结
             </p>
-            <h2 id="面试常见知识点总结"><a href="#面试常见知识点总结" class="headerlink" title="面试常见知识点总结"></a>面试常见知识点总结</h2><h3 id="HTML与CSS部分"><a href="#HTML与CSS部分" class="headerlink" title="HTML与CSS部分"></a>HTML与CSS部分</h3><h4 id="什么是html语义化，为什么要语义化，有什么好处，怎么做？-待补充"><a href="#什么是html语义化，为什么要语义化，有什么好处，怎么做？-待补充" class="headerlink" title="什么是html语义化，为什么要语义化，有什么好处，怎么做？(待补充)"></a>什么是html语义化，为什么要语义化，有什么好处，怎么做？(待补充)</h4><h4 id="inline、block、inline-block"><a href="#inline、block、inline-block" class="headerlink" title="inline、block、inline-block"></a>inline、block、inline-block</h4><p>行级元素（inline）：span，a，em，strong，br<br>块级元素（block）：div，h1~h6，p，ul，li，ol<br>行级块元素（inline-block）：img，input，textarea，select，button</p>
+            <h2 id="面试常见知识点总结"><a href="#面试常见知识点总结" class="headerlink" title="面试常见知识点总结"></a>面试常见知识点总结</h2><h3 id="HTML与CSS部分"><a href="#HTML与CSS部分" class="headerlink" title="HTML与CSS部分"></a>HTML与CSS部分</h3><h4 id="什么是html语义化，为什么要语义化，有什么好处，怎么做？-待补充"><a href="#什么是html语义化，为什么要语义化，有什么好处，怎么做？-待补充" class="headerlink" title="什么是html语义化，为什么要语义化，有什么好处，怎么做？(待补充)"></a>什么是html语义化，为什么要语义化，有什么好处，怎么做？(待补充)</h4><p>h5语义化标签：<br>header：网页或者section页眉<br>nav：导航栏，主要的导航部分<br>article：代表一个在文档、页面或者网站中自成一体的内容。<br>section：代表文档中的节或段，节指页面里的分组，段指文章里按照主题的分段<br>aside：包含在article元素中作为主要内容的附属信息部分，特殊的section<br>footer： 网页或者section页脚<br>addresss： 地址<br>hgroup：代表网页或者section标签，其他与header类似。</p>
+<h4 id="inline、block、inline-block"><a href="#inline、block、inline-block" class="headerlink" title="inline、block、inline-block"></a>inline、block、inline-block</h4><p>行级元素（inline）：span，a，em，strong，br<br>块级元素（block）：div，h1~h6，p，ul，li，ol<br>行级块元素（inline-block）：img，input，textarea，select，button</p>
 <p>行级标签：默认宽度由内容撑开,不会自动换行，不能设置宽高。<br>块级标签：默认宽度100%，占满整行。会自动换行，可以设置宽高。<br>行级块元素：默认宽度由内容撑开，不会自动换行，可以设置宽高。</p>
 <h4 id="去浮动"><a href="#去浮动" class="headerlink" title="去浮动"></a>去浮动</h4><ol>
 <li><p>为带有浮动元素的父元素，添加伪元素（最佳推选）</p>
@@ -956,20 +957,6 @@
 <li>加强post请求保护<br> 一、对post请求的数据加验证码，这样除了用户，黑客的网站获取不到本次session的验证码，但会降低用户提交体验。<br> 二、在用访问的页面中，都种下验证用的token，用户所有的提交都必须带上本次页面中生成的token，这种方式的本质和使用验证码没什么两样，但是这种方式，整个页面每一次的session，使用同一个token就行，很多post操作，开发者就可以自动带上当前页面的token。如果token校验不通过，则证明此次提交并非从本站发送来，则终止提交过程。如果token确实为本网站生成的话，则可以通过。</li>
 <li>网络劫持攻击<br> 很多的时候，我们的网站不是直接就访问到我们的服务器上的，中间会经过很多层代理，如果在某一个环节，数据被中间代理层的劫持者所截获，他们就能获取到使用你网站的用户的密码等保密数据。这里推荐将网站从http升级为https。或者对提交的信息内容进行非对称性加密–在客户端加密，在服务端才能解开。</li>
 </ol>
-<h4 id="设计模式-待补充"><a href="#设计模式-待补充" class="headerlink" title="设计模式(待补充)"></a>设计模式(待补充)</h4><h5 id="观察者模式-订阅-发布模式-自定义事件"><a href="#观察者模式-订阅-发布模式-自定义事件" class="headerlink" title="观察者模式(订阅/发布模式)(自定义事件)"></a>观察者模式(订阅/发布模式)(自定义事件)</h5><p>目的：一个对象观察另一个对象的特定活动并在状态改变后获得通知。<br>实质：通过创建”可观察的”对象，当发生一个感兴趣的事件时可将该事件通告给所有观察者，形成松散耦合。<br>所有的浏览器事件(鼠标悬停，按键等事件)都是该模式例子。</p>
-<h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><p>目的：单向数据绑定。</p>
-<h5 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h5><p>目的：双向数据绑定。</p>
-<h5 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h5><p>目的： 当创建相似对象时执行重复操作。 在编译时不知道具体类型(类)的情况下，为工厂客户提供一种创建对象的接口。</p>
-<p>使用工厂模式不用new或对象字面量的构造函数，依据创建时传参来指定类型创建对象的接口。<br>例：<code>var corolla = CarMaker.factory(&#39;Compact&#39;);</code></p>
-<h5 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h5><p>思想：保证一个特定类仅有一个实例。<br>实质：保证每次创建的实例对象this指向原来的实例。<br>使用JavaScript中的对象创建对象字面量时，它就是一个单例。因为每一个对象的空间地址不同，所以两个对象的空间地址不同，故两个对象不会相等。</p>
-<p>JavaScript实现单例：</p>
-<ol>
-<li>使用new操作符实例构造函数。(new会得this指向该对象实例this)</li>
-<li>在构造函数的静态属性中缓存该实例。(在实例中定义一个变量接收this)</li>
-<li>将该实例包装在闭包中</li>
-</ol>
-<h5 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h5><p>目的：对对象实现互相通信，形成松耦合，提高可维护性。<br>实质：使用一个中介者(mediator)对象来保存其他对象的信息，通过它去通知其他对象状态改变。<br>在mediator对象中定义用户信息，状态，交互方法。当要改变数据都要经过调用mediator上的属性或方法。通过使对象之间并不直接”通话”，而是仅通过一个中介者对象进行通信，从而促进形成松散耦合。</p>
-<h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><p>目的：可在运动时动态添加附加功能到对象中。<br>实质：通过从预定于装饰者对象中添加功能，从而在运行时调整对象。<br>实现装饰者模式的其中一个方法是使得每个装饰者成为一个对象，并且该对象包含了应该被重载的方法。每个装饰者实际上继承了目前已经被前一个装饰者进行增强后的对象。每个装饰方法在“继承的对象”上调用了同样的方法并获取其值，此外它还继续执行了一些操作。</p>
 <h3 id="前端工程化-待补充"><a href="#前端工程化-待补充" class="headerlink" title="前端工程化(待补充)"></a>前端工程化(待补充)</h3><h3 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h3><ol>
 <li>资源压缩合并，减少HTTP请求</li>
 <li>非核心代码异步加载 -&gt; 异步加载的方式 -&gt; 异步加载的区别<br> 方式: ① 动态脚本加载 ② defer、async<br> 区别: ① defer是在HTML解析完成之后才会执行，如果是多个，按照加载的顺序依次执行。 ② async是在加载完之后立即执行，如果是多个，加载快的先执行。</li>
@@ -994,10 +981,26 @@
 <li>采用AJAX通信的方式上报 (不常用)</li>
 <li>利用Image对象上报 (常用)<br><code>(new Image()).src = &#39;http://baidu.com/tesjk?r=tksij&#39;</code><br>利用image对象的特殊的特点可以直接将错误写在src里上报错误。</li>
 </ol>
+<h4 id="设计模式-待补充"><a href="#设计模式-待补充" class="headerlink" title="设计模式(待补充)"></a>设计模式(待补充)</h4><h5 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h5><p>目的： 当创建相似对象时执行重复操作。 在编译时不知道具体类型(类)的情况下，为工厂客户提供一种创建对象的接口。</p>
+<p>使用工厂模式不用new或对象字面量的构造函数，依据创建时传参来指定类型创建对象的接口。<br>例：<code>var corolla = CarMaker.factory(&#39;Compact&#39;);</code></p>
+<h5 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h5><p>思想：保证一个特定类仅有一个实例。<br>实质：保证每次创建的实例对象this指向原来的实例。<br>使用JavaScript中的对象创建对象字面量时，它就是一个单例。因为每一个对象的空间地址不同，所以两个对象的空间地址不同，故两个对象不会相等。</p>
+<p>JavaScript实现单例：</p>
+<ol>
+<li>使用new操作符实例构造函数。(new会得this指向该对象实例this)</li>
+<li>在构造函数的静态属性中缓存该实例。(在实例中定义一个变量接收this)</li>
+<li>将该实例包装在闭包中</li>
+</ol>
+<h5 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h5><p>目的：对对象实现互相通信，形成松耦合，提高可维护性。<br>实质：使用一个中介者(mediator)对象来保存其他对象的信息，通过它去通知其他对象状态改变。<br>在mediator对象中定义用户信息，状态，交互方法。当要改变数据都要经过调用mediator上的属性或方法。通过使对象之间并不直接”通话”，而是仅通过一个中介者对象进行通信，从而促进形成松散耦合。</p>
+<h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><p>目的：可在运动时动态添加附加功能到对象中。<br>实质：通过从预定于装饰者对象中添加功能，从而在运行时调整对象。<br>实现装饰者模式的其中一个方法是使得每个装饰者成为一个对象，并且该对象包含了应该被重载的方法。每个装饰者实际上继承了目前已经被前一个装饰者进行增强后的对象。每个装饰方法在“继承的对象”上调用了同样的方法并获取其值，此外它还继续执行了一些操作。</p>
+<h5 id="观察者模式-订阅-发布模式-自定义事件"><a href="#观察者模式-订阅-发布模式-自定义事件" class="headerlink" title="观察者模式(订阅/发布模式)(自定义事件)"></a>观察者模式(订阅/发布模式)(自定义事件)</h5><p>目的：一个对象观察另一个对象的特定活动并在状态改变后获得通知。<br>实质：通过创建”可观察的”对象，当发生一个感兴趣的事件时可将该事件通告给所有观察者，形成松散耦合。<br>所有的浏览器事件(鼠标悬停，按键等事件)都是该模式例子。</p>
+<h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><p>目的：单向数据绑定。<br>M:Model V:View</p>
+<h5 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h5><p>目的：双向数据绑定。<br>示例： Vue.js React.js Angular.js<br>M: Model &lt;=&gt; VM:viewModel &lt;=&gt; V:View<br>双向数据绑定：view(视图层) &lt;=&gt; data(数据层)<br>核心： Oject.defineProperty(),可以直接在一个对象上定义一个新属性或者修改属性。<br>    参数： obj: 定义属性的对象。 prop： 定义或修改属性的名称。 descriptor：定义或修改属性描述符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">descriptor: &#123;</span><br><span class="line">    configurable: true, //true时属性描述符才能改变，默认false</span><br><span class="line">    enumerable: true, //true时该属性才能枚举，默认false</span><br><span class="line">    value: &apos;&apos;,     //设置该对象对象的值，默认undefined</span><br><span class="line">    writable: true,  //true时该属性才能被赋值运算符改变，默认为false</span><br><span class="line">    get,</span><br><span class="line">    set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用的设计模式：观察者模式。</p>
+<p>问题：Object.defineProperty与reflect.defineProperty的区别？<br>Object.defineProperty是ES5的API，返回的是一个对象。<br>reflect.defineProperty是ES6的API，返回的是一个布尔值。</p>
 <h3 id="VUE-待补充"><a href="#VUE-待补充" class="headerlink" title="VUE(待补充)"></a>VUE(待补充)</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
 <p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
 <p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
-<h4 id="Vue双向数据绑定"><a href="#Vue双向数据绑定" class="headerlink" title="Vue双向数据绑定"></a>Vue双向数据绑定</h4><p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observe(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，会为 data 中的每一个属性生成一个主题对象 dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
+<h4 id="Vue双向数据绑定"><a href="#Vue双向数据绑定" class="headerlink" title="Vue双向数据绑定"></a>Vue双向数据绑定</h4><p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observer(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，observer会为 data 中的每一个属性生成一个主题对象 Dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>Watcher(观察者)会订阅Dep对象，然后数据改变后，Dep对象会通知所有的Watcher,Watcher就会去更新View。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
 <h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
 <h4 id="vueRoute的实现方式"><a href="#vueRoute的实现方式" class="headerlink" title="vueRoute的实现方式"></a>vueRoute的实现方式</h4><p><a href="https://juejin.im/post/5ac61da66fb9a028c71eae1b" target="_blank" rel="noopener">https://juejin.im/post/5ac61da66fb9a028c71eae1b</a></p>
 <h4 id="vue组件的数据传递"><a href="#vue组件的数据传递" class="headerlink" title="vue组件的数据传递"></a>vue组件的数据传递</h4><h3 id="其它-待补充"><a href="#其它-待补充" class="headerlink" title="其它(待补充)"></a>其它(待补充)</h3><h4 id="二叉树遍历思路"><a href="#二叉树遍历思路" class="headerlink" title="二叉树遍历思路"></a>二叉树遍历思路</h4><h4 id="树的广度和深度的优先遍历"><a href="#树的广度和深度的优先遍历" class="headerlink" title="树的广度和深度的优先遍历"></a>树的广度和深度的优先遍历</h4><h4 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h4><h4 id="创建线程的步骤"><a href="#创建线程的步骤" class="headerlink" title="创建线程的步骤"></a>创建线程的步骤</h4><h4 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h4><h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找法是典型的对数级的事件复杂度O(logn)<br>对数级的时间复杂度的算法，对于数据量越大，越具备优势。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//二分查找，前提是数组为有序数组</span><br><span class="line">function binarySearch(target, arr) &#123;</span><br><span class="line">    let start = 0;</span><br><span class="line">    let end = arr.length - 1;</span><br><span class="line">    while(start &lt;= end) &#123;</span><br><span class="line">        let mid = parseInt(start + (end - start) / 2)</span><br><span class="line">        if (target == arr[mid]) &#123;</span><br><span class="line">            return mid;</span><br><span class="line">        &#125; else if(target &gt; arr[mid]) &#123;</span><br><span class="line">            start = mid + 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            end = mid - 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
