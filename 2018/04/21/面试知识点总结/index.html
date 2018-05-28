@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 28 2018 10:17:45 GMT+0800">
+        <meta property="article:modified_time" content="Mon May 28 2018 11:18:52 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Mon May 28 2018 10:17:45 GMT+0800",
+    "dateModified": "Mon May 28 2018 11:18:52 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -531,7 +531,7 @@
 <li>document.getElementsByTagName // 兼容所有浏览器</li>
 <li>document.getElementsByName // 只有部分标签的name可以生效，表单、表单元素、img、iframecss选择器:</li>
 <li>querySelector() // ie7及以下的版本中没有这种方法</li>
-<li>6.querySelectorAll() // ie7及以下的版本中没有这种方法</li>
+<li>querySelectorAll() // ie7及以下的版本中没有这种方法</li>
 </ol>
 <p>遍历节点树 &amp; 遍历元素节点树</p>
 <p>节点树的遍历：</p>
@@ -745,9 +745,11 @@
 <li>DOM无法获得。</li>
 <li>AJAX 请求不能发送。</li>
 </ol>
-<h4 id="cookie-localstorage-Session-待补充"><a href="#cookie-localstorage-Session-待补充" class="headerlink" title="cookie localstorage Session(待补充)"></a>cookie localstorage Session(待补充)</h4><p>客户端存储:<br>localStorage: 存储量在5M以上，浏览器关闭不会失效<br>sessionStorage: 存储量在5M以上，浏览器关闭失效<br>cookie: 存储量不大于4k，过期失效</p>
+<h4 id="cookie-localstorage-Session"><a href="#cookie-localstorage-Session" class="headerlink" title="cookie localstorage Session"></a>cookie localstorage Session</h4><p>客户端存储:<br>localStorage: 存储量在5M以上，浏览器关闭不会失效<br>sessionStorage: 存储量在5M以上，浏览器关闭失效<br>cookie: 存储量不大于4k，过期失效</p>
 <p>localStorage/sessionStorage 操作方法:<br>1.setItem(name,val) 设置属性值<br>2.getItem(name) 获得属性值<br>3.removeItem(name) 移出属性值<br>4.clear() 清除所有属性</p>
 <p>cookie 操作方法:<br>1.存储 cookie：document.cookie = “name=duanran;expires=10000;” // 时间为10000毫秒<br>2.查看 cookie：document.cookie<br>3.删除 cookie：document.cookie = “name=;expires=-1;” // 时间设置为-1</p>
+<p>Session:<br>Session是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中。由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，需要Sesson来识别具体的用户。</p>
+<p>问题：服务端如何识别特定的用户？<br>每次HTTP请求的时候，客户端都会发送相应的Cookie信息到服务端。大多数应用都是用Cookie来实现，Session进行回话跟踪的。第一次创建Session时，服务端会在HTTP协议中告诉客户端，需要在Cookie里记录一个Session ID，以后每次请求这个会话ID发送到服务器，就知道你是哪个用户了。<br>问题：如果客户端的浏览器禁用Cookie了，怎么办？<br>使用URL重写的技术来进行会话跟踪，每次HTTP交互，URL后面都会被附加上一个id的信息参数，服务端就可以根据这个进行判定。</p>
 <h4 id="AJAX-Fetch"><a href="#AJAX-Fetch" class="headerlink" title="AJAX/Fetch"></a>AJAX/Fetch</h4><p>AJAX<br>AJAX是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，AJAX可以使网页实现异步更新。意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 <p>AJAX 优缺点<br>AJAX 优点:</p>
 <pre><code>1. 页面无刷新，用户体验好
