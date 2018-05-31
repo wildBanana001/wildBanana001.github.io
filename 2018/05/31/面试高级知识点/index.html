@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Thu May 31 2018 18:46:07 GMT+0800">
+        <meta property="article:modified_time" content="Thu May 31 2018 18:50:20 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
     "headline": "面试高级知识点",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Thu May 31 2018 18:46:07 GMT+0800",
+    "dateModified": "Thu May 31 2018 18:50:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -494,7 +494,7 @@
 <li>ES6出现，出现了模块化，想统一现在所有模块化标准</li>
 <li>nodejs积极支持模块化标准，但浏览器尚未统一。</li>
 </ol>
-<h4 id="Class与JS构造函数的区别"><a href="#Class与JS构造函数的区别" class="headerlink" title="Class与JS构造函数的区别"></a>Class与JS构造函数的区别</h4><p><img src="prototype.png" alt=""></p>
+<h4 id="Class与JS构造函数的区别"><a href="#Class与JS构造函数的区别" class="headerlink" title="Class与JS构造函数的区别"></a>Class与JS构造函数的区别</h4><p><img src="./img/prototype.png" alt="prototype" title="prototype"></p>
 <h5 id="定义一个构造函数"><a href="#定义一个构造函数" class="headerlink" title="定义一个构造函数"></a>定义一个构造函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function M(x,y) &#123;</span><br><span class="line">    this.x = x</span><br><span class="line">    this.y = y</span><br><span class="line">&#125;</span><br><span class="line">M.prototype.add = function() &#123;</span><br><span class="line">    return this.x + this.y</span><br><span class="line">&#125;</span><br><span class="line">var m = new M(1,2)</span><br><span class="line">m.add()</span><br></pre></td></tr></table></figure>
 <h5 id="定义一个class"><a href="#定义一个class" class="headerlink" title="定义一个class"></a>定义一个class</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class CM &#123;</span><br><span class="line">    constructor(x,y) &#123;</span><br><span class="line">        this.x = x</span><br><span class="line">        this.y = y</span><br><span class="line">    &#125;</span><br><span class="line">    add() &#123;</span><br><span class="line">        return this.x + this.y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">const cm = new CM(1,2) //当new实例化CM时，有参数就会立即去查看M的constructor</span><br><span class="line">cm.add()</span><br></pre></td></tr></table></figure>
 <h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>class就是es6推出了语法糖，1和2本质上没有区别。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type CM //&quot;function&quot;</span><br><span class="line">CM === CM.prototype.constructor //true</span><br></pre></td></tr></table></figure></p>
