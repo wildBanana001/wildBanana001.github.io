@@ -43,7 +43,7 @@
     
     <title>
         
-            Markdown语法 | 
+            面试高级知识点 | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Markdown">
+    <meta name="keywords" content=",Es6 异步 原型 vdom MVVM 组件化 hybrid">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -214,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BLOG">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/01/26/Markdown语法/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/31/面试高级知识点/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BLOG">
@@ -229,16 +229,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/01/26/Markdown语法/">
+    <meta property="og:url" content="http://yoursite.com/2018/05/31/面试高级知识点/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Markdown语法 | BLOG">
+    <meta property="og:title" content="面试高级知识点 | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Markdown"> 
+    <meta property="og:article:tag" content="Es6 异步 原型 vdom MVVM 组件化 hybrid"> 
 
     
-        <meta property="article:published_time" content="Fri Jan 26 2018 21:42:39 GMT+0800">
-        <meta property="article:modified_time" content="Wed Apr 25 2018 01:18:32 GMT+0800">
+        <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
+        <meta property="article:modified_time" content="Thu May 31 2018 13:31:20 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,7 +246,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/01/26/Markdown语法/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/31/面试高级知识点/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -258,10 +258,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/01/26/Markdown语法/index.html",
-    "headline": "Markdown语法",
-    "datePublished": "Fri Jan 26 2018 21:42:39 GMT+0800",
-    "dateModified": "Wed Apr 25 2018 01:18:32 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
+    "headline": "面试高级知识点",
+    "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
+    "dateModified": "Thu May 31 2018 13:31:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -279,7 +279,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Markdown",
+    "keywords": ",Es6 异步 原型 vdom MVVM 组件化 hybrid",
     "description": "",
 }
 </script>
@@ -456,78 +456,43 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                Markdown语法
+                面试高级知识点
             </p>
-            <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><p>初次接触markdown是写文章时所需。这是一种轻量级标记语言，创始人为John Gruber(约翰·格鲁伯)。这是一种比HTML还简单容易学习的语言！简单来说就是一种排版语法。</p>
-<h3 id="Markdown特性"><a href="#Markdown特性" class="headerlink" title="Markdown特性"></a>Markdown特性</h3><p>markdown允许人们使用易读易写的纯文本格式编写文档，然后转化为有效的HTML文档。它吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
-<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><pre><code>1. # 一级标题
-2. ## 二级标题
-3. ### 三级标题
-4. #### 四级标题
-5. ##### 五级标题
-6. ###### 六级标题
-7. 一级标题
-==================
-8. 二级标题
--------------------
-</code></pre><h3 id="斜体和斜体及删除线"><a href="#斜体和斜体及删除线" class="headerlink" title="斜体和斜体及删除线"></a>斜体和斜体及删除线</h3><pre><code>1. *斜体*
-2. _斜体_
-3. **粗体**
-4. ***加粗斜体***
-5. ~~删除线~~
-</code></pre><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><pre><code>1. 链接
-[链接标题](链接地址) | [title](url)
-例 ： [blog](wildBanana001.github.io)
-
-2. 引用链接
-[链接文字][链接标记] | [链接文字][]
-例 ： 今天我去了[GitHub][1]社区，创建了一个[账号][2]。这真的是个有趣的[博客][]呢！
-
-[1]:https://www.github.com &quot;GitHub&quot;
-[2]:https://www.github.com/wildBanana001 &quot;账号&quot;
-[博客]:wildBanana001.github.io
-
-3. 自动链接
-&lt;wildBanana001.github.io&gt;
-
-4. 页内超链接
-用于跳转到指定标题。
-### 超链接{#jump}
-
-我想回到[超链接](#jump)
-</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>1. - 无序列表
-2. 1. 有序列表
-</code></pre><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code>1. &gt; 一级
-2. &gt;&gt; 二级
-3. &gt;&gt; 三级
-</code></pre><h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><pre><code>1. ![图片Alt](图片地址 &quot;图片Title&quot;)
-例 ： ![我的图片](img.jpg &quot;我的图片&quot;)
-2. 1[](图片地址)
-例 ： ![](img.jpg)
-</code></pre><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>1.  学号|姓名|分数
-    -|-|-
-    小明|男|75
-    小红|女|79
-    小陆|男|92
-2.  |学号|姓名|分数|
-    |-|-|-|
-    |小明|男|75|
-    |小红|女|79|
-    |小陆|男|92|
-</code></pre><h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><pre><code>1. * * *
-2. ***
-3. *****
-4. - - -
-5. ---------------------------------------
-</code></pre><h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><pre><code>单行在代码前后加入&quot; ` &quot;
-例 ： ` markdown `
-多行则在代码前后加入&quot; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例 ：</span><br></pre></td></tr></table></figure>
-
-       markdown
-       markdown
-       markdown
-       ```
-</code></pre>
+            <h2 id="面试高级知识点"><a href="#面试高级知识点" class="headerlink" title="面试高级知识点"></a>面试高级知识点</h2><h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="模块化的使用和编译环境"><a href="#模块化的使用和编译环境" class="headerlink" title="模块化的使用和编译环境"></a>模块化的使用和编译环境</h4><h5 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h5><p>ES6模块设计思想是尽量静态化，这样在编译时就能确定模块的依赖关系。<br>语法：import export<br>输出：export default {}<br>引入：import xx from ‘路径’<br>环境： babel编译ES6语法，模块化可用webpack和rollup</p>
+<h5 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h5><p>将ES6现在浏览器还不支持的标准使用babel转化成ES5的语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//babelrc</span><br><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [&quot;env&quot;, &#123;</span><br><span class="line">      &quot;modules&quot;: false,</span><br><span class="line">      &quot;targets&quot;: &#123;</span><br><span class="line">        &quot;browsers&quot;: [&quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 8&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;stage-2&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;],</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &#123;</span><br><span class="line">      &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;],</span><br><span class="line">      &quot;plugins&quot;: [&quot;istanbul&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h5><p>开发环境-webpack</p>
+<ol>
+<li>npm init</li>
+<li>npm install webpack babel-loader –save-dev</li>
+<li><p>配置 webpack.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    //入口</span><br><span class="line">    entry: &apos;./src/index.js&apos;,</span><br><span class="line">    //输出</span><br><span class="line">    output: &#123;</span><br><span class="line">        path:__dirname,</span><br><span class="line">        filename: &apos;./build/build.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    //打包模块</span><br><span class="line">    module: &#123;</span><br><span class="line">        //规则</span><br><span class="line">        rules: [&#123;</span><br><span class="line">            //监听所有的js文件</span><br><span class="line">            test: /\.js?$/,</span><br><span class="line">            //除了第三方的js文件</span><br><span class="line">            exclude: /(node_modules)/,</span><br><span class="line">            //使用babel编译</span><br><span class="line">            loader: &apos;babel-loader&apos;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置 package.json中的scripts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;npm run dev&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行 npm run dev</p>
+</li>
+</ol>
+<h5 id="rollup"><a href="#rollup" class="headerlink" title="rollup"></a>rollup</h5><p>开发环境-rollup<br>rollup打包后内容会很小，如Vue的源代码就是使用rollup打包。<br>rollup功能单一，就是打包模块化，webpack功能强大。</p>
+<ol>
+<li>npm init</li>
+<li>npm install rollup rollup-plugin-node-resolve rollup-plugin-babel babel-plugin-external-helpers babel-preset-latest –save-dev</li>
+<li>配置 .babelrc</li>
+<li><p>配置 rollup.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import babel from &apos;rollup-plugin-babel&apos;</span><br><span class="line">import resolve from &apos;rollup-plugin-node-resolve&apos;</span><br><span class="line">export default &#123;</span><br><span class="line">    entry: &apos;src/index.js&apos;,</span><br><span class="line">    //格式umd，兼容COMMONJS和AMDJS规范</span><br><span class="line">    format: &apos;umd&apos;,</span><br><span class="line">    //插件</span><br><span class="line">    plugins: [</span><br><span class="line">        resolve(),</span><br><span class="line">        babel(&#123;</span><br><span class="line">            exclude: &apos;node_modules/**&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    //输出</span><br><span class="line">    dest: &apos;build/build.js&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置 package.json的scripts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    //将配置文件定位到rollup.config.js</span><br><span class="line">    &quot;start&quot;: &quot;rollup -c rollup.config.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="模块化总结"><a href="#模块化总结" class="headerlink" title="模块化总结"></a>模块化总结</h5><ol>
+<li>前端刚开始的时候是没有模块化的，写代码不规范。</li>
+<li>之后有了一个前端工程化的体系，AMD成为标准，CMD标准(require.js)</li>
+<li>后来前端打包工具出现，如gulp、webpack。nodejs模块化可以被使用。</li>
+<li>ES6出现，出现了模块化，想统一现在所有模块化标准</li>
+<li>nodejs积极支持模块化标准，但浏览器尚未统一。</li>
+</ol>
+<h4 id="Class与JS构造函数的区别"><a href="#Class与JS构造函数的区别" class="headerlink" title="Class与JS构造函数的区别"></a>Class与JS构造函数的区别</h4><h4 id="Promise的用法"><a href="#Promise的用法" class="headerlink" title="Promise的用法"></a>Promise的用法</h4><h4 id="ES6其他常用功能"><a href="#ES6其他常用功能" class="headerlink" title="ES6其他常用功能"></a>ES6其他常用功能</h4><h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><h4 id="什么是单线程，和异步有什么关系"><a href="#什么是单线程，和异步有什么关系" class="headerlink" title="什么是单线程，和异步有什么关系"></a>什么是单线程，和异步有什么关系</h4><h4 id="什么是event-loop"><a href="#什么是event-loop" class="headerlink" title="什么是event-loop"></a>什么是event-loop</h4><h4 id="目前JS解决异步的方案有哪些"><a href="#目前JS解决异步的方案有哪些" class="headerlink" title="目前JS解决异步的方案有哪些"></a>目前JS解决异步的方案有哪些</h4><h4 id="如果只用jquery如何解决异步"><a href="#如果只用jquery如何解决异步" class="headerlink" title="如果只用jquery如何解决异步"></a>如果只用jquery如何解决异步</h4><h4 id="Promise的标准"><a href="#Promise的标准" class="headerlink" title="Promise的标准"></a>Promise的标准</h4><h4 id="async-await的使用"><a href="#async-await的使用" class="headerlink" title="async/await的使用"></a>async/await的使用</h4><h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><h4 id="原型如何实际应用"><a href="#原型如何实际应用" class="headerlink" title="原型如何实际应用"></a>原型如何实际应用</h4><h4 id="原型如何满足扩展"><a href="#原型如何满足扩展" class="headerlink" title="原型如何满足扩展"></a>原型如何满足扩展</h4><h3 id="VDOM"><a href="#VDOM" class="headerlink" title="VDOM"></a>VDOM</h3><h4 id="什么是vdom，为何使用vdom"><a href="#什么是vdom，为何使用vdom" class="headerlink" title="什么是vdom，为何使用vdom"></a>什么是vdom，为何使用vdom</h4><h4 id="vdom如何使用，核心函数有哪些"><a href="#vdom如何使用，核心函数有哪些" class="headerlink" title="vdom如何使用，核心函数有哪些"></a>vdom如何使用，核心函数有哪些</h4><h4 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h4><h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><h4 id="jquery和Vue的使用区别"><a href="#jquery和Vue的使用区别" class="headerlink" title="jquery和Vue的使用区别"></a>jquery和Vue的使用区别</h4><h4 id="如何理解MVVM"><a href="#如何理解MVVM" class="headerlink" title="如何理解MVVM"></a>如何理解MVVM</h4><h4 id="Vue如何实现响应式"><a href="#Vue如何实现响应式" class="headerlink" title="Vue如何实现响应式"></a>Vue如何实现响应式</h4><h4 id="Vue如何解析模板"><a href="#Vue如何解析模板" class="headerlink" title="Vue如何解析模板"></a>Vue如何解析模板</h4><h4 id="Vue实现流程"><a href="#Vue实现流程" class="headerlink" title="Vue实现流程"></a>Vue实现流程</h4><h3 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h3><h4 id="对组件化的理解"><a href="#对组件化的理解" class="headerlink" title="对组件化的理解"></a>对组件化的理解</h4><h4 id="JSX是什么？"><a href="#JSX是什么？" class="headerlink" title="JSX是什么？"></a>JSX是什么？</h4><h4 id="JSX和VDOM的关系"><a href="#JSX和VDOM的关系" class="headerlink" title="JSX和VDOM的关系"></a>JSX和VDOM的关系</h4><h4 id="React的setState"><a href="#React的setState" class="headerlink" title="React的setState"></a>React的setState</h4><h4 id="比较React和Vue"><a href="#比较React和Vue" class="headerlink" title="比较React和Vue"></a>比较React和Vue</h4><h3 id="hybrid"><a href="#hybrid" class="headerlink" title="hybrid"></a>hybrid</h3><h4 id="hybrid是什么？"><a href="#hybrid是什么？" class="headerlink" title="hybrid是什么？"></a>hybrid是什么？</h4><h4 id="hybrid如何更新上线"><a href="#hybrid如何更新上线" class="headerlink" title="hybrid如何更新上线"></a>hybrid如何更新上线</h4><h4 id="hybrid与h5的区别"><a href="#hybrid与h5的区别" class="headerlink" title="hybrid与h5的区别"></a>hybrid与h5的区别</h4><h4 id="JS如何与客户端通信"><a href="#JS如何与客户端通信" class="headerlink" title="JS如何与客户端通信"></a>JS如何与客户端通信</h4><h3 id="你的博客和github怎么维护？"><a href="#你的博客和github怎么维护？" class="headerlink" title="你的博客和github怎么维护？"></a>你的博客和github怎么维护？</h3>
             
         </div>
     
@@ -549,21 +514,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/07/HTML/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/09/27/hello/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/03/前端性能优化/" id="post_nav-older" class="next-content">
             Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
