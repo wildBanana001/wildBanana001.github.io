@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 28 2018 22:28:48 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jun 01 2018 15:43:28 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Mon May 28 2018 22:28:48 GMT+0800",
+    "dateModified": "Fri Jun 01 2018 15:43:28 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -705,9 +705,6 @@
 <li>extends（es6 方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;&#125;</span><br><span class="line">class Son extends Father &#123;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>在JS中，所有的代码都是单线程执行的，所以JS的所有网络操作，浏览器事件都必须异步执行。而异步需要大量回调函数会导致页面结构混乱，形成可怕的回调地狱。<br>而ES6的Promise就是一个语法糖，帮助我们规范化书写回调函数。（采用链式调用的方法异步执行JS）<br>Promise对象有三个状体：<br>Pending（起始状体，进行中）<br>Resolved（成功）<br>Rejected（失败）<br>Pending –&gt; Resolved 或 Pending –&gt; Rejected<br>状体改变后不会在变</p>
-<p>Promise 对象<br>var promise = new Promise(function(resolved,rejected){});</p>
-<p>Promise.catch<br>如果promise.then不传第二个参数，可以用promise.catch方法来获取promise对象失败时传来的数据，是rejected的语法糖</p>
 <h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><p>定义：Browser Object Model，定义了操作浏览器的接口<br>BOM对象: Window, History,Navigator,Screen, Location等</p>
 <p>window 对象:表示浏览器中打开的窗口。<br>window 对象上有特别多的方法，一般来讲，能全局使用的都是 window 对象上的方法，例如我们常用的一些：<br>console，setInterval，setTimeout，navigator，screen，history，location</p>
 <p>navigator对象：<br>navigator.userAgent 目前用户使用的是 pc端 还是 移动端，是什么 浏览器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">问题：若是 移动端 跳转 移动端 url，若是 pc端 跳转 pc端 url？</span><br><span class="line">答案：</span><br><span class="line">if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase()))&#123;</span><br><span class="line">    window.location.href=&quot;移动端url&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    window.location.href=&quot;pc端url&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -993,7 +990,7 @@
 <h5 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h5><p>目的：对对象实现互相通信，形成松耦合，提高可维护性。<br>实质：使用一个中介者(mediator)对象来保存其他对象的信息，通过它去通知其他对象状态改变。<br>在mediator对象中定义用户信息，状态，交互方法。当要改变数据都要经过调用mediator上的属性或方法。通过使对象之间并不直接”通话”，而是仅通过一个中介者对象进行通信，从而促进形成松散耦合。</p>
 <h5 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h5><p>目的：可在运动时动态添加附加功能到对象中。<br>实质：通过从预定于装饰者对象中添加功能，从而在运行时调整对象。<br>实现装饰者模式的其中一个方法是使得每个装饰者成为一个对象，并且该对象包含了应该被重载的方法。每个装饰者实际上继承了目前已经被前一个装饰者进行增强后的对象。每个装饰方法在“继承的对象”上调用了同样的方法并获取其值，此外它还继续执行了一些操作。</p>
 <h5 id="观察者模式-订阅-发布模式-自定义事件"><a href="#观察者模式-订阅-发布模式-自定义事件" class="headerlink" title="观察者模式(订阅/发布模式)(自定义事件)"></a>观察者模式(订阅/发布模式)(自定义事件)</h5><p>目的：一个对象观察另一个对象的特定活动并在状态改变后获得通知。<br>实质：通过创建”可观察的”对象，当发生一个感兴趣的事件时可将该事件通告给所有观察者，形成松散耦合。<br>所有的浏览器事件(鼠标悬停，按键等事件)都是该模式例子。</p>
-<h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><p>目的：单向数据绑定。<br>M:Model V:View</p>
+<h5 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h5><p>目的：单向数据绑定。<br>M:Model V:View C:Controller<br>Model -&gt; View -&gt; Controller -&gt; Model</p>
 <h5 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h5><p>目的：双向数据绑定。<br>示例： Vue.js React.js Angular.js<br>M: Model &lt;=&gt; VM:viewModel &lt;=&gt; V:View<br>双向数据绑定：view(视图层) &lt;=&gt; data(数据层)<br>核心： Oject.defineProperty(),可以直接在一个对象上定义一个新属性或者修改属性。<br>    参数： obj: 定义属性的对象。 prop： 定义或修改属性的名称。 descriptor：定义或修改属性描述符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">descriptor: &#123;</span><br><span class="line">    configurable: true, //true时属性描述符才能改变，默认false</span><br><span class="line">    enumerable: true, //true时该属性才能枚举，默认false</span><br><span class="line">    value: &apos;&apos;,     //设置该对象对象的值，默认undefined</span><br><span class="line">    writable: true,  //true时该属性才能被赋值运算符改变，默认为false</span><br><span class="line">    get,</span><br><span class="line">    set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用的设计模式：观察者模式。</p>
 <p>问题：Object.defineProperty与reflect.defineProperty的区别？<br>Object.defineProperty是ES5的API，返回的是一个对象。<br>reflect.defineProperty是ES6的API，返回的是一个布尔值。</p>
