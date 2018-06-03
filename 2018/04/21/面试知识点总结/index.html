@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 03 2018 10:39:01 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 18:31:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun Jun 03 2018 10:39:01 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 18:31:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -518,7 +518,7 @@
 <h4 id="css盒模型"><a href="#css盒模型" class="headerlink" title="css盒模型"></a>css盒模型</h4><p>以前HTML和CSS没有一个统一的标准，所以到后来出现统一标准后，要对老网页兼容，则出现了怪异模式。我们经常能看到HTML文档第一行有 &lt;!DOCTYPE html&gt;声明。说明这个页面遵守了HTML5规范的,浏览器会自动选择标准模式。</p>
 <p>基本概念： 标准模型+IE模型（普通盒模型+怪异盒模型）<br>标准模型下宽和高等于content，IE模型下宽和高等于border+padding+content。<br>标准模型：box-sizing: content-box;<br>IE模型： box-sizing: border-box;<br>JS设置获取盒模型的宽和高：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dom.style.width/height</span><br><span class="line">dom.currentStyle.width/height //只有IE支持 获取当前的宽和高，比上一个准确</span><br><span class="line">window.getComputedStyle(dom).width.height //通用性更好</span><br><span class="line">dom.getBoundingClientRect().width/height //及时运行完后计算元素的绝对位置，相对于视窗（fixed），会返回left、top、right、bottom</span><br></pre></td></tr></table></figure></p>
 <p>图片对其方式：<br>标准盒模型：verticle-align: baseline; (inline, tablecell)怪异盒模型：verticle-align: bottom; </p>
-<h4 id="padding和margin的单位设置为-时，这个-是相对于谁。"><a href="#padding和margin的单位设置为-时，这个-是相对于谁。" class="headerlink" title="padding和margin的单位设置为%时，这个%是相对于谁。"></a>padding和margin的单位设置为%时，这个%是相对于谁。</h4><h4 id="inline与inline-block元素间会有莫名的间距这个是怎么产生的，怎么解决。"><a href="#inline与inline-block元素间会有莫名的间距这个是怎么产生的，怎么解决。" class="headerlink" title="inline与inline-block元素间会有莫名的间距这个是怎么产生的，怎么解决。"></a>inline与inline-block元素间会有莫名的间距这个是怎么产生的，怎么解决。</h4><h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><p>flex: 弹性容器(父元素) 、 弹性项目(子元素)<br>实则flex布局后，子元素的float、clear和vertical-align属性会失效。</p>
+<h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><p>flex: 弹性容器(父元素) 、 弹性项目(子元素)<br>实则flex布局后，子元素的float、clear和vertical-align属性会失效。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">弹性容器：</span><br><span class="line"></span><br><span class="line">flex-direction 定义排列的方向</span><br><span class="line">row 默认值，主轴为水平，从左向右排列</span><br><span class="line">row-reverse 主轴为水平，从右向左排列</span><br><span class="line">column 主轴为垂直方向，从上向下排列</span><br><span class="line">column-reverse 主轴为垂直方向，从下向上排列</span><br><span class="line"></span><br><span class="line">flex-wrap 定义是否新行显示，以及新行的排列方向</span><br><span class="line">nowrap 默认值，显示在同一行，不换行</span><br><span class="line">wrap 一行显示不了时使用新行显示</span><br><span class="line">wrap-reverse 同 wrap，但是从下向上显示</span><br><span class="line"></span><br><span class="line">flex-flow 是 flex-direction 和 flex-wrap 的简写方式使用方法 </span><br><span class="line">flex-flow: &lt;‘flex-direction’&gt; || &lt;‘flex-wrap’&gt;</span><br><span class="line">默认值为： row nowrap</span><br><span class="line"></span><br><span class="line">justify-content 定义弹性项目在主轴上的对齐方式</span><br><span class="line">flex-start 默认值，从起始位置对齐，通常为左对齐</span><br><span class="line">flex-end 从结束位置对齐，通常为右对齐</span><br><span class="line">center 居中对齐</span><br><span class="line">space-between 两端对齐，平均间隔</span><br><span class="line">space-around 每个子元素都有相等的外边距，相邻元素外边距不会叠加</span><br><span class="line"></span><br><span class="line">align-items 定义弹性项目在侧轴上的对齐方式</span><br><span class="line">stretch 默认值，弹性项目在没指定高度或者高度为 auto 的情况下，则高度会占满空间</span><br><span class="line">flex-start 侧轴起点开始对齐</span><br><span class="line">flex-end 从侧轴结束位置对齐</span><br><span class="line">center 相对侧轴居中对齐</span><br><span class="line">baseline 与基线对齐</span><br><span class="line"></span><br><span class="line">align-content 定义多行在侧轴的对齐方式，当只有一行时，不起作用</span><br><span class="line">stretch 默认值，各行会伸展以占满整个纵轴空间</span><br><span class="line">flex-start 对齐到纵轴起点</span><br><span class="line">flex-end 对齐到纵轴终点</span><br><span class="line">center 相对纵轴中间对齐</span><br><span class="line">space-between 各行相对纵轴两端对齐，各行间隔相等</span><br><span class="line">space-around 各行都有相等的外边距，各行的外边距不会叠加</span><br><span class="line"></span><br><span class="line">弹性项目：</span><br><span class="line"></span><br><span class="line">flex-grow 数字，定义弹性项目的放大比例，默认 0</span><br><span class="line">flex-shrink 数字，定义弹性项目的缩小比例，默认 1，值 0 表示不缩小</span><br><span class="line">flex-basis 数字，定义弹性项目的默认尺寸，</span><br><span class="line">flex 是 flex-grow flex-shrink flex-basis 的缩写，默认值为 0 1 auto</span><br><span class="line">align-self 定义此弹性项目本身的对齐方式，会覆盖弹性容器 </span><br><span class="line">align-items 定义的对齐方式auto 从弹性容器继承</span><br><span class="line">stretch 弹性项目在没指定高度或者高度为 auto 的情况下，则高度会占满空间</span><br><span class="line">flex-start 侧轴起点开始对齐</span><br><span class="line">flex-end 从侧轴结束位置对齐</span><br><span class="line">center 相对侧轴居中对齐</span><br><span class="line">baseline 与基线对齐</span><br><span class="line">order 数字，定义弹性项目的显示顺序，数字越小越靠前</span><br></pre></td></tr></table></figure>
 <h4 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h4><p>浏览器内核又可以分成两部分：渲染引擎和JS引擎。它负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。<br>后来JS引擎独立，内核就倾向于只指渲染引擎。2013 年以前，代表有 Trident（IE），Gecko（firefox），Webkit（Safari chrome 等）以及 Presto（opera)。2013 年，谷歌开始研发 blink 引擎，chrome 28 以后开始使用，而 opera 则放弃了自主研发的 Presto 引擎，投入谷歌怀抱，和谷歌一起研发 blink 引擎，国内各种 chrome系的浏览器（360、UC、QQ、2345 等等）也纷纷放弃 webkit，投入 blink 的怀抱。</p>
 <p>扩展： Webkit 其实是 KHTML 的分支，这里的 KHTML 指渲染引擎，Webkit 其实就泛指了 Webkit 的渲染引擎 WebCore，而 Webkit 引擎的 Javascript 引擎 JSCore 则是 KJS 的分支。而 chrome 则搭载了自己的 Javascript 引擎。</p>
@@ -1030,7 +1030,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -1040,7 +1040,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

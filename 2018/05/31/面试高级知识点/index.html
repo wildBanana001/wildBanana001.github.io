@@ -43,7 +43,7 @@
     
     <title>
         
-            面试高级知识点 | 
+            面试高级知识点 (持续更新) | 
         
         BLOG
     </title>
@@ -231,14 +231,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/2018/05/31/面试高级知识点/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="面试高级知识点 | BLOG">
+    <meta property="og:title" content="面试高级知识点 (持续更新) | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="Es6 异步 原型 vdom MVVM 组件化 hybrid"> 
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 03 2018 12:58:14 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 18:30:09 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,9 +259,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
-    "headline": "面试高级知识点",
+    "headline": "面试高级知识点 (持续更新)",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Sun Jun 03 2018 12:58:14 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 18:30:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -456,7 +456,7 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                面试高级知识点
+                面试高级知识点 (持续更新)
             </p>
             <p>首先推荐一些网站：<br>社区：掘金，思否，CSDN<br>解决问题的网站： 官方文档是最权威的。stackoverflow.com，GitHub.com的Issues板块。</p>
 <h2 id="面试高级知识点"><a href="#面试高级知识点" class="headerlink" title="面试高级知识点"></a>面试高级知识点</h2><h3 id="技术选型分析"><a href="#技术选型分析" class="headerlink" title="技术选型分析"></a>技术选型分析</h3><ol>
@@ -606,7 +606,9 @@
 <p>原始值存储在栈中，变量可以直接访问 -&gt; 系统自动分配释放<br>引用值存储在堆中，值是一个指针，指向内存地址 -&gt; 动态分配内存空间，程序员可进行分配和释放（动态分配类似链表）</p>
 <h5 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h5><p>使用{}形成一个封闭的作用域。<br>es6中块级作用域在es5中的实现：<br>由于是es6的东西，所以有很多浏览器以前的JS引擎不支持，所以出现了babel编译神器，需要将es6的代码编译成低版本的JS引擎的代码。babel的源码实现使用闭包和变量改变。</p>
 <h5 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h5><p>模板字符串：<br>不在局限使用’’或者””,使用模板字符串可以在模板内任意写变量，变量使用${}，且能解析换行符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`&lt;div&gt;welcome to $&#123;place&#125;&lt;/div&gt;`</span><br></pre></td></tr></table></figure></p>
-<h5 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h5><h5 id="函数默认参数"><a href="#函数默认参数" class="headerlink" title="函数默认参数"></a>函数默认参数</h5><h5 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h5><h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><h4 id="什么是单线程，和异步有什么关系"><a href="#什么是单线程，和异步有什么关系" class="headerlink" title="什么是单线程，和异步有什么关系"></a>什么是单线程，和异步有什么关系</h4><p>单线程：只有一个线程，同一时间只能做一件事<br>原因：避免DOM渲染冲突<br>解决方案：异步<br>实现方式：event-loop</p>
+<h5 id="函数默认参数"><a href="#函数默认参数" class="headerlink" title="函数默认参数"></a>函数默认参数</h5><p>在函数的参数里直接写上<code>function(a,b={}){}</code>。这不传b的值默认初始化为{}。<br>注意：默认参数要放在必选参数之后。</p>
+<h5 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h5><p>v =&gt; v+1 就是箭头函数， 箭头左侧是函数的参数，当只有一个参数的时候可以不用 () ，等有多个参数的时候用 () 。箭头右侧是函数体，如何只有一行代码可以省略 {} 。</p>
+<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><h4 id="什么是单线程，和异步有什么关系"><a href="#什么是单线程，和异步有什么关系" class="headerlink" title="什么是单线程，和异步有什么关系"></a>什么是单线程，和异步有什么关系</h4><p>单线程：只有一个线程，同一时间只能做一件事<br>原因：避免DOM渲染冲突<br>解决方案：异步<br>实现方式：event-loop</p>
 <ul>
 <li>为什么要单线程：浏览器需要渲染DOM，JS可以修改DOM结构。JS执行的时候，浏览器DOM渲染会停止，两段JS也不能同时执行修改DOM。</li>
 <li>异步：异步操作可以让我们继续往下执行JS代码。异步任务会进入异步任务队列，等到异步任务完成，就会插入到同步队列中执行。</li>
@@ -753,7 +755,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -763,7 +765,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/05/03/前端性能优化/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
