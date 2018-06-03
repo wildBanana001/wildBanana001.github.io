@@ -43,7 +43,7 @@
     
     <title>
         
-            Archive | 
+            Node.js入门 | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",nodejs express koa2 MongoDB">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -214,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BLOG">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/page/2/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/03/Node-js入门/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BLOG">
@@ -229,13 +229,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/page/2/">
+    <meta property="og:url" content="http://yoursite.com/2018/06/03/Node-js入门/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archive | BLOG">
+    <meta property="og:title" content="Node.js入门 | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="nodejs express koa2 MongoDB"> 
 
+    
+        <meta property="article:published_time" content="Sun Jun 03 2018 18:18:30 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 18:24:22 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -243,13 +246,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/page/2/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/06/03/Node-js入门/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/06/03/Node-js入门/index.html",
+    "headline": "Node.js入门",
+    "datePublished": "Sun Jun 03 2018 18:18:30 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 18:24:22 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "林凯锋",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/myavatar.png"
+        },
+        "description": "github.com/wildBanana001"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "BLOG",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",nodejs express koa2 MongoDB",
+    "description": "",
+}
+</script>
 
 
     
@@ -379,25 +412,29 @@
 
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
 
-    <!-- Normal Post -->
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+
+
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
     
         <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
+        <div class="post-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
             <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
             <span class="name-span">林凯锋</span>
@@ -408,293 +445,74 @@
     
         </div>
 
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/03/20/CSS垂直居中/">CSS垂直居中</a>
-        </p>
 
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                CS...
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/03/20/CSS垂直居中/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
 
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/css-浏览器内核/">css 浏览器内核</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Mar 20, 2018
-            </div>
-            <div class="post_entry-footer-comment">
                 
-                
-            </div>
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+
+    
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                Node.js入门
+            </p>
+            <h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>nodejs运行在服务器端，通过将V8引擎内嵌到操作系统的集成层，来让JavaScript享受到底层操作系统的异步接口，从而实现将其带到服务器端的目的。<br>nodejs 高效、简洁。无须将书写部署到独立安装的web服务器中去运行。</p>
+<h4 id="Nodejs-创建服务器"><a href="#Nodejs-创建服务器" class="headerlink" title="Nodejs 创建服务器"></a>Nodejs 创建服务器</h4><p>创建一个web服务器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var http = require( &apos; http &apos; )</span><br><span class="line">var server = http.createServer( function(req, res) &#123;</span><br><span class="line">    res.writeHead(200)</span><br><span class="line">    res.end(&apos; Hello world &apos; )</span><br><span class="line">&#125; )</span><br><span class="line">server.listen(3000)</span><br></pre></td></tr></table></figure></p>
+<p>nodejs快速高效的优点得益于事件轮询( event loop )技术，构建于V8之上。<br>node REPL(Read-Eval-Print-Loop) nodejs调试台</p>
+<h4 id="事件驱动和非阻塞模型"><a href="#事件驱动和非阻塞模型" class="headerlink" title="事件驱动和非阻塞模型"></a>事件驱动和非阻塞模型</h4><p>nodejs使用事件驱动和非阻塞模型。<br>事件驱动<br>    I/O等异步操作结束后的通知<br>    观察者模式<br>阻塞与非阻塞IO<br>    阻塞：I/O时进程休眠等待I/O完成后进行下一步<br>    非阻塞：I/O时函数立即返回，进程不等待I/O完成</p>
+<h4 id="Nodejs的单线程"><a href="#Nodejs的单线程" class="headerlink" title="Nodejs的单线程"></a>Nodejs的单线程</h4><p>单线程只是针对主进程，I/O操作系统底层多线程调度。<br>单线程并不是单进程。</p>
+<p>共享状态的并发<br>Node是单线程的：故许多优秀的Node模块都是非阻塞的，执行任务采用异步方式。</p>
+<h4 id="事件轮询"><a href="#事件轮询" class="headerlink" title="事件轮询"></a>事件轮询</h4><p>事件轮询(http、net模块中的IO，timeout)<br>    Node会先注册事件，随后不停地询问内核这些事件是否已经分发。当事件分发时，对应的回调函数就会被触发，然后继续执行。如无事件触发，则继续执行其他代码，直到有新事件时，再去执行对应的回调函数(异步操作)。</p>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p>错误处理<br>    Node的执行环境是单线程的，应避免使用同步IO且所有的状态都是维护在一个内存空间中的，必须小心避免错误！一旦遗漏错误，将很难追踪，上下文信息会丢失。可能抛出的错误都要及时处理。</p>
+<h4 id="Node下的JavaScript"><a href="#Node下的JavaScript" class="headerlink" title="Node下的JavaScript"></a>Node下的JavaScript</h4><p>global对象 (全局对象GO)<br>在浏览器中全局对象指window对象。<br>Node中global和window一样，任何global对象上的属性都可以被全局访问。<br>process：所有全局执行上下文中的内容都在pricess对象中。Node中只有一个process对象等同于浏览器中的window。 例：window.name 等同 process.title。<br>模块系统：使用NPM安装模块，给模块独立定义专门的API。避免对全局命名空间的污染及命名冲突问题。<br>绝对模块：内部node_modules上可以查找到的模块，如http模块。<br>相对模块：require指向一个相对工作目录中的JS文件。<br>暴露API：使用exports打包</p>
+<p>require：支持js、json、node扩展名，不写依次尝试。不写路径则默认是build-in模块或者各级node_modules内的第三方模块。</p>
+<h4 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h4><p>Buffer类(缓冲)是Nodejs的全局变量，因此无需使用require(‘buffer’).Buffer<br>    用于处理二进制数据流，实例类似整数数组，大小固定。Buffer使用内存是C++代码在V8堆外分配的物理内存。<br>ES6之前JS语言没有读取或操作二进制数据流的机制，Buffer类被引入作为Nodejs的API的一部分，使TCP流或文件系统操作中处理二进制数据流。<br>如今ES6有TypedArray，比Buffer类更优化、更适合Nodejs。</p>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>Event 事件<br>    监听器，所有能触发事件的对象都是EventEmitter类的实例，这些对象开发了一个eventEmitter.on()函数 (注册监听器)，可以将一个或多个函数绑定到会被对象触发的命名事件上。eventEmitter.emit() （触发事件）</p>
+<h4 id="fs"><a href="#fs" class="headerlink" title="fs"></a>fs</h4><p>fs(文件系统)<br>    文件I/O是由简单封装的标准POSIX函数提供。通过require(‘fs’)使用该模块，所有方法都有同步异步的形式。</p>
+<h4 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h4><p>MongoDB是一个面向文档，无模式(关系）的数据库，非常适合于Node.js应用以及云端部署。<br>可以将任意类型的文档数据存储到集合中。<br>可以将数据看作文档，设计非常灵活。绝大多数情况下就是JSON格式形式存储。<br>可以与其他键–值形式的NoSQL数据区别开，文档可以是任意深度的。</p>
+
+            
         </div>
-    </div>
+    
 </div>
 
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
 
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/03/16/CSS/">CSS</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                CSS
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/03/16/CSS/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/CSS-选择器-权重-三栏布局-溢出打点/">CSS 选择器 权重 三栏布局 溢出打点</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Mar 16, 2018
-            </div>
-            <div class="post_entry-footer-comment">
                 
+                    <!-- Paradox Post Info -->
+                    
+                
+
+                <!-- Post Comments -->
+                
+                    
                 
             </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/03/计算机基础/" id="post_nav-older" class="next-content">
+            Älteren
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
         </div>
     </div>
-</div>
 
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
-
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/03/07/HTML/">HTML</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                HTML
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/03/07/HTML/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/HTML/">HTML</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Mar 07, 2018
-            </div>
-            <div class="post_entry-footer-comment">
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
-
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/01/26/Markdown语法/">Markdown语法</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/01/26/Markdown语法/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Jan 26, 2018
-            </div>
-            <div class="post_entry-footer-comment">
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
-
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2017/09/27/hello/">hello</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                hello world!
-
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2017/09/27/hello/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/hello-world/">hello world</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Sep 27, 2017
-            </div>
-            <div class="post_entry-footer-comment">
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/archives/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-        </nav>
-    
-
-    
-</div>
 
 
                     

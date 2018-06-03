@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 03 2018 10:39:06 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 12:58:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
     "headline": "面试高级知识点",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Sun Jun 03 2018 10:39:06 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 12:58:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>رئيسية</span>
+                    <span>Home</span>
                 </a>
             </span>
 
@@ -490,6 +490,16 @@
 <p>CSS Module的工作原理就是把一个类名编译成哈希字符串，然后在引用的时候直接使用这个哈希字符串，进而保证相同的类名根据不同的路径和组件名称得到不同的值，保证最终的类名隔离。</p>
 <p>Vue在Vue-loader中配置开启CSS Module<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//在Vue官方文档上可以看到</span><br><span class="line">cssModules: &#123;</span><br><span class="line">    localIdentName: &apos;[path][name]---[local]---[hash:base64:5]&apos;,</span><br><span class="line">    camelCase: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在Vue文件中style标签加上module属性：<code>&lt;style lang=&#39;scss&#39; module&gt;&lt;/style&gt;</code><br>对于父组件声明的类名，在子组件内CSS Module是不处理的，想用必须显示调用类名($style.类名)<br>使用@import引入第三方样式库。</p>
+<p>问题：CSS Module 和<code>Vue&lt;style&gt;</code>的scoped属性有啥异同？</p>
+<ul>
+<li>相同点：两者都是为了解决CSS类名相互干扰的问题，也就是”作用域”问题。</li>
+<li>不同点：</li>
+</ul>
+<ol>
+<li>CSS Module是所有组件化框架都支持的技术方案，他不属于某个框架的私有属性。而scoped是Vue框架的私有属性。</li>
+<li>CSS Module的工作原理大白话说就是把一个类名做md5，然后在引用的时候直接使用md5字符串，进而保证相同的类名根据不同的路径和组件名称得到不同的md5值，保证了最终的类名隔离。Scoped的做法是做命名空间限制，也就是说每个组件就是一个命名空间，每个命名空间拥有不同的类名(md5),然后在每个下面的类名都会挂在这个命名空间下进而达到隔离。</li>
+<li>对于父组件的声明的类名，在子组件内，CSS Module是不处理的，想用必须显示调用类名($style.类名)，而使用scoped是因为命名空间的方式，所以子组件依然有效。</li>
+</ol>
 <h4 id="JS模块化"><a href="#JS模块化" class="headerlink" title="JS模块化"></a>JS模块化</h4><ul>
 <li>设计原则</li>
 </ul>
@@ -633,6 +643,35 @@
 <h3 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
 <p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
 <p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
+<p>实现流程</p>
+<ol>
+<li>解析模板成render函数</li>
+<li>响应式开始监听</li>
+<li>首次渲染，显示页面，绑定依赖：<ul>
+<li>初次渲染，執行updateComponent，執行vm.<em>render()</em></li>
+<li>执行render函数，访问到vm.list和vm.title</li>
+<li>被响应式的get方法监听到</li>
+<li>执行updateComponent，会走到vdom的patch方法</li>
+<li>patch将vnode渲染成DOM，初次渲染完成</li>
+</ul>
+</li>
+<li>data属性变化，触发rerender</li>
+</ol>
+<h4 id="jquery和Vue的使用区别"><a href="#jquery和Vue的使用区别" class="headerlink" title="jquery和Vue的使用区别"></a>jquery和Vue的使用区别</h4><p>jQuery: 数据和视图的混合,使用DOM操作视图。<br>Vue： 数据和视图的分离,解耦(开放封闭原则：扩展开放，修改封闭)。以数据驱动视图，只关心数据变化，封装DOM操作。</p>
+<h4 id="如何理解MVVM"><a href="#如何理解MVVM" class="headerlink" title="如何理解MVVM"></a>如何理解MVVM</h4><p>目的：双向数据绑定。<br>示例： Vue.js React.js Angular.js<br>M: Model &lt;=&gt; VM:viewModel &lt;=&gt; V:View<br>双向数据绑定：view(视图层) &lt;=&gt; data(数据层)<br>核心： Oject.defineProperty(),可以直接在一个对象上定义一个新属性或者修改属性。<br>    参数： obj: 定义属性的对象。 prop： 定义或修改属性的名称。 descriptor：定义或修改属性描述符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">descriptor: &#123;</span><br><span class="line">    configurable: true, //true时属性描述符才能改变，默认false</span><br><span class="line">    enumerable: true, //true时该属性才能枚举，默认false</span><br><span class="line">    value: &apos;&apos;,     //设置该对象对象的值，默认undefined</span><br><span class="line">    writable: true,  //true时该属性才能被赋值运算符改变，默认为false</span><br><span class="line">    get,</span><br><span class="line">    set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用的设计模式：观察者模式。</p>
+<p>问题：Object.defineProperty与reflect.defineProperty的区别？<br>Object.defineProperty是ES5的API，返回的是一个对象。<br>reflect.defineProperty是ES6的API，返回的是一个布尔值。</p>
+<h4 id="Vue如何实现响应式-双向数据绑定"><a href="#Vue如何实现响应式-双向数据绑定" class="headerlink" title="Vue如何实现响应式 (双向数据绑定)"></a>Vue如何实现响应式 (双向数据绑定)</h4><p>核心API：Object.defineProperty</p>
+<p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observer(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，observer会为 data 中的每一个属性生成一个主题对象 Dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>Watcher(观察者)会订阅Dep对象，然后数据改变后，Dep对象会通知所有的Watcher,Watcher就会去更新View。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
+<h4 id="Vue模板-render函数"><a href="#Vue模板-render函数" class="headerlink" title="Vue模板 render函数"></a>Vue模板 render函数</h4><p>本质：字符串，有逻辑，可以嵌入JS变量。最终要转化为html显示。<br>render函数： 内部使用了with函数，可以改变作用域。将width内的属性的作用域改变为参数里的作用域。实际开发不推荐使用with，容易造成逻辑混乱等。</p>
+<ol>
+<li>模板中所有信息都被render函数包含。</li>
+<li>模板中用到的data中的属性都变成了JS变量。</li>
+<li>模板中的v-model v-for v-on都变成JS逻辑。</li>
+<li>render函数执行返回vnode。</li>
+</ol>
+<h4 id="Vue的安装包有几个版本，遇到问题如何解决？"><a href="#Vue的安装包有几个版本，遇到问题如何解决？" class="headerlink" title="Vue的安装包有几个版本，遇到问题如何解决？"></a>Vue的安装包有几个版本，遇到问题如何解决？</h4><p><img src="/img/postImg/VueVersion.png" alt="VueVersion" title="VueVersion"><br>完整版：同时包含编译器和运行时的版本。<br>编译器：用来将模板字符串编译成JS渲染函数的代码。<br>运行时：用来创建Vue实例、渲染并处理虚拟DOM等的代码。基本上就是除去编译器的其他一切。</p>
+<p>在webpack中引入vue.esm.js：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">        &apos;vue$&apos;:&apos;vue/dist/vue.esm.js&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="什么是vdom，为何使用vdom"><a href="#什么是vdom，为何使用vdom" class="headerlink" title="什么是vdom，为何使用vdom"></a>什么是vdom，为何使用vdom</h4><ul>
 <li>virtual dom: 虚拟DOM</li>
 <li>用JS模拟DOM结构</li>
@@ -657,21 +696,11 @@
 <p>diff算法实现过程</p>
 <ol>
 <li>patch(container, vnode)：核心createElement</li>
-<li>patch(vnode, newVnode):核心updateChildren<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//伪代码,创建真实DOM流程 patch(container, vnode)</span><br><span class="line">function createElement(vnode) &#123;</span><br><span class="line">    var tag = vnode.tag</span><br><span class="line">    var attrs = vnode.attrs || &#123;&#125;</span><br><span class="line">    var children = vnode.children || &#123;&#125;</span><br><span class="line">    if(!tag) &#123;</span><br><span class="line">        return null</span><br><span class="line">    &#125;</span><br><span class="line">    //创建元素</span><br><span class="line">    var elem = document.createElement(tag)</span><br><span class="line">    //属性</span><br><span class="line">    var attrName</span><br><span class="line">    for(attrName in attrs) &#123;</span><br><span class="line">        if(attes.hasOwnProperty(attrName)) &#123;</span><br><span class="line">            //给elem添加属性</span><br><span class="line">            elem.setAttribute(attrName, attrs[attrName])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    //子元素</span><br><span class="line">    children.forEach(function(childVnode) &#123;</span><br><span class="line">        //给elem添加子元素</span><br><span class="line">        elem.appendChild(createElement(childVnode)) //递归</span><br><span class="line">    &#125;)</span><br><span class="line">    //返回真实的dom元素</span><br><span class="line">    return elem</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>patch(vnode, newVnode):核心updateChildren<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">//伪代码,创建真实DOM流程 patch(container, vnode)</span><br><span class="line">function createElement(vnode) &#123;</span><br><span class="line">    var tag = vnode.tag</span><br><span class="line">    var attrs = vnode.attrs || &#123;&#125;</span><br><span class="line">    var children = vnode.children || &#123;&#125;</span><br><span class="line">    if(!tag) &#123;</span><br><span class="line">        return null</span><br><span class="line">    &#125;</span><br><span class="line">    //创建元素</span><br><span class="line">    var elem = document.createElement(tag)</span><br><span class="line">    //属性</span><br><span class="line">    var attrName</span><br><span class="line">    for(attrName in attrs) &#123;</span><br><span class="line">        if(attes.hasOwnProperty(attrName)) &#123;</span><br><span class="line">            //给elem添加属性</span><br><span class="line">            elem.setAttribute(attrName, attrs[attrName])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    //子元素</span><br><span class="line">    children.forEach(function(childVnode) &#123;</span><br><span class="line">        //给elem添加子元素</span><br><span class="line">        elem.appendChild(createElement(childVnode)) //递归</span><br><span class="line">    &#125;)</span><br><span class="line">    //返回真实的dom元素</span><br><span class="line">    return elem</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//伪代码，实现更新 patch(vnode, newVnode)</span><br><span class="line">function updateChildren(vnode, newVnode) &#123;</span><br><span class="line">    var children = vnode.children || []</span><br><span class="line">    var newChildren = newVnode.children || []</span><br><span class="line">    //遍历现有的children</span><br><span class="line">    children.forEach(function(child, index) &#123;</span><br><span class="line">        var newChild = newChildren[index]</span><br><span class="line">        if(newChild === null) &#123;</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        if(child.tag === newChild.tag) &#123;</span><br><span class="line">            //两者tag一样，递归</span><br><span class="line">            updateChildren(child, newChild)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            //两者tag不一样，替换</span><br><span class="line">            replaceNode(child, newChild)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function replaceNode(vnode, newVnode) &#123;</span><br><span class="line">    var elem = vnode.elem</span><br><span class="line">    var newElem = createElement(newVnode)</span><br><span class="line">    //替换操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//伪代码，实现更新 patch(vnode, newVnode)</span><br><span class="line">function updateChildren(vnode, newVnode) &#123;</span><br><span class="line">    var children = vnode.children || []</span><br><span class="line">    var newChildren = newVnode.children || []</span><br><span class="line">    //遍历现有的children</span><br><span class="line">    children.forEach(function(child, index) &#123;</span><br><span class="line">        var newChild = newChildren[index]</span><br><span class="line">        if(newChild === null) &#123;</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        if(child.tag === newChild.tag) &#123;</span><br><span class="line">            //两者tag一样，递归</span><br><span class="line">            updateChildren(child, newChild)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            //两者tag不一样，替换</span><br><span class="line">            replaceNode(child, newChild)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function replaceNode(vnode, newVnode) &#123;</span><br><span class="line">    var elem = vnode.elem</span><br><span class="line">    var newElem = createElement(newVnode)</span><br><span class="line">    //替换操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>因为不知道vdom结构到底有几层，所以使用递归，进行循环。</p>
-<h4 id="jquery和Vue的使用区别"><a href="#jquery和Vue的使用区别" class="headerlink" title="jquery和Vue的使用区别"></a>jquery和Vue的使用区别</h4><p>jQuery: 数据和视图的混合,使用DOM操作视图。<br>Vue： 数据和视图的分离,解耦(开放封闭原则：扩展开放，修改封闭)。以数据驱动视图，只关心数据变化，封装DOM操作。</p>
-<h4 id="如何理解MVVM"><a href="#如何理解MVVM" class="headerlink" title="如何理解MVVM"></a>如何理解MVVM</h4><p>目的：双向数据绑定。<br>示例： Vue.js React.js Angular.js<br>M: Model &lt;=&gt; VM:viewModel &lt;=&gt; V:View<br>双向数据绑定：view(视图层) &lt;=&gt; data(数据层)<br>核心： Oject.defineProperty(),可以直接在一个对象上定义一个新属性或者修改属性。<br>    参数： obj: 定义属性的对象。 prop： 定义或修改属性的名称。 descriptor：定义或修改属性描述符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">descriptor: &#123;</span><br><span class="line">    configurable: true, //true时属性描述符才能改变，默认false</span><br><span class="line">    enumerable: true, //true时该属性才能枚举，默认false</span><br><span class="line">    value: &apos;&apos;,     //设置该对象对象的值，默认undefined</span><br><span class="line">    writable: true,  //true时该属性才能被赋值运算符改变，默认为false</span><br><span class="line">    get,</span><br><span class="line">    set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用的设计模式：观察者模式。</p>
-<p>问题：Object.defineProperty与reflect.defineProperty的区别？<br>Object.defineProperty是ES5的API，返回的是一个对象。<br>reflect.defineProperty是ES6的API，返回的是一个布尔值。</p>
-<h4 id="Vue如何实现响应式-双向数据绑定"><a href="#Vue如何实现响应式-双向数据绑定" class="headerlink" title="Vue如何实现响应式 (双向数据绑定)"></a>Vue如何实现响应式 (双向数据绑定)</h4><p>核心API：Object.defineProperty</p>
-<p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observer(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，observer会为 data 中的每一个属性生成一个主题对象 Dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>Watcher(观察者)会订阅Dep对象，然后数据改变后，Dep对象会通知所有的Watcher,Watcher就会去更新View。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
-<h4 id="Vue模板"><a href="#Vue模板" class="headerlink" title="Vue模板"></a>Vue模板</h4><p>本质：字符串，有逻辑，最终转化为html显示。<br>render函数： 内部使用了with函数，可以改变作用域。将width内的属性的作用域改变为参数里的作用域。实际开发不推荐使用，容易造成逻辑混乱等。</p>
-<h4 id="Vue的安装包有几个版本，遇到问题如何解决？"><a href="#Vue的安装包有几个版本，遇到问题如何解决？" class="headerlink" title="Vue的安装包有几个版本，遇到问题如何解决？"></a>Vue的安装包有几个版本，遇到问题如何解决？</h4><p><img src="/img/postImg/VueVersion.png" alt="VueVersion" title="VueVersion"><br>完整版：同时包含编译器和运行时的版本。<br>编译器：用来将模板字符串编译成JS渲染函数的代码。<br>运行时：用来创建Vue实例、渲染并处理虚拟DOM等的代码。基本上就是除去编译器的其他一切。</p>
-<p>在webpack中引入vue.esm.js：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">        &apos;vue$&apos;:&apos;vue/dist/vue.esm.js&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="Vue实现流程-渲染"><a href="#Vue实现流程-渲染" class="headerlink" title="Vue实现流程,渲染"></a>Vue实现流程,渲染</h4><h4 id="Vue-router"><a href="#Vue-router" class="headerlink" title="Vue-router"></a>Vue-router</h4><p>SPA设计：单页面设计</p>
+<h4 id="Vue-router"><a href="#Vue-router" class="headerlink" title="Vue-router"></a>Vue-router</h4><p>SPA设计：单页面设计</p>
 <ol>
 <li>设计意义</li>
 </ol>
@@ -724,7 +753,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            أحدث
+            Neuren
         </a>
     
 
@@ -734,7 +763,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/05/03/前端性能优化/" id="post_nav-older" class="next-content">
-            أقدم
+            Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
