@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jun 01 2018 15:43:25 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 10:39:06 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
     "headline": "面试高级知识点",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Fri Jun 01 2018 15:43:25 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 10:39:06 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -458,17 +458,100 @@
             <p class="post-title">
                 面试高级知识点
             </p>
-            <h2 id="面试高级知识点"><a href="#面试高级知识点" class="headerlink" title="面试高级知识点"></a>面试高级知识点</h2><h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="模块化的使用和编译环境"><a href="#模块化的使用和编译环境" class="headerlink" title="模块化的使用和编译环境"></a>模块化的使用和编译环境</h4><h5 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h5><p>ES6模块设计思想是尽量静态化，这样在编译时就能确定模块的依赖关系。<br>语法：import export<br>输出：export default {}<br>引入：import xx from ‘路径’<br>环境： babel编译ES6语法，模块化可用webpack和rollup</p>
+            <p>首先推荐一些网站：<br>社区：掘金，思否，CSDN<br>解决问题的网站： 官方文档是最权威的。stackoverflow.com，GitHub.com的Issues板块。</p>
+<h2 id="面试高级知识点"><a href="#面试高级知识点" class="headerlink" title="面试高级知识点"></a>面试高级知识点</h2><h3 id="技术选型分析"><a href="#技术选型分析" class="headerlink" title="技术选型分析"></a>技术选型分析</h3><ol>
+<li>构建工具</li>
+<li>MVVM框架选择：学习成本，生态(插件体系、文档、作者维护热度),对原理的了解程度。Vuejs、Reactjs、Angularjs。</li>
+<li>模块化设计：CSS模块化设计、JS模块化设计。</li>
+<li>自适应方案设计</li>
+<li>代码维护及复用性设计的思考：需求变更、产品迭代、Bug定位、新功能开发。</li>
+</ol>
+<h4 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h4><p>gulp、grunt、fis、prepack、webpack和rollup。</p>
+<ul>
+<li>使用构建工具的好处：资源压缩、静态资源替换、模块化处理、编译处理。</li>
+<li>grunt负责任务管理，是输入输出操作，之后被gulp取代。gulp负责任务管理，IO流式操作。还是使用webpack主要负责编译打包。fis是百度内部推出的集成方案。prepack是facebook出的代码打包工具是即时的。</li>
+</ul>
+<h4 id="CSS模块化"><a href="#CSS模块化" class="headerlink" title="CSS模块化"></a>CSS模块化</h4><ul>
+<li>设计原则： </li>
+</ul>
+<ol>
+<li>可复用能继承要完整。</li>
+<li>周期性迭代。</li>
+</ol>
+<ul>
+<li>设计方法： </li>
+</ul>
+<ol>
+<li>先整体后部分再颗粒化：布局-&gt;页面-&gt;功能-&gt;业务</li>
+<li>先抽象再具体。</li>
+</ol>
+<p>使用SCSS作为预编译语言：<br>有变量、嵌套规则，导入等功能。<br>模块化让更多样式可以被复用，如颜色的定义、模块的定义、样式的继承等。</p>
+<p>CSS模块化主要分成三种CSS：<br>reset.scss：兼容不同浏览器<br>layout.scss：写抽象布局样式<br>element.scss：具体颗粒化，写元素样式</p>
+<p>CSS Module的工作原理就是把一个类名编译成哈希字符串，然后在引用的时候直接使用这个哈希字符串，进而保证相同的类名根据不同的路径和组件名称得到不同的值，保证最终的类名隔离。</p>
+<p>Vue在Vue-loader中配置开启CSS Module<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//在Vue官方文档上可以看到</span><br><span class="line">cssModules: &#123;</span><br><span class="line">    localIdentName: &apos;[path][name]---[local]---[hash:base64:5]&apos;,</span><br><span class="line">    camelCase: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Vue文件中style标签加上module属性：<code>&lt;style lang=&#39;scss&#39; module&gt;&lt;/style&gt;</code><br>对于父组件声明的类名，在子组件内CSS Module是不处理的，想用必须显示调用类名($style.类名)<br>使用@import引入第三方样式库。</p>
+<h4 id="JS模块化"><a href="#JS模块化" class="headerlink" title="JS模块化"></a>JS模块化</h4><ul>
+<li>设计原则</li>
+</ul>
+<ol>
+<li>高内聚低耦合。</li>
+<li>周期性迭代。</li>
+</ol>
+<ul>
+<li>设计方法</li>
+</ul>
+<ol>
+<li>先整体后部分再颗粒化。</li>
+<li>尽可能的抽象。</li>
+</ol>
+<p>高内聚：组件的功能受控于组件本身，而不是依赖于其他组件。<br>低耦合：抽象出列表组件，但不包括实际的功能。<br>周期性迭代：反复优化代码。</p>
+<p>对于组件复用性，第一步将功能组件和业务组件划分开，然后在功能组件上也要继续设计，不断抽象在去实现，这样可以满足更多应用，达到最大化复用，且随着业务如何变化，功能组件的稳定性都不会遭到破坏。</p>
+<h4 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h4><p>自适应在移动端要适配很多种机型，通常使用media+rem的方式实现，缺点是media有优先级，多个media优先级覆盖不好会导致失效，设备太多测试很难，不具备通用性。</p>
+<ul>
+<li>基本概念</li>
+</ul>
+<ol>
+<li>CSS像素、设备像素、逻辑像素、设备像素比</li>
+<li>viewport</li>
+<li>rem</li>
+</ol>
+<ul>
+<li>工作原理</li>
+</ul>
+<ol>
+<li>利用viewport和设备像素比调整基准像素</li>
+<li>利用px2rem自动转换css单位</li>
+<li>利用viewport和设备像素比调整基准像素</li>
+</ol>
+<p>css像素= 逻辑像素<br>设备像素是物理像素跟硬件相关<br>设备像素比 = css像素/设备像素</p>
+<p>viewport：移动设备浏览器上(也可能是一个app中的webview)用来显示网页的一块”画布”。<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;</code></p>
+<ul>
+<li>width：控制viewport的大小，可以指定一个值，如600或特殊的值。如device-width为设备的宽度(单位为缩放100%时CSS的像素)</li>
+<li>height：和width相对应，指定高度。</li>
+<li>inital-scale：初始缩放比例，即当页面第一次load的时候缩放比例。</li>
+<li>maximum-scale：允许用户缩放到的最大比例</li>
+<li>minimum-scale：允许用户缩放的最小比例</li>
+<li>user-scalable：用户是否可以手动缩放。</li>
+</ul>
+<p>with=device-width就是将layout裁剪成visual<br>ideal viewport的宽度 = 屏幕的逻辑像素宽度</p>
+<p>viewport分三类：</p>
+<ol>
+<li>visual viewport: 可视视口(手机宽高内看到的画面)</li>
+<li>layout viewport: 布局视口</li>
+<li>ideal viewport: 理想窗口</li>
+</ol>
+<p>rem：rem是根据html的font-size大小变化。基于这个，可以在每一个设备下根据设备的宽度设置对应的html字号，从而实现自适应布局。<br>在vue中配置px2rem-loader，在开发时只使用px，px2rem把px转化成rem，再动态的计算font-size。</p>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="模块化的使用和编译环境"><a href="#模块化的使用和编译环境" class="headerlink" title="模块化的使用和编译环境"></a>模块化的使用和编译环境</h4><h5 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h5><p>ES6模块设计思想是尽量静态化，这样在编译时就能确定模块的依赖关系。<br>语法：import export<br>输出：export default {}<br>引入：import xx from ‘路径’<br>环境： babel编译ES6语法</p>
 <h5 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h5><p>将ES6现在浏览器还不支持的标准使用babel转化成ES5的语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//babelrc</span><br><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [&quot;env&quot;, &#123;</span><br><span class="line">      &quot;modules&quot;: false,</span><br><span class="line">      &quot;targets&quot;: &#123;</span><br><span class="line">        &quot;browsers&quot;: [&quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 8&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;stage-2&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;],</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &#123;</span><br><span class="line">      &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;],</span><br><span class="line">      &quot;plugins&quot;: [&quot;istanbul&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h5><p>开发环境-webpack</p>
 <ol>
 <li>npm init</li>
 <li>npm install webpack babel-loader –save-dev</li>
 <li><p>配置 webpack.config.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    //入口</span><br><span class="line">    entry: &apos;./src/index.js&apos;,</span><br><span class="line">    //输出</span><br><span class="line">    output: &#123;</span><br><span class="line">        path:__dirname,</span><br><span class="line">        filename: &apos;./build/build.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    //打包模块</span><br><span class="line">    module: &#123;</span><br><span class="line">        //规则</span><br><span class="line">        rules: [&#123;</span><br><span class="line">            //监听所有的js文件</span><br><span class="line">            test: /\.js?$/,</span><br><span class="line">            //除了第三方的js文件</span><br><span class="line">            exclude: /(node_modules)/,</span><br><span class="line">            //使用babel编译</span><br><span class="line">            loader: &apos;babel-loader&apos;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    //配置入口</span><br><span class="line">    entry: &apos;./src/index.js&apos;,</span><br><span class="line">    //配置输出</span><br><span class="line">    output: &#123;</span><br><span class="line">        path:__dirname,</span><br><span class="line">        filename: &apos;./build/build.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    //配置loader</span><br><span class="line">    module: &#123;</span><br><span class="line">        //规则</span><br><span class="line">        rules: [&#123;</span><br><span class="line">            //监听所有的js文件</span><br><span class="line">            test: /\.js?$/,</span><br><span class="line">            //除了第三方的js文件</span><br><span class="line">            exclude: /(node_modules)/,</span><br><span class="line">            //使用babel编译</span><br><span class="line">            loader: &apos;babel-loader&apos;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    //配置插件</span><br><span class="line">    plugins,</span><br><span class="line">    //查询文件</span><br><span class="line">    resolve,</span><br><span class="line">    //开启服务</span><br><span class="line">    devServer</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置 package.json中的scripts</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;npm run dev&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;webpack-dev-server --open&quot; //open会帮你启动的时候自动帮你打开页面</span><br><span class="line">    &quot;build&quot;: &quot;webpack --env.production&quot;  //打包输出</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运行 npm start</p>
 </li>
@@ -547,7 +630,10 @@
 <li>需要babel-polyfill，因为是ES7的提案，还不是一个标准，现在各大浏览器并不支持。</li>
 <li>再也没有回调函数了。Promise通过then链解决多层回调问题，而async/await进一步优化回调，几乎和同步代码一样。</li>
 </ol>
-<h3 id="VDOM"><a href="#VDOM" class="headerlink" title="VDOM"></a>VDOM</h3><h4 id="什么是vdom，为何使用vdom"><a href="#什么是vdom，为何使用vdom" class="headerlink" title="什么是vdom，为何使用vdom"></a>什么是vdom，为何使用vdom</h4><ul>
+<h3 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h3><h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><p>new Vue()<br>-&gt; Init(Event &amp; Lifecycle)<br>-&gt; beforeCreate -&gt; init(injections &amp; reactivity)<br>-&gt; created<br>-&gt; Has ‘el’ option? ( -N&gt; when vm.$mount(el) is called -&gt; )<br>-Y&gt;  Has ‘template’ options  ( -N&gt; Compile el’s outerHTML as template <em> ) (-Y&gt; Compile template into render funcrion </em> )<br>-&gt; beforeMount<br>-&gt; Create vm.$el and replace ‘el’ with it<br>-&gt; mounted<br>-&gt; Mounted (-&gt; when data changes -&gt; beforeUpdate -OR&gt; updated -&gt; Virtual Dom re-render and patch)<br>-&gt; when vm.$destroy() is called<br>-&gt; beforeDestroy<br>-&gt; Teardown watchers, child components and event listeners<br>-&gt; Destroyed<br>-&gt; destroyed</p>
+<p>方法生命周期<br>beforeCreate<br>-&gt; created<br>-&gt; beforeMount<br>-&gt; mounted<br>-&gt; ( beforeUpdate -OR&gt; updated)<br>-&gt; beforeDestroy<br>-&gt; destroyed </p>
+<p>创建Vue实例<br>-&gt; 初始化事件和生命周期，初始化_init是vue设置在prototype的私有属性，初始化时，_init里有一个属性是vm._uid，每次创建一个Vue实例时加1，以确保每一个Vue实例都是独一无二的。<br>-&gt;初始化注入和反应<br>-&gt; 是否有el属性，若无看是否使用$mount方法挂载，满足则进入下一个周期<br>-&gt; 是否有template模板属性<br>-&gt; 如果没有，则将挂载的el对象的外部HTML作为template模板，如果有则编译template模板进入render渲染函数<br>-&gt; 创建虚拟el替代Vue实例里的el<br>-&gt; （在更新前当数据发生变化 或者 更新 则触发虚拟DOM进行重新渲染re-render 和 产生补丁patch)<br>-&gt; 开始销毁虚拟Vue<br>-&gt; 卸载watchers, child, components 和 eventlisteners<br>-&gt; 销毁，结束</p>
+<h4 id="什么是vdom，为何使用vdom"><a href="#什么是vdom，为何使用vdom" class="headerlink" title="什么是vdom，为何使用vdom"></a>什么是vdom，为何使用vdom</h4><ul>
 <li>virtual dom: 虚拟DOM</li>
 <li>用JS模拟DOM结构</li>
 <li>DOM变化的对比，放在JS层来做</li>
@@ -580,10 +666,33 @@
 <h4 id="如何理解MVVM"><a href="#如何理解MVVM" class="headerlink" title="如何理解MVVM"></a>如何理解MVVM</h4><p>目的：双向数据绑定。<br>示例： Vue.js React.js Angular.js<br>M: Model &lt;=&gt; VM:viewModel &lt;=&gt; V:View<br>双向数据绑定：view(视图层) &lt;=&gt; data(数据层)<br>核心： Oject.defineProperty(),可以直接在一个对象上定义一个新属性或者修改属性。<br>    参数： obj: 定义属性的对象。 prop： 定义或修改属性的名称。 descriptor：定义或修改属性描述符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">descriptor: &#123;</span><br><span class="line">    configurable: true, //true时属性描述符才能改变，默认false</span><br><span class="line">    enumerable: true, //true时该属性才能枚举，默认false</span><br><span class="line">    value: &apos;&apos;,     //设置该对象对象的值，默认undefined</span><br><span class="line">    writable: true,  //true时该属性才能被赋值运算符改变，默认为false</span><br><span class="line">    get,</span><br><span class="line">    set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用的设计模式：观察者模式。</p>
 <p>问题：Object.defineProperty与reflect.defineProperty的区别？<br>Object.defineProperty是ES5的API，返回的是一个对象。<br>reflect.defineProperty是ES6的API，返回的是一个布尔值。</p>
-<h4 id="Vue如何实现响应式"><a href="#Vue如何实现响应式" class="headerlink" title="Vue如何实现响应式"></a>Vue如何实现响应式</h4><p>响应式就是双向数据绑定，核心API：Object.defineProperty</p>
+<h4 id="Vue如何实现响应式-双向数据绑定"><a href="#Vue如何实现响应式-双向数据绑定" class="headerlink" title="Vue如何实现响应式 (双向数据绑定)"></a>Vue如何实现响应式 (双向数据绑定)</h4><p>核心API：Object.defineProperty</p>
 <p>每当 new 一个 Vue，主要做了两件事：<br>第一个是监听数据：observer(data)，<br>第二个是编译 HTML：nodeToFragement(id)。<br>在监听数据的过程中，observer会为 data 中的每一个属性生成一个主题对象 Dep。<br>在编译 HTML 的过程中，会为每个与数据绑定相关的节点生成一个订阅者 watcher，watcher 会将自己添加到相应属性的 dep 中。<br>Watcher(观察者)会订阅Dep对象，然后数据改变后，Dep对象会通知所有的Watcher,Watcher就会去更新View。<br>修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的 set 方法。<br>发出通知 dep.notify() =&gt; 触发订阅者的 update 方法 =&gt; 更新视图。</p>
 <h4 id="Vue模板"><a href="#Vue模板" class="headerlink" title="Vue模板"></a>Vue模板</h4><p>本质：字符串，有逻辑，最终转化为html显示。<br>render函数： 内部使用了with函数，可以改变作用域。将width内的属性的作用域改变为参数里的作用域。实际开发不推荐使用，容易造成逻辑混乱等。</p>
-<h4 id="Vue实现流程-渲染"><a href="#Vue实现流程-渲染" class="headerlink" title="Vue实现流程,渲染"></a>Vue实现流程,渲染</h4><h3 id="hybrid"><a href="#hybrid" class="headerlink" title="hybrid"></a>hybrid</h3><h4 id="hybrid是什么？"><a href="#hybrid是什么？" class="headerlink" title="hybrid是什么？"></a>hybrid是什么？</h4><h4 id="hybrid如何更新上线"><a href="#hybrid如何更新上线" class="headerlink" title="hybrid如何更新上线"></a>hybrid如何更新上线</h4><h4 id="hybrid与h5的区别"><a href="#hybrid与h5的区别" class="headerlink" title="hybrid与h5的区别"></a>hybrid与h5的区别</h4><h4 id="JS如何与客户端通信"><a href="#JS如何与客户端通信" class="headerlink" title="JS如何与客户端通信"></a>JS如何与客户端通信</h4><h3 id="你的博客和github怎么维护？"><a href="#你的博客和github怎么维护？" class="headerlink" title="你的博客和github怎么维护？"></a>你的博客和github怎么维护？</h3><h3 id="一些面试题"><a href="#一些面试题" class="headerlink" title="一些面试题"></a>一些面试题</h3><h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>考查：函数和类、原型链、运算符优先级、作用域、变量提升<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">function Foo() &#123;</span><br><span class="line">    getName = function() &#123;</span><br><span class="line">        console.log(1)</span><br><span class="line">    &#125;</span><br><span class="line">    return this</span><br><span class="line">&#125;</span><br><span class="line">Foo.getName = function() &#123;</span><br><span class="line">    console.log(2)</span><br><span class="line">&#125;</span><br><span class="line">Foo.prototype.getName = function() &#123;</span><br><span class="line">    console.log(3)</span><br><span class="line">&#125;</span><br><span class="line">var getName = function() &#123;</span><br><span class="line">    console.log(4)</span><br><span class="line">&#125;</span><br><span class="line">function getName() &#123;</span><br><span class="line">    console.log(5)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName()                   //2 相当于Foo.getName = function() &#123;&#125;函数运行</span><br><span class="line">getName()                       //4 变量提升，var声明的getName值为undefined，而函数是JS的第一公民，它会第一时间赋值，JS是单线程，所以运行到var的getName这时候又进行了赋值，到function时，已经赋值过所以不会重新赋值，故打印出的是4而不是5。</span><br><span class="line">Foo().getName()                 //1 这时候调用了function Foo()里的getName，然后return this，由于是在全局下调用，这个this指向window，所以会将getName重新赋值。</span><br><span class="line">getName()                       //1 此时调用的getName已被上一个覆盖。getName() = this.getName = window.getName</span><br><span class="line">new Foo.getName()               //2 new Foo.getName() = new function()&#123; console.log(2) &#125;</span><br><span class="line">new Foo().getName()             //3 new了Foo()实例，访问的是Foo原型上的方法getName</span><br><span class="line">new new Foo().getName()         //3 new Foo().getName优先级比new高，所以先执行new Foo().getName()。所以最后还是3。</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vue的安装包有几个版本，遇到问题如何解决？"><a href="#Vue的安装包有几个版本，遇到问题如何解决？" class="headerlink" title="Vue的安装包有几个版本，遇到问题如何解决？"></a>Vue的安装包有几个版本，遇到问题如何解决？</h4><p><img src="/img/postImg/VueVersion.png" alt="VueVersion" title="VueVersion"><br>完整版：同时包含编译器和运行时的版本。<br>编译器：用来将模板字符串编译成JS渲染函数的代码。<br>运行时：用来创建Vue实例、渲染并处理虚拟DOM等的代码。基本上就是除去编译器的其他一切。</p>
+<p>在webpack中引入vue.esm.js：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">        &apos;vue$&apos;:&apos;vue/dist/vue.esm.js&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vue实现流程-渲染"><a href="#Vue实现流程-渲染" class="headerlink" title="Vue实现流程,渲染"></a>Vue实现流程,渲染</h4><h4 id="Vue-router"><a href="#Vue-router" class="headerlink" title="Vue-router"></a>Vue-router</h4><p>SPA设计：单页面设计</p>
+<ol>
+<li>设计意义</li>
+</ol>
+<ul>
+<li>前后端分离</li>
+<li>减轻服务器压力</li>
+<li>增强用户体验</li>
+<li>Prerender预渲染优化SEO</li>
+</ul>
+<ol>
+<li>工作原理</li>
+</ol>
+<ul>
+<li>History API(优雅): pushstate(创建一个历史记录)、onpopstate(响应前进、后退、控制事件)</li>
+<li>hash(兼容性最好): location.hash(点击入口修改hash值)、hashchange(监听hash的修改)</li>
+</ul>
+<p>history是window下的属性。</p>
+<h4 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。<br>vuex的目的是去管理非亲自组件之间的共享状态，如果父子组件可以使用props、slot插槽等设计来实现，对于非父子组件也可以使用事件总线方式来实现。<br>禁止vuex用来存储数据，组件的data才是用来存储数据的方法，用vuex来会让问题变得复杂。</p>
+<h3 id="hybrid"><a href="#hybrid" class="headerlink" title="hybrid"></a>hybrid</h3><h4 id="hybrid是什么？"><a href="#hybrid是什么？" class="headerlink" title="hybrid是什么？"></a>hybrid是什么？</h4><h4 id="hybrid如何更新上线"><a href="#hybrid如何更新上线" class="headerlink" title="hybrid如何更新上线"></a>hybrid如何更新上线</h4><h4 id="hybrid与h5的区别"><a href="#hybrid与h5的区别" class="headerlink" title="hybrid与h5的区别"></a>hybrid与h5的区别</h4><h4 id="JS如何与客户端通信"><a href="#JS如何与客户端通信" class="headerlink" title="JS如何与客户端通信"></a>JS如何与客户端通信</h4><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>面试准备： 梳理历史项目、打造一个满意的项目、问答设计、更多思考。<br>项目介绍： 项目背景、项目收益、项目设计、项目总结。<br>沟通技巧： 强逻辑、谦虚、知进退、善总结。</p>
+<h4 id="项目还能怎么改进？"><a href="#项目还能怎么改进？" class="headerlink" title="项目还能怎么改进？"></a>项目还能怎么改进？</h4><p>gzip压缩，vue异步加载了解一下。</p>
+<h3 id="一些面试题"><a href="#一些面试题" class="headerlink" title="一些面试题"></a>一些面试题</h3><h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>考查：函数和类、原型链、运算符优先级、作用域、变量提升<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">function Foo() &#123;</span><br><span class="line">    getName = function() &#123;</span><br><span class="line">        console.log(1)</span><br><span class="line">    &#125;</span><br><span class="line">    return this</span><br><span class="line">&#125;</span><br><span class="line">Foo.getName = function() &#123;</span><br><span class="line">    console.log(2)</span><br><span class="line">&#125;</span><br><span class="line">Foo.prototype.getName = function() &#123;</span><br><span class="line">    console.log(3)</span><br><span class="line">&#125;</span><br><span class="line">var getName = function() &#123;</span><br><span class="line">    console.log(4)</span><br><span class="line">&#125;</span><br><span class="line">function getName() &#123;</span><br><span class="line">    console.log(5)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName()                   //2 相当于Foo.getName = function() &#123;&#125;函数运行</span><br><span class="line">getName()                       //4 变量提升，var声明的getName值为undefined，而函数是JS的第一公民，它会第一时间赋值，JS是单线程，所以运行到var的getName这时候又进行了赋值，到function时，已经赋值过所以不会重新赋值，故打印出的是4而不是5。</span><br><span class="line">Foo().getName()                 //1 这时候调用了function Foo()里的getName，然后return this，由于是在全局下调用，这个this指向window，所以会将getName重新赋值。</span><br><span class="line">getName()                       //1 此时调用的getName已被上一个覆盖。getName() = this.getName = window.getName</span><br><span class="line">new Foo.getName()               //2 new Foo.getName() = new function()&#123; console.log(2) &#125;</span><br><span class="line">new Foo().getName()             //3 new了Foo()实例，访问的是Foo原型上的方法getName</span><br><span class="line">new new Foo().getName()         //3 new Foo().getName优先级比new高，所以先执行new Foo().getName()。所以最后还是3。</span><br></pre></td></tr></table></figure></p>
 <p>运算符优先级：<br><img src="/img/postImg/operatorPriority1.png" alt="operatorPriority1" title="operatorPriority1"><br><img src="/img/postImg/operatorPriority2.png" alt="operatorPriority2" title="operatorPriority2"><br><img src="/img/postImg/operatorPriority3.png" alt="operatorPriority3" title="operatorPriority3"></p>
 <h3 id="使用面向对象的方式维护一个列表，每个列表有一个删除按钮，点击删除移除当前行"><a href="#使用面向对象的方式维护一个列表，每个列表有一个删除按钮，点击删除移除当前行" class="headerlink" title="使用面向对象的方式维护一个列表，每个列表有一个删除按钮，点击删除移除当前行"></a>使用面向对象的方式维护一个列表，每个列表有一个删除按钮，点击删除移除当前行</h3><p>考查：复用性设计、事件代理、事件绑定、渲染机制、递归<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class List &#123;</span><br><span class="line">    constructor(sel) &#123;</span><br><span class="line">        this.el = Array.from(document.querySelectorAll(sel))</span><br><span class="line">        let self = this</span><br><span class="line">        this.el.forEach(item =&gt; &#123;</span><br><span class="line">            item.addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">                if(e.target.className.indexOf(&apos;del&apos;) &gt; -1) &#123;</span><br><span class="line">                    self.removeItem.call(self, e.target)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    removeItem(target) &#123;</span><br><span class="line">        let self = this</span><br><span class="line">        let findParent = function(node) &#123;</span><br><span class="line">            let parent = node.parentNode</span><br><span class="line">            let root = self.el.find(item =&gt; item === parent)</span><br><span class="line">            if(root) &#123;</span><br><span class="line">                root.removeChild(node)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                findParent(parent)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        findParent(target)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">window.addEventListener(&apos;DOMContentLoaded&apos;, function() &#123;</span><br><span class="line">    new List(&apos;.list&apos;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>思路：在构造函数中，只查找DOM元素和绑定事件，处理方法则解耦出来，方便后期扩展和维护。使用事件委托，避免事件性能问题。使用递归收集是哪个发出的响应，然后执行方法。最后监听DOMContentLoaded，等到代码结构渲染出来，在创建实例。</p>
@@ -609,6 +718,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/06/03/计算机基础/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            أحدث
+        </a>
     
 
     <!-- Section Spacer -->
