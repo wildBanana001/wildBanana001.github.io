@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 03 2018 18:31:03 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 03 2018 19:12:09 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Sun Jun 03 2018 18:31:03 GMT+0800",
+    "dateModified": "Sun Jun 03 2018 19:12:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>رئيسية</span>
+                    <span>Home</span>
                 </a>
             </span>
 
@@ -634,7 +634,8 @@
 <li>帮你创建一个新对象。 var obj = new Object();</li>
 <li>帮你绑定原型。obj.<strong>proto</strong> = Object.prototype 将新对象的<strong>proto</strong>属性指向构造函数的prototype</li>
 <li>帮你将this指向新对象。</li>
-<li>帮你return新对象。但在这里注意构造函数是否有返回值。如果构造函数的返回值为基本数据类型（number，string，boolean，undefined，null）则返回临新对象。如果构造函数的返回值为对象类型，则返回这个对象类型。</li>
+<li>帮你return新对象。但在这里注意构造函数是否有返回值。如果构造函数的返回值为基本数据类型（number，string，boolean，undefined，null）则返回临新对象。如果构造函数的返回值为对象类型，则返回这个对象类型。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var myNew = function(func) &#123;</span><br><span class="line">    //生成一个新对象，指定构造函数原型对象</span><br><span class="line">    var o = Object.create(func.prototype)</span><br><span class="line">    //改变执行上下文this</span><br><span class="line">    var k = func.call(o)</span><br><span class="line">    //是否是对象，是则直接返回这个对象类型，不是则返回新对象</span><br><span class="line">    if(typeof k === &apos;object&apos;) &#123;</span><br><span class="line">        return k</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return o</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h4 id="call-apply-bind-this"><a href="#call-apply-bind-this" class="headerlink" title="call/apply/bind/this"></a>call/apply/bind/this</h4><p>其中call/apply作用都是改变this指向，区别只是后面传的参数形式不同。<br>call(thisArg,[arg1,[arg2,[…]]])，apply(thisArg,[arrs])<br>bind也能改变this指向。但是bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入bind()方法的第一个参数作为this，传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</p>
 <p>this是一个指向。<br>在函数预编译过程中this指向window对象。在全局作用域里this也指向window对象。<br>最后 <strong>this永远指向最后调用它的那个对象</strong>。<br>那么我们如何改变this指向？</p>
@@ -672,9 +673,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var F = function()&#123;this.name=&quot;o3&quot;&#125;</span><br><span class="line">var o3 = new F()</span><br><span class="line">//打印</span><br><span class="line">F &#123;name: &quot;o3&quot;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用Object.create</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var P = &#123;name: &quot;o4&quot;&#125;</span><br><span class="line">var o4 = Object.create(P)</span><br><span class="line">//打印</span><br><span class="line">Object &#123;&#125;</span><br><span class="line">-&gt; o4.name</span><br><span class="line">&lt;- &quot;o4&quot;</span><br><span class="line">//object.create是内部定义一个对象，并让内部对象的prototype赋值为引进的对象属性，return出一个新的对象。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var P = &#123;name: &quot;o4&quot;&#125;</span><br><span class="line">var o4 = Object.create(P)</span><br><span class="line">//打印</span><br><span class="line">Object &#123;&#125;</span><br><span class="line">-&gt; o4.name</span><br><span class="line">&lt;- &quot;o4&quot;</span><br><span class="line">/*o4的__proto__指向构造函数的原型对象P对象，在JS引擎查找时，o4是一个空对象没有name属性，Object.create的方法是把参数的对象作为新对象的原型对象赋给o4。</span><br><span class="line">object.create是内部定义一个对象，并让内部对象的prototype赋值为引进的对象属性，return出一个新的对象。 */</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h4 id="instanceof-原理"><a href="#instanceof-原理" class="headerlink" title="instanceof 原理"></a>instanceof 原理</h4><p>判断实例对象的<strong>proto</strong>和构造函数的prototype是不是同一个引用地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var M = function() &#123;this.name=&quot;m&quot;&#125;</span><br><span class="line">var m = new M()</span><br><span class="line">m instanceof M //true</span><br><span class="line">m.__proto__ === M.prototype //true</span><br><span class="line">M.prototype.__proto__ === Object.prototype //true</span><br><span class="line"></span><br><span class="line">m.__proto__.constructor === M   //true</span><br><span class="line">m.__proto__.constructor === Object  //false</span><br><span class="line">//所以使用constructor做判断比instanceof更严谨</span><br></pre></td></tr></table></figure></p>
 <h4 id="class特性与继承"><a href="#class特性与继承" class="headerlink" title="class特性与继承"></a>class特性与继承</h4><p>继承（6种方法）：</p>
 <ul>
 <li>原型链继承<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Father () &#123;&#125;</span><br><span class="line">function Son () &#123;&#125;</span><br><span class="line">Son.prototype = new Father()</span><br></pre></td></tr></table></figure>
@@ -1030,7 +1032,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            أحدث
+            Neuren
         </a>
     
 
@@ -1040,7 +1042,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/04/15/网络/" id="post_nav-older" class="next-content">
-            أقدم
+            Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
