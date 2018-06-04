@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 21 2018 23:23:59 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jun 04 2018 09:48:41 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jun 04 2018 10:20:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/21/面试知识点总结/index.html",
     "headline": "web前端面试知识点总结",
     "datePublished": "Sat Apr 21 2018 23:23:59 GMT+0800",
-    "dateModified": "Mon Jun 04 2018 09:48:41 GMT+0800",
+    "dateModified": "Mon Jun 04 2018 10:20:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -615,7 +615,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//有缺陷,当数组中存放1和‘1’会默认去掉其中一个，从而达不到想要的效果</span><br><span class="line">const unique = arr =&gt; &#123;</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    arr.forEach(value =&gt; &#123;</span><br><span class="line">        obj[value] = 0;</span><br><span class="line">    &#125;)</span><br><span class="line">    return Object.keys(obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="JS运行机制"><a href="#JS运行机制" class="headerlink" title="JS运行机制"></a>JS运行机制</h4><p>JS是单线程语言<br>任务队列： 同步任务和异步任务<br>Event Loop： JS运行时会把同步的任务放进运行栈里，先进先出，单线程执行。当遇到异步任务时，JS引擎会把这个异步任务拿走放入异步任务队列里，当这个异步任务完成后，插入到正在执行的同步任务的下一个队列中。<br>开启异步任务： setTimeout和setInterval，DOM事件，ES6的Promise。<br>如果设置setTimeout的时间是0秒，但在浏览器里其实会有一个4ms的时间。</p>
+<h4 id="JS运行机制"><a href="#JS运行机制" class="headerlink" title="JS运行机制"></a>JS运行机制</h4><p>JS是单线程语言<br>任务队列： 同步任务和异步任务<br>Event Loop： JS运行时会把同步的任务放进运行栈里，先进先出，单线程执行。当遇到异步任务时，JS引擎会把这个异步任务拿走放入异步任务队列里，当这个异步任务完成后，插入到正在执行的同步任务的下一个队列中。<br>开启异步任务： setTimeout和setInterval，DOM事件，ES6的Promise，ES7的async/await。<br>如果设置setTimeout的时间是0秒，但在浏览器里其实会有一个4ms的时间。</p>
 <h4 id="作用域及作用域链"><a href="#作用域及作用域链" class="headerlink" title="作用域及作用域链"></a>作用域及作用域链</h4><p>js作用域分为：全局作用域、局部作用域<br>作用域定义：当函数执行时，会创建一个称为执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境，函数每次执行时的执行上下文都是独一无二的，所以多次调用一个函数会导致创建多个执行上下文，当函数执行完毕，它所产生的执行上下文就会被销毁。<br>简单来说在作用域内声明函数会创建函数作用域子节点，遇{}会创建块级作用域子节点，从而形成作用域链。</p>
 <p>[[scope]]<br>每个JS函数都是一个对象，对象中有些属性我们可以访问，但有的不可以，这些属性仅供JS引擎存取。[[scope]]就是一个。它就是指作用域，其中存储了运行期上下文的集合，这个集合是链式连接，它就是作用域链。</p>
 <p>变量值查找<br>在当前作用域往上查找，找到第一个匹配的标识符时就会停止返回。变量值，如果查找全局作用域都没有，则抛出reference error错误，因此变量值查找有就近原则。</p>
@@ -806,15 +806,17 @@
 <p>Fetch 的使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//fetch获取数据</span><br><span class="line">fetch(url).then(function (res) &#123; // 需要同源策略</span><br><span class="line">    return res.json();</span><br><span class="line">&#125;).then(function (data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;).catch(function (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">&#125;)</span><br><span class="line">//fetch发送数据</span><br><span class="line">const data = &#123;data:&apos;content&apos;&#125;;</span><br><span class="line">fetch(url, &#123;</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;:&apos;application/json&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    body:JSON.stringify(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>Fetch处理异常<br>zlFetchFetch不会关心ajax是否成功，它只关心从服务器发送请求和接收响应。所以我们应该在响应失败时去抛出异常。那么我们可以使用zlFetch库，它会来帮我们进行异常处理。</p>
 <p>Fetch是很好的方法，能发送和接收数据。不需要在编写XHR请求或依赖于jQuery。尽管Fetch很好，但是其错误处理不是很直接。在处理之前，需要让错误信息进入到catch方法中。使用zlFetch库，就不需要担心错误处理了。</p>
-<h4 id="跨域跨域的方法"><a href="#跨域跨域的方法" class="headerlink" title="跨域跨域的方法"></a>跨域跨域的方法</h4><pre><code>1. 服务器代理中转 // 将资源放在服务器上
-2. document.domain // 主域名相同，子域名不同，在子页面 与 主页面 分别加上 document.domain
-3. window.name // 修改子页面的 window.name 让主页面获取到这个值
-4. window.location.hash // 用 window.location.hash 值传递数据，将数据放到 url 里，hash改变页面不会更新。 (常用)
-5. postMessage // H5新标准。使用 Window.postMessage 发送数据，在子页面绑定 message 事件接收数据 (常用)
-6. jsonp // script 标签 src 属性 不受同源策略限制 (常用)
-7. cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持 (常用)
-8. WebSocket // (常用)
-</code></pre><h4 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h4><p>jsonp：<br>web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。<br>jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。</p>
+<h4 id="跨域跨域的方法"><a href="#跨域跨域的方法" class="headerlink" title="跨域跨域的方法"></a>跨域跨域的方法</h4><ol>
+<li>服务器代理中转 // 将资源放在服务器上</li>
+<li>document.domain // 主域名相同，子域名不同，在子页面 与 主页面 分别加上 document.domain</li>
+<li>window.name // 修改子页面的 window.name 让主页面获取到这个值</li>
+<li>window.location.hash // 用 window.location.hash 值传递数据，将数据放到 url 里，hash改变页面不会更新。 (常用)</li>
+<li>postMessage // H5新标准。使用 Window.postMessage 发送数据，在子页面绑定 message 事件接收数据 (常用)</li>
+<li>jsonp // script 标签 src 属性 不受同源策略限制 (常用)</li>
+<li>cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持 (常用)</li>
+<li>WebSocket // (常用)</li>
+</ol>
+<h4 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h4><p>jsonp：<br>web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。<br>jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。</p>
 <p>jsonp 优点：</p>
 <pre><code>1. JSONP 可以跨越同源策略
 2. 兼容性好
