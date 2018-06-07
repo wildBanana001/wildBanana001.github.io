@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jun 06 2018 10:42:00 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jun 07 2018 23:41:52 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
     "headline": "面试高级知识点 (持续更新)",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Wed Jun 06 2018 10:42:00 GMT+0800",
+    "dateModified": "Thu Jun 07 2018 23:41:52 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -551,6 +551,7 @@
 <li>ideal viewport: 理想窗口</li>
 </ol>
 <p>rem：rem是根据html的font-size大小变化。基于这个，可以在每一个设备下根据设备的宽度设置对应的html字号，从而实现自适应布局。<br>在vue中配置px2rem-loader，在开发时只使用px，px2rem把px转化成rem，再动态的计算font-size。</p>
+<h4 id="移动端1px"><a href="#移动端1px" class="headerlink" title="移动端1px"></a>移动端1px</h4><p>在移动端写1px会导致显示变粗，是因为viewport的设置和屏幕物理分辨率是按比例而不是相同的，由于不同的手机有不同的像素密度。在window对象中有一个devicePixelRatio属性，他可以反应css中的像素与设备的像素比。<br><code>devicePixelRatio = 物理像素 / 独立像素</code></p>
 <h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="模块化的使用和编译环境"><a href="#模块化的使用和编译环境" class="headerlink" title="模块化的使用和编译环境"></a>模块化的使用和编译环境</h4><h5 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h5><p>ES6模块设计思想是尽量静态化，这样在编译时就能确定模块的依赖关系。<br>语法：import export<br>输出：export default {}<br>引入：import xx from ‘路径’<br>环境： babel编译ES6语法</p>
 <h5 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h5><p>将ES6现在浏览器还不支持的标准使用babel转化成ES5的语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//babelrc</span><br><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [&quot;env&quot;, &#123;</span><br><span class="line">      &quot;modules&quot;: false,</span><br><span class="line">      &quot;targets&quot;: &#123;</span><br><span class="line">        &quot;browsers&quot;: [&quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 8&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;stage-2&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;],</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &#123;</span><br><span class="line">      &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;],</span><br><span class="line">      &quot;plugins&quot;: [&quot;istanbul&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h5><p>开发环境-webpack</p>
@@ -756,7 +757,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -766,7 +767,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/05/03/前端性能优化/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
