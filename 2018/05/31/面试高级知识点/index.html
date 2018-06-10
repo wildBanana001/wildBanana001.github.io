@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:40 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jun 07 2018 23:41:52 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 10 2018 23:13:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/面试高级知识点/index.html",
     "headline": "面试高级知识点 (持续更新)",
     "datePublished": "Thu May 31 2018 11:15:40 GMT+0800",
-    "dateModified": "Thu Jun 07 2018 23:41:52 GMT+0800",
+    "dateModified": "Sun Jun 10 2018 23:13:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>Home</span>
+                    <span>رئيسية</span>
                 </a>
             </span>
 
@@ -536,14 +536,14 @@
 <p>css像素= 逻辑像素<br>设备像素是物理像素跟硬件相关<br>设备像素比 = css像素/设备像素</p>
 <p>viewport：移动设备浏览器上(也可能是一个app中的webview)用来显示网页的一块”画布”。<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;</code></p>
 <ul>
-<li>width：控制viewport的大小，可以指定一个值，如600或特殊的值。如device-width为设备的宽度(单位为缩放100%时CSS的像素)</li>
+<li>width：控制viewport的大小，可以指定一个值，如600或特殊的值。如device-width为设备的宽度(单位为缩放100%时CSS的像素)。width没设置则默认是980px。</li>
 <li>height：和width相对应，指定高度。</li>
 <li>inital-scale：初始缩放比例，即当页面第一次load的时候缩放比例。</li>
 <li>maximum-scale：允许用户缩放到的最大比例</li>
 <li>minimum-scale：允许用户缩放的最小比例</li>
 <li>user-scalable：用户是否可以手动缩放。</li>
 </ul>
-<p>with=device-width就是将layout裁剪成visual<br>ideal viewport的宽度 = 屏幕的逻辑像素宽度</p>
+<p>with=device-width就是将layout裁剪成visual<br>ideal viewport的宽度 = 屏幕的逻辑像素宽度<br>设置了initial-scale和viewport=device-width/scale，同时还设置了width和initial-scale，则会取min-width，即应用这两个较小的值。</p>
 <p>viewport分三类：</p>
 <ol>
 <li>visual viewport: 可视视口(手机宽高内看到的画面)</li>
@@ -551,7 +551,15 @@
 <li>ideal viewport: 理想窗口</li>
 </ol>
 <p>rem：rem是根据html的font-size大小变化。基于这个，可以在每一个设备下根据设备的宽度设置对应的html字号，从而实现自适应布局。<br>在vue中配置px2rem-loader，在开发时只使用px，px2rem把px转化成rem，再动态的计算font-size。</p>
-<h4 id="移动端1px"><a href="#移动端1px" class="headerlink" title="移动端1px"></a>移动端1px</h4><p>在移动端写1px会导致显示变粗，是因为viewport的设置和屏幕物理分辨率是按比例而不是相同的，由于不同的手机有不同的像素密度。在window对象中有一个devicePixelRatio属性，他可以反应css中的像素与设备的像素比。<br><code>devicePixelRatio = 物理像素 / 独立像素</code></p>
+<h4 id="移动端1px"><a href="#移动端1px" class="headerlink" title="移动端1px"></a>移动端1px</h4><p>在移动端写1px会导致显示变粗，是因为viewport的设置和屏幕物理分辨率是按比例而不是相同的，由于不同的手机有不同的像素密度。在window对象中有一个devicePixelRatio属性，他可以反应css中的像素与设备的像素比。<br><code>devicePixelRatio = 物理像素 / 独立像素</code>，以下简称dpr。</p>
+<ol>
+<li>Flexible方案<ul>
+<li>借助JavaScript来动态改变meta标签中的viewport中的initial-scale的值，然后根据dpr修改html中的font-size值，再使用rem来处理。</li>
+<li>原理：让viewport放大为device-width的dpr倍数，然后缩小1/dpr倍显示。</li>
+<li>缺点：只能处理IOS的dpr为2的情况，不支持Android和dpr=3的情况。</li>
+</ul>
+</li>
+</ol>
 <h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="模块化的使用和编译环境"><a href="#模块化的使用和编译环境" class="headerlink" title="模块化的使用和编译环境"></a>模块化的使用和编译环境</h4><h5 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h5><p>ES6模块设计思想是尽量静态化，这样在编译时就能确定模块的依赖关系。<br>语法：import export<br>输出：export default {}<br>引入：import xx from ‘路径’<br>环境： babel编译ES6语法</p>
 <h5 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h5><p>将ES6现在浏览器还不支持的标准使用babel转化成ES5的语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//babelrc</span><br><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [&quot;env&quot;, &#123;</span><br><span class="line">      &quot;modules&quot;: false,</span><br><span class="line">      &quot;targets&quot;: &#123;</span><br><span class="line">        &quot;browsers&quot;: [&quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 8&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;stage-2&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;],</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &#123;</span><br><span class="line">      &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;],</span><br><span class="line">      &quot;plugins&quot;: [&quot;istanbul&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h5><p>开发环境-webpack</p>
@@ -757,7 +765,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
+            أحدث
         </a>
     
 
@@ -767,7 +775,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/05/03/前端性能优化/" id="post_nav-older" class="next-content">
-            Older
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
