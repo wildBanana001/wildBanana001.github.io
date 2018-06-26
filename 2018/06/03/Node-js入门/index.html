@@ -43,7 +43,7 @@
     
     <title>
         
-            Node.js入门 (持续更新) | 
+            Node.js入门 (停更ing) | 
         
         BLOG
     </title>
@@ -231,14 +231,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/2018/06/03/Node-js入门/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Node.js入门 (持续更新) | BLOG">
+    <meta property="og:title" content="Node.js入门 (停更ing) | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="nodejs express koa2 MongoDB"> 
 
     
         <meta property="article:published_time" content="Sun Jun 03 2018 18:18:30 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 03 2018 18:30:01 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jun 26 2018 10:39:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,9 +259,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2018/06/03/Node-js入门/index.html",
-    "headline": "Node.js入门 (持续更新)",
+    "headline": "Node.js入门 (停更ing)",
     "datePublished": "Sun Jun 03 2018 18:18:30 GMT+0800",
-    "dateModified": "Sun Jun 03 2018 18:30:01 GMT+0800",
+    "dateModified": "Tue Jun 26 2018 10:39:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -348,7 +348,7 @@
         <nav class="header-nav header-item">
             <span class="header-nav-item">
                 <a href="/" title="Home">
-                    <span>رئيسية</span>
+                    <span>Home</span>
                 </a>
             </span>
 
@@ -456,7 +456,7 @@
     
         <div class="post-content_wrapper">
             <p class="post-title">
-                Node.js入门 (持续更新)
+                Node.js入门 (停更ing)
             </p>
             <h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>nodejs运行在服务器端，通过将V8引擎内嵌到操作系统的集成层，来让JavaScript享受到底层操作系统的异步接口，从而实现将其带到服务器端的目的。<br>nodejs 高效、简洁。无须将书写部署到独立安装的web服务器中去运行。</p>
 <h4 id="Nodejs-创建服务器"><a href="#Nodejs-创建服务器" class="headerlink" title="Nodejs 创建服务器"></a>Nodejs 创建服务器</h4><p>创建一个web服务器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var http = require( &apos; http &apos; )</span><br><span class="line">var server = http.createServer( function(req, res) &#123;</span><br><span class="line">    res.writeHead(200)</span><br><span class="line">    res.end(&apos; Hello world &apos; )</span><br><span class="line">&#125; )</span><br><span class="line">server.listen(3000)</span><br></pre></td></tr></table></figure></p>
@@ -472,6 +472,18 @@
 <h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>Event 事件<br>    监听器，所有能触发事件的对象都是EventEmitter类的实例，这些对象开发了一个eventEmitter.on()函数 (注册监听器)，可以将一个或多个函数绑定到会被对象触发的命名事件上。eventEmitter.emit() （触发事件）</p>
 <h4 id="fs"><a href="#fs" class="headerlink" title="fs"></a>fs</h4><p>fs(文件系统)<br>    文件I/O是由简单封装的标准POSIX函数提供。通过require(‘fs’)使用该模块，所有方法都有同步异步的形式。</p>
 <h4 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h4><p>MongoDB是一个面向文档，无模式(关系）的数据库，非常适合于Node.js应用以及云端部署。<br>可以将任意类型的文档数据存储到集合中。<br>可以将数据看作文档，设计非常灵活。绝大多数情况下就是JSON格式形式存储。<br>可以与其他键–值形式的NoSQL数据区别开，文档可以是任意深度的。</p>
+<h3 id="Koa2"><a href="#Koa2" class="headerlink" title="Koa2"></a>Koa2</h3><ul>
+<li>基于nodejs平台的下一代web开发框架</li>
+<li>Express原班人马打造，更精简</li>
+<li>Async+await处理异步</li>
+<li>洋葱圈型的中间件机制</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const Koa = require(&apos;koa&apos;)</span><br><span class="line">const app = new Koa()</span><br><span class="line"></span><br><span class="line">app.use(async (ctx, next) =&gt; &#123;</span><br><span class="line">    ctx.body = &apos;hello Koa&apos;</span><br><span class="line">&#125;)   </span><br><span class="line"></span><br><span class="line">//中间件运行机制  打印135642 </span><br><span class="line">app.use(async (ctx, next) =&gt; &#123;</span><br><span class="line">    ctx.body = &apos;1&apos;</span><br><span class="line">    next()</span><br><span class="line">    ctx.body += &apos;2&apos;</span><br><span class="line">&#125;)   </span><br><span class="line">app.use(async (ctx, next) =&gt; &#123;</span><br><span class="line">    ctx.body = &apos;3&apos;</span><br><span class="line">    next()</span><br><span class="line">    ctx.body += &apos;4&apos;</span><br><span class="line">&#125;)   </span><br><span class="line">app.use(async (ctx, next) =&gt; &#123;</span><br><span class="line">    ctx.body = &apos;5&apos;</span><br><span class="line">    next()</span><br><span class="line">    ctx.body += &apos;6&apos;</span><br><span class="line">&#125;)   </span><br><span class="line"></span><br><span class="line">app.listen(3000)</span><br></pre></td></tr></table></figure>
+<h4 id="koa-logger框架-自己实现"><a href="#koa-logger框架-自己实现" class="headerlink" title="koa-logger框架 (自己实现)"></a>koa-logger框架 (自己实现)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = async(ctx,next) =&gt; &#123;</span><br><span class="line">        const start = new Date().getTime()</span><br><span class="line">        await next()</span><br><span class="line">        const end = new Date().getTime()</span><br><span class="line"></span><br><span class="line">        console.log(ctx.request.url, end - start, ctx.body.length)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="koa路由"><a href="#koa路由" class="headerlink" title="koa路由"></a>koa路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//普通路由</span><br><span class="line">app.use(async(ctx,next) =&gt; &#123;</span><br><span class="line">    console.log(ctx)</span><br><span class="line">    if(ctx.request.url === &apos;/&apos;) &#123;</span><br><span class="line">        ctx.body = &apos;home&apos;</span><br><span class="line">    &#125; else if(ctx.request.url === &apos;/page&apos;) &#123;</span><br><span class="line">        ctx.body = &apos;page&apos;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        ctx.body = &apos;&lt;h1&gt;404 not found &lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    await next()</span><br><span class="line">    ctx.body +=&apos;2&apos;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">koa-router</span><br><span class="line"></span><br><span class="line">    const Router = require(&apos;koa-router&apos;)</span><br><span class="line">    const router = new Router()</span><br><span class="line"></span><br><span class="line">    router.get(&apos;/&apos;,(ctx,next) =&gt; &#123;</span><br><span class="line">        ctx.body = &apos;home&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    router.get(&apos;/page&apos;,(ctx,next) =&gt; &#123;</span><br><span class="line">        ctx.body = &apos;page&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    app</span><br><span class="line">           .use(router.routes())</span><br><span class="line">           .use(router.allowedMethods())</span><br></pre></td></tr></table></figure>
+<h4 id="koa2实现"><a href="#koa2实现" class="headerlink" title="koa2实现"></a>koa2实现</h4><ul>
+<li>基于node自带的http库</li>
+</ul>
 
             
         </div>
@@ -501,7 +513,7 @@
     <!-- Next Nav -->
     
         <a href="/2018/06/03/计算机基础/" id="post_nav-older" class="next-content">
-            أقدم
+            Älteren
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
