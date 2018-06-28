@@ -43,7 +43,7 @@
     
     <title>
         
-            Archive: 2018/6 | 
+            深入Vue (学习ing) | 
         
         BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Vue源码 架构">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -214,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BLOG">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2018/06/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/26/深入Vue/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BLOG">
@@ -229,13 +229,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/2018/06/">
+    <meta property="og:url" content="http://yoursite.com/2018/06/26/深入Vue/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archive: 2018/6 | BLOG">
+    <meta property="og:title" content="深入Vue (学习ing) | BLOG">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Vue源码 架构"> 
 
+    
+        <meta property="article:published_time" content="Tue Jun 26 2018 10:35:19 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jun 28 2018 11:28:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -243,13 +246,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2018/06/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/06/26/深入Vue/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/06/26/深入Vue/index.html",
+    "headline": "深入Vue (学习ing)",
+    "datePublished": "Tue Jun 26 2018 10:35:19 GMT+0800",
+    "dateModified": "Thu Jun 28 2018 11:28:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "林凯锋",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/myavatar.png"
+        },
+        "description": "github.com/wildBanana001"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "BLOG",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Vue源码 架构",
+    "description": "",
+}
+</script>
 
 
     
@@ -379,25 +412,29 @@
 
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
 
-    <!-- Normal Post -->
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+
+
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
     
         <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
+        <div class="post-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
             <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
             <span class="name-span">林凯锋</span>
@@ -408,169 +445,88 @@
     
         </div>
 
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/06/26/深入Vue/">深入Vue (学习ing)</a>
-        </p>
 
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                文章源自滴滴前端大神黄佚： 
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/06/26/深入Vue/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
 
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/Vue源码-架构/">Vue源码 架构</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Jun 26, 2018
-            </div>
-            <div class="post_entry-footer-comment">
                 
-                
-            </div>
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+
+    
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                深入Vue (学习ing)
+            </p>
+            <p>文章源自滴滴前端大神黄佚： <a href="https://ustbhuangyi.github.io/vue-analysis/" target="_blank" rel="noopener">https://ustbhuangyi.github.io/vue-analysis/</a></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><p>你是否发现在阅读Vue源码的时候，很多文件开头写了<code>/*@flow*/</code>。<br>Flow是facebook出品的JavaScript静态类型检查工具。Vue.js源码就是利用了Flow做静态类型检查。</p>
+<h3 id="Flow的好处"><a href="#Flow的好处" class="headerlink" title="Flow的好处"></a>Flow的好处</h3><p>JavaScript是动态类型的语言，它非常灵活，但过于灵活会导致很容易写出非常隐蔽的隐患代码，在编译期不会报错，但在运行阶段可能会出现各种各样的bug。<br>类型检测是当前动态语言的发展趋势，在编译期发现由类型错误引起的bug，又不影响代码运行(不需要运行时动态类型检查)，使得JavaScript与Java等强类型语言有相近的体验。<br>项目越复杂就越需要通过工具的手段来保证项目的维护性和增强代码的可读性。Vue.js在2.0重构时，在ES2015(ES6)的基础上，除了使用ESlint来保证代码风格之外，也引入了flow做静态类型检查。选择Flow是因为Babel和ESLint都有相对应的Flow插件以支持语法，可以完全沿用现有的构建配置，以非常小的成本的改动就可以拥有静态类型检查的能力。</p>
+<h3 id="Flow的工作方式"><a href="#Flow的工作方式" class="headerlink" title="Flow的工作方式"></a>Flow的工作方式</h3><p>通常类型检查分为2种方式：</p>
+<ul>
+<li><p>类型推断： 通过变量的使用上下文来推断出变量类型，然后根据这些推断来检查类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*@flow@/</span><br><span class="line"></span><br><span class="line">function split(str) &#123;</span><br><span class="line">    return str.split(&apos; &apos;)</span><br><span class="line">&#125;</span><br><span class="line">split(11)</span><br><span class="line">//Flow检查代码后会报错，因为函数split期待的参数是字符串，而我们输入了数字。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类型注释： 事先注释好我们期待的类型，Flow会基于这些注释来进行判断。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*@flow*/</span><br><span class="line"></span><br><span class="line">function add(x: number, y: number): number &#123;</span><br><span class="line">    return x + y</span><br><span class="line">&#125;</span><br><span class="line">//Flow检查代码后，我们传入的参数只有都是数字才不会报错。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*@flow*/</span><br><span class="line"></span><br><span class="line">var arr: Array&lt;number&gt; = [1, 2, 3]</span><br></pre></td></tr></table></figure>
+<p>数组类型注释的格式是 <code>Array&lt;T&gt;</code>, T 表示数组中每项的数据类型。</p>
+<h5 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*@flow*/</span><br><span class="line"></span><br><span class="line">classBar &#123;</span><br><span class="line">    x: string           //x是字符串</span><br><span class="line">    y: string | number  //y是字符串或者数字</span><br><span class="line">    z: boolean          //z是布尔值</span><br><span class="line"></span><br><span class="line">    constructor(x: string, y: string | number) &#123;</span><br><span class="line">        this.x = x</span><br><span class="line">        this.y = y</span><br><span class="line">        this.z = false</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var bar: Bar = new Bar(&apos;hello&apos;, 4)</span><br><span class="line">//ES6解构赋值的写法</span><br><span class="line">var obj: &#123; a: string, b: number, c: Array&lt;string&gt;, d: Bar&#125; = &#123;</span><br><span class="line">    a: &apos;hello&apos;,</span><br><span class="line">    b: 11,</span><br><span class="line">    c: [&apos;hello&apos;, &apos;world&apos;],</span><br><span class="line">    d: new Bar(&apos;hello&apos;, 3)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>类的类型注释格式如上，可以对类自身的属性做类型检查，也可以对构造函数的参数做类型检查。这里需要注意的是，属性 y 的类型中间用 | 做间隔，表示 y 的类型即可以是字符串也可以是数字。<br>对象的注释类似于类，需要指定对象属性的类型。</p>
+<h5 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*@flow*/</span><br><span class="line"></span><br><span class="line">var foo: ?string = null</span><br><span class="line">//此时foo可以是字符串，也可以是null</span><br></pre></td></tr></table></figure>
+<p>如果想任意类型 T 可以为 null 或者 undefined， 只需写成 <code>?T</code> 的格式。</p>
+<h3 id="Flow在Vue-js源码中的应用"><a href="#Flow在Vue-js源码中的应用" class="headerlink" title="Flow在Vue.js源码中的应用"></a>Flow在Vue.js源码中的应用</h3><p>有时我们引入第三方库或自定义一些类型，但Flow不认识，故检查时会报错。为了解决这个问题，Flow提出了一个 <code>libdef</code> 的概念，可以用来识别这些第三方库或自定义类型，而Vue.js也利用这一特性。<br>在Vue.js的主目录下有 <code>.flowconfig</code> 文件，它是Flow的配置文件。其中的 <code>[libs]</code> 部分用来描述包含指定库定义的目录，默认是名为 <code>flow-typed</code> 的目录。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flow文件夹下的目录</span><br><span class="line"></span><br><span class="line">compiler.js     //编译相关</span><br><span class="line">component.js    //组件数据结构</span><br><span class="line">global-api.js   //Global API 结构</span><br><span class="line">modules.js      //第三方库定义</span><br><span class="line">options.js      //选项相关</span><br><span class="line">ssr.js          //服务端渲染相关</span><br><span class="line">vnode.js        //虚拟 node 相关</span><br></pre></td></tr></table></figure></p>
+<h3 id="Flow总结"><a href="#Flow总结" class="headerlink" title="Flow总结"></a>Flow总结</h3><p>对Flow的认识，有助于我们阅读Vue的源码，并且这种静态类型检查的方式非常有利于大型项目源码的开发和维护。类似Flow的工具如TypeScript。</p>
+<h2 id="Vue-js源码目录设计"><a href="#Vue-js源码目录设计" class="headerlink" title="Vue.js源码目录设计"></a>Vue.js源码目录设计</h2><p>Vue.js的源码在src目录下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">compiler    //编译相关</span><br><span class="line">core        //核心代码</span><br><span class="line">platforms   //不同平台的支持</span><br><span class="line">server      //服务端渲染</span><br><span class="line">sfc         //.vue 文件解析</span><br><span class="line">shared      //共享代码</span><br></pre></td></tr></table></figure></p>
+<h5 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h5><p>compiler 目录包含Vue所有编译相关的代码。它包括把模板解析成 ast 语法树优化，代码生成等功能。<br>编译的工作可以在构建时做(借助 webpack、 vue-loader 等辅助插件)，也可以在运行时做，使用包含构建功能的 Vue。<br>编译是一项耗性能的工作，所有更推荐前者——离线编译。</p>
+<h5 id="core"><a href="#core" class="headerlink" title="core"></a>core</h5><p>core 目录包含了 Vue 的核心代码，包含内置组件，全局API封装，Vue实例化、观察者、虚拟DOM、工具函数等等。<br>core 目录里的代码是 Vue 的灵魂。</p>
+<h5 id="platform"><a href="#platform" class="headerlink" title="platform"></a>platform</h5><p>Vue 是一个跨平台的 MVVM 框架，它可以跑在 web 上，也可以配合 weex 跑在 native 客户端上。 platform 是 Vue 的入口， 2个目录代表2个主要入口。分别打包成运行在 web 上和 weex 上的 Vue。</p>
+<h5 id="server"><a href="#server" class="headerlink" title="server"></a>server</h5><p>Vue.js 2.0 支持； 服务端渲染，所有服务端渲染相关的逻辑都在这个目录下。 注意： 这部分代码是跑在服务端的 Node.js，不要和跑在浏览器端的 Vue 混为一谈。<br>服务端渲染主要的工作是把组件渲染为服务端的 HTML 字符串，将它们直接发送到浏览器，最后将静态标记 “混合” 为客户端上完全交互的应用程序。</p>
+<h5 id="sfc"><a href="#sfc" class="headerlink" title="sfc"></a>sfc</h5><p>通常我们开发Vue都会借助 webpack 构建，然后通过 .vue 单文件来编写组件。<br>这个目录下的代码逻辑会把 .vue 文件内容解析成一个 JavaScript 的对象。</p>
+<h5 id="shared"><a href="#shared" class="headerlink" title="shared"></a>shared</h5><p>Vue 会定义一些工具方法，这里定义的工具方法都是会被浏览器端的 Vue 和服务端的 Vue 所共享的。</p>
+<h3 id="Vue源码目录设计总结"><a href="#Vue源码目录设计总结" class="headerlink" title="Vue源码目录设计总结"></a>Vue源码目录设计总结</h3><p>Vue 的功能模块从目录上看出来，相关的逻辑放在一个独立的目录下维护，并且把复用的代码也抽成一个独立目录。这样的目录设计让代码的阅读性和可维护性都变强，非常值得学习和推敲。</p>
+
+            
         </div>
-    </div>
+    
 </div>
 
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
 
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/06/03/Node-js入门/">Node.js入门 (停更ing)</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                Nodej...
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/06/03/Node-js入门/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/nodejs-express-koa2-MongoDB/">nodejs express koa2 MongoDB</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Jun 03, 2018
-            </div>
-            <div class="post_entry-footer-comment">
                 
+                    <!-- Paradox Post Info -->
+                    
+                
+
+                <!-- Post Comments -->
+                
+                    
                 
             </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/03/Node-js入门/" id="post_nav-older" class="next-content">
+            Älteren
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
         </div>
     </div>
-</div>
 
-            
-        
-    
-        
-            
-            
-                <!-- Isolation Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post_entry Header -->
-    
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/myavatar.png" class="avatar-img" width="44px" height="44px" alt="林凯锋's avatar">
-            <span class="name-span">林凯锋</span>
-        </div>
-
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    
-        </div>
-
-    <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
-        <!-- Post Title -->
-        <p class="post_entry-title">
-            <a href="/2018/06/03/计算机基础/">计算机基础 (停更ing)</a>
-        </p>
-
-        <!-- Post Excerpt -->
-        <p class="post_entry-excerpt">
-            
-                计算机基础
-            
-            &nbsp;&nbsp;&nbsp;
-            <span>
-                <a href="/2018/06/03/计算机基础/" target="_self">Weiterlesen</a>
-            </span>
-        </p>
-
-        <!-- Post Tags -->
-        <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/算法-数据结构/">算法 数据结构</a></li></ul>
-    </div>
-
-    <!-- Post_entry Footer -->
-    <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
-        <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                Jun 03, 2018
-            </div>
-            <div class="post_entry-footer-comment">
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-            
-        
-    
-
-    
-
-    
-</div>
 
 
                     
