@@ -238,7 +238,7 @@
 
     
         <meta property="article:published_time" content="Tue Jun 26 2018 10:35:19 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jun 28 2018 11:28:54 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jul 16 2018 18:48:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +261,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/06/26/深入Vue/index.html",
     "headline": "深入Vue (学习ing)",
     "datePublished": "Tue Jun 26 2018 10:35:19 GMT+0800",
-    "dateModified": "Thu Jun 28 2018 11:28:54 GMT+0800",
+    "dateModified": "Mon Jul 16 2018 18:48:15 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "林凯锋",
@@ -459,7 +459,7 @@
                 深入Vue (学习ing)
             </p>
             <p>文章源自滴滴前端大神黄佚： <a href="https://ustbhuangyi.github.io/vue-analysis/" target="_blank" rel="noopener">https://ustbhuangyi.github.io/vue-analysis/</a></p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><p>你是否发现在阅读Vue源码的时候，很多文件开头写了<code>/*@flow*/</code>。<br>Flow是facebook出品的JavaScript静态类型检查工具。Vue.js源码就是利用了Flow做静态类型检查。</p>
+<h1 id="储备知识"><a href="#储备知识" class="headerlink" title="储备知识"></a>储备知识</h1><h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><p>你是否发现在阅读Vue源码的时候，很多文件开头写了<code>/*@flow*/</code>。<br>Flow是facebook出品的JavaScript静态类型检查工具。Vue.js源码就是利用了Flow做静态类型检查。</p>
 <h3 id="Flow的好处"><a href="#Flow的好处" class="headerlink" title="Flow的好处"></a>Flow的好处</h3><p>JavaScript是动态类型的语言，它非常灵活，但过于灵活会导致很容易写出非常隐蔽的隐患代码，在编译期不会报错，但在运行阶段可能会出现各种各样的bug。<br>类型检测是当前动态语言的发展趋势，在编译期发现由类型错误引起的bug，又不影响代码运行(不需要运行时动态类型检查)，使得JavaScript与Java等强类型语言有相近的体验。<br>项目越复杂就越需要通过工具的手段来保证项目的维护性和增强代码的可读性。Vue.js在2.0重构时，在ES2015(ES6)的基础上，除了使用ESlint来保证代码风格之外，也引入了flow做静态类型检查。选择Flow是因为Babel和ESLint都有相对应的Flow插件以支持语法，可以完全沿用现有的构建配置，以非常小的成本的改动就可以拥有静态类型检查的能力。</p>
 <h3 id="Flow的工作方式"><a href="#Flow的工作方式" class="headerlink" title="Flow的工作方式"></a>Flow的工作方式</h3><p>通常类型检查分为2种方式：</p>
 <ul>
@@ -486,6 +486,12 @@
 <h5 id="sfc"><a href="#sfc" class="headerlink" title="sfc"></a>sfc</h5><p>通常我们开发Vue都会借助 webpack 构建，然后通过 .vue 单文件来编写组件。<br>这个目录下的代码逻辑会把 .vue 文件内容解析成一个 JavaScript 的对象。</p>
 <h5 id="shared"><a href="#shared" class="headerlink" title="shared"></a>shared</h5><p>Vue 会定义一些工具方法，这里定义的工具方法都是会被浏览器端的 Vue 和服务端的 Vue 所共享的。</p>
 <h3 id="Vue源码目录设计总结"><a href="#Vue源码目录设计总结" class="headerlink" title="Vue源码目录设计总结"></a>Vue源码目录设计总结</h3><p>Vue 的功能模块从目录上看出来，相关的逻辑放在一个独立的目录下维护，并且把复用的代码也抽成一个独立目录。这样的目录设计让代码的阅读性和可维护性都变强，非常值得学习和推敲。</p>
+<h2 id="源码构建"><a href="#源码构建" class="headerlink" title="源码构建"></a>源码构建</h2><p>基于 Rollup 构建，构建相关配置在scripts目录下。</p>
+<h3 id="构建脚本"><a href="#构建脚本" class="headerlink" title="构建脚本"></a>构建脚本</h3><p>通常一个基于 NPM 托管的项目都会有一个 package.json 文件，它是对项目的描述文件，它的内容实际上是一个标准的 JSON 对象。<br>通常会配置 script 字段作为 NPM 的执行脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;script&quot;: &#123;</span><br><span class="line">        &quot;build&quot;: &quot;node scripts/build.js&quot;,</span><br><span class="line">        &quot;build:ssr&quot;: &quot;npm run build -- web-runtime-cjs,web-server-renderer&quot;,</span><br><span class="line">        &quot;build:weex&quot;: &quot;npm run build --weex&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>三条命令作用都是构建 Vue.js，后两天是在第一条命令的基础上添加一些环节参数。<br>运行 npm run build 其实就是执行 node scripts/build.js。</p>
+<h3 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h3><p>先打开构建的入口 JS 文件，在 scripts/build.js 中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">let builds = require(&apos;./config&apos;).getAllBuilds()</span><br><span class="line"></span><br><span class="line">if(process.argv[2]) &#123;</span><br><span class="line">    const filters = process.argv[2].split(&apos;,&apos;)</span><br><span class="line">    builds = builds.filter(b =&gt; &#123;</span><br><span class="line">        return filters.some(f =&gt; b.output.file.indexOf(f) &gt; -1 || b._name.indexOf(f) &gt; -1)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    builds = builds.filter(b =&gt; &#123;</span><br><span class="line">        return b.output.file.indexOf(&apos;weex&apos;) === -1</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">build(builds)</span><br></pre></td></tr></table></figure></p>
+<p>先从配置文件读取配置，再通过命令行参数对构建配置做过滤，这样就可以构建出不同用途的 Vue。</p>
+<p>配置文件，在 scripts/config.js 中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const builds = &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
             
         </div>
